@@ -42,3 +42,6 @@ export type AttemptRecord = {
   isCorrect: boolean
   answeredAt: string
 }
+
+export type ExamItem = { examItemId: string; order: number; originalNumber: number; questionId: string; questionVersion: number }
+export type Exam = { examId: string; title: string; declaredQuestionCount: number; items: ExamItem[] }

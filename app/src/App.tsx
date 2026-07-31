@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { loadJpd123Questions, loadJpd123Subject } from './content'
+import { loadJpd123Exams, loadJpd123Questions, loadJpd123Subject } from './content'
+import { examQuestions, examScore } from './exam'
 import { gradeAnswer, saveAttempt, selectPracticeQuestions, selectRandomQuestions } from './practice'
 import { clearAttempts, loadAttempts, seedStatisticsDemo } from './practice'
 import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
-import type { Question, Subject } from './types'
+import type { Exam, Question, Subject } from './types'
 
-type Screen = 'loading' | 'subject' | 'mode' | 'practice' | 'complete' | 'statistics' | 'error'
+type Screen = 'loading' | 'subject' | 'mode' | 'practice' | 'complete' | 'statistics' | 'exam-list' | 'exam' | 'exam-result' | 'error'
 
 function textOf(blocks: { text: string }[]) {
   return blocks.map((block) => block.text).join('\n')
@@ -16,6 +17,9 @@ function App() {
   const [screen, setScreen] = useState<Screen>('loading')
   const [subject, setSubject] = useState<Subject | null>(null)
   const [questions, setQuestions] = useState<Question[]>([])
+  const [exams, setExams] = useState<Exam[]>([])
+  const [exam, setExam] = useState<Exam | null>(null)
+  const [examAnswers, setExamAnswers] = useState<Record<string, string>>({})
   const [session, setSession] = useState<Question[]>([])
   const [position, setPosition] = useState(0)
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null)
@@ -26,10 +30,11 @@ function App() {
   const [detailStatus, setDetailStatus] = useState<LearningStatus | null>(null)
 
   useEffect(() => {
-    Promise.all([loadJpd123Subject(), loadJpd123Questions()])
-      .then(([loadedSubject, bank]) => {
+    Promise.all([loadJpd123Subject(), loadJpd123Questions(), loadJpd123Exams()])
+      .then(([loadedSubject, bank, loadedExams]) => {
         setSubject(loadedSubject)
         setQuestions(bank.questions)
+        setExams(loadedExams)
         setScreen('subject')
       })
       .catch((reason: unknown) => {
@@ -100,9 +105,21 @@ function App() {
 
   if (screen === 'mode') return <main className="app-shell"><section className="subject-card" aria-labelledby="mode-title">
     <p className="eyebrow">JPD123 · Practice</p><h1 id="mode-title">Bạn muốn luyện thế nào?</h1>
-    <div className="mode-list"><button type="button" onClick={() => startPractice('smart')}><strong>Luyện thông minh</strong><span>Ưu tiên câu cần ôn theo tiến độ của bạn.</span></button><button type="button" onClick={() => startPractice('random')}><strong>Ngẫu nhiên toàn bộ</strong><span>Chọn đều từ toàn bộ ngân hàng câu hỏi.</span></button></div>
+    <div className="mode-list"><button type="button" onClick={() => startPractice('smart')}><strong>Luyện thông minh</strong><span>Ưu tiên câu cần ôn theo tiến độ của bạn.</span></button><button type="button" onClick={() => startPractice('random')}><strong>Ngẫu nhiên toàn bộ</strong><span>Chọn đều từ toàn bộ ngân hàng câu hỏi.</span></button><button type="button" onClick={() => setScreen('exam-list')}><strong>Luyện theo đề thi</strong><span>Giữ thứ tự đề, đổi đáp án trước khi nộp.</span></button></div>
     <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
   </section></main>
+
+  if (screen === 'exam-list') return <main className="app-shell"><section className="subject-card"><p className="eyebrow">JPD123 · Exam</p><h1>Chọn đề thi</h1><div className="mode-list">{exams.map((item) => <button key={item.examId} type="button" onClick={() => { setExam(item); setExamAnswers({}); setScreen('exam') }}><strong>{item.title}</strong><span>{item.declaredQuestionCount} câu · FE SP26</span></button>)}</div><button className="text-button" type="button" onClick={() => setScreen('mode')}>Quay lại</button></section></main>
+
+  if (screen === 'exam' && exam) {
+    const examQuestionsInOrder = examQuestions(exam, questions)
+    return <main className="practice-shell"><header className="practice-header"><span>{exam.title}</span><span>{Object.keys(examAnswers).length}/{examQuestionsInOrder.length} đã trả lời</span></header>{examQuestionsInOrder.map((item, index) => <section className="question-card exam-question" key={item.id}><p className="eyebrow">Câu {index + 1}</p><h2 className="question-text">{textOf(item.blocks)}</h2><div className="answers">{item.options.map((option, optionIndex) => <button className={`answer-button${examAnswers[item.id] === option.id ? ' selected' : ''}`} key={option.id} type="button" onClick={() => setExamAnswers((current) => ({ ...current, [item.id]: option.id }))}><span className="option-label">{String.fromCharCode(65 + optionIndex)}</span><span>{textOf(option.blocks)}</span></button>)}</div></section>)}<button className="primary-button" type="button" onClick={() => setScreen('exam-result')}>Nộp bài</button></main>
+  }
+
+  if (screen === 'exam-result' && exam) {
+    const items = examQuestions(exam, questions); const score = examScore(examAnswers, items)
+    return <main className="app-shell"><section className="subject-card result-card"><p className="eyebrow">Kết quả đề thi</p><h1>{score.correct}/{items.length} câu đúng</h1><p>Tỉ lệ đúng: {score.percent}% · Chưa trả lời: {score.unanswered}</p><button className="primary-button" type="button" onClick={() => { setExam(null); setScreen('exam-list') }}>Chọn đề khác</button><button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button></section></main>
+  }
 
   if (screen === 'complete') {
     return (
