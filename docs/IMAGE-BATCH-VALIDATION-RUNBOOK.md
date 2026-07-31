@@ -3,6 +3,10 @@
 Use this pipeline after an LLM has converted source images into one
 `ImageImportBatch` JSON file and before any Question Bank or Exam import.
 
+Name batches by Subject and serial number, for example `prj301-batch-001`.
+The actual question count is `items.length`; an expected count in the prompt is
+only a completeness check and is not part of the batch identity.
+
 ```bash
 node scripts/validate-image-import-batch.mjs path/to/batch.json
 ```
