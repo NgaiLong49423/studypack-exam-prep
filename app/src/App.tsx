@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { loadJpd123Questions, loadJpd123Subject } from './content'
 import { gradeAnswer, saveAttempt, selectPracticeQuestions } from './practice'
+import { loadAttempts } from './practice'
+import { summarizeQuestions } from './statistics'
 import type { Question, Subject } from './types'
 
-type Screen = 'loading' | 'subject' | 'practice' | 'complete' | 'error'
+type Screen = 'loading' | 'subject' | 'practice' | 'complete' | 'statistics' | 'error'
 
 function textOf(blocks: { text: string }[]) {
   return blocks.map((block) => block.text).join('\n')
@@ -85,6 +87,7 @@ function App() {
             <div><dt>Chế độ hiện có</dt><dd>Practice</dd></div>
           </dl>
           <button className="primary-button" type="button" onClick={startPractice}>Bắt đầu luyện 10 câu</button>
+          <button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button>
           <p className="hint">Lựa chọn đầu tiên sẽ được khóa ngay và bạn tự bấm Tiếp tục.</p>
         </section>
       </main>
@@ -100,9 +103,21 @@ function App() {
           <p>Kết quả từng câu đã được lưu trong trình duyệt của bạn. Thống kê tổng hợp sẽ có ở lát cắt tiếp theo.</p>
           <button className="primary-button" type="button" onClick={startPractice}>Luyện thêm 10 câu</button>
           <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
+          <button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê</button>
         </section>
       </main>
     )
+  }
+
+  if (screen === 'statistics') {
+    const summary = summarizeQuestions(questions, loadAttempts())
+    const labels = { not_practiced: 'Chưa ôn', learning: 'Đang học', weak: 'Yếu', developing: 'Đang phát triển', stable: 'Ổn', mastered: 'Thành thạo' }
+    return <main className="app-shell"><section className="subject-card" aria-labelledby="statistics-title">
+      <p className="eyebrow">JPD123 · Statistics</p><h1 id="statistics-title">Tiến độ học tập</h1>
+      <dl className="subject-facts"><div><dt>Lượt trả lời</dt><dd>{summary.totalAttempts}</dd></div><div><dt>Tỉ lệ đúng</dt><dd>{summary.accuracy}%</dd></div></dl>
+      <div className="statistics-list">{Object.entries(summary.counts).map(([key, count]) => <div key={key}><span>{labels[key as keyof typeof labels]}</span><strong>{count} câu</strong></div>)}</div>
+      <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
+    </section></main>
   }
 
   if (!question) return null

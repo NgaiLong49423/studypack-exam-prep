@@ -34,4 +34,6 @@ h2 { color: #253042; font-size: 1.35rem; }
 .feedback-incorrect { background: #fff2f2; color: #8c2020; }
 .feedback h2 { margin-bottom: .5rem; color: inherit; }
 .feedback p { white-space: pre-wrap; line-height: 1.55; }
+.statistics-list { display: grid; gap: .5rem; margin: 1.5rem 0; }
+.statistics-list div { display: flex; justify-content: space-between; border-bottom: 1px solid #e3e8ee; padding: .75rem 0; color: #364152; }
 @media (max-width: 35rem) { .subject-facts { grid-template-columns: 1fr; } .practice-header { align-items: flex-start; flex-direction: column; gap: .25rem; } }
