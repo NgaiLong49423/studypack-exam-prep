@@ -4,6 +4,11 @@
 
 - Chạy `node scripts/validate-content.mjs` trước khi chạy Frontend CI hoặc build
   GitHub Pages.
+- Sau build, chạy `node scripts/verify-deploy-artifact.mjs`; mọi file trong
+  `app/dist/subjects/` phải khớp byte-for-byte với `subjects/` trước khi Pages
+  được upload.
+- Build Pages phải đặt `VITE_CONTENT_REVISION` theo commit deploy để URL fetch
+  catalog/nội dung thay đổi ở mỗi bản phát hành và không dùng cache cũ.
 - Sửa mọi `ERROR` do validator báo trước khi chuyển môn sang `published` hoặc
   mở Pull Request. `warning` cần được xem xét nhưng không chặn build.
 
@@ -24,7 +29,8 @@
 - Kiểm chứng Random All không bỏ câu trong đề cũ.
 - Kiểm chứng Markdown xuất cho Gemini Notebook tìm được câu theo ID.
 - Kiểm chứng xuất ngân hàng và câu yếu chỉ có một bản cho mỗi question ID.
-- Kiểm chứng luyện tập khóa ngay lựa chọn đầu tiên, không có bước xác nhận riêng.
+- Kiểm chứng câu một đáp án khóa ngay lựa chọn đầu tiên; câu nhiều đáp án chỉ
+  khóa sau khi người học xác nhận tập lựa chọn.
 - Kiểm chứng không thể đổi, bỏ chọn hoặc chọn lại đáp án sau khi câu đã khóa.
 - Kiểm chứng app không tự chuyển câu sau khi chấm và chỉ chuyển khi người học
   bấm **Tiếp tục**.

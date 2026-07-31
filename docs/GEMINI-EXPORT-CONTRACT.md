@@ -76,6 +76,10 @@ File chỉ lấy dữ liệu hiện có từ `subject.json`, `topics.json` (nế
 
 App không tự tạo Topic, quy tắc môn hoặc nội dung theory.
 
+Hai file trong `notebook/` là tùy chọn. Thiếu một hoặc cả hai file chỉ tạo nội
+dung rỗng trong Gemini Pack; không được chặn người học mở Subject hoặc luyện
+câu hỏi.
+
 ## question-bank.md
 
 Chỉ export Question hợp lệ, `active`; mỗi `questionId` đúng một lần.
