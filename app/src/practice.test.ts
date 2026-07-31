@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { gradeAnswer, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions } from './practice'
+import { gradeAnswer, loadAttempts, saveAttempt, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions } from './practice'
 import type { Question } from './types'
 
 const questions: Question[] = [
@@ -35,6 +35,12 @@ describe('practice helpers', () => {
     const session = selectRandomQuestions(duplicatedQuestions, 3)
     expect(session).toHaveLength(2)
     expect(new Set(session.map((question) => question.id)).size).toBe(2)
+  })
+
+  it('keeps browser-local attempts isolated by subject ID', () => {
+    saveAttempt('jpd123', { questionId: 'jpd123-q-0001', questionVersion: 1, selectedOptionId: 'opt-a', isCorrect: true, answeredAt: '2026-07-31T00:00:00.000Z' })
+    expect(loadAttempts('jpd123')).toHaveLength(1)
+    expect(loadAttempts('prj301')).toEqual([])
   })
 
   it('selects only active questions with no history for unseen practice', () => {

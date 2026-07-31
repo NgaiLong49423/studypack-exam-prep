@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { loadJpd123Exams, loadJpd123NotebookDocuments, loadJpd123Questions, loadJpd123Subject } from './content'
+import { loadExams, loadNotebookDocuments, loadQuestions, loadSubject, loadSubjectCatalog } from './content'
 import { examAttempts, examScore, resolveExamItems } from './exam'
 import { copyPromptToClipboard, createAiTutorPrompt } from './ai-tutor'
 import { clearTutorNotebookUrl, loadTutorNotebookUrl, saveTutorNotebookUrl } from './tutor-settings'
@@ -8,9 +8,9 @@ import { downloadFile, fullGeminiPack, learningProgressMarkdown, createExportCon
 import { gradeAnswer, saveAttempt, saveAttempts, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions } from './practice'
 import { clearAttempts, loadAttempts, seedStatisticsDemo } from './practice'
 import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
-import type { Exam, Question, Subject } from './types'
+import type { Exam, Question, Subject, SubjectCatalogEntry } from './types'
 
-type Screen = 'loading' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'exam' | 'exam-result' | 'error'
+type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'exam' | 'exam-result' | 'error'
 type PracticeMode = 'smart' | 'random' | 'unseen' | 'review'
 
 function textOf(blocks: { text: string }[]) {
@@ -20,6 +20,7 @@ function textOf(blocks: { text: string }[]) {
 function App() {
   const [screen, setScreen] = useState<Screen>('loading')
   const [subject, setSubject] = useState<Subject | null>(null)
+  const [subjectCatalog, setSubjectCatalog] = useState<SubjectCatalogEntry[]>([])
   const [questions, setQuestions] = useState<Question[]>([])
   const [exams, setExams] = useState<Exam[]>([])
   const [notebookDocuments, setNotebookDocuments] = useState({ subjectContext: '', tutorRules: '' })
@@ -42,22 +43,25 @@ function App() {
   const [detailStatus, setDetailStatus] = useState<LearningStatus | null>(null)
 
   useEffect(() => {
-    Promise.all([loadJpd123Subject(), loadJpd123Questions(), loadJpd123Exams(), loadJpd123NotebookDocuments()])
-      .then(([loadedSubject, bank, loadedExams, loadedNotebookDocuments]) => {
-        setSubject(loadedSubject)
-        const savedUrl = loadTutorNotebookUrl(loadedSubject.subjectId)
-        setPersonalNotebookUrl(savedUrl)
-        setSavedNotebookUrl(savedUrl)
-        setQuestions(bank.questions)
-        setExams(loadedExams)
-        setNotebookDocuments(loadedNotebookDocuments)
-        setScreen('subject')
-      })
+    loadSubjectCatalog().then((catalog) => { setSubjectCatalog(catalog.subjects); setScreen('subject-picker') })
       .catch((reason: unknown) => {
         setError(reason instanceof Error ? reason.message : 'Đã xảy ra lỗi không xác định.')
         setScreen('error')
       })
   }, [])
+
+  async function chooseSubject(entry: SubjectCatalogEntry) {
+    if (entry.status !== 'published') return
+    setScreen('loading')
+    try {
+      const [loadedSubject, bank, loadedExams, loadedNotebookDocuments] = await Promise.all([loadSubject(entry.subjectId), loadQuestions(entry.subjectId), loadExams(entry.subjectId, entry.examIds), loadNotebookDocuments(entry.subjectId)])
+      setSubject(loadedSubject)
+      const savedUrl = loadTutorNotebookUrl(loadedSubject.subjectId)
+      setPersonalNotebookUrl(savedUrl); setSavedNotebookUrl(savedUrl)
+      setQuestions(bank.questions); setExams(loadedExams); setNotebookDocuments(loadedNotebookDocuments)
+      setScreen('subject')
+    } catch (reason: unknown) { setError(reason instanceof Error ? reason.message : 'Đã xảy ra lỗi không xác định.'); setScreen('error') }
+  }
 
   const question = session[position]
   const isLocked = selectedOptionId !== null
@@ -65,7 +69,7 @@ function App() {
 
   function startPractice(mode: PracticeMode) {
     setPracticeMode(mode)
-    const attempts = loadAttempts()
+    const attempts = loadAttempts(subject?.subjectId ?? '')
     const selected = mode === 'smart' ? selectPracticeQuestions(questions, attempts)
       : mode === 'random' ? selectRandomQuestions(questions)
         : mode === 'unseen' ? selectUnseenQuestions(questions, attempts)
@@ -83,7 +87,7 @@ function App() {
     const correct = gradeAnswer(question, optionId)
     setSelectedOptionId(optionId)
     setCorrectCount((current) => current + Number(correct))
-    saveAttempt({
+    saveAttempt(subject?.subjectId ?? '', {
       questionId: question.id,
       questionVersion: question.version,
       selectedOptionId: optionId,
@@ -104,7 +108,7 @@ function App() {
   function submitExam() {
     if (!exam) return
     const items = resolveExamItems(exam, questions)
-    saveAttempts(examAttempts(exam, items, examAnswers, new Date().toISOString()))
+    saveAttempts(subject?.subjectId ?? '', examAttempts(exam, items, examAnswers, new Date().toISOString()))
     setStatisticsRevision((value) => value + 1)
     setScreen('exam-result')
   }
@@ -112,7 +116,7 @@ function App() {
   async function exportGeminiPack() {
     if (!subject) return
     const selectedExams = exams.filter((item) => selectedGeminiExamIds.includes(item.examId))
-    const pack = await fullGeminiPack(subject, questions, loadAttempts(), exams, selectedExams, notebookDocuments)
+    const pack = await fullGeminiPack(subject, questions, loadAttempts(subject.subjectId), exams, selectedExams, notebookDocuments)
     downloadFile(pack.blob, pack.filename)
     setGeminiExportStatus(`Đã tải Gemini Pack${selectedExams.length ? ` kèm ${selectedExams.length} đề` : ''}.`)
   }
@@ -120,7 +124,7 @@ function App() {
   function refreshLearningProgress() {
     if (!subject) return
     const context = createExportContext(subject.subjectId)
-    const markdown = learningProgressMarkdown(subject, questions, loadAttempts(), context)
+    const markdown = learningProgressMarkdown(subject, questions, loadAttempts(subject.subjectId), context)
     downloadFile(new Blob([markdown], { type: 'text/markdown;charset=utf-8' }), `studypack-${subject.subjectId}-learning-progress.md`)
     setGeminiExportStatus('Đã tải learning-progress.md mới nhất.')
   }
@@ -171,6 +175,8 @@ function App() {
   if (screen === 'loading') return <main className="center-message">Đang tải StudyPack…</main>
   if (screen === 'error') return <main className="center-message error-message">{error}</main>
 
+  if (screen === 'subject-picker') return <main className="app-shell"><section className="subject-card" aria-labelledby="subject-picker-title"><p className="eyebrow">StudyPack Exam Prep</p><h1 id="subject-picker-title">Chọn môn để ôn</h1><div className="mode-list">{subjectCatalog.map((item) => <button key={item.subjectId} type="button" disabled={item.status !== 'published'} onClick={() => void chooseSubject(item)}><strong>{item.code} · {item.name}</strong><span>{item.status === 'published' ? item.description : 'Đang chuẩn bị ngân hàng câu hỏi và đề thi.'}</span></button>)}</div><p className="hint">Chỉ môn đã có dữ liệu được mở để luyện tập.</p></section></main>
+
   if (screen === 'subject' && subject) {
     return (
       <main className="app-shell">
@@ -185,6 +191,7 @@ function App() {
           </dl>
           <button className="primary-button" type="button" onClick={() => setScreen('mode')}>Chọn cách luyện</button>
           <button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button>
+          <button className="text-button" type="button" onClick={() => setScreen('subject-picker')}>Đổi môn học</button>
           <p className="hint">Lựa chọn đầu tiên sẽ được khóa ngay và bạn tự bấm Tiếp tục.</p>
         </section>
       </main>
@@ -227,19 +234,19 @@ function App() {
   }
 
   if (screen === 'statistics') {
-    const summary = summarizeQuestions(questions, loadAttempts())
+    const summary = summarizeQuestions(questions, loadAttempts(subject?.subjectId ?? ''))
     const labels = { not_practiced: 'Chưa ôn', learning: 'Đang học', weak: 'Yếu', developing: 'Đang phát triển', stable: 'Ổn', mastered: 'Thành thạo' }
     const rules = { not_practiced: '0 lần trả lời', learning: '1–3 lần trả lời', weak: 'Từ 4 lần, đúng ≤ 50%', developing: 'Từ 4 lần, đúng > 50% đến 75%', stable: 'Từ 4 lần, đúng > 75% đến < 90%', mastered: 'Từ 4 lần, đúng ≥ 90%' }
-    const detailedQuestions = detailStatus ? questionsByStatus(questions, loadAttempts(), detailStatus) : []
+    const detailedQuestions = detailStatus ? questionsByStatus(questions, loadAttempts(subject?.subjectId ?? ''), detailStatus) : []
     const resetStatistics = () => {
       if (window.confirm('Xóa toàn bộ lịch sử trả lời JPD123 trên trình duyệt này? Bạn sẽ bắt đầu lại từ đầu.')) {
-        clearAttempts()
+        clearAttempts(subject?.subjectId ?? '')
         setDetailStatus(null)
         setStatisticsRevision((value) => value + 1)
       }
     }
     const loadDemo = () => {
-      seedStatisticsDemo(questions.slice(0, 6).map((question) => question.id))
+      seedStatisticsDemo(subject?.subjectId ?? '', questions.slice(0, 6).map((question) => question.id))
       setDetailStatus(null)
       setStatisticsRevision((value) => value + 1)
     }
@@ -247,7 +254,7 @@ function App() {
       <p className="eyebrow">JPD123 · Statistics</p><h1 id="statistics-title">Tiến độ học tập</h1>
       <dl className="subject-facts"><div><dt>Lượt trả lời</dt><dd>{summary.totalAttempts}</dd></div><div><dt>Tỉ lệ đúng</dt><dd>{summary.accuracy}%</dd></div></dl>
       <div className="statistics-list">{Object.entries(summary.counts).map(([key, count]) => { const status = key as LearningStatus; return <div key={key}><span><strong>{labels[status]}</strong><small>{rules[status]}</small></span><button type="button" className="text-button" onClick={() => setDetailStatus(status)}>Xem chi tiết · {count} câu</button></div> })}</div>
-      {detailStatus && <section className="detail-list" aria-live="polite"><h2>{labels[detailStatus]} · {detailedQuestions.length} câu</h2>{detailedQuestions.map((question) => { const ownAttempts = loadAttempts().filter((attempt) => attempt.questionId === question.id); const correct = ownAttempts.filter((attempt) => attempt.isCorrect).length; return <article key={question.id}><strong>{question.id}</strong><p>{textOf(question.blocks)}</p><small>{ownAttempts.length} lần làm · {correct} đúng · {ownAttempts.length ? Math.round((correct / ownAttempts.length) * 100) : 0}%</small></article> })}</section>}
+      {detailStatus && <section className="detail-list" aria-live="polite"><h2>{labels[detailStatus]} · {detailedQuestions.length} câu</h2>{detailedQuestions.map((question) => { const ownAttempts = loadAttempts(subject?.subjectId ?? '').filter((attempt) => attempt.questionId === question.id); const correct = ownAttempts.filter((attempt) => attempt.isCorrect).length; return <article key={question.id}><strong>{question.id}</strong><p>{textOf(question.blocks)}</p><small>{ownAttempts.length} lần làm · {correct} đúng · {ownAttempts.length ? Math.round((correct / ownAttempts.length) * 100) : 0}%</small></article> })}</section>}
       <section className="gemini-documents" aria-labelledby="gemini-documents-title"><p className="eyebrow">Gemini Learning Documents</p><h2 id="gemini-documents-title">Xuất tài liệu để đưa vào Gemini</h2><p>Gói chỉ là snapshot đọc-only. Kết quả trong Gemini không tự thay đổi Statistics của app; bạn có thể tự thêm theory Markdown vào Notebook.</p><div className="notebook-settings"><h3>Gemini Notebook của bạn</h3><p>Link này chỉ lưu trên trình duyệt hiện tại và chỉ dùng khi bạn bấm Hỏi AI.</p><label htmlFor="personal-notebook-url">Đường link Gemini Notebook</label><input id="personal-notebook-url" type="url" inputMode="url" placeholder="https://notebooklm.google.com/..." value={personalNotebookUrl} onChange={(event) => setPersonalNotebookUrl(event.target.value)} /><div><button className="secondary-button" type="button" onClick={savePersonalNotebookUrl}>Lưu link riêng</button><button className="text-button inline-button" type="button" onClick={removePersonalNotebookUrl}>Xóa link</button></div>{notebookSettingsStatus && <p className="notebook-status" aria-live="polite">{notebookSettingsStatus}</p>}</div><fieldset><legend>Đính kèm đề thi (tùy chọn)</legend>{exams.map((item) => <label key={item.examId}><input type="checkbox" checked={selectedGeminiExamIds.includes(item.examId)} onChange={() => setSelectedGeminiExamIds((current) => current.includes(item.examId) ? current.filter((id) => id !== item.examId) : [...current, item.examId])} /> {item.title} · {item.items.length} câu</label>)}</fieldset><button className="primary-button" type="button" onClick={() => void exportGeminiPack()}>Tải Full Gemini Pack (.zip)</button><button className="text-button" type="button" onClick={refreshLearningProgress}>Tải learning-progress.md mới nhất</button>{geminiExportStatus && <p className="export-status" aria-live="polite">{geminiExportStatus}</p>}</section>
       <button className="danger-button" type="button" onClick={resetStatistics}>Xóa dữ liệu thống kê và ôn lại từ đầu</button>
       {import.meta.env.DEV && <button className="demo-button" type="button" onClick={loadDemo}>Nạp dữ liệu demo Statistics (chỉ local)</button>}

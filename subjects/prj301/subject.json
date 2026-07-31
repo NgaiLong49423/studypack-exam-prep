@@ -1,0 +1,1 @@
+{"schemaVersion":"1.0","subjectId":"prj301","code":"PRJ301","name":"Java Web Application Development","description":"Ngân hàng câu hỏi sẽ được nhập sau.","status":"draft","contentLanguages":["en","vi"],"explanationLanguage":"vi","aiTutor":{"enabled":false,"provider":"gemini-notebook","promptTemplateId":"explain-question-v1"}}

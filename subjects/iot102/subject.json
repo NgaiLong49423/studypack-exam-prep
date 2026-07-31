@@ -1,0 +1,1 @@
+{"schemaVersion":"1.0","subjectId":"iot102","code":"IOT102","name":"Internet of Things","description":"Ngân hàng câu hỏi sẽ được nhập sau.","status":"draft","contentLanguages":["en","vi"],"explanationLanguage":"vi","aiTutor":{"enabled":false,"provider":"gemini-notebook","promptTemplateId":"explain-question-v1"}}

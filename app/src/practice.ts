@@ -1,7 +1,7 @@
 import type { AttemptRecord, Question } from './types'
 
 export const PRACTICE_SESSION_SIZE = 10
-export const ATTEMPTS_STORAGE_KEY = 'studypack:jpd123:attempts:v1'
+export const attemptsStorageKey = (subjectId: string) => `studypack:${subjectId}:attempts:v1`
 
 const bandTargets = [0.35, 0.25, 0.2, 0.12, 0.08]
 
@@ -16,8 +16,8 @@ function frequencyBand(questionId: string, attempts: AttemptRecord[]): number {
   return 4
 }
 
-export function selectPracticeQuestions(questions: Question[], attemptsOrSize: AttemptRecord[] | number = loadAttempts(), requestedSize = PRACTICE_SESSION_SIZE): Question[] {
-  const attempts = Array.isArray(attemptsOrSize) ? attemptsOrSize : loadAttempts()
+export function selectPracticeQuestions(questions: Question[], attemptsOrSize: AttemptRecord[] | number = [], requestedSize = PRACTICE_SESSION_SIZE): Question[] {
+  const attempts = Array.isArray(attemptsOrSize) ? attemptsOrSize : []
   const size = typeof attemptsOrSize === 'number' ? attemptsOrSize : requestedSize
   const available = questions.filter((question) => question.active)
   const limit = Math.min(size, available.length)
@@ -52,12 +52,12 @@ export function selectRandomQuestions(questions: Question[], size = PRACTICE_SES
   return shuffled.slice(0, Math.min(size, shuffled.length))
 }
 
-export function selectUnseenQuestions(questions: Question[], attempts: AttemptRecord[] = loadAttempts(), size = PRACTICE_SESSION_SIZE): Question[] {
+export function selectUnseenQuestions(questions: Question[], attempts: AttemptRecord[] = [], size = PRACTICE_SESSION_SIZE): Question[] {
   const attemptedQuestionIds = new Set(attempts.map((attempt) => attempt.questionId))
   return selectRandomQuestions(questions.filter((question) => !attemptedQuestionIds.has(question.id)), size)
 }
 
-export function selectReviewQuestions(questions: Question[], attempts: AttemptRecord[] = loadAttempts(), size = PRACTICE_SESSION_SIZE): Question[] {
+export function selectReviewQuestions(questions: Question[], attempts: AttemptRecord[] = [], size = PRACTICE_SESSION_SIZE): Question[] {
   const byQuestion = new Map<string, AttemptRecord[]>()
   attempts.forEach((attempt) => byQuestion.set(attempt.questionId, [...(byQuestion.get(attempt.questionId) ?? []), attempt]))
   const needsReview = questions.filter((question) => {
@@ -71,29 +71,29 @@ export function gradeAnswer(question: Question, selectedOptionId: string): boole
   return question.correctAnswerIds.length === 1 && question.correctAnswerIds[0] === selectedOptionId
 }
 
-export function saveAttempt(attempt: AttemptRecord): void {
-  saveAttempts([attempt])
+export function saveAttempt(subjectId: string, attempt: AttemptRecord): void {
+  saveAttempts(subjectId, [attempt])
 }
 
-export function saveAttempts(attempts: AttemptRecord[]): void {
-  const existing = loadAttempts()
-  localStorage.setItem(ATTEMPTS_STORAGE_KEY, JSON.stringify([...existing, ...attempts]))
+export function saveAttempts(subjectId: string, attempts: AttemptRecord[]): void {
+  const existing = loadAttempts(subjectId)
+  localStorage.setItem(attemptsStorageKey(subjectId), JSON.stringify([...existing, ...attempts]))
 }
 
-export function loadAttempts(): AttemptRecord[] {
+export function loadAttempts(subjectId: string): AttemptRecord[] {
   try {
-    const value = JSON.parse(localStorage.getItem(ATTEMPTS_STORAGE_KEY) ?? '[]')
+    const value = JSON.parse(localStorage.getItem(attemptsStorageKey(subjectId)) ?? '[]')
     return Array.isArray(value) ? value as AttemptRecord[] : []
   } catch {
     return []
   }
 }
 
-export function clearAttempts(): void {
-  localStorage.removeItem(ATTEMPTS_STORAGE_KEY)
+export function clearAttempts(subjectId: string): void {
+  localStorage.removeItem(attemptsStorageKey(subjectId))
 }
 
-export function seedStatisticsDemo(questionIds: string[]): void {
+export function seedStatisticsDemo(subjectId: string, questionIds: string[]): void {
   const patterns = [
     [],
     [true, false],
@@ -106,5 +106,5 @@ export function seedStatisticsDemo(questionIds: string[]): void {
     questionId: questionIds[questionIndex], questionVersion: 1, selectedOptionId: isCorrect ? 'opt-a' : 'opt-b', isCorrect,
     answeredAt: new Date(2026, 0, attemptIndex + 1).toISOString(),
   })))
-  localStorage.setItem(ATTEMPTS_STORAGE_KEY, JSON.stringify(attempts))
+  localStorage.setItem(attemptsStorageKey(subjectId), JSON.stringify(attempts))
 }

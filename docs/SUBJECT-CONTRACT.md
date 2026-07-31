@@ -27,6 +27,26 @@ Mỗi môn phải có `subjects/{subjectId}/subject.json` với cấu trúc:
 }
 ```
 
+## Danh mục môn học
+
+`subjects/index.json` là danh mục versioned để app hiển thị và tải môn theo
+`subjectId`. Mỗi entry có `subjectId`, thông tin hiển thị, `status` và `examIds`.
+
+- `published`: entry phải có ngân hàng Question hợp lệ; app cho phép bắt đầu ôn.
+- `draft`: app chỉ hiển thị trạng thái đang chuẩn bị, không tải Question hoặc
+  tạo lượt học.
+- `examIds`: danh sách ID đề của Subject để loader tải chính xác file Exam; không
+  được suy đoán bằng cách quét thư mục trên GitHub Pages.
+
+## Quy trình thêm môn và đề mới
+
+1. Tạo scaffold `subjects/{subjectId}/` và thêm Subject ở trạng thái `draft` vào
+   `subjects/index.json`.
+2. Nhập Question và Exam theo `EXAM-IMPORT-CONTRACT.md`; không tạo dữ liệu giả.
+3. Chạy validation, xử lý câu nghi trùng và kiểm tra mọi ExamItem tham chiếu.
+4. Khi ngân hàng hợp lệ, thêm `examIds` đã publish và đổi Subject sang `published`.
+5. App tự hiển thị môn để ôn; lịch sử localStorage được tách theo `subjectId`.
+
 ## 2. Danh tính môn học
 
 | Trường | Bắt buộc | Quy tắc |
