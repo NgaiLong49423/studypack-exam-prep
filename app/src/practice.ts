@@ -20,6 +20,15 @@ export function gradeAnswer(question: Question, selectedOptionId: string): boole
 }
 
 export function saveAttempt(attempt: AttemptRecord): void {
-  const existing = JSON.parse(localStorage.getItem(ATTEMPTS_STORAGE_KEY) ?? '[]') as AttemptRecord[]
+  const existing = loadAttempts()
   localStorage.setItem(ATTEMPTS_STORAGE_KEY, JSON.stringify([...existing, attempt]))
+}
+
+export function loadAttempts(): AttemptRecord[] {
+  try {
+    const value = JSON.parse(localStorage.getItem(ATTEMPTS_STORAGE_KEY) ?? '[]')
+    return Array.isArray(value) ? value as AttemptRecord[] : []
+  } catch {
+    return []
+  }
 }
