@@ -36,3 +36,19 @@ export function loadAttempts(): AttemptRecord[] {
 export function clearAttempts(): void {
   localStorage.removeItem(ATTEMPTS_STORAGE_KEY)
 }
+
+export function seedStatisticsDemo(questionIds: string[]): void {
+  const patterns = [
+    [],
+    [true, false],
+    [false, false, false, false],
+    [true, true, true, false],
+    [true, true, true, true, false],
+    [true, true, true, true],
+  ]
+  const attempts = patterns.flatMap((pattern, questionIndex) => pattern.map((isCorrect, attemptIndex) => ({
+    questionId: questionIds[questionIndex], questionVersion: 1, selectedOptionId: isCorrect ? 'opt-a' : 'opt-b', isCorrect,
+    answeredAt: new Date(2026, 0, attemptIndex + 1).toISOString(),
+  })))
+  localStorage.setItem(ATTEMPTS_STORAGE_KEY, JSON.stringify(attempts))
+}
