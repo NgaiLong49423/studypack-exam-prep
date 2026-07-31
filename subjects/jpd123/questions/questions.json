@@ -599,7 +599,7 @@
           }
         ]
       },
-      "active": true,
+      "active": false,
       "source": {
         "name": "FuOverflow Community",
         "url": null,
@@ -2073,7 +2073,7 @@
           }
         ]
       },
-      "active": true,
+      "active": false,
       "source": {
         "name": "FuOverflow Community",
         "url": null,
@@ -2676,7 +2676,7 @@
           }
         ]
       },
-      "active": true,
+      "active": false,
       "source": {
         "name": "FuOverflow Community",
         "url": null,
@@ -10314,7 +10314,7 @@
           }
         ]
       },
-      "active": true,
+      "active": false,
       "source": {
         "name": "FuOverflow Community",
         "url": null,
@@ -12860,7 +12860,7 @@
           }
         ]
       },
-      "active": true,
+      "active": false,
       "source": {
         "name": "FuOverflow Community",
         "url": null,
@@ -13329,7 +13329,7 @@
           }
         ]
       },
-      "active": true,
+      "active": false,
       "source": {
         "name": "FuOverflow Community",
         "url": null,
@@ -13603,6 +13603,2814 @@
         "url": null,
         "note": "Chuyển đổi từ bộ ảnh đề thi."
       }
+    },
+    {
+      "id": "jpd123-q-0204",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào?\n\n午前【十時半】ともだちと レストランで しょくじします。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "じゅうじはん"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "しちじはん"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "じゅうしじはん"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "しちじはん"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0205",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào?\n\n私は【会社】で はたらきます。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "かいしゃ"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "しゃかい"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "だいがく"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "がっこう"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0206",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào?\n\nコンビニの【後ろ】に ごうえんが あります。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "うしろ"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "あとろ"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "まえろ"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ごう"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0207",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào?\n\n駅前【お寺】へ いきます。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "おてら"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "おしろ"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "おなまえ"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "おすし"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0208",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào?\n\n来年、よこはまへ【いきます】。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "行きます"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "書きます"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "会います"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "話きます"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0209",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào?\n\nスーパーで【かいもの】します。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "買物"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "食事"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "時間"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "食物"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0210",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào?\n\n私の まちに【おおきい】おしろが あります。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "大きい"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "大い"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "太きい"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "太い"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0211",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nしゅうまつ、いっしょに サッカーを（　）か。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "しましょう"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "しません"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "しました"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "します"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0212",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\n山田（やまだ）さんは、いま、先生（　）はなしています。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "で"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "が"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "と"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "も"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-c"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0213",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nあついですから、まどを（　）。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "あらってください"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "とってください"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "あけてください"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "たしてください"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-c"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0214",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nハノイから ホーチミンまで くるま（　）30時間半 くらいです。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "に"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "で"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "も"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "は"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0215",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nともだち（　）おかね（　）かりました。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "を／に"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "に／を"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "に／で"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "で／に"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0216",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\n私の くには ちいさいです（　）、人が おおいです。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ね"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "が"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "も"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "と"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0217",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nコンサートの チケット（　）2枚（まい）（　）あります。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "が／と"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "が／×"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "が／が"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "×／が"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0218",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nきのうの えいがは（　）。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "どうしてですか"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "どんなですか"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "どうですか"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "どうでしたか"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-d"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0219",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nきれいな しゃしんですね。だれ（　）とりましたか。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "に"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "は"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "が"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "の"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-c"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0220",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nランさん、この りょうりの（　）かたを おしえてください。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "つくります"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "つくり"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "つくりま"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "つくりました"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0221",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nきのうの よる、私は（　）ゲームを しました。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ひとりで"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ひとりと"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ひとりに"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ひとりが"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0222",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Hãy chọn dạng phủ định của từ dưới đây:\n\n「きもちが いい」"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きもちが よくない"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きもちが よかった"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きもちが いかった"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きもちが いくない"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0223",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Từ nào có ý nghĩa KHÔNG CÙNG NHÓM với các từ còn lại?\n\n① バス\n② ビル\n③ くるま\n④ ひこうき"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "バス"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ビル"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "くるま"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ひこうき"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0224",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn từ khác loại trong những từ sau:\n\n① たいへん\n② ひま\n③ きれい\n④ やすい"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "たいへん"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ひま"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きれい"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "やすい"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-d"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0225",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nこの ほんやは えきから（　）です。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "はやい"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ひろい"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ちかい"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "いい"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-c"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0226",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nロサンゼルス（Los Angeles）は アメリカの（　）です。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ひと"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "にし"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "みどり"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "くるま"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0227",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nおんせんは（　）です。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "むずかしい"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "かんたん"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きもちが いい"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "たいへん"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-c"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0228",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn từ KHÔNG CÙNG NHÓM trong các từ sau:\n\n① しんかんせん\n② まんなか\n③ でんしゃ\n④ ひこうき"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "しんかんせん"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "まんなか"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "でんしゃ"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ひこうき"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0229",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Đọc đoạn văn và chọn từ thích hợp điền vào chỗ trống ①.\n\n土曜日、どこかへ ①____、へやを そうじしました。それから、日本語を 勉強しました。2時間 勉強しました。それから、DVDを 見ました。日曜日、ともだちと こうえんへ 行きました。こうえんで バーベキューを しました。とてもおいしかったです。②____、たのしかったです。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "行きませんでした"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "行きます"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "来ませんでした"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "来ます"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0230",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Đọc đoạn văn và chọn từ thích hợp điền vào chỗ trống ②.\n\n土曜日、どこかへ ①____、へやを そうじしました。それから、日本語を 勉強しました。2時間 勉強しました。それから、DVDを 見ました。日曜日、ともだちと こうえんへ 行きました。こうえんで バーベキューを しました。とてもおいしかったです。②____、たのしかったです。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "そして"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "それから"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "が"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "すこし"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0231",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Đọc đoạn văn và chọn đáp án đúng:\n\nグプタさんは 土曜日、何をしましたか。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "へやを そうじしました"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "バーベキューを しました"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "こうえんへ 行きました"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "うみへ 行きました"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0232",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Đọc đoạn văn và chọn đáp án đúng:\n\nグプタさんは 日曜日、何をしましたか。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "へやを そうじしました"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "DVDを 見ました"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "勉強（べんきょう）しました"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "こうえんで バーベキューを しました"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-d"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0233",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào?\n\nモスクワは ロシアの【東】です。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ひがし"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "にし"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きた"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "みなみ"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0234",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào?\n\n来週【お寺】へ いきます。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "おてら"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "おしろ"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "おなまえ"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "おすし"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0235",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào?\n\n午前、としょかんへ【行きます】。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "いきます"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "おきます"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ききます"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "かきます"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0236",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào?\n\n【先週】、ほっかいどうへ いきました。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "せんしゅう"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "あさって"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "あした"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きょう"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0237",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào?\n\n【こんげつ】しんじゅくへ 行きます。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "今月"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "令月"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "来月"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "先月"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0238",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào?\n\n【ことし】さくらまつりが あります。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "今年"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "来年"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "令年"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "今缶"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0239",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào?\n\n私の まちに【おおきい】おしろが あります。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "大きい"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "太い"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "大きい"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "太い"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0240",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nあついですから、まどを（　）。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "あってください"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "とってください"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "あけてください"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "かしてください"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-c"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0241",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nA: とうきょうから アユタヤまで（　）ですか。\nB: ひこうきで 6時間くらいです。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "どこ"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "どのくらい"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "どちら"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "どんな"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0242",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\n（　）へ かばんを 買いに 行きます。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "としょかん"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "レストラン"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "デパート"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きっさてん"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-c"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0243",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Dựa vào các từ gợi ý cho sẵn, hãy chọn câu có ý nghĩa hoàn chỉnh:\n\nこうえん／まち／おおきい／あります／私"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "私の こうえんに おおきい まちが あります。"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "私の まちに おおきい こうえんが あります。"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "こうえんに 私の まちが おおきい あります。"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "まちに 私の おおきい こうえんが あります。"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0244",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Hãy chọn dạng phủ định của từ dưới đây:\n\n「にぎやか」"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "にぎやかではありませんでした"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "にぎやかかった"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "にぎやかでした"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "にぎやかじゃありません"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-d"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0245",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\n今年の ふゆ、（　）へ スキーを しに 行きます。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ほっかいどう"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "レストラン"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "デパート"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きっさてん"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0246",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\nなつやすみ、日本で アルバイトを しますから、（　）。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "食べません"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "国（くに）へ かえりません"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "どこへも 行きませんでした"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "こんばん、うちで べんきょうします"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0247",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn đáp án thích hợp để điền vào chỗ trống:\n\n肉が きらいですから、（　）。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "食べません"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "国（くに）へ かえりません"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "どこへも 行きませんでした"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "こんばん、うちで べんきょうします"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0248",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Dựa vào các từ gợi ý cho sẵn, hãy chọn câu có ý nghĩa hoàn chỉnh:\n\nさむい／とても／1月／私／まち／です"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "私は 1月 まち とても さむいです。"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "私の まちは 1月 とても さむいです。"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "まちは 私の 1月 さむい とても です。"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "とても さむい 私の まちは 1月です。"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0249",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn nghĩa tiếng Việt tương ứng của từ sau:\n\n「てんきが わるい」"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Núi thấp"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Núi cao"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Thời tiết đẹp"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Thời tiết xấu"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-d"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0250",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn từ KHÔNG CÙNG NHÓM trong các từ sau:\n\n① みず\n② パン\n③ こうちゃ\n④ ジュース"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "みず"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "パン"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "こうちゃ"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ジュース"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0251",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn từ khác loại trong số các từ sau:\n\n① すっぱい\n② ふるい\n③ にがい\n④ からい"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "すっぱい"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ふるい"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "にがい"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "からい"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0252",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Chọn nghĩa tiếng Việt tương ứng của từ sau:\n\n「きょうかい」"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Suối nước nóng"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Nhà thờ"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Lâu đài"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Đền thờ"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-b"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0253",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Đọc đoạn văn và chọn từ thích hợp điền vào chỗ trống ①.\n\n日曜日、ともだちと ちかくの やまに ①____。てんきが よかったですから、とても きもちが よかったです。やまで、おべんとうを ②____。やまからの けしきが とても きれいでした。それから、ふるいお寺を 見に 行きました。とてもおもしろかったです。とても たのしい1日でした。また 行きたいです。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "つくりました"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "あいました"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "のぼりました"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "はいりました"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-c"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0254",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Đọc đoạn văn và chọn từ thích hợp điền vào chỗ trống ②.\n\n日曜日、ともだちと ちかくの やまに ①____。てんきが よかったですから、とても きもちが よかったです。やまで、おべんとうを ②____。やまからの けしきが とても きれいでした。それから、ふるいお寺を 見に 行きました。とてもおもしろかったです。とても たのしい1日でした。また 行きたいです。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "たべました"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "しょくじしました"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "とりました"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "かりました"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
+    },
+    {
+      "id": "jpd123-q-0255",
+      "subjectId": "jpd123",
+      "version": 1,
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "Đọc đoạn văn và chọn đáp án đúng:\n\nやまからの けしきは どうでしたか。"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-a",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きれいでした"
+            }
+          ]
+        },
+        {
+          "id": "opt-b",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "たかかったです"
+            }
+          ]
+        },
+        {
+          "id": "opt-c",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "よくなかったです"
+            }
+          ]
+        },
+        {
+          "id": "opt-d",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "きれいじゃありませんでした"
+            }
+          ]
+        }
+      ],
+      "correctAnswerIds": [
+        "opt-a"
+      ],
+      "maxSelections": 1,
+      "active": true
     }
   ]
 }

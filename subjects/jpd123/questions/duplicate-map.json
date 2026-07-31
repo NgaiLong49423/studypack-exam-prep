@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0",
+  "subjectId": "jpd123",
+  "canonicalQuestionIdByDuplicateId": {
+    "jpd123-q-0052": "jpd123-q-0051",
+    "jpd123-q-0065": "jpd123-q-0053",
+    "jpd123-q-0072": "jpd123-q-0066",
+    "jpd123-q-0108": "jpd123-q-0101",
+    "jpd123-q-0117": "jpd123-q-0114",
+    "jpd123-q-0137": "jpd123-q-0124"
+  }
+}
