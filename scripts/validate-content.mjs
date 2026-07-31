@@ -40,7 +40,8 @@ for (const entry of catalog?.subjects ?? []) {
     if (question.subjectId !== entry.subjectId || !Array.isArray(question.blocks) || question.blocks.length === 0 || !Array.isArray(question.options) || question.options.length === 0) issue('error', 'QUESTION_STRUCTURE_INVALID', questionFile, 'Question needs matching subject, blocks and options.')
     const optionIds = question.options?.map((option) => option.id) ?? []
     if (optionIds.length !== new Set(optionIds).size) issue('error', 'QUESTION_OPTION_ID_DUPLICATE', questionFile, 'Option IDs must be unique.')
-    if (!Array.isArray(question.correctAnswerIds) || question.correctAnswerIds.length !== 1 || question.correctAnswerIds.some((id) => !optionIds.includes(id))) issue('error', 'QUESTION_CORRECT_ANSWER_INVALID', questionFile, 'Exactly one existing correct option is required.')
+    if (!Number.isInteger(question.maxSelections) || question.maxSelections < 1 || question.maxSelections > optionIds.length) issue('error', 'QUESTION_MAX_SELECTIONS_INVALID', questionFile, 'maxSelections must be between 1 and the number of options.')
+    if (!Array.isArray(question.correctAnswerIds) || question.correctAnswerIds.length < 1 || question.correctAnswerIds.length > question.maxSelections || question.correctAnswerIds.some((id) => !optionIds.includes(id)) || new Set(question.correctAnswerIds).size !== question.correctAnswerIds.length) issue('error', 'QUESTION_CORRECT_ANSWER_INVALID', questionFile, 'Correct answers must be unique existing options and cannot exceed maxSelections.')
   }
   for (const examId of entry.examIds ?? []) {
     if (!validId(examId)) { issue('error', 'CATALOG_EXAM_ID_INVALID', entryFile, 'Each catalog examId must be a valid ID.'); continue }

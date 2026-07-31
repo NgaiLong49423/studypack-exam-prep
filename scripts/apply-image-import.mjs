@@ -3,20 +3,22 @@ import { resolve } from 'node:path'
 import { spawnSync } from 'node:child_process'
 
 const root = resolve(import.meta.dirname, '..')
-const [batchInput, resolutionInput, mode] = process.argv.slice(2)
-if (!batchInput || !resolutionInput || (mode !== undefined && mode !== '--write')) {
-  console.error('Usage: node scripts/apply-image-import.mjs <clean-batch.json> <resolution.json> [--write]')
+const [batchInput, secondInput, thirdInput] = process.argv.slice(2)
+const mode = secondInput === '--write' ? '--write' : thirdInput
+const resolutionInput = secondInput === '--write' ? null : secondInput
+if (!batchInput || (mode !== undefined && mode !== '--write')) {
+  console.error('Usage: node scripts/apply-image-import.mjs <clean-batch.json> [resolution.json] [--write]')
   process.exit(2)
 }
 const readJson = (file) => JSON.parse(readFileSync(file, 'utf8'))
 const batchFile = resolve(process.cwd(), batchInput)
-const resolutionFile = resolve(process.cwd(), resolutionInput)
+const resolutionFile = resolutionInput ? resolve(process.cwd(), resolutionInput) : null
 const planRun = spawnSync(process.execPath, [resolve(root, 'scripts', 'plan-image-import.mjs'), batchFile], { encoding: 'utf8' })
 if (planRun.stderr) process.stderr.write(planRun.stderr)
 if (planRun.status !== 0) process.exit(planRun.status ?? 1)
 const plan = JSON.parse(planRun.stdout)
 const batch = readJson(batchFile)
-const resolution = readJson(resolutionFile)
+const resolution = resolutionFile ? readJson(resolutionFile) : { schemaVersion: '1.0', batchId: batch.batchId, subjectId: batch.subjectId, decisions: [] }
 const fail = (message) => { console.error(`Import was not applied: ${message}`); process.exit(1) }
 const validId = (value) => typeof value === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)
 if (resolution.schemaVersion !== '1.0' || resolution.batchId !== batch.batchId || resolution.subjectId !== batch.subjectId || !Array.isArray(resolution.decisions)) fail('resolution must match the clean batch and contain decisions.')
@@ -48,6 +50,13 @@ const questionIdByOrder = new Map()
 const newQuestions = []
 for (const decision of plan.decisions) {
   if (decision.decision === 'EXACT_DUPLICATE') { questionIdByOrder.set(decision.sourceOrder, decision.questionId); continue }
+  if (decision.decision === 'EXACT_DUPLICATE_IN_BATCH') {
+    const reusedQuestionId = questionIdByOrder.get(decision.reusesSourceOrder)
+    if (!reusedQuestionId) fail(`sourceOrder ${decision.sourceOrder} cannot reuse unresolved sourceOrder ${decision.reusesSourceOrder}.`)
+    questionIdByOrder.set(decision.sourceOrder, reusedQuestionId)
+    continue
+  }
+  if (decision.decision === 'POSSIBLE_DUPLICATE_IN_BATCH') fail(`sourceOrder ${decision.sourceOrder} needs manual batch cleanup before applying import.`)
   const userDecision = resolutionByOrder.get(decision.sourceOrder)
   if (decision.decision === 'POSSIBLE_DUPLICATE') {
     if (!userDecision) fail(`sourceOrder ${decision.sourceOrder} needs a resolution for POSSIBLE_DUPLICATE.`)

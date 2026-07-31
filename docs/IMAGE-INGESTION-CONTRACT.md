@@ -123,6 +123,13 @@ Quy tắc:
 - Chỉ trích xuất lời giải khi ảnh thực sự có lời giải; nếu không dùng `null`.
 - Không biến lời giải do LLM suy luận thành dữ liệu nguồn.
 
+Ngoại lệ có kiểm soát: sau khi chủ ngân hàng câu hỏi trực tiếp quyết định một
+đáp án chưa có trong nguồn bên thứ ba, người nhập có thể dùng `explicit` để
+cho phép app chấm bài. `evidenceText` bắt buộc phải ghi rõ đó là quyết định thủ
+công, không phải đáp án chính thức từ ảnh; ví dụ: `Manual decision by question
+bank owner: A; third-party source did not provide an official answer.` LLM OCR
+không được tự tạo ngoại lệ này.
+
 ## 6. Ảnh chứa nhiều câu hoặc một câu có nhiều ảnh
 
 - Một ảnh có nhiều câu: tạo nhiều item, cùng `fileName`, và ghi `region` mô tả

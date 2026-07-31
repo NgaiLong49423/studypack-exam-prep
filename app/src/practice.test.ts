@@ -37,6 +37,13 @@ describe('practice helpers', () => {
     expect(new Set(session.map((question) => question.id)).size).toBe(2)
   })
 
+  it('requires the exact full answer set for a multiple-answer question', () => {
+    const multiple = { ...questions[0], correctAnswerIds: ['opt-a', 'opt-b'], maxSelections: 2 }
+    expect(gradeAnswer(multiple, ['opt-a', 'opt-b'])).toBe(true)
+    expect(gradeAnswer(multiple, ['opt-a'])).toBe(false)
+    expect(gradeAnswer(multiple, ['opt-a', 'opt-c'])).toBe(false)
+  })
+
   it('keeps browser-local attempts isolated by subject ID', () => {
     saveAttempt('jpd123', { questionId: 'jpd123-q-0001', questionVersion: 1, selectedOptionId: 'opt-a', isCorrect: true, answeredAt: '2026-07-31T00:00:00.000Z' })
     expect(loadAttempts('jpd123')).toHaveLength(1)

@@ -32,10 +32,11 @@ function App() {
   const [savedNotebookUrl, setSavedNotebookUrl] = useState('')
   const [notebookSettingsStatus, setNotebookSettingsStatus] = useState('')
   const [exam, setExam] = useState<Exam | null>(null)
-  const [examAnswers, setExamAnswers] = useState<Record<string, string>>({})
+  const [examAnswers, setExamAnswers] = useState<Record<string, string[]>>({})
   const [session, setSession] = useState<Question[]>([])
   const [position, setPosition] = useState(0)
-  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null)
+  const [selectedOptionIds, setSelectedOptionIds] = useState<string[]>([])
+  const [isLocked, setIsLocked] = useState(false)
   const [correctCount, setCorrectCount] = useState(0)
   const [practiceMode, setPracticeMode] = useState<PracticeMode>('smart')
   const [error, setError] = useState('')
@@ -64,8 +65,7 @@ function App() {
   }
 
   const question = session[position]
-  const isLocked = selectedOptionId !== null
-  const isCorrect = question && selectedOptionId ? gradeAnswer(question, selectedOptionId) : false
+  const isCorrect = question && isLocked ? gradeAnswer(question, selectedOptionIds) : false
 
   function startPractice(mode: PracticeMode) {
     setPracticeMode(mode)
@@ -77,23 +77,33 @@ function App() {
     setSession(selected)
     setPosition(0)
     setCorrectCount(0)
-    setSelectedOptionId(null)
+    setSelectedOptionIds([])
+    setIsLocked(false)
     setScreen(selected.length ? 'practice' : 'practice-empty')
   }
 
-  function chooseAnswer(optionId: string) {
-    if (!question || isLocked) return
-
-    const correct = gradeAnswer(question, optionId)
-    setSelectedOptionId(optionId)
+  function submitPracticeAnswer(optionIds: string[]) {
+    if (!question || isLocked || optionIds.length === 0) return
+    const correct = gradeAnswer(question, optionIds)
+    setSelectedOptionIds(optionIds)
+    setIsLocked(true)
     setCorrectCount((current) => current + Number(correct))
     saveAttempt(subject?.subjectId ?? '', {
       questionId: question.id,
       questionVersion: question.version,
-      selectedOptionId: optionId,
+      selectedOptionId: optionIds.length === 1 ? optionIds[0] : null,
+      selectedOptionIds: optionIds,
       isCorrect: correct,
       answeredAt: new Date().toISOString(),
     })
+  }
+
+  function chooseAnswer(optionId: string) {
+    if (!question || isLocked) return
+    if (question.maxSelections === 1) { submitPracticeAnswer([optionId]); return }
+    setSelectedOptionIds((current) => current.includes(optionId)
+      ? current.filter((id) => id !== optionId)
+      : current.length < question.maxSelections ? [...current, optionId] : current)
   }
 
   function continuePractice() {
@@ -102,7 +112,8 @@ function App() {
       return
     }
     setPosition((current) => current + 1)
-    setSelectedOptionId(null)
+    setSelectedOptionIds([])
+    setIsLocked(false)
   }
 
   function submitExam() {
@@ -210,12 +221,18 @@ function App() {
 
   if (screen === 'exam' && exam) {
     const examItemsInOrder = resolveExamItems(exam, questions)
-    return <main className="practice-shell"><header className="practice-header"><span>{exam.title}</span><span>{Object.keys(examAnswers).length}/{examItemsInOrder.length} đã trả lời</span></header>{examItemsInOrder.map(({ item, question }, index) => <section className="question-card exam-question" key={item.examItemId}><p className="eyebrow">Câu {index + 1}</p><h2 className="question-text">{textOf(question.blocks)}</h2><div className="answers">{question.options.map((option, optionIndex) => <button className={`answer-button${examAnswers[item.examItemId] === option.id ? ' selected' : ''}`} key={option.id} type="button" onClick={() => setExamAnswers((current) => ({ ...current, [item.examItemId]: option.id }))}><span className="option-label">{String.fromCharCode(65 + optionIndex)}</span><span>{textOf(option.blocks)}</span></button>)}</div></section>)}<button className="primary-button" type="button" onClick={submitExam}>Nộp bài</button></main>
+    const answeredCount = examItemsInOrder.filter(({ item }) => examAnswers[item.examItemId]?.length).length
+    const toggleExamAnswer = (itemId: string, question: Question, optionId: string) => setExamAnswers((current) => {
+      const selected = current[itemId] ?? []
+      const next = question.maxSelections === 1 ? [optionId] : selected.includes(optionId) ? selected.filter((id) => id !== optionId) : selected.length < question.maxSelections ? [...selected, optionId] : selected
+      return { ...current, [itemId]: next }
+    })
+    return <main className="practice-shell"><header className="practice-header"><span>{exam.title}</span><span>{answeredCount}/{examItemsInOrder.length} đã trả lời</span></header>{examItemsInOrder.map(({ item, question }, index) => <section className="question-card exam-question" key={item.examItemId}><p className="eyebrow">Câu {index + 1}{question.maxSelections > 1 ? ` · Chọn tối đa ${question.maxSelections} đáp án` : ''}</p><h2 className="question-text">{textOf(question.blocks)}</h2><div className="answers">{question.options.map((option, optionIndex) => <button className={`answer-button${(examAnswers[item.examItemId] ?? []).includes(option.id) ? ' selected' : ''}`} key={option.id} type="button" onClick={() => toggleExamAnswer(item.examItemId, question, option.id)}><span className="option-label">{String.fromCharCode(65 + optionIndex)}</span><span>{textOf(option.blocks)}</span></button>)}</div></section>)}<button className="primary-button" type="button" onClick={submitExam}>Nộp bài</button></main>
   }
 
   if (screen === 'exam-result' && exam) {
     const items = resolveExamItems(exam, questions); const score = examScore(examAnswers, items)
-    return <main className="app-shell"><section className="subject-card result-card"><p className="eyebrow">Kết quả đề thi</p><h1>{score.correct}/{items.length} câu đúng</h1><p>Tỉ lệ đúng: {score.percent}% · Chưa trả lời: {score.unanswered}</p><section className="exam-review" aria-label="Xem lại đáp án và lời giải"><h2>Xem lại từng câu</h2>{items.map(({ item, question }, index) => { const selectedOptionId = examAnswers[item.examItemId]; const selectedOption = question.options.find((option) => option.id === selectedOptionId); const correctOption = question.options.find((option) => question.correctAnswerIds.includes(option.id)); const state = !selectedOptionId ? 'unanswered' : selectedOptionId === correctOption?.id ? 'correct' : 'incorrect'; const label = state === 'correct' ? 'Đúng' : state === 'incorrect' ? 'Sai' : 'Chưa trả lời'; return <article className={`review-item review-${state}`} key={item.examItemId}><p className="eyebrow">Câu {index + 1} · {label}</p><h3>{textOf(question.blocks)}</h3><p><strong>Bạn chọn:</strong> {selectedOption ? textOf(selectedOption.blocks) : 'Chưa trả lời'}</p><p><strong>Đáp án đúng:</strong> {correctOption ? textOf(correctOption.blocks) : 'Chưa có dữ liệu'}</p>{question.explanation && <div className="review-explanation"><strong>Lời giải</strong><p>{textOf(question.explanation.blocks)}</p></div>}<button className="secondary-button" type="button" onClick={() => void askAi(question, { title: exam.title, questionNumber: index + 1 })}>Hỏi AI để hiểu kỹ câu này</button></article> })}</section>{aiTutorStatus && <p className="ai-tutor-status" aria-live="polite">{aiTutorStatus}</p>}{showNotebookFallback && <button className="text-button" type="button" onClick={openNotebook}>Mở Gemini Notebook</button>}<button className="primary-button" type="button" onClick={() => { setExam(null); setScreen('exam-list') }}>Chọn đề khác</button><button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button><button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button></section></main>
+    return <main className="app-shell"><section className="subject-card result-card"><p className="eyebrow">Kết quả đề thi</p><h1>{score.correct}/{items.length} câu đúng</h1><p>Tỉ lệ đúng: {score.percent}% · Chưa trả lời: {score.unanswered}</p><section className="exam-review" aria-label="Xem lại đáp án và lời giải"><h2>Xem lại từng câu</h2>{items.map(({ item, question }, index) => { const selectedIds = examAnswers[item.examItemId] ?? []; const selectedOptions = question.options.filter((option) => selectedIds.includes(option.id)); const correctOptions = question.options.filter((option) => question.correctAnswerIds.includes(option.id)); const state = selectedIds.length === 0 ? 'unanswered' : gradeAnswer(question, selectedIds) ? 'correct' : 'incorrect'; const label = state === 'correct' ? 'Đúng' : state === 'incorrect' ? 'Sai' : 'Chưa trả lời'; return <article className={`review-item review-${state}`} key={item.examItemId}><p className="eyebrow">Câu {index + 1} · {label}</p><h3>{textOf(question.blocks)}</h3><p><strong>Bạn chọn:</strong> {selectedOptions.length ? selectedOptions.map((option) => textOf(option.blocks)).join('; ') : 'Chưa trả lời'}</p><p><strong>Đáp án đúng:</strong> {correctOptions.map((option) => textOf(option.blocks)).join('; ') || 'Chưa có dữ liệu'}</p>{question.explanation && <div className="review-explanation"><strong>Lời giải</strong><p>{textOf(question.explanation.blocks)}</p></div>}<button className="secondary-button" type="button" onClick={() => void askAi(question, { title: exam.title, questionNumber: index + 1 })}>Hỏi AI để hiểu kỹ câu này</button></article> })}</section>{aiTutorStatus && <p className="ai-tutor-status" aria-live="polite">{aiTutorStatus}</p>}{showNotebookFallback && <button className="text-button" type="button" onClick={openNotebook}>Mở Gemini Notebook</button>}<button className="primary-button" type="button" onClick={() => { setExam(null); setScreen('exam-list') }}>Chọn đề khác</button><button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button><button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button></section></main>
   }
 
   if (screen === 'complete') {
@@ -271,11 +288,11 @@ function App() {
         <span>Câu {position + 1}/{session.length}</span>
       </header>
       <section className="question-card" aria-labelledby="question-title">
-        <p className="eyebrow">{question.id}</p>
+        <p className="eyebrow">{question.id}{question.maxSelections > 1 ? ` · Chọn tối đa ${question.maxSelections} đáp án` : ''}</p>
         <h1 id="question-title" className="question-text">{textOf(question.blocks)}</h1>
         <div className="answers" aria-label="Các đáp án">
           {question.options.map((option, index) => {
-            const isSelected = selectedOptionId === option.id
+            const isSelected = selectedOptionIds.includes(option.id)
             const isAnswer = question.correctAnswerIds.includes(option.id)
             const state = isLocked ? (isAnswer ? ' correct' : isSelected ? ' incorrect' : '') : ''
             return (
@@ -286,6 +303,7 @@ function App() {
             )
           })}
         </div>
+        {!isLocked && question.maxSelections > 1 && <button className="primary-button" type="button" disabled={selectedOptionIds.length === 0} onClick={() => submitPracticeAnswer(selectedOptionIds)}>Xác nhận {selectedOptionIds.length}/{question.maxSelections} đáp án</button>}
         {isLocked && (
           <section className={`feedback ${isCorrect ? 'feedback-correct' : 'feedback-incorrect'}`} aria-live="polite">
             <h2>{isCorrect ? 'Đúng rồi' : 'Chưa đúng'}</h2>

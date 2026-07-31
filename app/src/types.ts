@@ -48,6 +48,7 @@ export type AttemptRecord = {
   questionId: string
   questionVersion: number
   selectedOptionId: string | null
+  selectedOptionIds?: string[]
   isCorrect: boolean
   answeredAt: string
   source?: 'practice' | 'exam'

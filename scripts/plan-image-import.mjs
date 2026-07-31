@@ -47,17 +47,25 @@ for (const question of questions) {
   questionsByStem.set(stem, [...(questionsByStem.get(stem) ?? []), question])
 }
 
+const plannedExactBySignature = new Map()
+const plannedByStem = new Map()
 const decisions = batch.items.map((item, index) => {
   const signature = batchItemSignature(item)
   const exactMatches = exactBySignature.get(signature) ?? []
   const stemMatches = questionsByStem.get(normalize(blockText(item.stemBlocks))) ?? []
   const base = { sourceOrder: item.sourceOrder, originalNumber: item.originalNumber, sourceFile: item.sourceRef.fileName, field: `items[${index}]` }
   if (exactMatches.length > 0) return { ...base, decision: 'EXACT_DUPLICATE', questionId: exactMatches[0].id, questionVersion: exactMatches[0].version, candidateQuestionIds: exactMatches.map((question) => question.id) }
+  const plannedExact = plannedExactBySignature.get(signature)
+  if (plannedExact) return { ...base, decision: 'EXACT_DUPLICATE_IN_BATCH', reusesSourceOrder: plannedExact.sourceOrder, reusesSourceFile: plannedExact.sourceFile }
+  const plannedStem = plannedByStem.get(normalize(blockText(item.stemBlocks)))
   if (stemMatches.length > 0) return { ...base, decision: 'POSSIBLE_DUPLICATE', candidateQuestionIds: stemMatches.map((question) => question.id), actionRequired: 'Choose merge, keepSeparate or skip before applying import.' }
+  if (plannedStem) return { ...base, decision: 'POSSIBLE_DUPLICATE_IN_BATCH', candidateSourceOrders: [plannedStem.sourceOrder], actionRequired: 'Resolve against the earlier item in this batch before applying import.' }
+  plannedExactBySignature.set(signature, base)
+  plannedByStem.set(normalize(blockText(item.stemBlocks)), base)
   return { ...base, decision: 'NEW_QUESTION', actionRequired: 'Create a new Question only in the apply-import pipeline.' }
 })
 
-const possibleCount = decisions.filter((decision) => decision.decision === 'POSSIBLE_DUPLICATE').length
+const possibleCount = decisions.filter((decision) => decision.decision === 'POSSIBLE_DUPLICATE' || decision.decision === 'POSSIBLE_DUPLICATE_IN_BATCH').length
 const report = {
   schemaVersion: '1.0',
   batchId: batch.batchId,
@@ -66,8 +74,8 @@ const report = {
   status: possibleCount > 0 ? 'needs-review' : 'ready-for-apply',
   summary: {
     sourceItemCount: decisions.length,
-    exactDuplicateCount: decisions.filter((decision) => decision.decision === 'EXACT_DUPLICATE').length,
-    possibleDuplicateCount: possibleCount,
+    exactDuplicateCount: decisions.filter((decision) => decision.decision === 'EXACT_DUPLICATE' || decision.decision === 'EXACT_DUPLICATE_IN_BATCH').length,
+    possibleDuplicateCount: decisions.filter((decision) => decision.decision === 'POSSIBLE_DUPLICATE' || decision.decision === 'POSSIBLE_DUPLICATE_IN_BATCH').length,
     newQuestionCount: decisions.filter((decision) => decision.decision === 'NEW_QUESTION').length,
   },
   exam: batch.sourceKind === 'exam' ? {
