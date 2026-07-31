@@ -6,6 +6,7 @@ type ExportContext = { subjectId: string; generatedAt: string; snapshotId: strin
 type NotebookDocuments = { subjectContext: string; tutorRules: string }
 
 const textOf = (blocks: { text: string }[]) => blocks.map((block) => block.text).join('\n')
+const isUnanswered = (attempt: AttemptRecord) => attempt.selectedOptionIds ? attempt.selectedOptionIds.length === 0 : attempt.selectedOptionId === null
 
 function metadata(type: string, context: ExportContext) {
   return `Document type: ${type}\nExport format version: 1.0\nSubject ID: ${context.subjectId}\nGenerated at: ${context.generatedAt}\nSnapshot ID: ${context.snapshotId}`
@@ -39,15 +40,15 @@ export function learningProgressMarkdown(subject: Subject, questions: Question[]
   const counts = { not_practiced: 0, learning: 0, weak: 0, developing: 0, stable: 0, mastered: 0 }
   activeQuestions.forEach((question) => { counts[learningStatus(histories.get(question.id) ?? [])] += 1 })
   const correct = attempts.filter((attempt) => attempt.isCorrect).length
-  const unanswered = attempts.filter((attempt) => attempt.selectedOptionId === null).length
+  const unanswered = attempts.filter(isUnanswered).length
   const incorrect = attempts.length - correct - unanswered
   const entries = activeQuestions.map((question) => {
     const history = histories.get(question.id) ?? []
     const correctCount = history.filter((attempt) => attempt.isCorrect).length
-    const unansweredCount = history.filter((attempt) => attempt.selectedOptionId === null).length
+    const unansweredCount = history.filter(isUnanswered).length
     const incorrectCount = history.length - correctCount - unansweredCount
     const latest = [...history].sort((a, b) => b.answeredAt.localeCompare(a.answeredAt))[0]
-    const lastResult = !latest ? 'not_practiced' : latest.selectedOptionId === null ? 'unanswered' : latest.isCorrect ? 'correct' : 'incorrect'
+    const lastResult = !latest ? 'not_practiced' : isUnanswered(latest) ? 'unanswered' : latest.isCorrect ? 'correct' : 'incorrect'
     const rate = history.length ? Math.round((correctCount / history.length) * 100) : 0
     return `### [${question.id}]\n\n- Study status: ${learningStatus(history)}\n- Attempt count: ${history.length}\n- Correct: ${correctCount}\n- Incorrect: ${incorrectCount}\n- Unanswered: ${unansweredCount}\n- Correct rate: ${rate}%\n- Frequency band: derived from study status\n- Last result: ${lastResult}\n- Last practiced at: ${latest?.answeredAt ?? 'Chưa làm'}`
   })

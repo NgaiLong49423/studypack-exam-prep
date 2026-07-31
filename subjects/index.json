@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "subjects": [
     { "subjectId": "jpd123", "code": "JPD123", "name": "Japanese Elementary 3", "description": "Ngân hàng câu hỏi và đề thi đã sẵn sàng để ôn.", "status": "published", "examIds": ["jpd123-sp26-c2fe", "jpd123-sp26-re"] },
-    { "subjectId": "prj301", "code": "PRJ301", "name": "Java Web Application Development", "description": "Đang chuẩn bị ngân hàng câu hỏi và đề thi.", "status": "draft", "examIds": [] },
+    { "subjectId": "prj301", "code": "PRJ301", "name": "Java Web Application Development", "description": "Ngân hàng 338 câu trắc nghiệm Java Web Application Development.", "status": "published", "examIds": [] },
     { "subjectId": "iot102", "code": "IOT102", "name": "Internet of Things", "description": "Đang chuẩn bị ngân hàng câu hỏi và đề thi.", "status": "draft", "examIds": [] },
     { "subjectId": "csd201", "code": "CSD201", "name": "Data Structures and Algorithms", "description": "Đang chuẩn bị ngân hàng câu hỏi và đề thi.", "status": "draft", "examIds": [] }
   ]

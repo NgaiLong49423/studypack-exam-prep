@@ -19,13 +19,20 @@ const exam: Exam = {
 describe('exam helpers', () => {
   it('keeps repeated question references independent by exam item ID', () => {
     const items = resolveExamItems(exam, [question])
-    expect(examScore({ 'item-1': 'opt-a', 'item-2': 'opt-b' }, items)).toEqual({ correct: 1, unanswered: 0, percent: 50 })
+    expect(examScore({ 'item-1': ['opt-a'], 'item-2': ['opt-b'] }, items)).toEqual({ correct: 1, unanswered: 0, percent: 50 })
   })
 
   it('creates one saved attempt per item only after submit', () => {
-    const attempts = examAttempts(exam, resolveExamItems(exam, [question]), { 'item-1': 'opt-a' }, '2026-07-31T00:00:00.000Z')
+    const attempts = examAttempts(exam, resolveExamItems(exam, [question]), { 'item-1': ['opt-a'] }, '2026-07-31T00:00:00.000Z')
     expect(attempts).toHaveLength(2)
-    expect(attempts[0]).toMatchObject({ source: 'exam', examId: exam.examId, examItemId: 'item-1', selectedOptionId: 'opt-a', isCorrect: true })
-    expect(attempts[1]).toMatchObject({ examItemId: 'item-2', selectedOptionId: null, isCorrect: false })
+    expect(attempts[0]).toMatchObject({ source: 'exam', examId: exam.examId, examItemId: 'item-1', selectedOptionIds: ['opt-a'], isCorrect: true })
+    expect(attempts[1]).toMatchObject({ examItemId: 'item-2', selectedOptionIds: [], isCorrect: false })
+  })
+
+  it('scores a multiple-answer item only when the complete set is selected', () => {
+    const multiple = { ...question, correctAnswerIds: ['opt-a', 'opt-b'], maxSelections: 2 }
+    const items = resolveExamItems({ ...exam, items: [{ ...exam.items[0], questionId: multiple.id }] }, [multiple])
+    expect(examScore({ 'item-1': ['opt-a', 'opt-b'] }, items).correct).toBe(1)
+    expect(examScore({ 'item-1': ['opt-a'] }, items).correct).toBe(0)
   })
 })

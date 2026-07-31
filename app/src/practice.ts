@@ -67,8 +67,10 @@ export function selectReviewQuestions(questions: Question[], attempts: AttemptRe
   return selectRandomQuestions(needsReview, size)
 }
 
-export function gradeAnswer(question: Question, selectedOptionId: string): boolean {
-  return question.correctAnswerIds.length === 1 && question.correctAnswerIds[0] === selectedOptionId
+export function gradeAnswer(question: Question, selectedOptionIds: string | string[]): boolean {
+  const selected = Array.isArray(selectedOptionIds) ? selectedOptionIds : [selectedOptionIds]
+  return selected.length === question.correctAnswerIds.length
+    && selected.every((optionId) => question.correctAnswerIds.includes(optionId))
 }
 
 export function saveAttempt(subjectId: string, attempt: AttemptRecord): void {
