@@ -3,14 +3,19 @@
   "subjectId": "jpd123",
   "code": "JPD123",
   "name": "Japanese Elementary 3",
-  "description": "Ngân hàng lý thuyết và câu hỏi ôn tập JPD123.",
-  "status": "draft",
+  "description": "Ngân hàng 203 câu trắc nghiệm ôn tập JPD123.",
+  "status": "published",
   "contentLanguages": ["ja", "vi"],
   "explanationLanguage": "vi",
   "aiTutor": {
-    "enabled": false,
+    "enabled": true,
     "provider": "gemini-notebook",
     "notebookUrl": null,
     "promptTemplateId": "explain-question-v1"
+  },
+  "source": {
+    "name": "FuOverflow Community",
+    "url": null,
+    "note": "Chuyển đổi từ bộ ảnh đề thi."
   }
 }
