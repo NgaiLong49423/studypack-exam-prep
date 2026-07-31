@@ -43,4 +43,5 @@ h2 { color: #253042; font-size: 1.35rem; }
 .detail-list p { margin: .35rem 0; white-space: pre-wrap; }
 .detail-list small { color: #526073; }
 .danger-button { width: 100%; border: 1px solid #c53232; border-radius: .625rem; background: #fff; color: #9b1c1c; padding: .8rem 1rem; font-weight: 700; }
+.demo-button { width: 100%; margin-top: .75rem; border: 1px dashed #526073; border-radius: .625rem; background: #f4f7f8; color: #364152; padding: .7rem 1rem; }
 @media (max-width: 35rem) { .subject-facts { grid-template-columns: 1fr; } .practice-header { align-items: flex-start; flex-direction: column; gap: .25rem; } }

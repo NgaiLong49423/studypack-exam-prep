@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { loadJpd123Questions, loadJpd123Subject } from './content'
 import { gradeAnswer, saveAttempt, selectPracticeQuestions } from './practice'
-import { clearAttempts, loadAttempts } from './practice'
+import { clearAttempts, loadAttempts, seedStatisticsDemo } from './practice'
 import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
 import type { Question, Subject } from './types'
 
@@ -123,12 +123,18 @@ function App() {
         setStatisticsRevision((value) => value + 1)
       }
     }
+    const loadDemo = () => {
+      seedStatisticsDemo(questions.slice(0, 6).map((question) => question.id))
+      setDetailStatus(null)
+      setStatisticsRevision((value) => value + 1)
+    }
     return <main className="app-shell"><section className="subject-card" aria-labelledby="statistics-title">
       <p className="eyebrow">JPD123 · Statistics</p><h1 id="statistics-title">Tiến độ học tập</h1>
       <dl className="subject-facts"><div><dt>Lượt trả lời</dt><dd>{summary.totalAttempts}</dd></div><div><dt>Tỉ lệ đúng</dt><dd>{summary.accuracy}%</dd></div></dl>
       <div className="statistics-list">{Object.entries(summary.counts).map(([key, count]) => { const status = key as LearningStatus; return <div key={key}><span><strong>{labels[status]}</strong><small>{rules[status]}</small></span><button type="button" className="text-button" onClick={() => setDetailStatus(status)}>Xem chi tiết · {count} câu</button></div> })}</div>
       {detailStatus && <section className="detail-list" aria-live="polite"><h2>{labels[detailStatus]} · {detailedQuestions.length} câu</h2>{detailedQuestions.map((question) => { const ownAttempts = loadAttempts().filter((attempt) => attempt.questionId === question.id); const correct = ownAttempts.filter((attempt) => attempt.isCorrect).length; return <article key={question.id}><strong>{question.id}</strong><p>{textOf(question.blocks)}</p><small>{ownAttempts.length} lần làm · {correct} đúng · {ownAttempts.length ? Math.round((correct / ownAttempts.length) * 100) : 0}%</small></article> })}</section>}
       <button className="danger-button" type="button" onClick={resetStatistics}>Xóa dữ liệu thống kê và ôn lại từ đầu</button>
+      {import.meta.env.DEV && <button className="demo-button" type="button" onClick={loadDemo}>Nạp dữ liệu demo Statistics (chỉ local)</button>}
       <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
     </section></main>
   }
