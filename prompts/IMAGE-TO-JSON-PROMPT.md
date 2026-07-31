@@ -13,6 +13,7 @@ THÔNG TIN LÔ NHẬP
 - Tên đề nếu có: {{EXAM_TITLE_OR_NULL}}
 - examId gợi ý nếu có: {{EXAM_ID_HINT_OR_NULL}}
 - Số câu nguồn khai báo nếu biết: {{COUNT_OR_NULL}}
+- Số câu phải xuất trong batch nếu người giao việc đã xác nhận: {{EXPECTED_ITEM_COUNT_OR_NULL}}
 
 NHIỆM VỤ
 1. Đọc toàn bộ ảnh trong ZIP theo thứ tự tên tệp.
@@ -26,6 +27,9 @@ QUY TẮC BẮT BUỘC
 - Không tự giải câu hỏi để đoán đáp án.
 - Không tự tạo lời giải, Topic, độ khó, nguồn, kỳ thi hoặc số câu.
 - Không cấp questionId và không kết luận câu nào đã trùng ngân hàng.
+- `subjectId` phải là ID nội bộ viết thường, khớp chính xác catalog của app (ví
+  dụ `prj301`, không phải mã hiển thị `PRJ301`).
+- `batchId` chỉ dùng chữ thường, số và dấu `-`, ví dụ `prj301-q1-30`.
 - Mỗi item phải chứa đúng fileName của ảnh nguồn.
 - Nếu ảnh không có đáp án: sourceLabels = [], evidence = "absent",
   needsReview = true và thêm issue ANSWER_NOT_PROVIDED.
@@ -38,6 +42,13 @@ QUY TẮC BẮT BUỘC
 - Một ảnh có nhiều câu thì tạo nhiều item và ghi region.
 - Nếu nghi ảnh bị thiếu, trùng hoặc sai thứ tự, ghi batchIssues; không tự xóa
   hay sắp xếp lại dựa trên suy đoán.
+- `batchIssues` và `items[].issues` luôn là mảng object Issue bên dưới; tuyệt
+  đối không ghi chuỗi như `"ANSWER_MARK_UNCLEAR"` hoặc `"ảnh bị thiếu"`.
+- `explanation` chỉ có hai dạng hợp lệ: `null` hoặc `{ "blocks": [...] }`.
+  Tuyệt đối không dùng mảng blocks trực tiếp làm giá trị `explanation`.
+- Nếu `EXPECTED_ITEM_COUNT_OR_NULL` có giá trị và số item đọc được khác giá trị
+  đó, thêm Issue mức `error` với code `SOURCE_ITEM_COUNT_MISMATCH`. Không bịa
+  thêm câu để đủ số lượng.
 
 JSON OUTPUT
 {
@@ -88,6 +99,34 @@ JSON OUTPUT
   "batchIssues": []
 }
 
+## Các object bắt buộc phải dùng đúng dạng
+
+Một lời giải có thật trong ảnh:
+
+```json
+"explanation": {
+  "blocks": [
+    { "type": "markdown", "text": "Lời giải được nhìn thấy trong ảnh." }
+  ]
+}
+```
+
+Một vấn đề phát hiện khi đọc ảnh:
+
+```json
+{
+  "severity": "warning",
+  "code": "POSSIBLE_MISSING_IMAGE",
+  "field": null,
+  "sourceFile": "Screenshot (641).png",
+  "message": "Screenshot (641).png is absent between Screenshot (640).png and Screenshot (642).png."
+}
+```
+
+Mọi Issue phải có đủ năm trường `severity`, `code`, `field`, `sourceFile` và
+`message`. `code` chỉ dùng CHỮ HOA, số và `_`; `field`/`sourceFile` có thể là
+`null` nhưng không được bỏ trường.
+
 Khi sourceKind = "exam", examDraft phải có dạng:
 {
   "examIdHint": "{{EXAM_ID_HINT_OR_NULL}}",
@@ -97,9 +136,16 @@ Khi sourceKind = "exam", examDraft phải có dạng:
 
 Trước khi trả kết quả, tự kiểm tra:
 - JSON parse được.
+- `subjectId`, `batchId` và `examIdHint` (nếu có) dùng chữ thường; không dùng
+  mã hiển thị viết hoa của môn.
 - Không có văn bản ngoài JSON.
 - Mọi item có sourceRef và sourceOrder duy nhất.
 - Nhãn đáp án đúng tồn tại trong options nếu evidence = "explicit".
 - Mọi phần không chắc chắn đã được đánh dấu needsReview và issue.
+- `needsReview: true` không được đi kèm Issue dạng chuỗi; dùng đủ object Issue.
+- `explanation` là `null` hoặc object có khóa `blocks`, không bao giờ là mảng.
+- Mọi batchIssues và items[].issues đều là object Issue đủ năm trường.
+- Nếu có số câu kỳ vọng, đếm `items.length`; số khác nhau phải có
+  `SOURCE_ITEM_COUNT_MISMATCH` và không được tuyên bố batch đã hoàn chỉnh.
 - Không có dữ liệu nào được suy đoán chỉ để điền đầy trường.
 ```
