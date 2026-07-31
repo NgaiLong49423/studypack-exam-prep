@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { loadJpd123Questions, loadJpd123Subject } from './content'
 import { gradeAnswer, saveAttempt, selectPracticeQuestions } from './practice'
-import { loadAttempts } from './practice'
-import { summarizeQuestions } from './statistics'
+import { clearAttempts, loadAttempts } from './practice'
+import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
 import type { Question, Subject } from './types'
 
 type Screen = 'loading' | 'subject' | 'practice' | 'complete' | 'statistics' | 'error'
@@ -21,6 +21,8 @@ function App() {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null)
   const [correctCount, setCorrectCount] = useState(0)
   const [error, setError] = useState('')
+  const [, setStatisticsRevision] = useState(0)
+  const [detailStatus, setDetailStatus] = useState<LearningStatus | null>(null)
 
   useEffect(() => {
     Promise.all([loadJpd123Subject(), loadJpd123Questions()])
@@ -112,10 +114,21 @@ function App() {
   if (screen === 'statistics') {
     const summary = summarizeQuestions(questions, loadAttempts())
     const labels = { not_practiced: 'Chưa ôn', learning: 'Đang học', weak: 'Yếu', developing: 'Đang phát triển', stable: 'Ổn', mastered: 'Thành thạo' }
+    const rules = { not_practiced: '0 lần trả lời', learning: '1–3 lần trả lời', weak: 'Từ 4 lần, đúng ≤ 50%', developing: 'Từ 4 lần, đúng > 50% đến 75%', stable: 'Từ 4 lần, đúng > 75% đến < 90%', mastered: 'Từ 4 lần, đúng ≥ 90%' }
+    const detailedQuestions = detailStatus ? questionsByStatus(questions, loadAttempts(), detailStatus) : []
+    const resetStatistics = () => {
+      if (window.confirm('Xóa toàn bộ lịch sử trả lời JPD123 trên trình duyệt này? Bạn sẽ bắt đầu lại từ đầu.')) {
+        clearAttempts()
+        setDetailStatus(null)
+        setStatisticsRevision((value) => value + 1)
+      }
+    }
     return <main className="app-shell"><section className="subject-card" aria-labelledby="statistics-title">
       <p className="eyebrow">JPD123 · Statistics</p><h1 id="statistics-title">Tiến độ học tập</h1>
       <dl className="subject-facts"><div><dt>Lượt trả lời</dt><dd>{summary.totalAttempts}</dd></div><div><dt>Tỉ lệ đúng</dt><dd>{summary.accuracy}%</dd></div></dl>
-      <div className="statistics-list">{Object.entries(summary.counts).map(([key, count]) => <div key={key}><span>{labels[key as keyof typeof labels]}</span><strong>{count} câu</strong></div>)}</div>
+      <div className="statistics-list">{Object.entries(summary.counts).map(([key, count]) => { const status = key as LearningStatus; return <div key={key}><span><strong>{labels[status]}</strong><small>{rules[status]}</small></span><button type="button" className="text-button" onClick={() => setDetailStatus(status)}>Xem chi tiết · {count} câu</button></div> })}</div>
+      {detailStatus && <section className="detail-list" aria-live="polite"><h2>{labels[detailStatus]} · {detailedQuestions.length} câu</h2>{detailedQuestions.map((question) => { const ownAttempts = loadAttempts().filter((attempt) => attempt.questionId === question.id); const correct = ownAttempts.filter((attempt) => attempt.isCorrect).length; return <article key={question.id}><strong>{question.id}</strong><p>{textOf(question.blocks)}</p><small>{ownAttempts.length} lần làm · {correct} đúng · {ownAttempts.length ? Math.round((correct / ownAttempts.length) * 100) : 0}%</small></article> })}</section>}
+      <button className="danger-button" type="button" onClick={resetStatistics}>Xóa dữ liệu thống kê và ôn lại từ đầu</button>
       <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
     </section></main>
   }
