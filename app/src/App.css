@@ -29,6 +29,8 @@ h2 { color: #253042; font-size: 1.35rem; }
 .option-label { display: grid; width: 1.75rem; height: 1.75rem; flex: 0 0 auto; place-items: center; border-radius: 50%; background: #edf1f5; color: #364152; font-size: .875rem; font-weight: 800; }
 .answer-button.correct { border-color: #218657; background: #eaf8f0; }
 .answer-button.incorrect { border-color: #c53232; background: #fff0f0; }
+.answer-button.selected { border-color: #176447; background: #eaf8f0; }
+.exam-question { margin-bottom: 1rem; }
 .feedback { margin-top: 1.5rem; border-radius: .75rem; padding: 1.25rem; }
 .feedback-correct { background: #eaf8f0; color: #164f35; }
 .feedback-incorrect { background: #fff2f2; color: #8c2020; }

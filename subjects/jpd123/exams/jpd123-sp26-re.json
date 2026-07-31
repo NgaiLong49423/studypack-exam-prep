@@ -1,0 +1,253 @@
+{
+  "schemaVersion": "1.0",
+  "examId": "jpd123-sp26-re",
+  "subjectId": "jpd123",
+  "title": "JPD123 Spring 2026 RE",
+  "examType": "FE",
+  "term": "SP26",
+  "status": "published",
+  "declaredQuestionCount": 30,
+  "sections": [],
+  "items": [
+    {
+      "examItemId": "jpd123-sp26-re-item-001",
+      "order": 1,
+      "originalNumber": 1,
+      "sectionId": null,
+      "questionId": "jpd123-q-0233",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-002",
+      "order": 2,
+      "originalNumber": 2,
+      "sectionId": null,
+      "questionId": "jpd123-q-0234",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-003",
+      "order": 3,
+      "originalNumber": 3,
+      "sectionId": null,
+      "questionId": "jpd123-q-0235",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-004",
+      "order": 4,
+      "originalNumber": 4,
+      "sectionId": null,
+      "questionId": "jpd123-q-0236",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-005",
+      "order": 5,
+      "originalNumber": 5,
+      "sectionId": null,
+      "questionId": "jpd123-q-0237",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-006",
+      "order": 6,
+      "originalNumber": 6,
+      "sectionId": null,
+      "questionId": "jpd123-q-0238",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-007",
+      "order": 7,
+      "originalNumber": 7,
+      "sectionId": null,
+      "questionId": "jpd123-q-0239",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-008",
+      "order": 8,
+      "originalNumber": 8,
+      "sectionId": null,
+      "questionId": "jpd123-q-0240",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-009",
+      "order": 9,
+      "originalNumber": 9,
+      "sectionId": null,
+      "questionId": "jpd123-q-0241",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-010",
+      "order": 10,
+      "originalNumber": 10,
+      "sectionId": null,
+      "questionId": "jpd123-q-0242",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-011",
+      "order": 11,
+      "originalNumber": 11,
+      "sectionId": null,
+      "questionId": "jpd123-q-0216",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-012",
+      "order": 12,
+      "originalNumber": 12,
+      "sectionId": null,
+      "questionId": "jpd123-q-0211",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-013",
+      "order": 13,
+      "originalNumber": 13,
+      "sectionId": null,
+      "questionId": "jpd123-q-0243",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-014",
+      "order": 14,
+      "originalNumber": 14,
+      "sectionId": null,
+      "questionId": "jpd123-q-0244",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-015",
+      "order": 15,
+      "originalNumber": 15,
+      "sectionId": null,
+      "questionId": "jpd123-q-0221",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-016",
+      "order": 16,
+      "originalNumber": 16,
+      "sectionId": null,
+      "questionId": "jpd123-q-0245",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-017",
+      "order": 17,
+      "originalNumber": 17,
+      "sectionId": null,
+      "questionId": "jpd123-q-0246",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-018",
+      "order": 18,
+      "originalNumber": 18,
+      "sectionId": null,
+      "questionId": "jpd123-q-0247",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-019",
+      "order": 19,
+      "originalNumber": 19,
+      "sectionId": null,
+      "questionId": "jpd123-q-0119",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-020",
+      "order": 20,
+      "originalNumber": 20,
+      "sectionId": null,
+      "questionId": "jpd123-q-0248",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-021",
+      "order": 21,
+      "originalNumber": 21,
+      "sectionId": null,
+      "questionId": "jpd123-q-0249",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-022",
+      "order": 22,
+      "originalNumber": 22,
+      "sectionId": null,
+      "questionId": "jpd123-q-0225",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-023",
+      "order": 23,
+      "originalNumber": 23,
+      "sectionId": null,
+      "questionId": "jpd123-q-0250",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-024",
+      "order": 24,
+      "originalNumber": 24,
+      "sectionId": null,
+      "questionId": "jpd123-q-0251",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-025",
+      "order": 25,
+      "originalNumber": 25,
+      "sectionId": null,
+      "questionId": "jpd123-q-0252",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-026",
+      "order": 26,
+      "originalNumber": 26,
+      "sectionId": null,
+      "questionId": "jpd123-q-0120",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-027",
+      "order": 27,
+      "originalNumber": 27,
+      "sectionId": null,
+      "questionId": "jpd123-q-0223",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-028",
+      "order": 28,
+      "originalNumber": 28,
+      "sectionId": null,
+      "questionId": "jpd123-q-0253",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-029",
+      "order": 29,
+      "originalNumber": 29,
+      "sectionId": null,
+      "questionId": "jpd123-q-0254",
+      "questionVersion": 1
+    },
+    {
+      "examItemId": "jpd123-sp26-re-item-030",
+      "order": 30,
+      "originalNumber": 30,
+      "sectionId": null,
+      "questionId": "jpd123-q-0255",
+      "questionVersion": 1
+    }
+  ]
+}
