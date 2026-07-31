@@ -52,6 +52,21 @@ export function selectRandomQuestions(questions: Question[], size = PRACTICE_SES
   return shuffled.slice(0, Math.min(size, shuffled.length))
 }
 
+export function selectUnseenQuestions(questions: Question[], attempts: AttemptRecord[] = loadAttempts(), size = PRACTICE_SESSION_SIZE): Question[] {
+  const attemptedQuestionIds = new Set(attempts.map((attempt) => attempt.questionId))
+  return selectRandomQuestions(questions.filter((question) => !attemptedQuestionIds.has(question.id)), size)
+}
+
+export function selectReviewQuestions(questions: Question[], attempts: AttemptRecord[] = loadAttempts(), size = PRACTICE_SESSION_SIZE): Question[] {
+  const byQuestion = new Map<string, AttemptRecord[]>()
+  attempts.forEach((attempt) => byQuestion.set(attempt.questionId, [...(byQuestion.get(attempt.questionId) ?? []), attempt]))
+  const needsReview = questions.filter((question) => {
+    const history = byQuestion.get(question.id) ?? []
+    return history.length > 0 && history.filter((attempt) => attempt.isCorrect).length / history.length <= 0.5
+  })
+  return selectRandomQuestions(needsReview, size)
+}
+
 export function gradeAnswer(question: Question, selectedOptionId: string): boolean {
   return question.correctAnswerIds.length === 1 && question.correctAnswerIds[0] === selectedOptionId
 }

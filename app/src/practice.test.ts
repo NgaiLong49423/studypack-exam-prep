@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { gradeAnswer, selectPracticeQuestions, selectRandomQuestions } from './practice'
+import { gradeAnswer, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions } from './practice'
 import type { Question } from './types'
 
 const questions: Question[] = [
@@ -35,6 +35,25 @@ describe('practice helpers', () => {
     const session = selectRandomQuestions(duplicatedQuestions, 3)
     expect(session).toHaveLength(2)
     expect(new Set(session.map((question) => question.id)).size).toBe(2)
+  })
+
+  it('selects only active questions with no history for unseen practice', () => {
+    const inactive = { ...questions[1], id: 'inactive', active: false }
+    const session = selectUnseenQuestions([...questions, inactive], [{ questionId: questions[0].id, isCorrect: false }] as never)
+    expect(session.map((question) => question.id)).toEqual([questions[1].id])
+  })
+
+  it('selects only attempted questions at or below 50 percent accuracy for review practice', () => {
+    const thirdQuestion = { ...questions[0], id: 'jpd123-q-0003' }
+    const attempts = [
+      { questionId: questions[0].id, isCorrect: false },
+      { questionId: questions[1].id, isCorrect: true },
+      { questionId: questions[1].id, isCorrect: false },
+      { questionId: thirdQuestion.id, isCorrect: true },
+      { questionId: thirdQuestion.id, isCorrect: true },
+    ] as never
+    const session = selectReviewQuestions([...questions, thirdQuestion], attempts)
+    expect(new Set(session.map((question) => question.id))).toEqual(new Set([questions[0].id, questions[1].id]))
   })
 
   it('prioritizes low-accuracy questions while keeping a session unique', () => {

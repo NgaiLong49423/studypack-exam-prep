@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { loadJpd123Exams, loadJpd123Questions, loadJpd123Subject } from './content'
 import { examAttempts, examScore, resolveExamItems } from './exam'
-import { gradeAnswer, saveAttempt, saveAttempts, selectPracticeQuestions, selectRandomQuestions } from './practice'
+import { gradeAnswer, saveAttempt, saveAttempts, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions } from './practice'
 import { clearAttempts, loadAttempts, seedStatisticsDemo } from './practice'
 import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
 import type { Exam, Question, Subject } from './types'
 
-type Screen = 'loading' | 'subject' | 'mode' | 'practice' | 'complete' | 'statistics' | 'exam-list' | 'exam' | 'exam-result' | 'error'
+type Screen = 'loading' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'exam' | 'exam-result' | 'error'
+type PracticeMode = 'smart' | 'random' | 'unseen' | 'review'
 
 function textOf(blocks: { text: string }[]) {
   return blocks.map((block) => block.text).join('\n')
@@ -24,7 +25,7 @@ function App() {
   const [position, setPosition] = useState(0)
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null)
   const [correctCount, setCorrectCount] = useState(0)
-  const [practiceMode, setPracticeMode] = useState<'smart' | 'random'>('smart')
+  const [practiceMode, setPracticeMode] = useState<PracticeMode>('smart')
   const [error, setError] = useState('')
   const [, setStatisticsRevision] = useState(0)
   const [detailStatus, setDetailStatus] = useState<LearningStatus | null>(null)
@@ -47,13 +48,18 @@ function App() {
   const isLocked = selectedOptionId !== null
   const isCorrect = question && selectedOptionId ? gradeAnswer(question, selectedOptionId) : false
 
-  function startPractice(mode: 'smart' | 'random') {
+  function startPractice(mode: PracticeMode) {
     setPracticeMode(mode)
-    setSession(mode === 'smart' ? selectPracticeQuestions(questions, loadAttempts()) : selectRandomQuestions(questions))
+    const attempts = loadAttempts()
+    const selected = mode === 'smart' ? selectPracticeQuestions(questions, attempts)
+      : mode === 'random' ? selectRandomQuestions(questions)
+        : mode === 'unseen' ? selectUnseenQuestions(questions, attempts)
+          : selectReviewQuestions(questions, attempts)
+    setSession(selected)
     setPosition(0)
     setCorrectCount(0)
     setSelectedOptionId(null)
-    setScreen('practice')
+    setScreen(selected.length ? 'practice' : 'practice-empty')
   }
 
   function chooseAnswer(optionId: string) {
@@ -113,9 +119,11 @@ function App() {
 
   if (screen === 'mode') return <main className="app-shell"><section className="subject-card" aria-labelledby="mode-title">
     <p className="eyebrow">JPD123 · Practice</p><h1 id="mode-title">Bạn muốn luyện thế nào?</h1>
-    <div className="mode-list"><button type="button" onClick={() => startPractice('smart')}><strong>Luyện thông minh</strong><span>Ưu tiên câu cần ôn theo tiến độ của bạn.</span></button><button type="button" onClick={() => startPractice('random')}><strong>Ngẫu nhiên toàn bộ</strong><span>Chọn đều từ toàn bộ ngân hàng câu hỏi.</span></button><button type="button" onClick={() => setScreen('exam-list')}><strong>Luyện theo đề thi</strong><span>Giữ thứ tự đề, đổi đáp án trước khi nộp.</span></button></div>
+    <div className="mode-list"><button type="button" onClick={() => startPractice('smart')}><strong>Luyện thông minh</strong><span>Ưu tiên câu cần ôn theo tiến độ của bạn.</span></button><button type="button" onClick={() => startPractice('random')}><strong>Ngẫu nhiên toàn bộ</strong><span>Chọn đều từ toàn bộ ngân hàng câu hỏi.</span></button><button type="button" onClick={() => startPractice('unseen')}><strong>Chỉ câu chưa ôn</strong><span>Chỉ lấy câu bạn chưa từng trả lời.</span></button><button type="button" onClick={() => startPractice('review')}><strong>Câu cần ôn lại</strong><span>Đã làm ít nhất 1 lần và hiện đúng từ 50% trở xuống.</span></button><button type="button" onClick={() => setScreen('exam-list')}><strong>Luyện theo đề thi</strong><span>Giữ thứ tự đề, đổi đáp án trước khi nộp.</span></button></div>
     <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
   </section></main>
+
+  if (screen === 'practice-empty') return <main className="app-shell"><section className="subject-card result-card"><p className="eyebrow">Chưa có câu phù hợp</p><h1>{practiceMode === 'unseen' ? 'Bạn đã ôn hết các câu hiện có' : 'Chưa có câu nào cần ôn lại'}</h1><p>{practiceMode === 'unseen' ? 'Hãy chọn một cách luyện khác hoặc xóa thống kê nếu bạn muốn bắt đầu lại từ đầu.' : 'Hãy làm thêm câu hỏi hoặc xem Statistics để kiểm tra tiến độ hiện tại.'}</p><button className="primary-button" type="button" onClick={() => setScreen('mode')}>Chọn cách luyện khác</button><button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button></section></main>
 
   if (screen === 'exam-list') return <main className="app-shell"><section className="subject-card"><p className="eyebrow">JPD123 · Exam</p><h1>Chọn đề thi</h1><div className="mode-list">{exams.map((item) => <button key={item.examId} type="button" onClick={() => { setExam(item); setExamAnswers({}); setScreen('exam') }}><strong>{item.title}</strong><span>{item.declaredQuestionCount} câu · FE SP26</span></button>)}</div><button className="text-button" type="button" onClick={() => setScreen('mode')}>Quay lại</button></section></main>
 
@@ -135,7 +143,7 @@ function App() {
         <section className="subject-card result-card" aria-labelledby="result-title">
           <p className="eyebrow">Hoàn thành lượt luyện</p>
           <h1 id="result-title">{correctCount}/{session.length} câu đúng</h1>
-          <p>Kết quả từng câu đã được lưu trong trình duyệt của bạn. Thống kê tổng hợp sẽ có ở lát cắt tiếp theo.</p>
+          <p>Kết quả từng câu đã được lưu trong trình duyệt của bạn và đã phản ánh vào Statistics.</p>
           <button className="primary-button" type="button" onClick={() => startPractice(practiceMode)}>Luyện thêm 10 câu</button>
           <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
           <button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê</button>
@@ -177,7 +185,7 @@ function App() {
   return (
     <main className="practice-shell">
       <header className="practice-header">
-        <span>{subject?.code} · {practiceMode === 'smart' ? 'Luyện thông minh' : 'Ngẫu nhiên toàn bộ'}</span>
+        <span>{subject?.code} · {{ smart: 'Luyện thông minh', random: 'Ngẫu nhiên toàn bộ', unseen: 'Chỉ câu chưa ôn', review: 'Câu cần ôn lại' }[practiceMode]}</span>
         <span>Câu {position + 1}/{session.length}</span>
       </header>
       <section className="question-card" aria-labelledby="question-title">
