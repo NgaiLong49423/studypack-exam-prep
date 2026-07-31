@@ -1,6 +1,7 @@
 import type { Exam, QuestionBank, Subject, SubjectCatalog } from './types'
 
-const contentUrl = (path: string) => `${import.meta.env.BASE_URL}subjects/${path}`
+const contentRevision = import.meta.env.VITE_CONTENT_REVISION || 'development'
+export const contentUrl = (path: string) => `${import.meta.env.BASE_URL}subjects/${path}?v=${encodeURIComponent(contentRevision)}`
 const subjectUrl = (subjectId: string, path: string) => contentUrl(`${subjectId}/${path}`)
 
 export async function loadSubjectCatalog(): Promise<SubjectCatalog> {
@@ -30,10 +31,14 @@ export async function loadExams(subjectId: string, examIds: string[]): Promise<E
 }
 
 export async function loadNotebookDocuments(subjectId: string): Promise<{ subjectContext: string; tutorRules: string }> {
-  const [subjectContext, tutorRules] = await Promise.all(['notebook/subject-context.md', 'notebook/tutor-rules.md'].map(async (path) => {
-    const response = await fetch(subjectUrl(subjectId, path))
-    if (!response.ok) throw new Error(`Không thể tải tài liệu Gemini của ${subjectId}.`)
-    return response.text()
-  }))
+  const loadOptionalDocument = async (path: string) => {
+    try {
+      const response = await fetch(subjectUrl(subjectId, path))
+      return response.ok ? response.text() : ''
+    } catch {
+      return ''
+    }
+  }
+  const [subjectContext, tutorRules] = await Promise.all(['notebook/subject-context.md', 'notebook/tutor-rules.md'].map(loadOptionalDocument))
   return { subjectContext, tutorRules }
 }
