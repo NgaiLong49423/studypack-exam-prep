@@ -8,7 +8,7 @@ Status: Accepted
 
 1. Tạo prompt từ câu hỏi sau khi kết quả đã được ghi nhận.
 2. Sao chép prompt vào clipboard.
-3. Mở Gemini Notebook đã cấu hình cho môn học.
+3. Mở Gemini Notebook riêng do người học cấu hình trên trình duyệt.
 
 Nội dung Gemini trả lời không tự động được lưu hoặc ghi đè `explanation` chính thức.
 
@@ -95,7 +95,19 @@ Nếu môn chưa có `aiTutor.notebookUrl`:
 - Không tự mở trang.
 - Thông báo rõ Notebook của môn chưa được cấu hình.
 
-## Cấu hình theo môn
+## Cấu hình link Notebook riêng của người học
+
+Mỗi người học tự lưu một link Gemini Notebook theo từng môn trong
+`localStorage` của trình duyệt hiện tại. Link này không nằm trong Question Bank,
+Gemini Pack, GitHub hoặc dữ liệu dùng chung; không có account sync ở V1.
+
+- Key được phân biệt theo `subjectId`.
+- Chỉ chấp nhận URL `https` hợp lệ.
+- App ưu tiên link local của người học. Nếu chưa có, app mới dùng
+  `aiTutor.notebookUrl` trong Subject như một default tùy chọn.
+- Người học có thể xóa link để trở lại default hoặc trạng thái chưa cấu hình.
+
+## Cấu hình default theo môn
 
 ```json
 {
