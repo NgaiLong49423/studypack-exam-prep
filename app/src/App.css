@@ -1,62 +1,37 @@
-#root {
-  min-height: 100vh;
-}
-
-.app-shell {
-  display: grid;
-  min-height: 100vh;
-  place-items: center;
-  padding: 1.5rem;
-}
-
-.welcome-card {
-  width: min(100%, 44rem);
-  border: 1px solid #d7dce5;
-  border-radius: 1rem;
-  background: #ffffff;
-  padding: clamp(1.5rem, 5vw, 3.5rem);
-  box-shadow: 0 1rem 2.5rem rgb(35 44 61 / 8%);
-}
-
-.eyebrow {
-  margin: 0 0 0.75rem;
-  color: #26614c;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-h1 {
-  max-width: 18ch;
-  margin: 0;
-  color: #182230;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1.08;
-}
-
-.summary {
-  max-width: 62ch;
-  margin: 1.5rem 0;
-  color: #4b5565;
-  font-size: 1.0625rem;
-  line-height: 1.65;
-}
-
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  border-radius: 999px;
-  background: #e9f7ef;
-  color: #184d36;
-  padding: 0.6rem 0.85rem;
-  font-weight: 650;
-}
-
-.status-dot {
-  width: 0.65rem;
-  height: 0.65rem;
-  border-radius: 50%;
-  background: #218657;
-}
+.app-shell, .practice-shell { min-height: 100vh; padding: clamp(1rem, 4vw, 3rem); }
+.app-shell, .center-message { display: grid; min-height: 100vh; place-items: center; }
+.center-message { padding: 1.5rem; color: #4b5565; }
+.error-message { color: #9b1c1c; }
+.subject-card, .question-card { width: min(100%, 48rem); border: 1px solid #d7dce5; border-radius: 1rem; background: #fff; box-shadow: 0 1rem 2.5rem rgb(35 44 61 / 8%); }
+.subject-card { padding: clamp(1.5rem, 5vw, 3.5rem); }
+.eyebrow { margin: 0 0 .75rem; color: #26614c; font-size: .8125rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+h1, h2, p { margin-top: 0; }
+h1 { color: #182230; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; }
+h2 { color: #253042; font-size: 1.35rem; }
+.subject-card > p:not(.eyebrow), .hint, .result-card p { max-width: 62ch; color: #4b5565; font-size: 1.05rem; line-height: 1.65; }
+.subject-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: 2rem 0; }
+.subject-facts div { border-radius: .75rem; background: #f4f7f8; padding: 1rem; }
+.subject-facts dt { color: #687386; font-size: .875rem; }
+.subject-facts dd { margin: .25rem 0 0; color: #182230; font-size: 1.1rem; font-weight: 700; }
+.primary-button, .text-button, .answer-button { cursor: pointer; font: inherit; }
+.primary-button { border: 0; border-radius: .625rem; background: #176447; color: #fff; padding: .8rem 1.15rem; font-weight: 750; }
+.primary-button:hover, .primary-button:focus-visible { background: #0f5138; }
+.hint { margin: 1rem 0 0; font-size: .9rem; }
+.text-button { display: block; margin: 1rem auto 0; border: 0; background: transparent; color: #176447; text-decoration: underline; }
+.practice-shell { margin: 0 auto; max-width: 56rem; }
+.practice-header { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; color: #526073; font-weight: 700; }
+.question-card { width: 100%; padding: clamp(1.25rem, 4vw, 2.5rem); }
+.question-text { white-space: pre-wrap; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.45; }
+.answers { display: grid; gap: .75rem; margin-top: 1.75rem; }
+.answer-button { display: flex; align-items: flex-start; gap: .85rem; width: 100%; border: 1px solid #cbd3df; border-radius: .75rem; background: #fff; padding: 1rem; color: #253042; text-align: left; line-height: 1.5; }
+.answer-button:not(:disabled):hover, .answer-button:not(:disabled):focus-visible { border-color: #176447; background: #f1faf5; }
+.answer-button:disabled { cursor: default; }
+.option-label { display: grid; width: 1.75rem; height: 1.75rem; flex: 0 0 auto; place-items: center; border-radius: 50%; background: #edf1f5; color: #364152; font-size: .875rem; font-weight: 800; }
+.answer-button.correct { border-color: #218657; background: #eaf8f0; }
+.answer-button.incorrect { border-color: #c53232; background: #fff0f0; }
+.feedback { margin-top: 1.5rem; border-radius: .75rem; padding: 1.25rem; }
+.feedback-correct { background: #eaf8f0; color: #164f35; }
+.feedback-incorrect { background: #fff2f2; color: #8c2020; }
+.feedback h2 { margin-bottom: .5rem; color: inherit; }
+.feedback p { white-space: pre-wrap; line-height: 1.55; }
+@media (max-width: 35rem) { .subject-facts { grid-template-columns: 1fr; } .practice-header { align-items: flex-start; flex-direction: column; gap: .25rem; } }
