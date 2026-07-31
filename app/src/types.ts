@@ -38,9 +38,12 @@ export type Subject = {
 export type AttemptRecord = {
   questionId: string
   questionVersion: number
-  selectedOptionId: string
+  selectedOptionId: string | null
   isCorrect: boolean
   answeredAt: string
+  source?: 'practice' | 'exam'
+  examId?: string
+  examItemId?: string
 }
 
 export type ExamItem = { examItemId: string; order: number; originalNumber: number; questionId: string; questionVersion: number }

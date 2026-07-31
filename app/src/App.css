@@ -31,6 +31,15 @@ h2 { color: #253042; font-size: 1.35rem; }
 .answer-button.incorrect { border-color: #c53232; background: #fff0f0; }
 .answer-button.selected { border-color: #176447; background: #eaf8f0; }
 .exam-question { margin-bottom: 1rem; }
+.exam-review { margin: 2rem 0; }
+.review-item { border-left: 4px solid #526073; border-radius: .5rem; background: #f7faf8; margin: .75rem 0; padding: 1rem; }
+.review-item h3 { margin: 0 0 .75rem; color: #253042; font-size: 1.05rem; line-height: 1.5; white-space: pre-wrap; }
+.review-item > p:not(.eyebrow) { margin: .5rem 0; color: #364152; white-space: pre-wrap; }
+.review-correct { border-color: #218657; background: #eaf8f0; }
+.review-incorrect { border-color: #c53232; background: #fff2f2; }
+.review-unanswered { border-color: #a16a12; background: #fff9eb; }
+.review-explanation { margin-top: .85rem; border-top: 1px solid rgb(82 96 115 / 25%); padding-top: .85rem; }
+.review-explanation p { margin: .35rem 0 0; white-space: pre-wrap; line-height: 1.55; }
 .feedback { margin-top: 1.5rem; border-radius: .75rem; padding: 1.25rem; }
 .feedback-correct { background: #eaf8f0; color: #164f35; }
 .feedback-incorrect { background: #fff2f2; color: #8c2020; }
