@@ -21,3 +21,12 @@ export async function loadJpd123Exams(): Promise<Exam[]> {
     return response.json() as Promise<Exam>
   }))
 }
+
+export async function loadJpd123NotebookDocuments(): Promise<{ subjectContext: string; tutorRules: string }> {
+  const [subjectContext, tutorRules] = await Promise.all(['notebook/subject-context.md', 'notebook/tutor-rules.md'].map(async (path) => {
+    const response = await fetch(contentUrl(path))
+    if (!response.ok) throw new Error('Không thể tải tài liệu Gemini của JPD123.')
+    return response.text()
+  }))
+  return { subjectContext, tutorRules }
+}
