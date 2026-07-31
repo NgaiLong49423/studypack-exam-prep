@@ -22,7 +22,6 @@ Mỗi môn phải có `subjects/{subjectId}/subject.json` với cấu trúc:
   "aiTutor": {
     "enabled": true,
     "provider": "gemini-notebook",
-    "notebookUrl": "https://example.com/notebook",
     "promptTemplateId": "explain-question-v1"
   }
 }
@@ -66,8 +65,10 @@ Chuyển sang `archived` phải xác nhận. Việc lưu trữ không tự độ
 
 - `enabled: false`: không hiển thị nút Hỏi AI.
 - `enabled: true`: cho phép tạo và sao chép prompt.
-- Có `notebookUrl`: sao chép prompt rồi mở Notebook.
-- `notebookUrl: null`: vẫn sao chép prompt; người dùng tự mở Notebook.
+- URL Gemini Notebook không thuộc `subject.json`; mỗi người học tự lưu URL
+  HTTPS riêng theo `subjectId` trong localStorage của trình duyệt.
+- Sau khi người học lưu link riêng, app sao chép prompt rồi mở link đó.
+- Nếu chưa lưu link, app vẫn sao chép prompt; người dùng tự mở Gemini.
 - Ứng dụng không gọi Gemini API.
 - `promptTemplateId` phải tham chiếu mẫu prompt tồn tại; thiếu mẫu là `error`.
 - URL không hợp lệ là `warning`; vẫn được sao chép prompt.
@@ -104,11 +105,12 @@ Một môn chỉ được chuyển sang `published` khi:
 - Tất cả câu hỏi tham chiếu đúng môn.
 - Cấu hình Hỏi AI hợp lệ nếu được bật.
 
-Không bắt buộc có đề thi, lý thuyết, lời giải đầy đủ hoặc `notebookUrl`.
+Không bắt buộc có đề thi, lý thuyết hoặc lời giải đầy đủ.
 
 ## 9. Chỉnh sửa an toàn
 
-- Có thể cập nhật `name`, `description`, ngôn ngữ và `notebookUrl`.
+- Có thể cập nhật `name`, `description` và ngôn ngữ.
+- Không lưu URL Gemini Notebook trong dữ liệu Subject dùng chung.
 - Thay đổi cấu hình không được sửa lịch sử đã lưu.
 - Nếu bản chỉnh sửa có `error`, giữ bản hợp lệ hiện tại và lưu thay đổi thành
   `draft`.
@@ -121,6 +123,6 @@ Không bắt buộc có đề thi, lý thuyết, lời giải đầy đủ hoặ
 - Vẫn đọc được lịch sử của môn `archived`.
 - Chặn xuất bản môn không có câu hỏi hợp lệ.
 - Chặn Hỏi AI khi thiếu `promptTemplateId` hợp lệ.
-- Chỉ cảnh báo khi `notebookUrl` thiếu hoặc sai nhưng vẫn cho sao chép prompt.
+- Kiểm tra URL HTTPS local trước khi lưu; thiếu link vẫn cho sao chép prompt.
 - Không ghi đè cấu hình hợp lệ bằng một bản chỉnh sửa có `error`.
 

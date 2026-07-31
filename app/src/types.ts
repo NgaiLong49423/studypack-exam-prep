@@ -33,6 +33,11 @@ export type Subject = {
   name: string
   description: string
   status: 'draft' | 'published' | 'archived'
+  aiTutor?: {
+    enabled: boolean
+    provider: 'gemini-notebook'
+    promptTemplateId: string
+  }
 }
 
 export type AttemptRecord = {

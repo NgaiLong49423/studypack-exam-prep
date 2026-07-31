@@ -5,8 +5,8 @@ Status: Accepted
 Ứng dụng không gọi AI API. JSON và lịch sử làm bài trong app là nguồn dữ liệu
 gốc; Gemini chỉ đọc snapshot Markdown do app export.
 
-- App tạo prompt từ Question hiện tại, sao chép vào clipboard và mở Gemini
-  Notebook URL theo cấu hình môn nếu có.
+- App tạo prompt từ Question hiện tại, sao chép vào clipboard và mở URL Gemini
+  Notebook riêng người học đã lưu local cho môn đó nếu có.
 - Gemini không được cập nhật ngược kết quả, tỷ lệ đúng hoặc trạng thái học.
 - Người học tự thêm tài liệu lý thuyết vào Notebook khi cần; app không export
   nội dung `theory/`.

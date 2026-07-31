@@ -10,7 +10,8 @@ Status: Partially accepted
 4. Người học không thể đổi, bỏ chọn hoặc chọn lại đáp án trong cùng lượt.
 5. App hiển thị đúng/sai, đáp án đúng, lời giải nếu có và **Hỏi AI**.
 6. App không tự chuyển câu.
-7. Nếu bấm **Hỏi AI**, app sao chép prompt và mở Gemini Notebook của môn.
+7. Nếu bấm **Hỏi AI**, app sao chép prompt và mở Gemini Notebook riêng đã lưu
+   trên trình duyệt; nếu chưa có link, app hướng dẫn người học tự mở Gemini.
 8. Người học bấm **Tiếp tục** để chuyển sang câu kế tiếp.
 
 Chế độ luyện tập không có bước **Xác nhận đáp án** riêng. Lần chọn đầu tiên là
@@ -23,7 +24,8 @@ kết quả duy nhất được dùng để chấm và thống kê.
 3. Người học bấm **Nộp bài** một lần.
 4. App chấm toàn bộ `ExamItem`; câu bỏ trống tính 0 câu đúng.
 5. Màn hình xem lại hiển thị lựa chọn của người học, đáp án đúng, trạng thái đúng/sai/bỏ trống, lời giải nếu có và **Hỏi AI**.
-6. Nếu bấm **Hỏi AI**, app sao chép prompt và mở Gemini Notebook của môn.
+6. Nếu bấm **Hỏi AI**, app sao chép prompt và mở Gemini Notebook riêng đã lưu
+   trên trình duyệt; nếu chưa có link, app hướng dẫn người học tự mở Gemini.
 
 Trong cả hai chế độ, **Hỏi AI** không được bật trước khi câu trả lời hoặc bài thi đã được ghi nhận.
 

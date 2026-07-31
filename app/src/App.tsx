@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { loadJpd123Exams, loadJpd123NotebookDocuments, loadJpd123Questions, loadJpd123Subject } from './content'
 import { examAttempts, examScore, resolveExamItems } from './exam'
+import { copyPromptToClipboard, createAiTutorPrompt } from './ai-tutor'
+import { clearTutorNotebookUrl, loadTutorNotebookUrl, saveTutorNotebookUrl } from './tutor-settings'
 import { downloadFile, fullGeminiPack, learningProgressMarkdown, createExportContext } from './gemini-export'
 import { gradeAnswer, saveAttempt, saveAttempts, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions } from './practice'
 import { clearAttempts, loadAttempts, seedStatisticsDemo } from './practice'
@@ -23,6 +25,11 @@ function App() {
   const [notebookDocuments, setNotebookDocuments] = useState({ subjectContext: '', tutorRules: '' })
   const [selectedGeminiExamIds, setSelectedGeminiExamIds] = useState<string[]>([])
   const [geminiExportStatus, setGeminiExportStatus] = useState('')
+  const [aiTutorStatus, setAiTutorStatus] = useState('')
+  const [showNotebookFallback, setShowNotebookFallback] = useState(false)
+  const [personalNotebookUrl, setPersonalNotebookUrl] = useState('')
+  const [savedNotebookUrl, setSavedNotebookUrl] = useState('')
+  const [notebookSettingsStatus, setNotebookSettingsStatus] = useState('')
   const [exam, setExam] = useState<Exam | null>(null)
   const [examAnswers, setExamAnswers] = useState<Record<string, string>>({})
   const [session, setSession] = useState<Question[]>([])
@@ -38,6 +45,9 @@ function App() {
     Promise.all([loadJpd123Subject(), loadJpd123Questions(), loadJpd123Exams(), loadJpd123NotebookDocuments()])
       .then(([loadedSubject, bank, loadedExams, loadedNotebookDocuments]) => {
         setSubject(loadedSubject)
+        const savedUrl = loadTutorNotebookUrl(loadedSubject.subjectId)
+        setPersonalNotebookUrl(savedUrl)
+        setSavedNotebookUrl(savedUrl)
         setQuestions(bank.questions)
         setExams(loadedExams)
         setNotebookDocuments(loadedNotebookDocuments)
@@ -115,6 +125,49 @@ function App() {
     setGeminiExportStatus('Đã tải learning-progress.md mới nhất.')
   }
 
+  async function askAi(questionForTutor: Question, examContext?: { title: string; questionNumber: number }) {
+    if (!subject) return
+    const copied = await copyPromptToClipboard(createAiTutorPrompt(subject, questionForTutor, examContext))
+    if (!copied) {
+      setAiTutorStatus('Trình duyệt chưa thể sao chép prompt. Hãy cho phép quyền Clipboard rồi thử lại.')
+      return
+    }
+    const notebookUrl = savedNotebookUrl
+    if (!notebookUrl) {
+      setShowNotebookFallback(false)
+      setAiTutorStatus('Đã sao chép prompt. Bạn chưa lưu link Gemini Notebook riêng, hãy mở Gemini và dán prompt.')
+      return
+    }
+    const opened = window.open(notebookUrl, '_blank', 'noopener,noreferrer')
+    setShowNotebookFallback(!opened)
+    setAiTutorStatus(opened ? 'Đã sao chép prompt và mở Gemini Notebook.' : 'Đã sao chép prompt. Trình duyệt chặn cửa sổ mới, hãy bấm Mở Gemini Notebook.')
+  }
+
+  function openNotebook() {
+    const notebookUrl = savedNotebookUrl
+    if (notebookUrl) window.open(notebookUrl, '_blank', 'noopener,noreferrer')
+  }
+
+  function savePersonalNotebookUrl() {
+    if (!subject) return
+    const result = saveTutorNotebookUrl(subject.subjectId, personalNotebookUrl)
+    if (!result.ok) {
+      setNotebookSettingsStatus(result.message)
+      return
+    }
+    setPersonalNotebookUrl(result.url)
+    setSavedNotebookUrl(result.url)
+    setNotebookSettingsStatus('Đã lưu link Gemini Notebook riêng trên trình duyệt này.')
+  }
+
+  function removePersonalNotebookUrl() {
+    if (!subject) return
+    clearTutorNotebookUrl(subject.subjectId)
+    setPersonalNotebookUrl('')
+    setSavedNotebookUrl('')
+    setNotebookSettingsStatus('Đã xóa link Gemini Notebook khỏi trình duyệt này.')
+  }
+
   if (screen === 'loading') return <main className="center-message">Đang tải StudyPack…</main>
   if (screen === 'error') return <main className="center-message error-message">{error}</main>
 
@@ -155,7 +208,7 @@ function App() {
 
   if (screen === 'exam-result' && exam) {
     const items = resolveExamItems(exam, questions); const score = examScore(examAnswers, items)
-    return <main className="app-shell"><section className="subject-card result-card"><p className="eyebrow">Kết quả đề thi</p><h1>{score.correct}/{items.length} câu đúng</h1><p>Tỉ lệ đúng: {score.percent}% · Chưa trả lời: {score.unanswered}</p><section className="exam-review" aria-label="Xem lại đáp án và lời giải"><h2>Xem lại từng câu</h2>{items.map(({ item, question }, index) => { const selectedOptionId = examAnswers[item.examItemId]; const selectedOption = question.options.find((option) => option.id === selectedOptionId); const correctOption = question.options.find((option) => question.correctAnswerIds.includes(option.id)); const state = !selectedOptionId ? 'unanswered' : selectedOptionId === correctOption?.id ? 'correct' : 'incorrect'; const label = state === 'correct' ? 'Đúng' : state === 'incorrect' ? 'Sai' : 'Chưa trả lời'; return <article className={`review-item review-${state}`} key={item.examItemId}><p className="eyebrow">Câu {index + 1} · {label}</p><h3>{textOf(question.blocks)}</h3><p><strong>Bạn chọn:</strong> {selectedOption ? textOf(selectedOption.blocks) : 'Chưa trả lời'}</p><p><strong>Đáp án đúng:</strong> {correctOption ? textOf(correctOption.blocks) : 'Chưa có dữ liệu'}</p>{question.explanation && <div className="review-explanation"><strong>Lời giải</strong><p>{textOf(question.explanation.blocks)}</p></div>}</article> })}</section><button className="primary-button" type="button" onClick={() => { setExam(null); setScreen('exam-list') }}>Chọn đề khác</button><button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button><button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button></section></main>
+    return <main className="app-shell"><section className="subject-card result-card"><p className="eyebrow">Kết quả đề thi</p><h1>{score.correct}/{items.length} câu đúng</h1><p>Tỉ lệ đúng: {score.percent}% · Chưa trả lời: {score.unanswered}</p><section className="exam-review" aria-label="Xem lại đáp án và lời giải"><h2>Xem lại từng câu</h2>{items.map(({ item, question }, index) => { const selectedOptionId = examAnswers[item.examItemId]; const selectedOption = question.options.find((option) => option.id === selectedOptionId); const correctOption = question.options.find((option) => question.correctAnswerIds.includes(option.id)); const state = !selectedOptionId ? 'unanswered' : selectedOptionId === correctOption?.id ? 'correct' : 'incorrect'; const label = state === 'correct' ? 'Đúng' : state === 'incorrect' ? 'Sai' : 'Chưa trả lời'; return <article className={`review-item review-${state}`} key={item.examItemId}><p className="eyebrow">Câu {index + 1} · {label}</p><h3>{textOf(question.blocks)}</h3><p><strong>Bạn chọn:</strong> {selectedOption ? textOf(selectedOption.blocks) : 'Chưa trả lời'}</p><p><strong>Đáp án đúng:</strong> {correctOption ? textOf(correctOption.blocks) : 'Chưa có dữ liệu'}</p>{question.explanation && <div className="review-explanation"><strong>Lời giải</strong><p>{textOf(question.explanation.blocks)}</p></div>}<button className="secondary-button" type="button" onClick={() => void askAi(question, { title: exam.title, questionNumber: index + 1 })}>Hỏi AI để hiểu kỹ câu này</button></article> })}</section>{aiTutorStatus && <p className="ai-tutor-status" aria-live="polite">{aiTutorStatus}</p>}{showNotebookFallback && <button className="text-button" type="button" onClick={openNotebook}>Mở Gemini Notebook</button>}<button className="primary-button" type="button" onClick={() => { setExam(null); setScreen('exam-list') }}>Chọn đề khác</button><button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button><button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button></section></main>
   }
 
   if (screen === 'complete') {
@@ -195,7 +248,7 @@ function App() {
       <dl className="subject-facts"><div><dt>Lượt trả lời</dt><dd>{summary.totalAttempts}</dd></div><div><dt>Tỉ lệ đúng</dt><dd>{summary.accuracy}%</dd></div></dl>
       <div className="statistics-list">{Object.entries(summary.counts).map(([key, count]) => { const status = key as LearningStatus; return <div key={key}><span><strong>{labels[status]}</strong><small>{rules[status]}</small></span><button type="button" className="text-button" onClick={() => setDetailStatus(status)}>Xem chi tiết · {count} câu</button></div> })}</div>
       {detailStatus && <section className="detail-list" aria-live="polite"><h2>{labels[detailStatus]} · {detailedQuestions.length} câu</h2>{detailedQuestions.map((question) => { const ownAttempts = loadAttempts().filter((attempt) => attempt.questionId === question.id); const correct = ownAttempts.filter((attempt) => attempt.isCorrect).length; return <article key={question.id}><strong>{question.id}</strong><p>{textOf(question.blocks)}</p><small>{ownAttempts.length} lần làm · {correct} đúng · {ownAttempts.length ? Math.round((correct / ownAttempts.length) * 100) : 0}%</small></article> })}</section>}
-      <section className="gemini-documents" aria-labelledby="gemini-documents-title"><p className="eyebrow">Gemini Learning Documents</p><h2 id="gemini-documents-title">Xuất tài liệu để đưa vào Gemini</h2><p>Gói chỉ là snapshot đọc-only. Kết quả trong Gemini không tự thay đổi Statistics của app; bạn có thể tự thêm theory Markdown vào Notebook.</p><fieldset><legend>Đính kèm đề thi (tùy chọn)</legend>{exams.map((item) => <label key={item.examId}><input type="checkbox" checked={selectedGeminiExamIds.includes(item.examId)} onChange={() => setSelectedGeminiExamIds((current) => current.includes(item.examId) ? current.filter((id) => id !== item.examId) : [...current, item.examId])} /> {item.title} · {item.items.length} câu</label>)}</fieldset><button className="primary-button" type="button" onClick={() => void exportGeminiPack()}>Tải Full Gemini Pack (.zip)</button><button className="text-button" type="button" onClick={refreshLearningProgress}>Tải learning-progress.md mới nhất</button>{geminiExportStatus && <p className="export-status" aria-live="polite">{geminiExportStatus}</p>}</section>
+      <section className="gemini-documents" aria-labelledby="gemini-documents-title"><p className="eyebrow">Gemini Learning Documents</p><h2 id="gemini-documents-title">Xuất tài liệu để đưa vào Gemini</h2><p>Gói chỉ là snapshot đọc-only. Kết quả trong Gemini không tự thay đổi Statistics của app; bạn có thể tự thêm theory Markdown vào Notebook.</p><div className="notebook-settings"><h3>Gemini Notebook của bạn</h3><p>Link này chỉ lưu trên trình duyệt hiện tại và chỉ dùng khi bạn bấm Hỏi AI.</p><label htmlFor="personal-notebook-url">Đường link Gemini Notebook</label><input id="personal-notebook-url" type="url" inputMode="url" placeholder="https://notebooklm.google.com/..." value={personalNotebookUrl} onChange={(event) => setPersonalNotebookUrl(event.target.value)} /><div><button className="secondary-button" type="button" onClick={savePersonalNotebookUrl}>Lưu link riêng</button><button className="text-button inline-button" type="button" onClick={removePersonalNotebookUrl}>Xóa link</button></div>{notebookSettingsStatus && <p className="notebook-status" aria-live="polite">{notebookSettingsStatus}</p>}</div><fieldset><legend>Đính kèm đề thi (tùy chọn)</legend>{exams.map((item) => <label key={item.examId}><input type="checkbox" checked={selectedGeminiExamIds.includes(item.examId)} onChange={() => setSelectedGeminiExamIds((current) => current.includes(item.examId) ? current.filter((id) => id !== item.examId) : [...current, item.examId])} /> {item.title} · {item.items.length} câu</label>)}</fieldset><button className="primary-button" type="button" onClick={() => void exportGeminiPack()}>Tải Full Gemini Pack (.zip)</button><button className="text-button" type="button" onClick={refreshLearningProgress}>Tải learning-progress.md mới nhất</button>{geminiExportStatus && <p className="export-status" aria-live="polite">{geminiExportStatus}</p>}</section>
       <button className="danger-button" type="button" onClick={resetStatistics}>Xóa dữ liệu thống kê và ôn lại từ đầu</button>
       {import.meta.env.DEV && <button className="demo-button" type="button" onClick={loadDemo}>Nạp dữ liệu demo Statistics (chỉ local)</button>}
       <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
@@ -230,6 +283,9 @@ function App() {
           <section className={`feedback ${isCorrect ? 'feedback-correct' : 'feedback-incorrect'}`} aria-live="polite">
             <h2>{isCorrect ? 'Đúng rồi' : 'Chưa đúng'}</h2>
             <p>{textOf(question.explanation?.blocks ?? [])}</p>
+            {subject?.aiTutor?.enabled && <button className="secondary-button" type="button" onClick={() => void askAi(question)}>Hỏi AI để hiểu kỹ câu này</button>}
+            {aiTutorStatus && <p className="ai-tutor-status" aria-live="polite">{aiTutorStatus}</p>}
+            {showNotebookFallback && <button className="text-button" type="button" onClick={openNotebook}>Mở Gemini Notebook</button>}
             <button className="primary-button" type="button" onClick={continuePractice}>Tiếp tục</button>
           </section>
         )}
