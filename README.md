@@ -36,6 +36,10 @@ npm run dev
 npm run lint --prefix app
 npm run test --prefix app -- --run
 npm run build --prefix app
+node scripts/validate-content.mjs
+node scripts/validate-image-import-batch.mjs path/to/batch.json
+node scripts/plan-image-import.mjs path/to/clean-batch.json
+node scripts/apply-image-import.mjs path/to/clean-batch.json path/to/resolution.json
 ```
 
 ## Key documents
