@@ -32,3 +32,7 @@ export function loadAttempts(): AttemptRecord[] {
     return []
   }
 }
+
+export function clearAttempts(): void {
+  localStorage.removeItem(ATTEMPTS_STORAGE_KEY)
+}

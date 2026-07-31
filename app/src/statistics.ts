@@ -20,3 +20,7 @@ export function summarizeQuestions(questions: Question[], attempts: AttemptRecor
   const correct = attempts.filter((attempt) => attempt.isCorrect).length
   return { counts, totalAttempts: attempts.length, correct, accuracy: attempts.length ? Math.round((correct / attempts.length) * 100) : 0 }
 }
+
+export function questionsByStatus(questions: Question[], attempts: AttemptRecord[], status: LearningStatus) {
+  return questions.filter((question) => learningStatus(attempts.filter((attempt) => attempt.questionId === question.id)) === status)
+}
