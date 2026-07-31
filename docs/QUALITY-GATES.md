@@ -35,6 +35,8 @@
 - Kiểm chứng app không tự chuyển câu sau khi chấm và chỉ chuyển khi người học
   bấm **Tiếp tục**.
 - Kiểm chứng thi thử không lộ đáp án trước khi nộp bài.
+- Kiểm chứng mọi Subject `published` có AI Tutor bật với prompt template hợp lệ;
+  validator phải chặn publish nếu thiếu hoặc tắt cấu hình này.
 - Kiểm chứng **Hỏi AI** chỉ bật sau khi kết quả được ghi nhận.
 - Kiểm chứng prompt chứa đúng câu, lựa chọn chính thức, đáp án đúng và không chứa
   lựa chọn của người học hoặc dữ liệu thừa.

@@ -83,8 +83,8 @@ Chuyển sang `archived` phải xác nhận. Việc lưu trữ không tự độ
 
 ## 5. Cấu hình Hỏi AI
 
-- `enabled: false`: không hiển thị nút Hỏi AI.
-- `enabled: true`: cho phép tạo và sao chép prompt.
+- `enabled: false`: chỉ hợp lệ với Subject `draft` hoặc `archived`; không hiển thị nút Hỏi AI.
+- `enabled: true`: bắt buộc với Subject `published`, cho phép tạo và sao chép prompt.
 - URL Gemini Notebook không thuộc `subject.json`; mỗi người học tự lưu URL
   HTTPS riêng theo `subjectId` trong localStorage của trình duyệt.
 - Sau khi người học lưu link riêng, app sao chép prompt rồi mở link đó.
@@ -123,7 +123,8 @@ Một môn chỉ được chuyển sang `published` khi:
 - Không còn lỗi mức `error`.
 - Có ít nhất một câu hỏi hợp lệ.
 - Tất cả câu hỏi tham chiếu đúng môn.
-- Cấu hình Hỏi AI hợp lệ nếu được bật.
+- Cấu hình Hỏi AI phải bật, dùng provider `gemini-notebook` và có
+  `promptTemplateId` hợp lệ.
 
 Không bắt buộc có đề thi, lý thuyết hoặc lời giải đầy đủ.
 

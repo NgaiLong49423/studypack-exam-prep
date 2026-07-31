@@ -27,6 +27,7 @@ for (const entry of catalog?.subjects ?? []) {
   const subject = readJson(subjectFile)
   if (!subject) continue
   if (subject.schemaVersion !== '1.0' || subject.subjectId !== entry.subjectId || subject.status !== entry.status || typeof subject.code !== 'string' || subject.code.length === 0 || typeof subject.name !== 'string' || subject.name.length === 0) issue('error', 'SUBJECT_CATALOG_MISMATCH', subjectFile, 'Subject metadata must match the catalog entry and include code and name.')
+  if (entry.status === 'published' && (subject.aiTutor?.enabled !== true || subject.aiTutor?.provider !== 'gemini-notebook' || !validId(subject.aiTutor?.promptTemplateId))) issue('error', 'PUBLISHED_SUBJECT_AI_TUTOR_INVALID', subjectFile, 'Published Subject requires an enabled Gemini Notebook AI Tutor with a valid promptTemplateId.')
   const bankFile = resolve(subjectsRoot, entry.subjectId, 'questions', 'questions.json')
   const bank = existsSync(bankFile) ? readJson(bankFile) : null
   if (entry.status === 'published' && !bank) { issue('error', 'PUBLISHED_SUBJECT_BANK_MISSING', bankFile, 'Published subject requires a question bank.'); continue }
