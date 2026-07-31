@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "subjectId": "csd201",
+  "code": "CSD201",
+  "name": "Data Structures and Algorithms",
+  "description": "Ngân hàng lý thuyết và câu hỏi ôn tập CSD201.",
+  "status": "draft",
+  "contentLanguages": ["en", "vi"],
+  "explanationLanguage": "vi",
+  "aiTutor": {
+    "enabled": false,
+    "provider": "gemini-notebook",
+    "notebookUrl": null,
+    "promptTemplateId": "explain-question-v1"
+  }
+}

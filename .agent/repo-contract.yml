@@ -1,32 +1,31 @@
-project_type: java-webapp
-canonical_docs:
-  requirements:
-    - docs/requirements/SRS.md
-    - docs/requirements/PRD.md
-  project_overview: README.md
-  changelog: CHANGELOG.md
-  contribution_rules: CONTRIBUTING.md
-  database_schema: database/schema.sql
-  labels: .github/labels.yml
+version: 1
+project_name: StudyPack Exam Prep
+project_type: static-web-app
+stack:
+  frontend: React + TypeScript + Vite
+  styling: CSS
+  persistence_v1: Browser local storage
+  deployment: GitHub Pages
 
-doc_sync_rules:
-  - when: docs/requirements/PRD.md changes
-    check:
-      - docs/requirements/SRS.md
-      - README.md
-      - CHANGELOG.md
-      - .github/ISSUE_TEMPLATE/
-  - when: docs/requirements/SRS.md changes
-    check:
-      - README.md
-      - CHANGELOG.md
-      - .github/ISSUE_TEMPLATE/
-  - when: database/schema.sql changes
-    check:
-      - docs/diagrams/ERD/
-      - docs/requirements/SRS.md
-      - CHANGELOG.md
-  - when: .github/labels.yml changes
-    check:
-      - .github/ISSUE_TEMPLATE/
-      - .agent/skill/
+source_of_truth:
+  product_contract: docs/PRODUCT-OVERVIEW.md
+  data_contract: docs/DATA-CONTRACT.md
+  gemini_export_contract: docs/GEMINI-EXPORT-CONTRACT.md
+  subject_content: subjects/
+
+workflow:
+  default_branch: main
+  implementation_branch_pattern: agent/<short-description>
+  issue_first: true
+  pull_request_required: true
+  deployment: GitHub Pages from main
+
+quality_gates:
+  - npm run lint --prefix app
+  - npm run test --prefix app -- --run
+  - npm run build --prefix app
+
+boundaries:
+  - Do not commit personal learning profiles, credentials, or private source material.
+  - Do not add an AI API in V1; Gemini Notebook receives exported documents and clipboard prompts only.
+  - Do not replace browser-local learner progress with a backend without an approved product decision.

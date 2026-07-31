@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://studypack.local/schemas/image-import-batch.schema.json",
+  "title": "StudyPack ImageImportBatch",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "batchId", "subjectId", "sourceKind", "examDraft", "items", "batchIssues"],
+  "properties": {
+    "schemaVersion": {"const": "1.0"},
+    "batchId": {"type": "string", "minLength": 1},
+    "subjectId": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "sourceKind": {"enum": ["question-bank", "exam"]},
+    "examDraft": {
+      "oneOf": [
+        {"type": "null"},
+        {"$ref": "#/$defs/examDraft"}
+      ]
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/item"}
+    },
+    "batchIssues": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/issue"}
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"sourceKind": {"const": "exam"}}},
+      "then": {"properties": {"examDraft": {"$ref": "#/$defs/examDraft"}}},
+      "else": {"properties": {"examDraft": {"type": "null"}}}
+    }
+  ],
+  "$defs": {
+    "nullableString": {
+      "oneOf": [{"type": "string"}, {"type": "null"}]
+    },
+    "examDraft": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["examIdHint", "title", "declaredQuestionCount"],
+      "properties": {
+        "examIdHint": {"$ref": "#/$defs/nullableString"},
+        "title": {"$ref": "#/$defs/nullableString"},
+        "declaredQuestionCount": {
+          "oneOf": [
+            {"type": "integer", "minimum": 1},
+            {"type": "null"}
+          ]
+        }
+      }
+    },
+    "block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "text"],
+      "properties": {
+        "type": {"const": "markdown"},
+        "text": {"type": "string", "minLength": 1}
+      }
+    },
+    "option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceLabel", "blocks"],
+      "properties": {
+        "sourceLabel": {"type": "string", "minLength": 1},
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/block"}
+        }
+      }
+    },
+    "answer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceLabels", "evidence", "evidenceText"],
+      "properties": {
+        "sourceLabels": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "evidence": {"enum": ["explicit", "absent", "unclear"]},
+        "evidenceText": {"$ref": "#/$defs/nullableString"}
+      }
+    },
+    "sourceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fileName", "pageIndex", "region"],
+      "properties": {
+        "fileName": {"type": "string", "minLength": 1},
+        "pageIndex": {"type": "integer", "minimum": 1},
+        "region": {"$ref": "#/$defs/nullableString"}
+      }
+    },
+    "explanation": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["blocks"],
+          "properties": {
+            "blocks": {
+              "type": "array",
+              "minItems": 1,
+              "items": {"$ref": "#/$defs/block"}
+            }
+          }
+        }
+      ]
+    },
+    "issue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["severity", "code", "field", "sourceFile", "message"],
+      "properties": {
+        "severity": {"enum": ["error", "warning", "info"]},
+        "code": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$"},
+        "field": {"$ref": "#/$defs/nullableString"},
+        "sourceFile": {"$ref": "#/$defs/nullableString"},
+        "message": {"type": "string", "minLength": 1}
+      }
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceRef", "sourceOrder", "originalNumber", "stemBlocks", "options",
+        "answer", "maxSelections", "explanation", "topicIds",
+        "extractionConfidence", "needsReview", "issues"
+      ],
+      "properties": {
+        "sourceRef": {"$ref": "#/$defs/sourceRef"},
+        "sourceOrder": {"type": "integer", "minimum": 1},
+        "originalNumber": {
+          "oneOf": [
+            {"type": "integer", "minimum": 1},
+            {"type": "null"}
+          ]
+        },
+        "stemBlocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/block"}
+        },
+        "options": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/option"}
+        },
+        "answer": {"$ref": "#/$defs/answer"},
+        "maxSelections": {"type": "integer", "minimum": 1},
+        "explanation": {"$ref": "#/$defs/explanation"},
+        "topicIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "extractionConfidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "needsReview": {"type": "boolean"},
+        "issues": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/issue"}
+        }
+      }
+    }
+  }
+}
