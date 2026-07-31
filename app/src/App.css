@@ -42,6 +42,11 @@ h2 { color: #253042; font-size: 1.35rem; }
 .detail-list article { border-left: 3px solid #176447; background: #f7faf8; margin: .75rem 0; padding: .75rem 1rem; }
 .detail-list p { margin: .35rem 0; white-space: pre-wrap; }
 .detail-list small { color: #526073; }
+.mode-list { display: grid; gap: .75rem; margin: 1.5rem 0; }
+.mode-list button { border: 1px solid #cbd3df; border-radius: .75rem; background: #fff; padding: 1rem; text-align: left; }
+.mode-list button:hover, .mode-list button:focus-visible { border-color: #176447; background: #f1faf5; }
+.mode-list strong, .mode-list span { display: block; }
+.mode-list span { margin-top: .3rem; color: #526073; }
 .danger-button { width: 100%; border: 1px solid #c53232; border-radius: .625rem; background: #fff; color: #9b1c1c; padding: .8rem 1rem; font-weight: 700; }
 .demo-button { width: 100%; margin-top: .75rem; border: 1px dashed #526073; border-radius: .625rem; background: #f4f7f8; color: #364152; padding: .7rem 1rem; }
 @media (max-width: 35rem) { .subject-facts { grid-template-columns: 1fr; } .practice-header { align-items: flex-start; flex-direction: column; gap: .25rem; } }

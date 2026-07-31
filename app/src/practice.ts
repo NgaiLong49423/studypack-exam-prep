@@ -44,6 +44,11 @@ export function selectPracticeQuestions(questions: Question[], attemptsOrSize: A
   return selected
 }
 
+export function selectRandomQuestions(questions: Question[], size = PRACTICE_SESSION_SIZE): Question[] {
+  const shuffled = questions.filter((question) => question.active).sort(() => Math.random() - 0.5)
+  return shuffled.slice(0, Math.min(size, shuffled.length))
+}
+
 export function gradeAnswer(question: Question, selectedOptionId: string): boolean {
   return question.correctAnswerIds.length === 1 && question.correctAnswerIds[0] === selectedOptionId
 }
