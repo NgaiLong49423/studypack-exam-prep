@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import { loadExams, loadNotebookDocuments, loadQuestions, loadSubject, loadSubjectCatalog } from './content'
-import { examAttempts, examScore, resolveExamItems } from './exam'
+import { createMockExam, examAttempts, examScore, formatRemainingTime, MOCK_EXAM_MAX_QUESTION_COUNT, MOCK_EXAM_MIN_QUESTION_COUNT, resolveExamItems } from './exam'
 import { copyPromptToClipboard, createAiTutorPrompt } from './ai-tutor'
 import { clearTutorNotebookUrl, loadTutorNotebookUrl, saveTutorNotebookUrl } from './tutor-settings'
 import { downloadFile, fullGeminiPack, learningProgressMarkdown, createExportContext } from './gemini-export'
@@ -10,7 +10,7 @@ import { clearAttempts, loadAttempts, seedStatisticsDemo } from './practice'
 import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
 import type { Exam, Question, Subject, SubjectCatalogEntry } from './types'
 
-type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'exam' | 'exam-result' | 'error'
+type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'mock-exam-setup' | 'exam' | 'exam-result' | 'error'
 type PracticeMode = 'smart' | 'random' | 'unseen' | 'review'
 
 function textOf(blocks: { text: string }[]) {
@@ -33,6 +33,13 @@ function App() {
   const [notebookSettingsStatus, setNotebookSettingsStatus] = useState('')
   const [exam, setExam] = useState<Exam | null>(null)
   const [examAnswers, setExamAnswers] = useState<Record<string, string[]>>({})
+  const [mockQuestionCount, setMockQuestionCount] = useState(MOCK_EXAM_MIN_QUESTION_COUNT)
+  const [mockDurationMinutes, setMockDurationMinutes] = useState(30)
+  const [mockExamEndsAt, setMockExamEndsAt] = useState<number | null>(null)
+  const [remainingSeconds, setRemainingSeconds] = useState(0)
+  const [wasAutoSubmitted, setWasAutoSubmitted] = useState(false)
+  const examSubmissionLocked = useRef(false)
+  const submitExamRef = useRef<(autoSubmitted?: boolean) => void>(() => {})
   const [session, setSession] = useState<Question[]>([])
   const [position, setPosition] = useState(0)
   const [selectedOptionIds, setSelectedOptionIds] = useState<string[]>([])
@@ -66,6 +73,18 @@ function App() {
 
   const question = session[position]
   const isCorrect = question && isLocked ? gradeAnswer(question, selectedOptionIds) : false
+
+  useEffect(() => {
+    if (screen !== 'exam' || !mockExamEndsAt) return
+    const tick = () => {
+      const seconds = Math.max(0, Math.ceil((mockExamEndsAt - Date.now()) / 1000))
+      setRemainingSeconds(seconds)
+      if (seconds === 0) submitExamRef.current(true)
+    }
+    tick()
+    const timer = window.setInterval(tick, 250)
+    return () => window.clearInterval(timer)
+  }, [screen, mockExamEndsAt, exam, examAnswers, subject])
 
   function startPractice(mode: PracticeMode) {
     setPracticeMode(mode)
@@ -116,13 +135,37 @@ function App() {
     setIsLocked(false)
   }
 
-  function submitExam() {
-    if (!exam) return
+  function openExam(nextExam: Exam, endsAt: number | null = null) {
+    examSubmissionLocked.current = false
+    setExam(nextExam)
+    setExamAnswers({})
+    setMockExamEndsAt(endsAt)
+    setRemainingSeconds(endsAt ? Math.max(0, Math.ceil((endsAt - Date.now()) / 1000)) : 0)
+    setWasAutoSubmitted(false)
+    setScreen('exam')
+  }
+
+  function startMockExam() {
+    if (!subject) return
+    const duration = Math.floor(mockDurationMinutes)
+    if (!Number.isFinite(duration) || duration < 1) return
+    const mock = createMockExam(subject.subjectId, questions, mockQuestionCount)
+    if (mock.items.length === 0) return
+    openExam(mock, Date.now() + duration * 60_000)
+  }
+
+  function submitExam(autoSubmitted = false) {
+    if (!exam || examSubmissionLocked.current) return
+    examSubmissionLocked.current = true
     const items = resolveExamItems(exam, questions)
     saveAttempts(subject?.subjectId ?? '', examAttempts(exam, items, examAnswers, new Date().toISOString()))
+    setWasAutoSubmitted(autoSubmitted)
+    setMockExamEndsAt(null)
     setStatisticsRevision((value) => value + 1)
     setScreen('exam-result')
   }
+
+  submitExamRef.current = submitExam
 
   async function exportGeminiPack() {
     if (!subject) return
@@ -211,13 +254,19 @@ function App() {
 
   if (screen === 'mode') return <main className="app-shell"><section className="subject-card" aria-labelledby="mode-title">
     <p className="eyebrow">JPD123 · Practice</p><h1 id="mode-title">Bạn muốn luyện thế nào?</h1>
-    <div className="mode-list"><button type="button" onClick={() => startPractice('smart')}><strong>Luyện thông minh</strong><span>Ưu tiên câu cần ôn theo tiến độ của bạn.</span></button><button type="button" onClick={() => startPractice('random')}><strong>Ngẫu nhiên toàn bộ</strong><span>Chọn đều từ toàn bộ ngân hàng câu hỏi.</span></button><button type="button" onClick={() => startPractice('unseen')}><strong>Chỉ câu chưa ôn</strong><span>Chỉ lấy câu bạn chưa từng trả lời.</span></button><button type="button" onClick={() => startPractice('review')}><strong>Câu cần ôn lại</strong><span>Đã làm ít nhất 1 lần và hiện đúng từ 50% trở xuống.</span></button><button type="button" onClick={() => setScreen('exam-list')}><strong>Luyện theo đề thi</strong><span>Giữ thứ tự đề, đổi đáp án trước khi nộp.</span></button></div>
+    <div className="mode-list"><button type="button" onClick={() => startPractice('smart')}><strong>Luyện thông minh</strong><span>Ưu tiên câu cần ôn theo tiến độ của bạn.</span></button><button type="button" onClick={() => startPractice('random')}><strong>Ngẫu nhiên toàn bộ</strong><span>Chọn đều từ toàn bộ ngân hàng câu hỏi.</span></button><button type="button" onClick={() => startPractice('unseen')}><strong>Chỉ câu chưa ôn</strong><span>Chỉ lấy câu bạn chưa từng trả lời.</span></button><button type="button" onClick={() => startPractice('review')}><strong>Câu cần ôn lại</strong><span>Đã làm ít nhất 1 lần và hiện đúng từ 50% trở xuống.</span></button><button type="button" onClick={() => setScreen('exam-list')}><strong>Luyện theo đề thi</strong><span>Giữ thứ tự đề, đổi đáp án trước khi nộp.</span></button><button type="button" onClick={() => setScreen('mock-exam-setup')}><strong>Thi thử bấm giờ</strong><span>Tự chọn số câu và thời gian, hết giờ tự nộp bài.</span></button></div>
     <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
   </section></main>
 
   if (screen === 'practice-empty') return <main className="app-shell"><section className="subject-card result-card"><p className="eyebrow">Chưa có câu phù hợp</p><h1>{practiceMode === 'unseen' ? 'Bạn đã ôn hết các câu hiện có' : 'Chưa có câu nào cần ôn lại'}</h1><p>{practiceMode === 'unseen' ? 'Hãy chọn một cách luyện khác hoặc xóa thống kê nếu bạn muốn bắt đầu lại từ đầu.' : 'Hãy làm thêm câu hỏi hoặc xem Statistics để kiểm tra tiến độ hiện tại.'}</p><button className="primary-button" type="button" onClick={() => setScreen('mode')}>Chọn cách luyện khác</button><button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button></section></main>
 
-  if (screen === 'exam-list') return <main className="app-shell"><section className="subject-card"><p className="eyebrow">JPD123 · Exam</p><h1>Chọn đề thi</h1><div className="mode-list">{exams.map((item) => <button key={item.examId} type="button" onClick={() => { setExam(item); setExamAnswers({}); setScreen('exam') }}><strong>{item.title}</strong><span>{item.declaredQuestionCount} câu · FE SP26</span></button>)}</div><button className="text-button" type="button" onClick={() => setScreen('mode')}>Quay lại</button></section></main>
+  if (screen === 'exam-list') return <main className="app-shell"><section className="subject-card"><p className="eyebrow">{subject?.code} · Exam</p><h1>Chọn đề thi</h1><div className="mode-list">{exams.map((item) => <button key={item.examId} type="button" onClick={() => openExam(item)}><strong>{item.title}</strong><span>{item.declaredQuestionCount} câu · FE SP26</span></button>)}</div><button className="text-button" type="button" onClick={() => setScreen('mode')}>Quay lại</button></section></main>
+
+  if (screen === 'mock-exam-setup') {
+    const availableQuestionCount = new Set(questions.filter((item) => item.active).map((item) => item.id)).size
+    const effectiveQuestionCount = Math.min(mockQuestionCount, availableQuestionCount)
+    return <main className="app-shell"><section className="subject-card" aria-labelledby="mock-exam-title"><p className="eyebrow">{subject?.code} · Mock Exam</p><h1 id="mock-exam-title">Thi thử bấm giờ</h1><p>Tự bốc ngẫu nhiên Question active, không lặp câu. Hết giờ app tự nộp và lưu kết quả.</p><div className="notebook-settings"><h2>Số câu</h2><div className="mode-list">{[30, 35, 40, 45, 50].map((count) => <button className={mockQuestionCount === count ? 'selected' : ''} key={count} type="button" onClick={() => setMockQuestionCount(count)}>{count} câu</button>)}</div><label htmlFor="mock-question-count">Hoặc nhập từ 30 đến 50</label><input id="mock-question-count" type="number" min={MOCK_EXAM_MIN_QUESTION_COUNT} max={MOCK_EXAM_MAX_QUESTION_COUNT} value={mockQuestionCount} onChange={(event) => setMockQuestionCount(Math.min(MOCK_EXAM_MAX_QUESTION_COUNT, Math.max(MOCK_EXAM_MIN_QUESTION_COUNT, Number(event.target.value) || MOCK_EXAM_MIN_QUESTION_COUNT)))} /><p className="hint">Ngân hàng hiện có {availableQuestionCount} câu; bài thi sẽ dùng {effectiveQuestionCount} câu.</p><h2>Thời gian</h2><div className="mode-list">{[15, 30, 45, 60].map((minutes) => <button className={mockDurationMinutes === minutes ? 'selected' : ''} key={minutes} type="button" onClick={() => setMockDurationMinutes(minutes)}>{minutes} phút</button>)}</div><label htmlFor="mock-duration-minutes">Hoặc nhập số phút</label><input id="mock-duration-minutes" type="number" min="1" value={mockDurationMinutes} onChange={(event) => setMockDurationMinutes(Math.max(1, Number(event.target.value) || 1))} /></div><button className="primary-button" type="button" disabled={effectiveQuestionCount === 0} onClick={startMockExam}>Bắt đầu thi thử · {effectiveQuestionCount} câu · {mockDurationMinutes} phút</button><button className="text-button" type="button" onClick={() => setScreen('mode')}>Quay lại</button></section></main>
+  }
 
   if (screen === 'exam' && exam) {
     const examItemsInOrder = resolveExamItems(exam, questions)
@@ -227,12 +276,12 @@ function App() {
       const next = question.maxSelections === 1 ? [optionId] : selected.includes(optionId) ? selected.filter((id) => id !== optionId) : selected.length < question.maxSelections ? [...selected, optionId] : selected
       return { ...current, [itemId]: next }
     })
-    return <main className="practice-shell"><header className="practice-header"><span>{exam.title}</span><span>{answeredCount}/{examItemsInOrder.length} đã trả lời</span></header>{examItemsInOrder.map(({ item, question }, index) => <section className="question-card exam-question" key={item.examItemId}><p className="eyebrow">Câu {index + 1}{question.maxSelections > 1 ? ` · Chọn tối đa ${question.maxSelections} đáp án` : ''}</p><h2 className="question-text">{textOf(question.blocks)}</h2><div className="answers">{question.options.map((option, optionIndex) => <button className={`answer-button${(examAnswers[item.examItemId] ?? []).includes(option.id) ? ' selected' : ''}`} key={option.id} type="button" onClick={() => toggleExamAnswer(item.examItemId, question, option.id)}><span className="option-label">{String.fromCharCode(65 + optionIndex)}</span><span>{textOf(option.blocks)}</span></button>)}</div></section>)}<button className="primary-button" type="button" onClick={submitExam}>Nộp bài</button></main>
+    return <main className="practice-shell"><header className="practice-header"><span>{exam.title}</span><span>{mockExamEndsAt ? `Còn ${formatRemainingTime(remainingSeconds)}` : `${answeredCount}/${examItemsInOrder.length} đã trả lời`}</span></header>{mockExamEndsAt && <p className="hint">{answeredCount}/{examItemsInOrder.length} đã trả lời · Hết giờ sẽ tự nộp bài.</p>}{examItemsInOrder.map(({ item, question }, index) => <section className="question-card exam-question" key={item.examItemId}><p className="eyebrow">Câu {index + 1}{question.maxSelections > 1 ? ` · Chọn tối đa ${question.maxSelections} đáp án` : ''}</p><h2 className="question-text">{textOf(question.blocks)}</h2><div className="answers">{question.options.map((option, optionIndex) => <button className={`answer-button${(examAnswers[item.examItemId] ?? []).includes(option.id) ? ' selected' : ''}`} key={option.id} type="button" onClick={() => toggleExamAnswer(item.examItemId, question, option.id)}><span className="option-label">{String.fromCharCode(65 + optionIndex)}</span><span>{textOf(option.blocks)}</span></button>)}</div></section>)}<button className="primary-button" type="button" onClick={() => submitExam()}>Nộp bài</button></main>
   }
 
   if (screen === 'exam-result' && exam) {
     const items = resolveExamItems(exam, questions); const score = examScore(examAnswers, items)
-    return <main className="app-shell"><section className="subject-card result-card"><p className="eyebrow">Kết quả đề thi</p><h1>{score.correct}/{items.length} câu đúng</h1><p>Tỉ lệ đúng: {score.percent}% · Chưa trả lời: {score.unanswered}</p><section className="exam-review" aria-label="Xem lại đáp án và lời giải"><h2>Xem lại từng câu</h2>{items.map(({ item, question }, index) => { const selectedIds = examAnswers[item.examItemId] ?? []; const selectedOptions = question.options.filter((option) => selectedIds.includes(option.id)); const correctOptions = question.options.filter((option) => question.correctAnswerIds.includes(option.id)); const state = selectedIds.length === 0 ? 'unanswered' : gradeAnswer(question, selectedIds) ? 'correct' : 'incorrect'; const label = state === 'correct' ? 'Đúng' : state === 'incorrect' ? 'Sai' : 'Chưa trả lời'; return <article className={`review-item review-${state}`} key={item.examItemId}><p className="eyebrow">Câu {index + 1} · {label}</p><h3>{textOf(question.blocks)}</h3><p><strong>Bạn chọn:</strong> {selectedOptions.length ? selectedOptions.map((option) => textOf(option.blocks)).join('; ') : 'Chưa trả lời'}</p><p><strong>Đáp án đúng:</strong> {correctOptions.map((option) => textOf(option.blocks)).join('; ') || 'Chưa có dữ liệu'}</p>{question.explanation && <div className="review-explanation"><strong>Lời giải</strong><p>{textOf(question.explanation.blocks)}</p></div>}<button className="secondary-button" type="button" onClick={() => void askAi(question, { title: exam.title, questionNumber: index + 1 })}>Hỏi AI để hiểu kỹ câu này</button></article> })}</section>{aiTutorStatus && <p className="ai-tutor-status" aria-live="polite">{aiTutorStatus}</p>}{showNotebookFallback && <button className="text-button" type="button" onClick={openNotebook}>Mở Gemini Notebook</button>}<button className="primary-button" type="button" onClick={() => { setExam(null); setScreen('exam-list') }}>Chọn đề khác</button><button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button><button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button></section></main>
+    return <main className="app-shell"><section className="subject-card result-card"><p className="eyebrow">Kết quả đề thi</p><h1>{score.correct}/{items.length} câu đúng</h1><p>Tỉ lệ đúng: {score.percent}% · Chưa trả lời: {score.unanswered}</p>{wasAutoSubmitted && <p className="error-message">Đã hết giờ, bài thi được tự động nộp.</p>}<section className="exam-review" aria-label="Xem lại đáp án và lời giải"><h2>Xem lại từng câu</h2>{items.map(({ item, question }, index) => { const selectedIds = examAnswers[item.examItemId] ?? []; const selectedOptions = question.options.filter((option) => selectedIds.includes(option.id)); const correctOptions = question.options.filter((option) => question.correctAnswerIds.includes(option.id)); const state = selectedIds.length === 0 ? 'unanswered' : gradeAnswer(question, selectedIds) ? 'correct' : 'incorrect'; const label = state === 'correct' ? 'Đúng' : state === 'incorrect' ? 'Sai' : 'Chưa trả lời'; return <article className={`review-item review-${state}`} key={item.examItemId}><p className="eyebrow">Câu {index + 1} · {label}</p><h3>{textOf(question.blocks)}</h3><p><strong>Bạn chọn:</strong> {selectedOptions.length ? selectedOptions.map((option) => textOf(option.blocks)).join('; ') : 'Chưa trả lời'}</p><p><strong>Đáp án đúng:</strong> {correctOptions.map((option) => textOf(option.blocks)).join('; ') || 'Chưa có dữ liệu'}</p>{question.explanation && <div className="review-explanation"><strong>Lời giải</strong><p>{textOf(question.explanation.blocks)}</p></div>}<button className="secondary-button" type="button" onClick={() => void askAi(question, { title: exam.title, questionNumber: index + 1 })}>Hỏi AI để hiểu kỹ câu này</button></article> })}</section>{aiTutorStatus && <p className="ai-tutor-status" aria-live="polite">{aiTutorStatus}</p>}{showNotebookFallback && <button className="text-button" type="button" onClick={openNotebook}>Mở Gemini Notebook</button>}<button className="primary-button" type="button" onClick={() => { setExam(null); setScreen('exam-list') }}>Chọn đề khác</button><button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button><button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button></section></main>
   }
 
   if (screen === 'complete') {

@@ -14,8 +14,9 @@ Status: Partially accepted
    trên trình duyệt; nếu chưa có link, app hướng dẫn người học tự mở Gemini.
 8. Người học bấm **Tiếp tục** để chuyển sang câu kế tiếp.
 
-Chế độ luyện tập không có bước **Xác nhận đáp án** riêng. Lần chọn đầu tiên là
-kết quả duy nhất được dùng để chấm và thống kê.
+Chế độ luyện tập không có bước **Xác nhận đáp án** riêng cho câu một đáp án.
+Câu nhiều đáp án cho phép chọn tối đa `maxSelections`, sau đó xác nhận một lần
+để chấm và khóa tập lựa chọn.
 
 ## Thi thử
 
@@ -26,6 +27,15 @@ kết quả duy nhất được dùng để chấm và thống kê.
 5. Màn hình xem lại hiển thị lựa chọn của người học, đáp án đúng, trạng thái đúng/sai/bỏ trống, lời giải nếu có và **Hỏi AI**.
 6. Nếu bấm **Hỏi AI**, app sao chép prompt và mở Gemini Notebook riêng đã lưu
    trên trình duyệt; nếu chưa có link, app hướng dẫn người học tự mở Gemini.
+
+### Thi thử bấm giờ
+
+1. Người học chọn từ 30 đến 50 câu và thời gian bằng preset hoặc số phút tự nhập.
+2. App bốc Question `active` ngẫu nhiên, không lặp `questionId`; nếu ngân hàng
+   không đủ, dùng toàn bộ số câu duy nhất hiện có.
+3. Đồng hồ đếm ngược luôn hiển thị trong khi làm bài.
+4. Người học có thể nộp sớm; khi đồng hồ về `00:00`, app tự nộp đúng một lần.
+5. Kết quả được chấm, lưu Statistics và xem lại như luồng thi thử thông thường.
 
 Trong cả hai chế độ, **Hỏi AI** không được bật trước khi câu trả lời hoặc bài thi đã được ghi nhận.
 

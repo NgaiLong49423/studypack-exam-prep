@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { examAttempts, examScore, resolveExamItems } from './exam'
+import { createMockExam, examAttempts, examScore, formatRemainingTime, resolveExamItems } from './exam'
 import type { Exam, Question } from './types'
 
 const question: Question = {
@@ -34,5 +34,20 @@ describe('exam helpers', () => {
     const items = resolveExamItems({ ...exam, items: [{ ...exam.items[0], questionId: multiple.id }] }, [multiple])
     expect(examScore({ 'item-1': ['opt-a', 'opt-b'] }, items).correct).toBe(1)
     expect(examScore({ 'item-1': ['opt-a'] }, items).correct).toBe(0)
+  })
+
+  it('creates a unique bounded mock exam from active questions', () => {
+    const questions = Array.from({ length: 55 }, (_, index) => ({ ...question, id: `jpd123-q-${index}`, active: index !== 54 }))
+    const mock = createMockExam('jpd123', [...questions, questions[0]], 50, 123)
+    expect(mock.examId).toBe('mock-jpd123-123')
+    expect(mock.items).toHaveLength(50)
+    expect(new Set(mock.items.map((item) => item.questionId)).size).toBe(50)
+  })
+
+  it('uses all available questions when the bank has fewer than the requested count', () => {
+    const mock = createMockExam('jpd123', [question], 30, 123)
+    expect(mock.items).toHaveLength(1)
+    expect(formatRemainingTime(65)).toBe('01:05')
+    expect(formatRemainingTime(-1)).toBe('00:00')
   })
 })
