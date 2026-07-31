@@ -1,5 +1,12 @@
 # Quality Gates
 
+## Content gate tự động
+
+- Chạy `node scripts/validate-content.mjs` trước khi chạy Frontend CI hoặc build
+  GitHub Pages.
+- Sửa mọi `ERROR` do validator báo trước khi chuyển môn sang `published` hoặc
+  mở Pull Request. `warning` cần được xem xét nhưng không chặn build.
+
 ## Trước khi dựng giao diện
 
 - Chốt Question Contract.
