@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { loadJpd123Exams, loadJpd123Questions, loadJpd123Subject } from './content'
+import { loadJpd123Exams, loadJpd123NotebookDocuments, loadJpd123Questions, loadJpd123Subject } from './content'
 import { examAttempts, examScore, resolveExamItems } from './exam'
+import { downloadFile, fullGeminiPack, learningProgressMarkdown, createExportContext } from './gemini-export'
 import { gradeAnswer, saveAttempt, saveAttempts, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions } from './practice'
 import { clearAttempts, loadAttempts, seedStatisticsDemo } from './practice'
 import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
@@ -19,6 +20,9 @@ function App() {
   const [subject, setSubject] = useState<Subject | null>(null)
   const [questions, setQuestions] = useState<Question[]>([])
   const [exams, setExams] = useState<Exam[]>([])
+  const [notebookDocuments, setNotebookDocuments] = useState({ subjectContext: '', tutorRules: '' })
+  const [selectedGeminiExamIds, setSelectedGeminiExamIds] = useState<string[]>([])
+  const [geminiExportStatus, setGeminiExportStatus] = useState('')
   const [exam, setExam] = useState<Exam | null>(null)
   const [examAnswers, setExamAnswers] = useState<Record<string, string>>({})
   const [session, setSession] = useState<Question[]>([])
@@ -31,11 +35,12 @@ function App() {
   const [detailStatus, setDetailStatus] = useState<LearningStatus | null>(null)
 
   useEffect(() => {
-    Promise.all([loadJpd123Subject(), loadJpd123Questions(), loadJpd123Exams()])
-      .then(([loadedSubject, bank, loadedExams]) => {
+    Promise.all([loadJpd123Subject(), loadJpd123Questions(), loadJpd123Exams(), loadJpd123NotebookDocuments()])
+      .then(([loadedSubject, bank, loadedExams, loadedNotebookDocuments]) => {
         setSubject(loadedSubject)
         setQuestions(bank.questions)
         setExams(loadedExams)
+        setNotebookDocuments(loadedNotebookDocuments)
         setScreen('subject')
       })
       .catch((reason: unknown) => {
@@ -92,6 +97,22 @@ function App() {
     saveAttempts(examAttempts(exam, items, examAnswers, new Date().toISOString()))
     setStatisticsRevision((value) => value + 1)
     setScreen('exam-result')
+  }
+
+  async function exportGeminiPack() {
+    if (!subject) return
+    const selectedExams = exams.filter((item) => selectedGeminiExamIds.includes(item.examId))
+    const pack = await fullGeminiPack(subject, questions, loadAttempts(), exams, selectedExams, notebookDocuments)
+    downloadFile(pack.blob, pack.filename)
+    setGeminiExportStatus(`Đã tải Gemini Pack${selectedExams.length ? ` kèm ${selectedExams.length} đề` : ''}.`)
+  }
+
+  function refreshLearningProgress() {
+    if (!subject) return
+    const context = createExportContext(subject.subjectId)
+    const markdown = learningProgressMarkdown(subject, questions, loadAttempts(), context)
+    downloadFile(new Blob([markdown], { type: 'text/markdown;charset=utf-8' }), `studypack-${subject.subjectId}-learning-progress.md`)
+    setGeminiExportStatus('Đã tải learning-progress.md mới nhất.')
   }
 
   if (screen === 'loading') return <main className="center-message">Đang tải StudyPack…</main>
@@ -174,6 +195,7 @@ function App() {
       <dl className="subject-facts"><div><dt>Lượt trả lời</dt><dd>{summary.totalAttempts}</dd></div><div><dt>Tỉ lệ đúng</dt><dd>{summary.accuracy}%</dd></div></dl>
       <div className="statistics-list">{Object.entries(summary.counts).map(([key, count]) => { const status = key as LearningStatus; return <div key={key}><span><strong>{labels[status]}</strong><small>{rules[status]}</small></span><button type="button" className="text-button" onClick={() => setDetailStatus(status)}>Xem chi tiết · {count} câu</button></div> })}</div>
       {detailStatus && <section className="detail-list" aria-live="polite"><h2>{labels[detailStatus]} · {detailedQuestions.length} câu</h2>{detailedQuestions.map((question) => { const ownAttempts = loadAttempts().filter((attempt) => attempt.questionId === question.id); const correct = ownAttempts.filter((attempt) => attempt.isCorrect).length; return <article key={question.id}><strong>{question.id}</strong><p>{textOf(question.blocks)}</p><small>{ownAttempts.length} lần làm · {correct} đúng · {ownAttempts.length ? Math.round((correct / ownAttempts.length) * 100) : 0}%</small></article> })}</section>}
+      <section className="gemini-documents" aria-labelledby="gemini-documents-title"><p className="eyebrow">Gemini Learning Documents</p><h2 id="gemini-documents-title">Xuất tài liệu để đưa vào Gemini</h2><p>Gói chỉ là snapshot đọc-only. Kết quả trong Gemini không tự thay đổi Statistics của app; bạn có thể tự thêm theory Markdown vào Notebook.</p><fieldset><legend>Đính kèm đề thi (tùy chọn)</legend>{exams.map((item) => <label key={item.examId}><input type="checkbox" checked={selectedGeminiExamIds.includes(item.examId)} onChange={() => setSelectedGeminiExamIds((current) => current.includes(item.examId) ? current.filter((id) => id !== item.examId) : [...current, item.examId])} /> {item.title} · {item.items.length} câu</label>)}</fieldset><button className="primary-button" type="button" onClick={() => void exportGeminiPack()}>Tải Full Gemini Pack (.zip)</button><button className="text-button" type="button" onClick={refreshLearningProgress}>Tải learning-progress.md mới nhất</button>{geminiExportStatus && <p className="export-status" aria-live="polite">{geminiExportStatus}</p>}</section>
       <button className="danger-button" type="button" onClick={resetStatistics}>Xóa dữ liệu thống kê và ôn lại từ đầu</button>
       {import.meta.env.DEV && <button className="demo-button" type="button" onClick={loadDemo}>Nạp dữ liệu demo Statistics (chỉ local)</button>}
       <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
