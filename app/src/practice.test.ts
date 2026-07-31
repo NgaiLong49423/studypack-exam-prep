@@ -29,4 +29,12 @@ describe('practice helpers', () => {
     expect(gradeAnswer(questions[0], 'opt-a')).toBe(true)
     expect(gradeAnswer(questions[0], 'opt-b')).toBe(false)
   })
+
+  it('prioritizes low-accuracy questions while keeping a session unique', () => {
+    const expanded = Array.from({ length: 20 }, (_, index) => ({ ...questions[index % 2], id: `jpd123-q-${index}` }))
+    const attempts = expanded.flatMap((question, index) => Array.from({ length: 4 }, () => ({ questionId: question.id, isCorrect: index < 10 ? false : true })) as never[])
+    const session = selectPracticeQuestions(expanded, attempts as never, 10)
+    expect(session.filter((question) => Number(question.id.split('-').at(-1)) < 10)).toHaveLength(4)
+    expect(new Set(session.map((question) => question.id)).size).toBe(10)
+  })
 })

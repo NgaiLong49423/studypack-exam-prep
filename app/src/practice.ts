@@ -3,16 +3,44 @@ import type { AttemptRecord, Question } from './types'
 export const PRACTICE_SESSION_SIZE = 10
 export const ATTEMPTS_STORAGE_KEY = 'studypack:jpd123:attempts:v1'
 
-export function selectPracticeQuestions(questions: Question[], size = PRACTICE_SESSION_SIZE): Question[] {
+const bandTargets = [0.35, 0.25, 0.2, 0.12, 0.08]
+
+function frequencyBand(questionId: string, attempts: AttemptRecord[]): number {
+  const history = attempts.filter((attempt) => attempt.questionId === questionId)
+  if (history.length < 4) return 2
+  const accuracy = history.filter((attempt) => attempt.isCorrect).length / history.length
+  if (accuracy <= 0.25) return 0
+  if (accuracy <= 0.5) return 1
+  if (accuracy <= 0.75) return 2
+  if (accuracy < 0.9) return 3
+  return 4
+}
+
+export function selectPracticeQuestions(questions: Question[], attemptsOrSize: AttemptRecord[] | number = loadAttempts(), requestedSize = PRACTICE_SESSION_SIZE): Question[] {
+  const attempts = Array.isArray(attemptsOrSize) ? attemptsOrSize : loadAttempts()
+  const size = typeof attemptsOrSize === 'number' ? attemptsOrSize : requestedSize
   const available = questions.filter((question) => question.active)
-  const shuffled = [...available]
-
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1))
-    ;[shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]]
+  const limit = Math.min(size, available.length)
+  const groups = Array.from({ length: 5 }, () => [] as Question[])
+  available.forEach((question) => groups[frequencyBand(question.id, attempts)].push(question))
+  groups[2].sort((a, b) => attempts.filter((item) => item.questionId === a.id).length - attempts.filter((item) => item.questionId === b.id).length)
+  const quotas = bandTargets.map((target) => Math.floor(limit * target))
+  for (let index = 0; quotas.reduce((sum, value) => sum + value, 0) < limit; index = (index + 1) % quotas.length) quotas[index] += 1
+  const selected: Question[] = []
+  const take = (group: Question[], count: number) => {
+    while (count > 0 && group.length) {
+      const index = Math.floor(Math.random() * group.length)
+      selected.push(group.splice(index, 1)[0])
+      count -= 1
+    }
+    return count
   }
-
-  return shuffled.slice(0, Math.min(size, shuffled.length))
+  quotas.forEach((quota, band) => {
+    let missing = take(groups[band], quota)
+    for (let distance = 1; missing > 0 && band + distance < groups.length; distance += 1) missing = take(groups[band + distance], missing)
+    for (let distance = 1; missing > 0 && band - distance >= 0; distance += 1) missing = take(groups[band - distance], missing)
+  })
+  return selected
 }
 
 export function gradeAnswer(question: Question, selectedOptionId: string): boolean {

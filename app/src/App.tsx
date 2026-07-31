@@ -42,7 +42,7 @@ function App() {
   const isCorrect = question && selectedOptionId ? gradeAnswer(question, selectedOptionId) : false
 
   function startPractice() {
-    setSession(selectPracticeQuestions(questions))
+    setSession(selectPracticeQuestions(questions, loadAttempts()))
     setPosition(0)
     setCorrectCount(0)
     setSelectedOptionId(null)
