@@ -37,4 +37,14 @@ describe('practice helpers', () => {
     expect(session.filter((question) => Number(question.id.split('-').at(-1)) < 10)).toHaveLength(4)
     expect(new Set(session.map((question) => question.id)).size).toBe(10)
   })
+
+  it('prefers zero-attempt questions over three-attempt questions in the normal band', () => {
+    const normalBand = Array.from({ length: 20 }, (_, index) => ({ ...questions[index % 2], id: `normal-${index}` }))
+    const attempts = normalBand.flatMap((question, index) => Array.from({ length: index < 10 ? 0 : 3 }, () => ({ questionId: question.id, isCorrect: true })) as never[])
+    vi.spyOn(Math, 'random').mockReturnValue(0.25)
+    const sessions = Array.from({ length: 100 }, () => selectPracticeQuestions(normalBand, attempts as never, 10))
+    const zeroAttemptSelections = sessions.flat().filter((question) => Number(question.id.split('-').at(-1)) < 10).length
+    const threeAttemptSelections = sessions.flat().filter((question) => Number(question.id.split('-').at(-1)) >= 10).length
+    expect(zeroAttemptSelections).toBeGreaterThan(threeAttemptSelections * 2)
+  })
 })

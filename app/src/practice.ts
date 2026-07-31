@@ -27,18 +27,19 @@ export function selectPracticeQuestions(questions: Question[], attemptsOrSize: A
   const quotas = bandTargets.map((target) => Math.floor(limit * target))
   for (let index = 0; quotas.reduce((sum, value) => sum + value, 0) < limit; index = (index + 1) % quotas.length) quotas[index] += 1
   const selected: Question[] = []
-  const take = (group: Question[], count: number) => {
+  const take = (group: Question[], count: number, isSorted = false) => {
     while (count > 0 && group.length) {
-      const index = Math.floor(Math.random() * group.length)
+      const maxIndex = isSorted ? Math.ceil(group.length / 2) : group.length
+      const index = Math.floor(Math.random() * maxIndex)
       selected.push(group.splice(index, 1)[0])
       count -= 1
     }
     return count
   }
   quotas.forEach((quota, band) => {
-    let missing = take(groups[band], quota)
-    for (let distance = 1; missing > 0 && band + distance < groups.length; distance += 1) missing = take(groups[band + distance], missing)
-    for (let distance = 1; missing > 0 && band - distance >= 0; distance += 1) missing = take(groups[band - distance], missing)
+    let missing = take(groups[band], quota, band === 2)
+    for (let distance = 1; missing > 0 && band + distance < groups.length; distance += 1) missing = take(groups[band + distance], missing, band + distance === 2)
+    for (let distance = 1; missing > 0 && band - distance >= 0; distance += 1) missing = take(groups[band - distance], missing, band - distance === 2)
   })
   return selected
 }
