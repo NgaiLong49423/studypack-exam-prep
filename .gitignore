@@ -1,27 +1,17 @@
-# Compiled Java files
-*.class
+# Dependencies and builds
+app/node_modules/
+app/dist/
+app/coverage/
 
-# Build folders
-target/
-build/
-out/
-
-# IDE files
-.idea/
-.vscode/
-*.iml
-nbproject/private/
-
-# OS files
+# Local environment and editor state
+.env
+.env.*
+!.env.example
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
 
-# Logs
-*.log
-
-# Environment files
-.env
-application-local.properties
-
-# Maven wrapper generated files
-.mvn/wrapper/maven-wrapper.jar
+# Private learner and imported source material
+**/*Learning_Profile*.md
+**/private/

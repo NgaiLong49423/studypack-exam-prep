@@ -1,0 +1,32 @@
+name: Feature
+description: Propose a learner-facing capability for StudyPack.
+title: "[Feature] "
+labels: ["status:needs-triage", "type:feature"]
+body:
+  - type: textarea
+    attributes:
+      label: Learner outcome
+      description: What can the learner do when this is complete?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Acceptance criteria
+      description: Write observable, testable behavior.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Contract and data impact
+      description: Link relevant docs, schemas, content files or state the impact is none.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Out of scope
+      description: Name work intentionally deferred.
+    validations:
+      required: true

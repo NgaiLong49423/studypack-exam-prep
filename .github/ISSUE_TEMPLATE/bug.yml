@@ -1,0 +1,30 @@
+name: Bug report
+description: Report behavior that differs from the StudyPack contract.
+title: "[Bug] "
+labels: ["status:needs-triage", "type:bug"]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Device and browser
+      placeholder: e.g. Android Chrome 126
+    validations:
+      required: true

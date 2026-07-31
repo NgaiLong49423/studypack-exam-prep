@@ -1,0 +1,28 @@
+name: Question-bank or content change
+description: Correct or extend public study content without mixing it with application code.
+title: "[Data] "
+labels: ["status:needs-triage", "type:data"]
+body:
+  - type: input
+    attributes:
+      label: Subject and source file
+      placeholder: e.g. JPD123 / subjects/jpd123/questions.json
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Requested change
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Verification source
+      description: State the authoritative material used to verify the change.
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Privacy check
+      options:
+        - label: This request contains no private learner profile or credential.
+          required: true

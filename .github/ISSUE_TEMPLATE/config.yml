@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: StudyPack contribution guide
+    url: https://github.com/NgaiLong49423/studypack-exam-prep/blob/main/CONTRIBUTING.md
+    about: Read the delivery workflow before opening an issue.
