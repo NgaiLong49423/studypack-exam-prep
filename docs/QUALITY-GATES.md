@@ -23,9 +23,12 @@
   bấm **Tiếp tục**.
 - Kiểm chứng thi thử không lộ đáp án trước khi nộp bài.
 - Kiểm chứng **Hỏi AI** chỉ bật sau khi kết quả được ghi nhận.
-- Kiểm chứng prompt chứa đúng câu, lựa chọn của người học, đáp án đúng và không chứa dữ liệu thừa.
+- Kiểm chứng prompt chứa đúng câu, lựa chọn chính thức, đáp án đúng và không chứa
+  lựa chọn của người học hoặc dữ liệu thừa.
 - Kiểm chứng prompt vẫn được sao chép khi trình duyệt chặn mở Gemini Notebook.
-- Kiểm chứng môn chưa có `aiTutor.notebookUrl` vẫn sao chép được prompt.
+- Kiểm chứng người học chưa lưu URL Notebook vẫn sao chép được prompt.
+- Kiểm chứng URL Notebook chỉ lưu local theo `subjectId`, chỉ chấp nhận HTTPS
+  và không xuất hiện trong JSON hoặc Gemini Pack.
 - Kiểm chứng câu có dưới 4 kết quả vẫn dùng tần suất mặc định.
 - Kiểm chứng từ kết quả thứ 4, tỷ lệ đúng được tính trên toàn bộ lịch sử.
 - Kiểm chứng kết quả thứ 5 trở đi tiếp tục làm thay đổi tỷ lệ tích lũy, không chỉ

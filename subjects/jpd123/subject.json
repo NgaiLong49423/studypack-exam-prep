@@ -10,7 +10,6 @@
   "aiTutor": {
     "enabled": true,
     "provider": "gemini-notebook",
-    "notebookUrl": null,
     "promptTemplateId": "explain-question-v1"
   },
   "source": {

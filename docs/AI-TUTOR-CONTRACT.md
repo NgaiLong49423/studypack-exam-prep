@@ -89,7 +89,7 @@ Nếu trình duyệt chặn mở trang mới:
 - Hiện thông báo **Đã sao chép prompt**.
 - Hiện nút **Mở Gemini Notebook** để người học chủ động bấm.
 
-Nếu môn chưa có `aiTutor.notebookUrl`:
+Nếu người học chưa lưu link Notebook riêng:
 
 - Vẫn cho phép sao chép prompt.
 - Không tự mở trang.
@@ -103,11 +103,10 @@ Gemini Pack, GitHub hoặc dữ liệu dùng chung; không có account sync ở 
 
 - Key được phân biệt theo `subjectId`.
 - Chỉ chấp nhận URL `https` hợp lệ.
-- App ưu tiên link local của người học. Nếu chưa có, app mới dùng
-  `aiTutor.notebookUrl` trong Subject như một default tùy chọn.
-- Người học có thể xóa link để trở lại default hoặc trạng thái chưa cấu hình.
+- App chỉ dùng link local đã lưu của người học.
+- Người học có thể xóa link để trở lại trạng thái chưa cấu hình.
 
-## Cấu hình default theo môn
+## Cấu hình dùng chung theo môn
 
 ```json
 {
@@ -115,12 +114,12 @@ Gemini Pack, GitHub hoặc dữ liệu dùng chung; không có account sync ở 
   "aiTutor": {
     "enabled": true,
     "provider": "gemini-notebook",
-    "notebookUrl": "https://...",
     "promptTemplateId": "explain-question-v1"
   }
 }
 ```
 
-- Mỗi môn có thể dùng một Gemini Notebook khác nhau.
+- `subject.json` không chứa URL Gemini Notebook, vì URL là dữ liệu riêng của
+  từng người học trên cùng một môn.
 - `promptTemplateId` cho phép quản lý phiên bản nội dung prompt.
 - Việc lưu câu trả lời AI làm lời giải chính thức chỉ được thực hiện bằng một hành động riêng sau khi người nhập dữ liệu kiểm tra và chủ động xác nhận.

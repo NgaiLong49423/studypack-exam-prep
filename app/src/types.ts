@@ -36,7 +36,6 @@ export type Subject = {
   aiTutor?: {
     enabled: boolean
     provider: 'gemini-notebook'
-    notebookUrl: string | null
     promptTemplateId: string
   }
 }

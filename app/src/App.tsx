@@ -132,10 +132,10 @@ function App() {
       setAiTutorStatus('Trình duyệt chưa thể sao chép prompt. Hãy cho phép quyền Clipboard rồi thử lại.')
       return
     }
-    const notebookUrl = savedNotebookUrl || (subject.aiTutor?.enabled ? subject.aiTutor.notebookUrl : null)
+    const notebookUrl = savedNotebookUrl
     if (!notebookUrl) {
       setShowNotebookFallback(false)
-      setAiTutorStatus('Đã sao chép prompt. Notebook Gemini của môn này chưa được cấu hình, hãy mở Gemini và dán prompt.')
+      setAiTutorStatus('Đã sao chép prompt. Bạn chưa lưu link Gemini Notebook riêng, hãy mở Gemini và dán prompt.')
       return
     }
     const opened = window.open(notebookUrl, '_blank', 'noopener,noreferrer')
@@ -144,7 +144,7 @@ function App() {
   }
 
   function openNotebook() {
-    const notebookUrl = savedNotebookUrl || (subject?.aiTutor?.enabled ? subject.aiTutor.notebookUrl : null)
+    const notebookUrl = savedNotebookUrl
     if (notebookUrl) window.open(notebookUrl, '_blank', 'noopener,noreferrer')
   }
 

@@ -217,7 +217,9 @@ kỹ: kiến thức kiểm tra, suy luận chọn đáp án, bẫy đáp án kh�
 và ví dụ ngắn nếu hữu ích. Nếu chưa có official explanation, Gemini phải nói
 rõ đó là giải thích hỗ trợ học tập.
 
-App copy prompt vào clipboard và mở Notebook URL của môn nếu được cấu hình.
+App copy prompt vào clipboard và mở URL Gemini Notebook riêng đã được người
+học lưu local cho môn đó. URL không nằm trong JSON Subject, Gemini Pack hoặc
+dữ liệu dùng chung.
 Gemini response không tự ghi đè official explanation.
 
 ## Validation và vị trí giao diện
