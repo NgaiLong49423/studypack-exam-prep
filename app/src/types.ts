@@ -40,6 +40,10 @@ export type Subject = {
   }
 }
 
+export type SubjectCatalogEntry = Pick<Subject, 'subjectId' | 'code' | 'name' | 'description' | 'status'> & { examIds: string[] }
+
+export type SubjectCatalog = { schemaVersion: string; subjects: SubjectCatalogEntry[] }
+
 export type AttemptRecord = {
   questionId: string
   questionVersion: number
