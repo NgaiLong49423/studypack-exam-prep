@@ -45,7 +45,10 @@ export function selectPracticeQuestions(questions: Question[], attemptsOrSize: A
 }
 
 export function selectRandomQuestions(questions: Question[], size = PRACTICE_SESSION_SIZE): Question[] {
-  const shuffled = questions.filter((question) => question.active).sort(() => Math.random() - 0.5)
+  const uniqueQuestions = Array.from(new Map(
+    questions.filter((question) => question.active).map((question) => [question.id, question]),
+  ).values())
+  const shuffled = uniqueQuestions.sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(size, shuffled.length))
 }
 

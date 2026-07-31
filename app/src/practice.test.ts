@@ -31,7 +31,10 @@ describe('practice helpers', () => {
   })
 
   it('selects unique active questions for random practice', () => {
-    expect(new Set(selectRandomQuestions(questions, 2).map((question) => question.id)).size).toBe(2)
+    const duplicatedQuestions = [...questions, { ...questions[0], blocks: [{ type: 'markdown' as const, text: 'Duplicate content' }] }]
+    const session = selectRandomQuestions(duplicatedQuestions, 3)
+    expect(session).toHaveLength(2)
+    expect(new Set(session.map((question) => question.id)).size).toBe(2)
   })
 
   it('prioritizes low-accuracy questions while keeping a session unique', () => {
