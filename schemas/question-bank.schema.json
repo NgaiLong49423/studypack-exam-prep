@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"StudyPack Question Bank","type":"object","required":["schemaVersion","subjectId","version","questions"],"properties":{"schemaVersion":{"const":"1.0"},"subjectId":{"type":"string"},"version":{"type":"integer","minimum":1},"questions":{"type":"array"}}}
