@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "subjectId": "jpd123",
+  "code": "JPD123",
+  "name": "Japanese Elementary 3",
+  "description": "Ngân hàng lý thuyết và câu hỏi ôn tập JPD123.",
+  "status": "draft",
+  "contentLanguages": ["ja", "vi"],
+  "explanationLanguage": "vi",
+  "aiTutor": {
+    "enabled": false,
+    "provider": "gemini-notebook",
+    "notebookUrl": null,
+    "promptTemplateId": "explain-question-v1"
+  }
+}
