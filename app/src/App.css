@@ -16,6 +16,9 @@ h2 { color: #253042; font-size: 1.35rem; }
 .primary-button, .text-button, .answer-button { cursor: pointer; font: inherit; }
 .primary-button { border: 0; border-radius: .625rem; background: #176447; color: #fff; padding: .8rem 1.15rem; font-weight: 750; }
 .primary-button:hover, .primary-button:focus-visible { background: #0f5138; }
+.secondary-button { margin: .75rem .75rem 0 0; border: 1px solid #176447; border-radius: .625rem; background: #fff; color: #176447; padding: .7rem 1rem; font: inherit; font-weight: 700; cursor: pointer; }
+.secondary-button:hover, .secondary-button:focus-visible { background: #f1faf5; }
+.ai-tutor-status { margin: .75rem 0 0; color: #164f35; line-height: 1.5; }
 .hint { margin: 1rem 0 0; font-size: .9rem; }
 .text-button { display: block; margin: 1rem auto 0; border: 0; background: transparent; color: #176447; text-decoration: underline; }
 .practice-shell { margin: 0 auto; max-width: 56rem; }
