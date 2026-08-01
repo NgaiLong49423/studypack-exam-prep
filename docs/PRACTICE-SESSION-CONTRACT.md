@@ -2,234 +2,167 @@
 
 Status: Partially accepted
 
-Tài liệu này mô tả một lượt làm câu hỏi và các quyết định đã được chốt trong
-quá trình phân rã. Những mục còn mở phải được duyệt trước khi Contract chuyển
-sang trạng thái `Accepted`.
+Phạm vi đã triển khai trong V1 là session luyện từ question bank (`practice`),
+bao gồm lưu và khôi phục một lượt đang làm dở trên cùng trình duyệt. Các phần
+về session Exam đầy đủ, bỏ lượt có trạng thái riêng và tiếp tục nhiều session
+vẫn là định hướng cho phase sau.
 
-## 1. Mô hình chung
+## 1. Phạm vi và mô hình hiện tại
 
-Mọi lượt làm câu hỏi dùng chung thực thể `PracticeSession`, bao gồm luyện từ
-ngân hàng và làm lại đề cũ. Mỗi vị trí trong lượt là một
-`QuestionAttempt`.
+Một `PracticeSession` đại diện cho một lượt luyện câu hỏi của một Subject.
+Danh sách câu được cố định ngay khi bắt đầu lượt. Session được lưu cục bộ bằng
+`localStorage`, tách theo `subjectId`:
 
-- `PracticeSession` giữ nguồn câu hỏi, cài đặt, thứ tự cố định và trạng thái
-  của cả lượt.
-- `QuestionAttempt` giữ câu hỏi, phiên bản, thứ tự đáp án và kết quả tại một
-  vị trí.
-- Làm lại luôn tạo session mới; không ghi đè lịch sử cũ.
-- Khi session bắt đầu, danh sách câu, phiên bản câu và thứ tự hiển thị phải
-  được cố định để có thể tiếp tục chính xác sau khi đóng app.
+```text
+studypack:{subjectId}:practice-session:v1
+```
 
-Không tạo một mô hình `ExamAttempt` riêng. Làm đề cũ là `PracticeSession` có
-`mode: "exam"` và tham chiếu `examId`.
-
-## 2. Chế độ và nguồn câu hỏi
-
-### `practice`
-
-Luyện từ ngân hàng theo Subject, một hoặc nhiều Topic và các bộ lọc như:
-
-- tất cả câu;
-- câu chưa từng làm;
-- câu cần ôn lại;
-- kết hợp các bộ lọc được app hỗ trợ.
-
-### `exam`
-
-Làm lại một đề cũ:
-
-- lấy đúng các `ExamItem`;
-- mặc định giữ nguyên thứ tự câu và đáp án;
-- không loại câu xuất hiện lặp trong đề;
-- không thêm câu ngoài đề.
-
-### `custom`
-
-Danh sách câu được người dùng hoặc một tính năng khác lựa chọn. Chế độ này có
-thể triển khai sau nhưng cấu trúc dữ liệu được phép hỗ trợ.
-
-## 3. Trạng thái session
-
-| Giá trị | Ý nghĩa |
-| --- | --- |
-| `in_progress` | Đang làm hoặc đã thoát app nhưng chưa nộp |
-| `completed` | Đã nộp và kết quả đã được khóa |
-| `abandoned` | Người dùng chủ động bỏ lượt |
-| `invalidated` | Dữ liệu hỏng và không được tính vào tiến độ |
-
-Không cần `paused`. Session `in_progress` cùng `lastActiveAt` đủ để tiếp tục
-bài đang làm.
-
-## 4. QuestionAttempt
-
-Ví dụ tối thiểu:
+Session hiện tại lưu:
 
 ```json
 {
-  "attemptId": "attempt-001",
-  "position": 1,
-  "questionId": "jpd123-q-0101",
-  "questionVersion": 2,
-  "examItemId": null,
-  "optionOrder": [
-    "option-c",
-    "option-a",
-    "option-d",
-    "option-b"
+  "sessionId": "practice-jpd123-...",
+  "subjectId": "jpd123",
+  "mode": "smart",
+  "questionRefs": [
+    { "questionId": "jpd123-q-0101", "questionVersion": 1 }
   ],
+  "position": 0,
   "selectedOptionIds": [],
-  "answerState": "unanswered",
-  "isCorrect": null,
-  "reviewState": "needs_review",
-  "lockedAt": null,
-  "answeredAt": null
+  "isLocked": false,
+  "correctCount": 0,
+  "startedAt": "2026-08-01T00:00:00.000Z",
+  "updatedAt": "2026-08-01T00:00:00.000Z",
+  "status": "in_progress"
 }
 ```
 
-Phải lưu `optionId`, không chỉ lưu vị trí A/B/C/D, vì vị trí có thể thay đổi
-khi trộn đáp án.
+`AttemptRecord` vẫn là lịch sử kết quả học tập. Session đang làm dở và lịch
+sử kết quả là hai dữ liệu khác nhau:
 
-## 5. Trạng thái thao tác và trạng thái ôn tập
+- session dùng để khôi phục thao tác hiện tại;
+- attempt dùng để tính Statistics và chọn câu cho lượt sau.
 
-Hệ thống giữ hai khái niệm riêng:
+V1 chưa tạo `QuestionAttempt` độc lập cho từng vị trí. Đây là mô hình mở rộng
+được phép dùng ở phase sau nếu cần lưu session chi tiết hơn.
 
-### `answerState`
+## 2. Các mode được hỗ trợ
 
-Ghi đúng hành động trong lượt:
+### `smart`
 
-| Giá trị | Ý nghĩa |
-| --- | --- |
-| `unanswered` | Chưa chọn đáp án hoặc để trống khi nộp |
-| `incorrect` | Đã trả lời nhưng không đúng |
-| `correct` | Đã trả lời đúng |
+Chọn câu theo lịch sử và các nhóm tần suất trong Progress Contract.
 
-`unanswered` vẫn cần tồn tại để app biết câu nào chưa làm, hỗ trợ tiếp tục bài
-dở và cảnh báo trước khi nộp.
+### `random`
 
-### Quy tắc khóa trong chế độ `practice`
+Chọn ngẫu nhiên từ các Question đang active.
 
-Ở chế độ luyện tập, thao tác chọn đáp án chính là thao tác trả lời:
+### `unseen`
+
+Chỉ chọn câu chưa xuất hiện trong lịch sử trả lời của Subject.
+
+### `review`
+
+Chọn câu đã làm và có tỷ lệ đúng tích lũy không quá 50%.
+
+Mỗi mode tạo một session mới. Việc tạo session mới không ghi đè lịch sử
+`AttemptRecord` cũ.
+
+Các mode `exam` và `custom` được mô tả trong định hướng domain nhưng chưa dùng
+chung `PracticeSession` persistence trong implementation hiện tại.
+
+## 3. Vòng đời session V1
+
+| Trạng thái | V1 | Ý nghĩa |
+| --- | --- | --- |
+| `in_progress` | Đã hỗ trợ | Session đang làm hoặc đã đóng app trước khi hoàn thành |
+| `completed` | Không lưu snapshot | Session bị xóa khỏi storage khi người học hoàn thành |
+| `abandoned` | Chưa hỗ trợ riêng | Hiện được xử lý bằng thao tác bỏ snapshot và bắt đầu lượt khác |
+| `invalidated` | Không lưu trạng thái riêng | Snapshot lỗi hoặc không khôi phục được sẽ bị xóa an toàn |
+
+Khi người học mở lại Subject:
+
+1. App đọc snapshot `in_progress` của Subject đó.
+2. App kiểm tra toàn bộ `questionId` và `questionVersion` còn khớp question
+   bank hiện tại hay không.
+3. Nếu hợp lệ, app hỏi: **“Bạn có một lượt luyện đang làm dở. Bạn muốn tiếp tục
+   không?”**
+4. **Tiếp tục lượt đang làm** khôi phục đúng thứ tự câu, vị trí, lựa chọn tạm
+   thời, trạng thái khóa và điểm hiện tại.
+5. **Bắt đầu lượt mới** xóa snapshot cũ rồi chuyển tới màn hình chọn mode.
+6. Nếu snapshot không hợp lệ, app xóa snapshot và không chặn việc học.
+
+Chỉ có một snapshot Practice đang dở cho mỗi Subject trong mỗi browser storage
+scope. V1 chưa hỗ trợ danh sách nhiều session đang làm dở.
+
+## 4. Quy tắc chọn và cố định câu
+
+- Danh sách câu được chọn một lần khi bắt đầu session.
+- Thứ tự câu không thay đổi khi khôi phục.
+- Mỗi reference giữ `questionId` và `questionVersion`.
+- Nếu một Question bị xóa hoặc version hiện tại không còn khớp, session không
+  được khôi phục một phần; toàn bộ snapshot bị loại để tránh trộn dữ liệu cũ và
+  mới.
+- Kết quả mới không làm thay đổi danh sách câu của session hiện tại.
+
+## 5. Quy tắc trả lời trong Practice
+
+### Câu một đáp án
 
 1. Người học chọn một đáp án.
-2. App ghi nhận lựa chọn đầu tiên, chấm và tự động lưu.
-3. `answerState`, `isCorrect`, `answeredAt` và `lockedAt` được thiết lập.
-4. Câu bị khóa ngay; không được đổi, bỏ chọn hoặc chọn lại đáp án trong cùng
-   session.
-5. App hiển thị đúng/sai, đáp án đúng và lời giải nếu có.
-6. App giữ nguyên câu hiện tại cho đến khi người học bấm **Tiếp tục**.
-7. Chỉ sau thao tác **Tiếp tục**, app mới chuyển sang câu kế tiếp.
+2. App chấm và ghi `AttemptRecord` ngay.
+3. Lựa chọn bị khóa ngay trong session.
+4. App lưu snapshot với `selectedOptionIds`, `isLocked` và `correctCount` mới.
+5. Người học phải bấm **Tiếp tục** để sang câu kế tiếp.
 
-Không có bước **Xác nhận đáp án** riêng và app không tự chuyển câu sau khi chấm.
-Nếu muốn trả lời lại câu đã khóa, người học phải bắt đầu một session mới.
+### Câu nhiều đáp án
 
-Quy tắc khóa ngay không áp dụng cho `mode: "exam"`: người học vẫn có thể sửa
-lựa chọn trong đề cho đến khi bấm **Nộp bài**.
+- Người học có thể chọn hoặc bỏ chọn trong giới hạn `maxSelections` trước khi
+  xác nhận.
+- Các lựa chọn tạm thời được lưu vào session để không mất khi refresh.
+- Khi bấm **Xác nhận**, app chấm, lưu attempt và khóa câu.
+- Sau khi khóa, không thể sửa lựa chọn trong session hiện tại.
 
-### `reviewState`
+App không tự chuyển câu sau khi chấm. Muốn trả lời lại câu đã khóa, người học
+phải bắt đầu session mới.
 
-Ghi cách câu được xử lý trong hệ thống ôn tập:
+## 6. Hoàn thành và lịch sử
 
-```text
-correct                 → mastered_for_attempt
-incorrect + unanswered  → needs_review
-```
+- Khi người học bấm **Tiếp tục** ở câu cuối, snapshot Practice được xóa.
+- Màn hình hoàn thành vẫn lấy kết quả từ state hiện tại của lượt.
+- Những `AttemptRecord` đã lưu không bị xóa khi snapshot bị xóa.
+- Lịch sử cũ không bị ghi đè khi bắt đầu session mới.
+- Xóa snapshot không có nghĩa là xóa Statistics.
 
-Quy tắc đã chốt:
+## 7. Phiên bản dữ liệu
 
-> Trong thống kê kiến thức, mọi câu không đúng — gồm trả lời sai và không trả
-> lời — đều được xem là cần ôn lại. Không tạo một nhóm ôn tập riêng cho câu bỏ
-> trống.
+- Session lưu `questionVersion` của từng Question tại thời điểm bắt đầu.
+- Session chỉ khôi phục khi version trong question bank hiện tại khớp.
+- Attempt lưu version được dùng khi trả lời.
+- V1 chưa có kho lưu nhiều phiên bản Question để dựng lại nội dung cũ; khi
+  version không khớp, app loại snapshot thay vì khôi phục sai nội dung.
 
-Một session đang `in_progress` không được kết luận vĩnh viễn rằng câu
-`unanswered` cần ôn. Việc quy đổi cuối cùng được thực hiện khi session
-`completed` hoặc `abandoned`. Trong lúc đang làm, app vẫn có thể hiển thị tạm
-thời các câu chưa trả lời.
+## 8. Validation và an toàn
 
-## 6. Chấm điểm
+Snapshot không hợp lệ nếu:
 
-Kết quả chính luôn tính trên toàn bộ số câu trong lượt:
+- không đúng `subjectId` của storage key;
+- không có `questionRefs`;
+- `position` nằm ngoài danh sách câu;
+- `selectedOptionIds` không phải mảng;
+- `isLocked` không phải boolean;
+- `correctCount` không phải số nguyên;
+- status không phải `in_progress`;
+- Question không tồn tại hoặc version không khớp question bank.
 
-```text
-scorePercent = correctCount / totalQuestionCount × 100
-needsReviewCount = incorrectCount + unansweredCount
-```
+Snapshot lỗi không được dùng để dựng UI và không được đưa vào Statistics.
 
-Ví dụ:
+## 9. Chưa nằm trong implementation V1
 
-```text
-Tổng: 50
-Đúng: 38
-Sai: 5
-Không trả lời: 7
+- Resume session Exam với toàn bộ đáp án tạm thời của từng `ExamItem`.
+- Trạng thái `abandoned` và `completed` được lưu như bản ghi session độc lập.
+- Nhiều session đang làm dở cùng một Subject.
+- Tiếp tục session sau khi nội dung Question đã có version mới.
+- Đồng bộ session giữa nhiều thiết bị hoặc nhiều trình duyệt.
+- Backend, authentication hoặc database cho learner progress.
 
-Điểm chính: 38/50 = 76%
-Cần ôn lại: 12 câu
-```
-
-App có thể hiển thị số câu chưa trả lời để người dùng hiểu kết quả, nhưng không
-dùng tỷ lệ đúng trên số câu đã trả lời làm điểm chính vì tỷ lệ đó có thể làm
-kết quả cao giả tạo.
-
-## 7. Nộp bài và lưu dữ liệu
-
-- Trong `practice`, lựa chọn đầu tiên phải được lưu và khóa bằng một thao tác
-  nguyên tử; các thao tác sửa đáp án sau đó phải bị từ chối.
-- Bấm **Tiếp tục** cập nhật vị trí hiện tại và phải được tự động lưu.
-- Trong `exam`, mọi thay đổi đáp án trước khi nộp và vị trí hiện tại phải được
-  tự động lưu.
-- Người dùng có thể nộp khi còn câu chưa trả lời sau một cảnh báo rõ ràng.
-- Khi nộp, câu chưa trả lời giữ `answerState: "unanswered"` và được quy về
-  `reviewState: "needs_review"`.
-- Session `completed` không được sửa. Muốn làm lại phải tạo session mới.
-- Session không tự hoàn thành chỉ vì người dùng không mở app trong thời gian
-  dài.
-
-## 8. Phiên bản và lịch sử
-
-- Mỗi attempt lưu `questionVersion` đã dùng.
-- Lượt mới dùng phiên bản câu hỏi hiện hành.
-- Lượt cũ không được tính lại kết quả khi câu hỏi được sửa.
-- Không xóa cứng phiên bản câu hỏi đã được một session tham chiếu.
-- Một câu xuất hiện ở hai vị trí của đề phải tạo hai `QuestionAttempt` riêng.
-
-## 9. Quy tắc hiển thị và trộn
-
-- Luyện ngân hàng mặc định trộn câu và xem đáp án sau khi trả lời.
-- Làm đề cũ mặc định giữ thứ tự nguồn và chỉ xem đáp án sau khi nộp.
-- Nếu trộn đáp án, `optionOrder` phải được lưu cố định trong attempt.
-- Mở lại session phải hiển thị đúng thứ tự đã tạo ban đầu.
-
-Các mặc định này có thể được người dùng thay đổi trước khi bắt đầu session.
-
-## 10. Validation tối thiểu
-
-Lỗi mức `error` gồm:
-
-- trùng `sessionId`, `attemptId` hoặc `position`;
-- `mode` không hợp lệ;
-- Subject, Exam, ExamItem, Question hoặc phiên bản không tồn tại;
-- câu hỏi thuộc sai Subject;
-- đáp án đã chọn không thuộc câu hỏi;
-- `isCorrect`, `answerState` và đáp án đã chọn mâu thuẫn;
-- attempt đã trả lời trong `practice` nhưng thiếu `lockedAt`;
-- attempt đã khóa nhưng lựa chọn hoặc kết quả tiếp tục bị sửa;
-- `reviewState` không đúng theo quy tắc quy đổi;
-- session `completed` thiếu `completedAt`;
-- session `in_progress` lại có `completedAt`;
-- attempt trong chế độ Exam tham chiếu ExamItem không thuộc Exam nguồn.
-
-Cảnh báo gồm:
-
-- nộp khi còn câu chưa trả lời;
-- nhiều session đang làm dở cùng nguồn;
-- số câu thực tế thấp hơn số lượng yêu cầu;
-- một câu lặp trong session luyện ngân hàng.
-
-## 11. Quyết định còn mở
-
-Contract chưa được xem là chốt toàn bộ cho đến khi quyết định:
-
-- Có cho chỉnh cài đặt hiển thị sau khi session đã bắt đầu không?
-
-Thuật toán ưu tiên câu cần ôn, khoảng cách lặp lại và cân bằng câu mới/cũ thuộc
-`Progress & Review Algorithm`, không thuộc Contract này.
+Các mục này cần được duyệt thành issue riêng trước khi triển khai.

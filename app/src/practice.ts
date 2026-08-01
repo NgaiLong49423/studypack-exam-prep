@@ -1,7 +1,8 @@
-import type { AttemptRecord, Question } from './types'
+import type { AttemptRecord, PracticeMode, PracticeSession, Question } from './types'
 
 export const PRACTICE_SESSION_SIZE = 10
 export const attemptsStorageKey = (subjectId: string) => `studypack:${subjectId}:attempts:v1`
+export const practiceSessionStorageKey = (subjectId: string) => `studypack:${subjectId}:practice-session:v1`
 
 const bandTargets = [0.35, 0.25, 0.2, 0.12, 0.08]
 
@@ -109,4 +110,49 @@ export function seedStatisticsDemo(subjectId: string, questionIds: string[]): vo
     answeredAt: new Date(2026, 0, attemptIndex + 1).toISOString(),
   })))
   localStorage.setItem(attemptsStorageKey(subjectId), JSON.stringify(attempts))
+}
+
+export function createPracticeSession(subjectId: string, mode: PracticeMode, questions: Question[], now = new Date().toISOString()): PracticeSession {
+  return {
+    sessionId: `practice-${subjectId}-${Date.now()}`,
+    subjectId,
+    mode,
+    questionRefs: questions.map((question) => ({ questionId: question.id, questionVersion: question.version })),
+    position: 0,
+    selectedOptionIds: [],
+    isLocked: false,
+    correctCount: 0,
+    startedAt: now,
+    updatedAt: now,
+    status: 'in_progress',
+  }
+}
+
+export function savePracticeSession(session: PracticeSession): void {
+  localStorage.setItem(practiceSessionStorageKey(session.subjectId), JSON.stringify(session))
+}
+
+export function loadPracticeSession(subjectId: string): PracticeSession | null {
+  try {
+    const value = JSON.parse(localStorage.getItem(practiceSessionStorageKey(subjectId)) ?? 'null') as Partial<PracticeSession> | null
+    if (!value || value.subjectId !== subjectId || value.status !== 'in_progress' || !Array.isArray(value.questionRefs) || value.questionRefs.length === 0) return null
+    if (typeof value.position !== 'number' || !Number.isInteger(value.position) || value.position < 0 || value.position >= value.questionRefs.length) return null
+    if (!Array.isArray(value.selectedOptionIds) || typeof value.isLocked !== 'boolean' || !Number.isInteger(value.correctCount)) return null
+    return value as PracticeSession
+  } catch {
+    return null
+  }
+}
+
+export function clearPracticeSession(subjectId: string): void {
+  localStorage.removeItem(practiceSessionStorageKey(subjectId))
+}
+
+export function restorePracticeQuestions(session: PracticeSession, questions: Question[]): Question[] | null {
+  const byId = new Map(questions.map((question) => [question.id, question]))
+  const restored = session.questionRefs.map(({ questionId, questionVersion }) => {
+    const question = byId.get(questionId)
+    return question && question.version === questionVersion ? question : null
+  })
+  return restored.every((question): question is Question => question !== null) ? restored : null
 }
