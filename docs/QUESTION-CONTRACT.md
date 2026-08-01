@@ -71,8 +71,8 @@ Status: Accepted
 - Chọn thiếu, chọn thừa hoặc chọn sai đều là sai.
 - Không có điểm riêng theo độ khó hoặc khu vực.
 - Thi thử: chỉ chấm khi nộp toàn bộ bài; câu bỏ trống tính 0 câu đúng.
-- Luyện tập: câu một đáp án được ghi nhận và khóa ngay. Câu nhiều đáp án cho
-  phép chọn tối đa `maxSelections`, sau đó người học bấm xác nhận một lần để
+- Luyện tập: mọi câu đều cho phép chọn tạm thời trước. Câu nhiều đáp án giới
+  hạn tối đa `maxSelections`; người học bấm xác nhận một lần để ghi nhận và
   khóa toàn bộ tập lựa chọn.
 - Sau khi xác nhận, hiển thị đáp án đúng và lời giải nếu có.
 - Người học phải bấm **Tiếp tục**; app không tự chuyển.

@@ -238,10 +238,11 @@ function App() {
 
   function chooseAnswer(optionId: string) {
     if (!question || isLocked) return
-    if (question.maxSelections === 1) { submitPracticeAnswer([optionId]); return }
-    const nextSelection = selectedOptionIds.includes(optionId)
-      ? selectedOptionIds.filter((id) => id !== optionId)
-      : selectedOptionIds.length < question.maxSelections ? [...selectedOptionIds, optionId] : selectedOptionIds
+    const nextSelection = question.maxSelections === 1
+      ? [optionId]
+      : selectedOptionIds.includes(optionId)
+        ? selectedOptionIds.filter((id) => id !== optionId)
+        : selectedOptionIds.length < question.maxSelections ? [...selectedOptionIds, optionId] : selectedOptionIds
     setSelectedOptionIds(nextSelection)
     persistPracticeSession({ selectedOptionIds: nextSelection })
   }
@@ -443,7 +444,7 @@ function App() {
           <button className="primary-button" type="button" onClick={() => setScreen('mode')}>Chọn cách luyện</button>
           <button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button>
           <button className="text-button" type="button" onClick={() => setScreen('subject-picker')}>Đổi môn học</button>
-          <p className="hint">Lựa chọn đầu tiên sẽ được khóa ngay và bạn tự bấm Tiếp tục.</p>
+          <p className="hint">Chọn đáp án, bấm Xác nhận để xem kết quả, rồi bấm Tiếp tục sang câu kế tiếp.</p>
         </section>
       </main>
     )
@@ -564,9 +565,11 @@ function App() {
             return orderedOptions.map((option, index) => {
               const isSelected = selectedOptionIds.includes(option.id)
               const isAnswer = question.correctAnswerIds.includes(option.id)
-              const state = isLocked ? (isAnswer ? ' correct' : isSelected ? ' incorrect' : '') : ''
+              const state = isLocked
+                ? (isAnswer ? ' correct' : isSelected ? ' incorrect' : '')
+                : isSelected ? ' selected' : ''
               return (
-              <button className={`answer-button${state}`} disabled={isLocked} key={option.id} type="button" onClick={() => chooseAnswer(option.id)}>
+              <button aria-pressed={isSelected} className={`answer-button${state}`} disabled={isLocked} key={option.id} type="button" onClick={() => chooseAnswer(option.id)}>
                 <span className="option-label">{String.fromCharCode(65 + index)}</span>
                 <span>{textOf(option.blocks)}</span>
               </button>
@@ -574,7 +577,7 @@ function App() {
             })
           })()}
         </div>
-        {!isLocked && question.maxSelections > 1 && <button className="primary-button" type="button" disabled={selectedOptionIds.length === 0} onClick={() => submitPracticeAnswer(selectedOptionIds)}>Xác nhận {selectedOptionIds.length}/{question.maxSelections} đáp án</button>}
+        {!isLocked && <button className="primary-button" type="button" disabled={selectedOptionIds.length === 0} onClick={() => submitPracticeAnswer(selectedOptionIds)}>{question.maxSelections === 1 ? 'Xác nhận đáp án' : `Xác nhận ${selectedOptionIds.length}/${question.maxSelections} đáp án`}</button>}
         {isLocked && (
           <section className={`feedback ${isCorrect ? 'feedback-correct' : 'feedback-incorrect'}`} aria-live="polite">
             <h2>{isCorrect ? 'Đúng rồi' : 'Chưa đúng'}</h2>

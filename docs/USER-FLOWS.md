@@ -5,18 +5,19 @@ Status: Partially accepted
 ## Luyện tập
 
 1. Hiển thị câu hỏi.
-2. Người học chọn một đáp án.
-3. App ghi nhận lựa chọn đầu tiên, chấm, tự động lưu và khóa câu ngay.
-4. Người học không thể đổi, bỏ chọn hoặc chọn lại đáp án trong cùng lượt.
+2. Người học chọn một hoặc nhiều đáp án; các đáp án đang chọn được đánh dấu rõ
+   nhưng chưa hiển thị kết quả.
+3. Người học có thể đổi lựa chọn tạm thời trong giới hạn của câu hỏi, rồi bấm
+   **Xác nhận đáp án**.
+4. App chỉ sau đó mới ghi nhận, chấm, lưu và khóa câu.
 5. App hiển thị đúng/sai, đáp án đúng, lời giải nếu có và **Hỏi AI**.
 6. App không tự chuyển câu.
 7. Nếu bấm **Hỏi AI**, app sao chép prompt và mở Gemini Notebook riêng đã lưu
    trên trình duyệt; nếu chưa có link, app hướng dẫn người học tự mở Gemini.
 8. Người học bấm **Tiếp tục** để chuyển sang câu kế tiếp.
 
-Chế độ luyện tập không có bước **Xác nhận đáp án** riêng cho câu một đáp án.
-Câu nhiều đáp án cho phép chọn tối đa `maxSelections`, sau đó xác nhận một lần
-để chấm và khóa tập lựa chọn.
+Quy tắc **Xác nhận đáp án** chỉ áp dụng cho chế độ Luyện tập. Thi theo đề và
+Thi thử vẫn cho phép sửa lựa chọn đến khi bấm **Nộp bài**.
 
 ## Thi thử
 

@@ -14,8 +14,8 @@ Nội dung Gemini trả lời không tự động được lưu hoặc ghi đè 
 
 ## Điều kiện sử dụng
 
-- Luyện tập: chỉ bật sau khi người học chọn đáp án và câu đã được chấm, lưu,
-  khóa ngay.
+- Luyện tập: chỉ bật sau khi người học bấm **Xác nhận đáp án** và câu đã được
+  chấm, lưu, khóa.
 - Thi thử: bị khóa trong lúc làm bài; chỉ bật sau khi người học bấm **Nộp bài**.
 - Không được để người học dùng nút này để xem đáp án trước khi kết quả được ghi nhận.
 

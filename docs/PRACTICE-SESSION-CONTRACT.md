@@ -108,16 +108,17 @@ scope. V1 chưa hỗ trợ danh sách nhiều session đang làm dở.
 
 ### Câu một đáp án
 
-1. Người học chọn một đáp án.
-2. App chấm và ghi `AttemptRecord` ngay.
-3. Lựa chọn bị khóa ngay trong session.
+1. Người học chọn một đáp án; lựa chọn tạm thời phải được hiển thị rõ và lưu
+   vào snapshot để không mất khi refresh.
+2. App chưa chấm, chưa ghi `AttemptRecord` và chưa hiển thị kết quả ở bước này.
+3. Người học bấm **Xác nhận đáp án** để app chấm, ghi attempt và khóa câu.
 4. App lưu snapshot với `selectedOptionIds`, `isLocked` và `correctCount` mới.
 5. Người học phải bấm **Tiếp tục** để sang câu kế tiếp.
 
 ### Câu nhiều đáp án
 
 - Người học có thể chọn hoặc bỏ chọn trong giới hạn `maxSelections` trước khi
-  xác nhận.
+  xác nhận; mọi lựa chọn tạm thời phải được hiển thị rõ.
 - Các lựa chọn tạm thời được lưu vào session để không mất khi refresh.
 - Khi bấm **Xác nhận**, app chấm, lưu attempt và khóa câu.
 - Sau khi khóa, không thể sửa lựa chọn trong session hiện tại.

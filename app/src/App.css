@@ -73,6 +73,7 @@
   --app-bg: #000000;
 }
 
+*, *::before, *::after { box-sizing: border-box; }
 body {
   background-color: var(--app-bg);
   color: var(--text);
@@ -107,18 +108,20 @@ h2 { color: var(--text-heading); font-size: 1.35rem; }
 .ai-tutor-status { margin: .75rem 0 0; color: var(--success-text); line-height: 1.5; }
 .hint { margin: 1rem 0 0; font-size: .9rem; }
 .text-button { display: block; margin: 1rem auto 0; border: 0; background: transparent; color: var(--primary); text-decoration: underline; }
-.practice-shell { margin: 0 auto; max-width: 56rem; }
-.practice-header { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; color: var(--text-light); font-weight: 700; }
+.practice-shell { width: 100%; margin: 0; max-width: none; padding-inline: clamp(1rem, 2.5vw, 3rem); }
+.practice-header { display: flex; justify-content: space-between; gap: 1rem; margin: 0 auto 1rem; color: var(--text-light); font-weight: 700; }
 .question-card { width: 100%; padding: clamp(1.25rem, 4vw, 2.5rem); }
-.question-text { white-space: pre-wrap; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.45; }
+.practice-shell .question-card { max-width: none; }
+.question-text { overflow-wrap: anywhere; white-space: pre-wrap; font-size: clamp(1.35rem, 2.2vw, 2.35rem); line-height: 1.45; }
 .answers { display: grid; gap: .75rem; margin-top: 1.75rem; }
-.answer-button { display: flex; align-items: flex-start; gap: .85rem; width: 100%; border: 1px solid var(--border); border-radius: .75rem; background: var(--bg); padding: 1rem; color: var(--text-heading); text-align: left; line-height: 1.5; }
+.answer-button { display: flex; align-items: flex-start; gap: .85rem; min-width: 0; width: 100%; border: 1px solid var(--border); border-radius: .75rem; background: var(--bg); padding: 1rem; color: var(--text-heading); text-align: left; line-height: 1.5; overflow-wrap: anywhere; }
 .answer-button:not(:disabled):hover, .answer-button:not(:disabled):focus-visible { border-color: var(--primary); background: var(--bg-hover); }
 .answer-button:disabled { cursor: default; }
 .option-label { display: grid; width: 1.75rem; height: 1.75rem; flex: 0 0 auto; place-items: center; border-radius: 50%; background: var(--bg-muted); color: var(--text); font-size: .875rem; font-weight: 800; }
 .answer-button.correct { border-color: var(--success-border); background: var(--bg-success); }
 .answer-button.incorrect { border-color: var(--danger-border); background: var(--bg-subtle-red); }
-.answer-button.selected { border-color: var(--primary); background: var(--bg-success); }
+.answer-button.selected { border-color: var(--primary); background: var(--bg-success); box-shadow: inset 0 0 0 1px var(--primary); }
+.answer-button.selected .option-label { background: var(--primary); color: var(--bg); }
 .exam-question { margin-bottom: 1rem; }
 .exam-review { margin: 2rem 0; }
 .review-item { border-left: 4px solid var(--text-light); border-radius: .5rem; background: var(--bg-subtle-green); margin: .75rem 0; padding: 1rem; }
@@ -177,7 +180,7 @@ h2 { color: var(--text-heading); font-size: 1.35rem; }
 .mode-list span { margin-top: .3rem; color: var(--text-light); }
 .danger-button { width: 100%; border: 1px solid var(--danger-border); border-radius: .625rem; background: var(--bg); color: var(--danger-text); padding: .8rem 1rem; font-weight: 700; }
 .demo-button { width: 100%; margin-top: .75rem; border: 1px dashed var(--text-light); border-radius: .625rem; background: var(--bg-subtle); color: var(--text); padding: .7rem 1rem; }
-@media (max-width: 35rem) { .subject-facts { grid-template-columns: 1fr; } .practice-header { align-items: flex-start; flex-direction: column; gap: .25rem; } }
+@media (max-width: 35rem) { .subject-facts { grid-template-columns: 1fr; } .practice-shell { padding-inline: 1rem; } .practice-header { align-items: flex-start; flex-direction: column; gap: .25rem; } .question-card { padding: 1.25rem; } }
 
 /* Gamification CSS */
 .global-gamification-header { position: sticky; top: 0; z-index: 50; padding: .75rem 1rem; display: flex; justify-content: flex-end; cursor: pointer; }

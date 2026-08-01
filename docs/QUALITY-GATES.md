@@ -29,8 +29,8 @@
 - Kiểm chứng Random All không bỏ câu trong đề cũ.
 - Kiểm chứng Markdown xuất cho Gemini Notebook tìm được câu theo ID.
 - Kiểm chứng xuất ngân hàng và câu yếu chỉ có một bản cho mỗi question ID.
-- Kiểm chứng câu một đáp án khóa ngay lựa chọn đầu tiên; câu nhiều đáp án chỉ
-  khóa sau khi người học xác nhận tập lựa chọn.
+- Kiểm chứng mọi câu Practice chỉ khóa sau khi người học xác nhận tập lựa
+  chọn, và lựa chọn tạm thời được đánh dấu rõ trước khi xác nhận.
 - Kiểm chứng không thể đổi, bỏ chọn hoặc chọn lại đáp án sau khi câu đã khóa.
 - Kiểm chứng app không tự chuyển câu sau khi chấm và chỉ chuyển khi người học
   bấm **Tiếp tục**.

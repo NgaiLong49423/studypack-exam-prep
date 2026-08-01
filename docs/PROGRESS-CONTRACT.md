@@ -9,7 +9,7 @@ chỉnh tần suất xuất hiện của từng câu hỏi.
 
 - Mỗi lượt luyện tập hoặc thi thử có một `attemptId` riêng.
 - Kết quả mới được thêm vào lịch sử; không ghi đè kết quả cũ.
-- Luyện tập ghi nhận và khóa ngay khi người dùng chọn đáp án lần đầu.
+- Luyện tập chỉ ghi nhận và khóa sau khi người dùng bấm **Xác nhận đáp án**.
 - Thi thử có thể tự lưu lựa chọn tạm thời, nhưng chỉ đưa kết quả vào thống kê sau
   khi người dùng bấm **Nộp bài**.
 - Bài thi thử chưa nộp không ảnh hưởng tỷ lệ đúng hoặc tần suất xuất hiện.
