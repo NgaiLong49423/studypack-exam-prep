@@ -258,8 +258,8 @@ function App() {
     if (position + 1 >= nextQuestions.length) {
       if (subject) clearPracticeSession(subject.subjectId)
       
-      const { profile: newProfile, levelUp } = addXp(profile, 50)
-      addToast(`🎉 Hoàn thành block luyện tập! +50 EXP`)
+      const { profile: newProfile, levelUp } = addXp(loadProfile(), 50)
+      addToast(`🏆 Hoàn thành block luyện tập! +50 EXP`)
       if (levelUp) addToast(`⭐ Lên cấp ${newProfile.level}!`)
       setProfile(newProfile)
 
@@ -305,12 +305,13 @@ function App() {
     setScreen('exam-result')
 
     const score = examScore(examAnswers, items)
-    const { profile: newProfile, levelUp } = addXp(profile, 50)
-    addToast(`🎉 Hoàn thành bài thi! +50 EXP`)
+    const { profile: newProfile, levelUp } = addXp(loadProfile(), 50)
+    addToast(`🏆 Hoàn thành bài thi! +50 EXP`)
     if (levelUp) addToast(`⭐ Lên cấp ${newProfile.level}!`)
 
     const isMock = exam.examId.startsWith('mock-')
     const { profile: achProfile, unlockedIds } = checkExamAchievements(score.correct, items.length, isMock, newProfile)
+    setProfile(achProfile)
     checkAndShowAchievements(unlockedIds, achProfile)
   }
 

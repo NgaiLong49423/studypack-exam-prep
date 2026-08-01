@@ -63,7 +63,7 @@ export type PracticeSession = {
   sessionId: string
   subjectId: string
   mode: PracticeMode
-  questionRefs: { questionId: string; questionVersion: number; optionOrder: string[] }[]
+  questionRefs: { questionId: string; questionVersion: number; optionOrder?: string[] }[]
   position: number
   selectedOptionIds: string[]
   isLocked: boolean
