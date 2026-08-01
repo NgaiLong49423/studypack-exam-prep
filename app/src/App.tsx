@@ -52,7 +52,7 @@ function App() {
   const [, setStatisticsRevision] = useState(0)
   const [detailStatus, setDetailStatus] = useState<LearningStatus | null>(null)
   
-  const [profile, setProfile] = useState<UserProfile>(loadProfile())
+  const [profile, setProfile] = useState<UserProfile | null>(null)
   const [toastMessages, setToastMessages] = useState<{ id: number, message: string }[]>([])
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     return (localStorage.getItem('studypack:theme') as 'light' | 'dark') || 'light'
@@ -65,7 +65,15 @@ function App() {
   }, [theme])
 
   useEffect(() => {
-    if (subject && questions.length > 0) {
+    if (subject) {
+      setProfile(loadProfile(subject.subjectId))
+    } else {
+      setProfile(null)
+    }
+  }, [subject])
+
+  useEffect(() => {
+    if (subject && questions.length > 0 && profile) {
       const summary = summarizeQuestions(questions, loadAttempts(subject.subjectId))
       const { profile: achProfile, unlockedIds } = checkMasteryAchievements(summary.counts.mastered, questions.length, profile)
       if (unlockedIds.length > 0) {
@@ -199,7 +207,8 @@ function App() {
     setIsLocked(true)
     setCorrectCount((current) => current + Number(correct))
     
-    const { profile: updatedProfile, xpAdded, levelUp } = handlePracticeAnswer(correct)
+    if (!subject || !profile) return
+    const { profile: updatedProfile, xpAdded, levelUp } = handlePracticeAnswer(subject.subjectId, correct)
     let newProfile = updatedProfile
     
     if (correct) {
@@ -240,6 +249,7 @@ function App() {
   }
 
   function continuePractice() {
+    if (!subject) return
     let nextQuestions = session
 
     if (position + 1 >= session.length && activePracticeSession) {
@@ -258,7 +268,7 @@ function App() {
     if (position + 1 >= nextQuestions.length) {
       if (subject) clearPracticeSession(subject.subjectId)
       
-      const { profile: newProfile, levelUp } = addXp(loadProfile(), 50)
+      const { profile: newProfile, levelUp } = addXp(loadProfile(subject.subjectId), 50)
       addToast(`🏆 Hoàn thành block luyện tập! +50 EXP`)
       if (levelUp) addToast(`⭐ Lên cấp ${newProfile.level}!`)
       setProfile(newProfile)
@@ -295,7 +305,7 @@ function App() {
   }
 
   function submitExam(autoSubmitted = false) {
-    if (!exam || examSubmissionLocked.current) return
+    if (!exam || !subject || examSubmissionLocked.current) return
     examSubmissionLocked.current = true
     const items = resolveExamItems(exam, questions)
     saveAttempts(subject?.subjectId ?? '', examAttempts(exam, items, examAnswers, new Date().toISOString()))
@@ -305,7 +315,7 @@ function App() {
     setScreen('exam-result')
 
     const score = examScore(examAnswers, items)
-    const { profile: newProfile, levelUp } = addXp(loadProfile(), 50)
+    const { profile: newProfile, levelUp } = addXp(loadProfile(subject.subjectId), 50)
     addToast(`🏆 Hoàn thành bài thi! +50 EXP`)
     if (levelUp) addToast(`⭐ Lên cấp ${newProfile.level}!`)
 
@@ -378,6 +388,7 @@ function App() {
 
   const renderScreen = () => {
     if (screen === 'profile') {
+      if (!profile) return null
       return (
         <main className="app-shell">
           <section className="subject-card result-card">
@@ -578,7 +589,7 @@ function App() {
   )
 }
 
-  const isGamifiedScreen = screen !== 'loading' && screen !== 'error' && screen !== 'exam' && screen !== 'practice'
+  const isGamifiedScreen = profile !== null && screen !== 'loading' && screen !== 'error' && screen !== 'exam' && screen !== 'practice'
 
   return (
     <>
