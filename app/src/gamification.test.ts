@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { calculateLevel, getLevelTitle, xpForNextLevel, addXp, checkMasteryAchievements, checkLevelAchievements, handlePracticeAnswer } from './gamification'
+import { calculateLevel, getLevelTitle, xpForNextLevel, addXp, checkMasteryAchievements, checkLevelAchievements, handlePracticeAnswer, checkExamAchievements } from './gamification'
 
 describe('Gamification Logic', () => {
   beforeEach(() => {
@@ -76,5 +76,32 @@ describe('Gamification Logic', () => {
     const profile = { subjectId: 'test-subject', xp: 0, level: 20, currentStreak: 0, achievements: [] }
     const { unlockedIds: u1 } = checkLevelAchievements(profile)
     expect(u1).toContain('level_20')
+  })
+
+  it('integration flow: completing practice block unlocks level 20', () => {
+    // Level 20 requires (19^2)*100 = 36100 xp
+    let profile = { subjectId: 'test-subject', xp: 36050, level: 19, currentStreak: 0, achievements: [] }
+    const { profile: newProfile, levelUp } = addXp(profile, 50)
+    expect(levelUp).toBe(true)
+    expect(newProfile.level).toBe(20)
+
+    const { unlockedIds } = checkLevelAchievements(newProfile)
+    expect(unlockedIds).toContain('level_20')
+  })
+
+  it('integration flow: completing exam unlocks level 50 and exam achievements', () => {
+    // Level 50 requires (49^2)*100 = 240100 xp
+    let profile = { subjectId: 'test-subject', xp: 240050, level: 49, currentStreak: 0, achievements: [] }
+    const { profile: newProfile, levelUp } = addXp(profile, 50)
+    expect(levelUp).toBe(true)
+    expect(newProfile.level).toBe(50)
+
+    const { profile: levelAchProfile, unlockedIds: levelIds } = checkLevelAchievements(newProfile)
+    expect(levelIds).toContain('level_50')
+
+    const { unlockedIds: examIds } = checkExamAchievements(40, 50, true, levelAchProfile)
+    expect(examIds).toContain('challenger')
+    expect([...levelIds, ...examIds]).toContain('level_50')
+    expect([...levelIds, ...examIds]).toContain('challenger')
   })
 })

@@ -269,7 +269,9 @@ function App() {
       const { profile: newProfile, levelUp } = addXp(loadProfile(subject.subjectId), 50)
       addToast(`🏆 Hoàn thành block luyện tập! +50 EXP`)
       if (levelUp) addToast(`⭐ Lên cấp ${newProfile.level}!`)
-      setProfile(newProfile)
+      const { profile: achProfile, unlockedIds } = checkLevelAchievements(newProfile)
+      checkAndShowAchievements(unlockedIds, achProfile)
+      setProfile(achProfile)
 
       setScreen('complete')
       return
@@ -318,9 +320,10 @@ function App() {
     if (levelUp) addToast(`⭐ Lên cấp ${newProfile.level}!`)
 
     const isMock = exam.examId.startsWith('mock-')
-    const { profile: achProfile, unlockedIds } = checkExamAchievements(score.correct, items.length, isMock, newProfile)
+    const { profile: levelAchProfile, unlockedIds: levelUnlockedIds } = checkLevelAchievements(newProfile)
+    const { profile: achProfile, unlockedIds: examUnlockedIds } = checkExamAchievements(score.correct, items.length, isMock, levelAchProfile)
+    checkAndShowAchievements([...levelUnlockedIds, ...examUnlockedIds], achProfile)
     setProfile(achProfile)
-    checkAndShowAchievements(unlockedIds, achProfile)
   }
 
   submitExamRef.current = submitExam
