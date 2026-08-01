@@ -117,7 +117,7 @@ h2 { color: var(--text-heading); font-size: 1.35rem; }
 .answer-button:disabled { cursor: default; }
 .option-label { display: grid; width: 1.75rem; height: 1.75rem; flex: 0 0 auto; place-items: center; border-radius: 50%; background: var(--bg-muted); color: var(--text); font-size: .875rem; font-weight: 800; }
 .answer-button.correct { border-color: var(--success-border); background: var(--bg-success); }
-.answer-button.incorrect { border-color: var(--danger-border); background: var(--bg)0f0; }
+.answer-button.incorrect { border-color: var(--danger-border); background: var(--bg-subtle-red); }
 .answer-button.selected { border-color: var(--primary); background: var(--bg-success); }
 .exam-question { margin-bottom: 1rem; }
 .exam-review { margin: 2rem 0; }
@@ -125,13 +125,13 @@ h2 { color: var(--text-heading); font-size: 1.35rem; }
 .review-item h3 { margin: 0 0 .75rem; color: var(--text-heading); font-size: 1.05rem; line-height: 1.5; white-space: pre-wrap; }
 .review-item > p:not(.eyebrow) { margin: .5rem 0; color: var(--text); white-space: pre-wrap; }
 .review-correct { border-color: var(--success-border); background: var(--bg-success); }
-.review-incorrect { border-color: var(--danger-border); background: var(--bg)2f2; }
-.review-unanswered { border-color: var(--warning-border); background: var(--bg)9eb; }
+.review-incorrect { border-color: var(--danger-border); background: var(--bg-subtle-red); }
+.review-unanswered { border-color: var(--warning-border); background: var(--bg-subtle-yellow); }
 .review-explanation { margin-top: .85rem; border-top: 1px solid var(--border); padding-top: .85rem; }
 .review-explanation p { margin: .35rem 0 0; white-space: pre-wrap; line-height: 1.55; }
 .feedback { margin-top: 1.5rem; border-radius: .75rem; padding: 1.25rem; }
 .feedback-correct { background: var(--bg-success); color: var(--success-text); }
-.feedback-incorrect { background: var(--bg)2f2; color: var(--danger-text); }
+.feedback-incorrect { background: var(--bg-subtle-red); color: var(--danger-text); }
 .feedback h2 { margin-bottom: .5rem; color: inherit; }
 .feedback p { white-space: pre-wrap; line-height: 1.55; }
 .donut-chart-container { display: flex; justify-content: center; margin: 2rem 0; }

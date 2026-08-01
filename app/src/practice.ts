@@ -123,7 +123,7 @@ export function createPracticeSession(subjectId: string, mode: PracticeMode, que
     subjectId,
     mode,
     questionRefs: questions.map((question) => {
-      const optionOrder = mode === 'exam' ? question.options.map((o) => o.id) : question.options.map((o) => o.id).sort(() => Math.random() - 0.5)
+      const optionOrder = question.options.map((o) => o.id).sort(() => Math.random() - 0.5)
       return { questionId: question.id, questionVersion: question.version, optionOrder }
     }),
     position: 0,
@@ -166,7 +166,7 @@ export function restorePracticeQuestions(session: PracticeSession, questions: Qu
 }
 
 export function extendPracticeSession(session: PracticeSession, questions: Question[], attempts: AttemptRecord[]): PracticeSession {
-  if (session.mode === 'exam') return session // Exam mode cannot be extended
+
   const recentCount = Math.min(20, session.questionRefs.length)
   const recentIds = session.questionRefs.slice(-recentCount).map(r => r.questionId)
   

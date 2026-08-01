@@ -63,7 +63,19 @@ function App() {
     else document.documentElement.removeAttribute('data-theme')
     localStorage.setItem('studypack:theme', theme)
   }, [theme])
-  
+
+  useEffect(() => {
+    if (subject && questions.length > 0) {
+      const summary = summarizeQuestions(questions, loadAttempts(subject.subjectId))
+      const { profile: achProfile, unlockedIds } = checkMasteryAchievements(summary.counts.mastered, questions.length, profile)
+      if (unlockedIds.length > 0) {
+        setProfile(achProfile)
+        checkAndShowAchievements(unlockedIds, achProfile)
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [screen])
+
   const addToast = (msg: string) => {
     const id = Date.now() + Math.random()
     setToastMessages((prev) => [...prev, { id, message: msg }])
@@ -228,15 +240,13 @@ function App() {
   }
 
   function continuePractice() {
-    let nextSession = activePracticeSession
     let nextQuestions = session
 
-    if (position + 1 >= session.length && activePracticeSession && activePracticeSession.mode !== 'exam') {
+    if (position + 1 >= session.length && activePracticeSession) {
       const extended = extendPracticeSession(activePracticeSession, questions, loadAttempts(subject?.subjectId ?? ''))
       if (extended.questionRefs.length > activePracticeSession.questionRefs.length) {
         const restored = restorePracticeQuestions(extended, questions)
         if (restored) {
-          nextSession = extended
           nextQuestions = restored
           setSession(restored)
           setActivePracticeSession(extended)
