@@ -1,4 +1,5 @@
 export type UserProfile = {
+  subjectId: string
   xp: number
   level: number
   currentStreak: number
@@ -24,18 +25,18 @@ export const ACHIEVEMENTS: Achievement[] = [
   { id: 'master_100', name: 'Thần Đồng', description: 'Thành thạo 100% tổng số câu hỏi trong ngân hàng.', icon: '👑' },
 ]
 
-const STORAGE_KEY = 'studypack:gamification:v1'
+const profileStorageKey = (subjectId: string) => `studypack:profile:${subjectId}`
 
-export function loadProfile(): UserProfile {
+export function loadProfile(subjectId: string): UserProfile {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY)
+    const raw = localStorage.getItem(profileStorageKey(subjectId))
     if (raw) return JSON.parse(raw) as UserProfile
   } catch {}
-  return { xp: 0, level: 1, currentStreak: 0, achievements: [] }
+  return { subjectId, xp: 0, level: 1, currentStreak: 0, achievements: [] }
 }
 
 export function saveProfile(profile: UserProfile) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(profile))
+  localStorage.setItem(profileStorageKey(profile.subjectId), JSON.stringify(profile))
 }
 
 export function calculateLevel(xp: number): number {
@@ -56,8 +57,8 @@ export function addXp(profile: UserProfile, amount: number): { profile: UserProf
   return { profile: updatedProfile, levelUp }
 }
 
-export function handlePracticeAnswer(isCorrect: boolean): { xpAdded: number, currentStreak: number, levelUp: boolean, profile: UserProfile } {
-  const profile = loadProfile()
+export function handlePracticeAnswer(subjectId: string, isCorrect: boolean): { xpAdded: number, currentStreak: number, levelUp: boolean, profile: UserProfile } {
+  const profile = loadProfile(subjectId)
   let xpAdded = 0
   let newStreak = profile.currentStreak
 
@@ -75,8 +76,9 @@ export function handlePracticeAnswer(isCorrect: boolean): { xpAdded: number, cur
   return { xpAdded, currentStreak: newStreak, levelUp, profile: finalProfile }
 }
 
-export function unlockAchievement(id: string, currentProfile?: UserProfile): { unlocked: boolean, profile: UserProfile } {
-  const profile = currentProfile ?? loadProfile()
+export function unlockAchievement(id: string, currentProfile?: UserProfile, subjectId?: string): { unlocked: boolean, profile: UserProfile } {
+  if (!currentProfile && !subjectId) throw new Error('Must provide currentProfile or subjectId')
+  const profile = currentProfile ?? loadProfile(subjectId!)
   if (profile.achievements.includes(id)) {
     return { unlocked: false, profile }
   }

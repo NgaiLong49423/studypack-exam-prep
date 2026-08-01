@@ -18,7 +18,7 @@ describe('Gamification Logic', () => {
   })
 
   it('adds XP and triggers level up', () => {
-    const profile = { xp: 0, level: 1, currentStreak: 0, achievements: [] }
+    const profile = { subjectId: 'test-subject', xp: 0, level: 1, currentStreak: 0, achievements: [] }
     const { profile: p1, levelUp: l1 } = addXp(profile, 50)
     expect(p1.xp).toBe(50)
     expect(p1.level).toBe(1)
@@ -31,21 +31,21 @@ describe('Gamification Logic', () => {
   })
 
   it('handles practice answer combos and resets', () => {
-    const r1 = handlePracticeAnswer(true)
+    const r1 = handlePracticeAnswer('test-subject', true)
     expect(r1.xpAdded).toBe(10)
     expect(r1.profile.currentStreak).toBe(1)
 
-    const r2 = handlePracticeAnswer(true)
+    const r2 = handlePracticeAnswer('test-subject', true)
     expect(r2.xpAdded).toBe(11)
     expect(r2.profile.currentStreak).toBe(2)
 
-    const r3 = handlePracticeAnswer(false)
+    const r3 = handlePracticeAnswer('test-subject', false)
     expect(r3.xpAdded).toBe(2)
     expect(r3.profile.currentStreak).toBe(0)
   })
 
   it('unlocks mastery achievements', () => {
-    const profile = { xp: 0, level: 1, currentStreak: 0, achievements: [] }
+    const profile = { subjectId: 'test-subject', xp: 0, level: 1, currentStreak: 0, achievements: [] }
     const { profile: p1, unlockedIds: u1 } = checkMasteryAchievements(1, 10, profile)
     expect(u1).toContain('master_10')
     
