@@ -1,0 +1,77 @@
+# Gamification Contract
+
+Status: Accepted
+
+Tài liệu này quy định các quy tắc về hệ thống Gamification (Game hóa) của ứng dụng, gồm Cấp độ (Level), Điểm kinh nghiệm (XP), Biệt danh (Level Titles) và Thành tựu (Achievements).
+
+## 1. Dữ liệu độc lập theo môn học (Per-Subject Isolation)
+
+Hệ thống Gamification được thiết kế **tách biệt 100% theo từng môn học**.
+- Mỗi môn học sở hữu một Profile riêng biệt được lưu trong localStorage với key định dạng `studypack:profile:[subjectId]`.
+- Người dùng bắt đầu từ Level 1 và 0 XP đối với mỗi môn học mới.
+- Không có hệ thống XP hay Level tổng (Global). Khi chuyển đổi giữa các môn học, UI chỉ hiển thị thông tin Gamification của môn đang được chọn. Ở màn hình chưa chọn môn (Subject Picker), các thành phần UI Gamification sẽ bị ẩn đi.
+
+## 2. Cấu trúc UserProfile
+
+```json
+{
+  "subjectId": "prj301",
+  "xp": 1250,
+  "level": 4,
+  "currentStreak": 12,
+  "incorrectStreak": 0,
+  "achievements": ["first_blood", "combo_10"]
+}
+```
+
+## 3. Hệ thống Cấp độ và Biệt danh (Level & Titles)
+
+### 3.1. Tính XP và Level
+- Công thức tính Level dựa trên XP: `Level = Math.floor(Math.sqrt(xp / 100)) + 1`
+- Trả lời đúng trong chế độ Practice: `+10 XP` và cộng thêm điểm thưởng bằng chuỗi `currentStreak` hiện tại.
+- Trả lời sai: `+2 XP` (điểm khích lệ).
+- Hoàn thành một bài thi thử (Exam) hoặc một block Practice: `+50 XP`.
+
+### 3.2. Biệt danh (Level Titles)
+Mỗi Level được gán một danh hiệu tương ứng nhằm tăng tính hấp dẫn:
+- **Level 1 - 4**: Tập Sự (Mới bắt đầu làm quen)
+- **Level 5 - 9**: Tân Binh (Có chút nền tảng)
+- **Level 10 - 19**: Học Giả (Nắm vững lý thuyết cơ bản)
+- **Level 20 - 29**: Chuyên Gia (Giải đề khá cứng tay)
+- **Level 30 - 49**: Cao Thủ (Chinh phục hầu hết các dạng bài)
+- **Level 50 - 99**: Đại Tông Sư (Đạt cảnh giới "Nhắm mắt cũng làm được")
+- **Level 100+**: Huyền Thoại (Thống trị bộ môn)
+
+## 4. Hệ thống Thành tựu (Achievements)
+
+Thành tựu được phân nhóm dựa vào hành vi của người dùng và lưu vào mảng `achievements` trong `UserProfile`. Mỗi khi trả lời hoặc lên cấp, hệ thống sẽ tự động kiểm tra và mở khóa thành tựu mới nếu đủ điều kiện.
+
+### 4.1. Nhóm Chuỗi (Combo / Streak)
+Kiểm tra dựa trên biến `currentStreak` và `incorrectStreak` liên tục:
+- **First Blood**: Lần đầu tiên trả lời đúng một câu hỏi.
+- **Nóng Máy**: Chuỗi Combo 10 câu đúng (`combo_10`).
+- **Bất Khả Chiến Bại**: Chuỗi Combo 30 câu đúng (`combo_30`).
+- **Thần Giao Cách Cảm**: Chuỗi Combo 50 câu đúng (`combo_50`).
+- **Cú Vấp Ngã**: Trả lời sai 5 câu liên tiếp (`stumble`).
+
+### 4.2. Nhóm Cày cuốc (Leveling)
+Mở khóa ngay khi người dùng đạt đủ số Level:
+- **Thợ Săn Điểm Số**: Đạt Level 20 (`level_20`).
+- **Kẻ Chinh Phục**: Đạt Level 50 (`level_50`).
+- **Đỉnh Cao Danh Vọng**: Đạt Level 100 (`level_100`).
+
+### 4.3. Nhóm Thành thạo (Mastery)
+Mở khóa dựa trên % tổng số câu hỏi đã được thành thạo (Mastery) trong toàn bộ ngân hàng câu hỏi của môn đó:
+- Tân Binh Thành Thạo (> 10%)
+- Chuyên Viên Thành Thạo (> 30%)
+- Chuyên Gia Thành Thạo (> 50%)
+- Bậc Thầy Thành Thạo (> 80%)
+- Thần Đồng (100%)
+- Kẻ Thách Thức (Đạt > 80% tỉ lệ đúng trong 1 bài Thi thử 50 câu).
+
+## 5. Cập nhật và Fallback dữ liệu (Validation)
+
+Để tránh các lỗi do dữ liệu bị cũ hoặc chỉnh sửa sai, hàm `loadProfile(subjectId)` bắt buộc phải:
+- Parse từng giá trị từ JSON và fallback về giá trị mặc định (`0` cho số, `[]` cho mảng) nếu phát hiện `NaN` hoặc kiểu dữ liệu không hợp lệ.
+- Luôn ép `subjectId` theo `subjectId` đang được truy vấn, không tin cậy hoàn toàn `subjectId` lưu trong JSON để tránh nhầm lẫn chéo giữa các môn.
+- Mọi dữ liệu cũ lưu dưới dạng Global (`studypack:profile`) đều bị bỏ qua (Hard-reset) mà không có tiến trình Migration.
