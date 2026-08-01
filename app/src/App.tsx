@@ -5,11 +5,13 @@ import { createMockExam, examAttempts, examScore, formatRemainingTime, MOCK_EXAM
 import { copyPromptToClipboard, createAiTutorPrompt } from './ai-tutor'
 import { clearTutorNotebookUrl, loadTutorNotebookUrl, saveTutorNotebookUrl } from './tutor-settings'
 import { downloadFile, fullGeminiPack, learningProgressMarkdown, createExportContext } from './gemini-export'
-import { clearAttempts, clearPracticeSession, createPracticeSession, gradeAnswer, loadAttempts, loadPracticeSession, restorePracticeQuestions, saveAttempt, saveAttempts, savePracticeSession, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions, seedStatisticsDemo } from './practice'
+import { clearAttempts, clearPracticeSession, createPracticeSession, extendPracticeSession, gradeAnswer, loadAttempts, loadPracticeSession, restorePracticeQuestions, saveAttempt, saveAttempts, savePracticeSession, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions, seedStatisticsDemo } from './practice'
 import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
+import { ACHIEVEMENTS, addXp, checkExamAchievements, checkLevelAchievements, checkMasteryAchievements, handlePracticeAnswer, loadProfile, unlockAchievement, xpForNextLevel, type UserProfile } from './gamification'
 import type { Exam, PracticeMode, PracticeSession, Question, Subject, SubjectCatalogEntry } from './types'
 
-type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'mock-exam-setup' | 'exam' | 'exam-result' | 'error'
+type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'mock-exam-setup' | 'exam' | 'exam-result' | 'error' | 'profile'
+
 function textOf(blocks: { text: string }[]) {
   return blocks.map((block) => block.text).join('\n')
 }
@@ -39,6 +41,7 @@ function App() {
   const submitExamRef = useRef<(autoSubmitted?: boolean) => void>(() => {})
   const [session, setSession] = useState<Question[]>([])
   const [practiceSessionId, setPracticeSessionId] = useState('')
+  const [activePracticeSession, setActivePracticeSession] = useState<PracticeSession | null>(null)
   const [resumeCandidate, setResumeCandidate] = useState<PracticeSession | null>(null)
   const [position, setPosition] = useState(0)
   const [selectedOptionIds, setSelectedOptionIds] = useState<string[]>([])
@@ -48,6 +51,34 @@ function App() {
   const [error, setError] = useState('')
   const [, setStatisticsRevision] = useState(0)
   const [detailStatus, setDetailStatus] = useState<LearningStatus | null>(null)
+  
+  const [profile, setProfile] = useState<UserProfile>(loadProfile())
+  const [toastMessages, setToastMessages] = useState<{ id: number, message: string }[]>([])
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    return (localStorage.getItem('studypack:theme') as 'light' | 'dark') || 'light'
+  })
+
+  useEffect(() => {
+    if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark')
+    else document.documentElement.removeAttribute('data-theme')
+    localStorage.setItem('studypack:theme', theme)
+  }, [theme])
+  
+  const addToast = (msg: string) => {
+    const id = Date.now() + Math.random()
+    setToastMessages((prev) => [...prev, { id, message: msg }])
+    setTimeout(() => setToastMessages((prev) => prev.filter((t) => t.id !== id)), 4000)
+  }
+
+  const checkAndShowAchievements = (unlockedIds: string[], newProfile: UserProfile) => {
+    if (unlockedIds.length > 0) {
+      unlockedIds.forEach(id => {
+        const ach = ACHIEVEMENTS.find(a => a.id === id)
+        if (ach) addToast(`🏆 Đạt thành tựu mới: ${ach.name}!`)
+      })
+    }
+    setProfile(newProfile)
+  }
 
   useEffect(() => {
     loadSubjectCatalog().then((catalog) => { setSubjectCatalog(catalog.subjects); setScreen('subject-picker') })
@@ -104,6 +135,7 @@ function App() {
     if (selected.length) {
       const nextSession = createPracticeSession(subject?.subjectId ?? '', mode, selected)
       setPracticeSessionId(nextSession.sessionId)
+      setActivePracticeSession(nextSession)
       savePracticeSession(nextSession)
       setResumeCandidate(null)
       setScreen('practice')
@@ -116,7 +148,9 @@ function App() {
     if (!subject || !practiceSessionId || !session.length) return
     const current = loadPracticeSession(subject.subjectId)
     if (!current || current.sessionId !== practiceSessionId) return
-    savePracticeSession({ ...current, ...changes, updatedAt: new Date().toISOString() })
+    const updated = { ...current, ...changes, updatedAt: new Date().toISOString() }
+    savePracticeSession(updated)
+    setActivePracticeSession(updated)
   }
 
   function resumePractice() {
@@ -129,6 +163,7 @@ function App() {
     }
     setSession(restored)
     setPracticeSessionId(resumeCandidate.sessionId)
+    setActivePracticeSession(resumeCandidate)
     setPracticeMode(resumeCandidate.mode)
     setPosition(resumeCandidate.position)
     setSelectedOptionIds(resumeCandidate.selectedOptionIds)
@@ -151,6 +186,26 @@ function App() {
     setSelectedOptionIds(optionIds)
     setIsLocked(true)
     setCorrectCount((current) => current + Number(correct))
+    
+    const { profile: updatedProfile, xpAdded, levelUp } = handlePracticeAnswer(correct)
+    let newProfile = updatedProfile
+    
+    if (correct) {
+      if (updatedProfile.currentStreak > 1) {
+        addToast(`🔥 Combo x${updatedProfile.currentStreak}! (+${xpAdded} EXP)`)
+      } else {
+        addToast(`✅ +${xpAdded} EXP`)
+        const fbRes = unlockAchievement('first_blood', newProfile)
+        if (fbRes.unlocked) { newProfile = fbRes.profile; addToast(`🏆 Đạt thành tựu mới: First Blood!`) }
+      }
+    } else {
+      addToast(`❌ +${xpAdded} EXP`)
+    }
+    
+    if (levelUp) addToast(`⭐ Lên cấp ${newProfile.level}!`)
+    const { profile: achProfile, unlockedIds } = checkLevelAchievements(newProfile)
+    checkAndShowAchievements(unlockedIds, achProfile)
+
     saveAttempt(subject?.subjectId ?? '', {
       questionId: question.id,
       questionVersion: question.version,
@@ -173,13 +228,38 @@ function App() {
   }
 
   function continuePractice() {
-    if (position + 1 >= session.length) {
+    let nextSession = activePracticeSession
+    let nextQuestions = session
+
+    if (position + 1 >= session.length && activePracticeSession && activePracticeSession.mode !== 'exam') {
+      const extended = extendPracticeSession(activePracticeSession, questions, loadAttempts(subject?.subjectId ?? ''))
+      if (extended.questionRefs.length > activePracticeSession.questionRefs.length) {
+        const restored = restorePracticeQuestions(extended, questions)
+        if (restored) {
+          nextSession = extended
+          nextQuestions = restored
+          setSession(restored)
+          setActivePracticeSession(extended)
+          savePracticeSession(extended)
+        }
+      }
+    }
+
+    if (position + 1 >= nextQuestions.length) {
       if (subject) clearPracticeSession(subject.subjectId)
+      
+      const { profile: newProfile, levelUp } = addXp(profile, 50)
+      addToast(`🎉 Hoàn thành block luyện tập! +50 EXP`)
+      if (levelUp) addToast(`⭐ Lên cấp ${newProfile.level}!`)
+      setProfile(newProfile)
+
       setScreen('complete')
       return
     }
+
     const nextPosition = position + 1
     setPosition(nextPosition)
+    // persistPracticeSession uses loadPracticeSession, which will get the latest saved session (e.g. extended)
     persistPracticeSession({ position: nextPosition, selectedOptionIds: [], isLocked: false })
     setSelectedOptionIds([])
     setIsLocked(false)
@@ -213,6 +293,15 @@ function App() {
     setMockExamEndsAt(null)
     setStatisticsRevision((value) => value + 1)
     setScreen('exam-result')
+
+    const score = examScore(examAnswers, items)
+    const { profile: newProfile, levelUp } = addXp(profile, 50)
+    addToast(`🎉 Hoàn thành bài thi! +50 EXP`)
+    if (levelUp) addToast(`⭐ Lên cấp ${newProfile.level}!`)
+
+    const isMock = exam.examId.startsWith('mock-')
+    const { profile: achProfile, unlockedIds } = checkExamAchievements(score.correct, items.length, isMock, newProfile)
+    checkAndShowAchievements(unlockedIds, achProfile)
   }
 
   submitExamRef.current = submitExam
@@ -276,7 +365,36 @@ function App() {
     setNotebookSettingsStatus('Đã xóa link Gemini Notebook khỏi trình duyệt này.')
   }
 
-  if (screen === 'loading') return <main className="center-message">Đang tải StudyPack…</main>
+  const renderScreen = () => {
+    if (screen === 'profile') {
+      return (
+        <main className="app-shell">
+          <section className="subject-card result-card">
+            <p className="eyebrow">Hồ sơ cá nhân</p>
+            <h1>⭐ Cấp độ {profile.level}</h1>
+            <p>Kinh nghiệm: {profile.xp} / {xpForNextLevel(profile.level)} XP</p>
+            <h2 style={{marginTop: '2rem'}}>Danh hiệu của bạn</h2>
+            <div className="achievements-grid">
+              {ACHIEVEMENTS.map(ach => {
+                const unlocked = profile.achievements.includes(ach.id)
+                return (
+                  <div key={ach.id} className={`achievement-item ${unlocked ? 'unlocked' : 'locked'}`}>
+                    <div className="ach-icon">{ach.icon}</div>
+                    <div>
+                      <strong>{ach.name}</strong>
+                      <small>{ach.description}</small>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+            <button className="text-button" type="button" onClick={() => setScreen('mode')}>Đóng</button>
+          </section>
+        </main>
+      )
+    }
+
+    if (screen === 'loading') return <main className="center-message">Đang tải StudyPack…</main>
   if (screen === 'error') return <main className="center-message error-message">{error}</main>
 
   if (screen === 'subject-picker') return <main className="app-shell"><section className="subject-card" aria-labelledby="subject-picker-title"><p className="eyebrow">StudyPack Exam Prep</p><h1 id="subject-picker-title">Chọn môn để ôn</h1><div className="mode-list">{subjectCatalog.map((item) => <button key={item.subjectId} type="button" disabled={item.status !== 'published'} onClick={() => void chooseSubject(item)}><strong>{item.code} · {item.name}</strong><span>{item.status === 'published' ? item.description : 'Đang chuẩn bị ngân hàng câu hỏi và đề thi.'}</span></button>)}</div><p className="hint">Chỉ môn đã có dữ liệu được mở để luyện tập.</p></section></main>
@@ -309,7 +427,7 @@ function App() {
   }
 
   if (screen === 'mode') return <main className="app-shell"><section className="subject-card" aria-labelledby="mode-title">
-    <p className="eyebrow">JPD123 · Practice</p><h1 id="mode-title">Bạn muốn luyện thế nào?</h1>
+    <p className="eyebrow">{subject?.code} · Practice</p><h1 id="mode-title">Bạn muốn luyện thế nào?</h1>
     <div className="mode-list"><button type="button" onClick={() => startPractice('smart')}><strong>Luyện thông minh</strong><span>Ưu tiên câu cần ôn theo tiến độ của bạn.</span></button><button type="button" onClick={() => startPractice('random')}><strong>Ngẫu nhiên toàn bộ</strong><span>Chọn đều từ toàn bộ ngân hàng câu hỏi.</span></button><button type="button" onClick={() => startPractice('unseen')}><strong>Chỉ câu chưa ôn</strong><span>Chỉ lấy câu bạn chưa từng trả lời.</span></button><button type="button" onClick={() => startPractice('review')}><strong>Câu cần ôn lại</strong><span>Đã làm ít nhất 1 lần và hiện đúng từ 50% trở xuống.</span></button><button type="button" onClick={() => setScreen('exam-list')}><strong>Luyện theo đề thi</strong><span>Giữ thứ tự đề, đổi đáp án trước khi nộp.</span></button><button type="button" onClick={() => setScreen('mock-exam-setup')}><strong>Thi thử bấm giờ</strong><span>Tự chọn số câu và thời gian, hết giờ tự nộp bài.</span></button></div>
     <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
   </section></main>
@@ -345,9 +463,9 @@ function App() {
       <main className="app-shell">
         <section className="subject-card result-card" aria-labelledby="result-title">
           <p className="eyebrow">Hoàn thành lượt luyện</p>
-          <h1 id="result-title">{correctCount}/{session.length} câu đúng</h1>
+          <h1 id="result-title">{correctCount}/{position + (isLocked ? 1 : 0)} câu đúng</h1>
           <p>Kết quả từng câu đã được lưu trong trình duyệt của bạn và đã phản ánh vào Statistics.</p>
-          <button className="primary-button" type="button" onClick={() => startPractice(practiceMode)}>Luyện thêm 10 câu</button>
+          <button className="primary-button" type="button" onClick={() => startPractice(practiceMode)}>Luyện vòng mới</button>
           <button className="text-button" type="button" onClick={() => setScreen('subject')}>Quay lại chọn môn</button>
           <button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê</button>
         </section>
@@ -359,9 +477,23 @@ function App() {
     const summary = summarizeQuestions(questions, loadAttempts(subject?.subjectId ?? ''))
     const labels = { not_practiced: 'Chưa ôn', learning: 'Đang học', weak: 'Yếu', developing: 'Đang phát triển', stable: 'Ổn', mastered: 'Thành thạo' }
     const rules = { not_practiced: '0 lần trả lời', learning: '1–3 lần trả lời', weak: 'Từ 4 lần, đúng ≤ 50%', developing: 'Từ 4 lần, đúng > 50% đến 75%', stable: 'Từ 4 lần, đúng > 75% đến < 90%', mastered: 'Từ 4 lần, đúng ≥ 90%' }
+    const colors = { not_practiced: 'var(--bg-muted)', learning: '#38bdf8', weak: 'var(--danger-border)', developing: '#fbbf24', stable: 'var(--success-border)', mastered: 'var(--success)' }
+    const totalCount = questions.length
+    let accumulatedPercent = 0
+    const gradientStops: string[] = []
+    const order = ['not_practiced', 'learning', 'weak', 'developing', 'stable', 'mastered'] as const
+    order.forEach((key) => {
+      const count = summary.counts[key]
+      if (count > 0) {
+        const percent = (count / totalCount) * 100
+        gradientStops.push(`${colors[key]} ${accumulatedPercent}% ${accumulatedPercent + percent}%`)
+        accumulatedPercent += percent
+      }
+    })
+    const conicGradient = gradientStops.length > 0 ? `conic-gradient(${gradientStops.join(', ')})` : 'conic-gradient(var(--bg-muted) 0% 100%)'
     const detailedQuestions = detailStatus ? questionsByStatus(questions, loadAttempts(subject?.subjectId ?? ''), detailStatus) : []
     const resetStatistics = () => {
-      if (window.confirm('Xóa toàn bộ lịch sử trả lời JPD123 trên trình duyệt này? Bạn sẽ bắt đầu lại từ đầu.')) {
+      if (window.confirm(`Xóa toàn bộ lịch sử trả lời ${subject?.code} trên trình duyệt này? Bạn sẽ bắt đầu lại từ đầu.`)) {
         clearAttempts(subject?.subjectId ?? '')
         setDetailStatus(null)
         setStatisticsRevision((value) => value + 1)
@@ -373,9 +505,10 @@ function App() {
       setStatisticsRevision((value) => value + 1)
     }
     return <main className="app-shell"><section className="subject-card" aria-labelledby="statistics-title">
-      <p className="eyebrow">JPD123 · Statistics</p><h1 id="statistics-title">Tiến độ học tập</h1>
-      <dl className="subject-facts"><div><dt>Lượt trả lời</dt><dd>{summary.totalAttempts}</dd></div><div><dt>Tỉ lệ đúng</dt><dd>{summary.accuracy}%</dd></div></dl>
-      <div className="statistics-list">{Object.entries(summary.counts).map(([key, count]) => { const status = key as LearningStatus; return <div key={key}><span><strong>{labels[status]}</strong><small>{rules[status]}</small></span><button type="button" className="text-button" onClick={() => setDetailStatus(status)}>Xem chi tiết · {count} câu</button></div> })}</div>
+      <p className="eyebrow">{subject?.code} · Statistics</p><h1 id="statistics-title">Tiến độ học tập</h1>
+      <dl className="subject-facts"><div><dt>Lượt trả lời</dt><dd>{summary.totalAttempts}</dd></div><div><dt>Tỉ lệ đúng chung</dt><dd>{summary.accuracy}%</dd></div></dl>
+      <div className="donut-chart-container"><div className="donut-chart" style={{ background: conicGradient }}><div className="donut-hole"><span className="donut-total">{totalCount}</span><span className="donut-label">câu hỏi</span></div></div></div>
+      <div className="statistics-list">{order.map((status) => { const count = summary.counts[status]; const percent = totalCount > 0 ? Math.round((count / totalCount) * 100) : 0; return <div className="statistics-card" key={status}><div className="statistics-card-header"><div className="statistics-dot" style={{ background: colors[status] }}></div><strong>{labels[status]}</strong><span className="statistics-percent">{percent}%</span></div><small>{rules[status]}</small><button type="button" className="text-button" onClick={() => setDetailStatus(status)}>Xem chi tiết · {count} câu</button></div> })}</div>
       {detailStatus && <section className="detail-list" aria-live="polite"><h2>{labels[detailStatus]} · {detailedQuestions.length} câu</h2>{detailedQuestions.map((question) => { const ownAttempts = loadAttempts(subject?.subjectId ?? '').filter((attempt) => attempt.questionId === question.id); const correct = ownAttempts.filter((attempt) => attempt.isCorrect).length; return <article key={question.id}><strong>{question.id}</strong><p>{textOf(question.blocks)}</p><small>{ownAttempts.length} lần làm · {correct} đúng · {ownAttempts.length ? Math.round((correct / ownAttempts.length) * 100) : 0}%</small></article> })}</section>}
       <section className="gemini-documents" aria-labelledby="gemini-documents-title"><p className="eyebrow">Gemini Learning Documents</p><h2 id="gemini-documents-title">Xuất tài liệu để đưa vào Gemini</h2><p>Gói chỉ là snapshot đọc-only. Kết quả trong Gemini không tự thay đổi Statistics của app; bạn có thể tự thêm theory Markdown vào Notebook.</p><div className="notebook-settings"><h3>Gemini Notebook của bạn</h3><p>Link này chỉ lưu trên trình duyệt hiện tại và chỉ dùng khi bạn bấm Hỏi AI.</p><label htmlFor="personal-notebook-url">Đường link Gemini Notebook</label><input id="personal-notebook-url" type="url" inputMode="url" placeholder="https://notebooklm.google.com/..." value={personalNotebookUrl} onChange={(event) => setPersonalNotebookUrl(event.target.value)} /><div><button className="secondary-button" type="button" onClick={savePersonalNotebookUrl}>Lưu link riêng</button><button className="text-button inline-button" type="button" onClick={removePersonalNotebookUrl}>Xóa link</button></div>{notebookSettingsStatus && <p className="notebook-status" aria-live="polite">{notebookSettingsStatus}</p>}</div><fieldset><legend>Đính kèm đề thi (tùy chọn)</legend>{exams.map((item) => <label key={item.examId}><input type="checkbox" checked={selectedGeminiExamIds.includes(item.examId)} onChange={() => setSelectedGeminiExamIds((current) => current.includes(item.examId) ? current.filter((id) => id !== item.examId) : [...current, item.examId])} /> {item.title} · {item.items.length} câu</label>)}</fieldset><button className="primary-button" type="button" onClick={() => void exportGeminiPack()}>Tải Full Gemini Pack (.zip)</button><button className="text-button" type="button" onClick={refreshLearningProgress}>Tải learning-progress.md mới nhất</button>{geminiExportStatus && <p className="export-status" aria-live="polite">{geminiExportStatus}</p>}</section>
       <button className="danger-button" type="button" onClick={resetStatistics}>Xóa dữ liệu thống kê và ôn lại từ đầu</button>
@@ -390,23 +523,33 @@ function App() {
     <main className="practice-shell">
       <header className="practice-header">
         <span>{subject?.code} · {{ smart: 'Luyện thông minh', random: 'Ngẫu nhiên toàn bộ', unseen: 'Chỉ câu chưa ôn', review: 'Câu cần ôn lại' }[practiceMode]}</span>
-        <span>Câu {position + 1}/{session.length}</span>
+        <span>
+          Đã làm: {position} 
+          <button className="text-button inline-button" style={{marginLeft: '1rem', padding: '0.25rem 0.5rem', fontSize: '0.85rem'}} type="button" onClick={() => { if (subject) clearPracticeSession(subject.subjectId); setScreen('complete') }}>Kết thúc & Xem điểm</button>
+        </span>
       </header>
       <section className="question-card" aria-labelledby="question-title">
         <p className="eyebrow">{question.id}{question.maxSelections > 1 ? ` · Chọn tối đa ${question.maxSelections} đáp án` : ''}</p>
         <h1 id="question-title" className="question-text">{textOf(question.blocks)}</h1>
         <div className="answers" aria-label="Các đáp án">
-          {question.options.map((option, index) => {
-            const isSelected = selectedOptionIds.includes(option.id)
-            const isAnswer = question.correctAnswerIds.includes(option.id)
-            const state = isLocked ? (isAnswer ? ' correct' : isSelected ? ' incorrect' : '') : ''
-            return (
+          {(() => {
+            const currentRef = activePracticeSession?.questionRefs[position]
+            const orderedOptions = currentRef?.optionOrder
+              ? currentRef.optionOrder.map(id => question.options.find(o => o.id === id)!).filter(Boolean)
+              : question.options
+
+            return orderedOptions.map((option, index) => {
+              const isSelected = selectedOptionIds.includes(option.id)
+              const isAnswer = question.correctAnswerIds.includes(option.id)
+              const state = isLocked ? (isAnswer ? ' correct' : isSelected ? ' incorrect' : '') : ''
+              return (
               <button className={`answer-button${state}`} disabled={isLocked} key={option.id} type="button" onClick={() => chooseAnswer(option.id)}>
                 <span className="option-label">{String.fromCharCode(65 + index)}</span>
                 <span>{textOf(option.blocks)}</span>
               </button>
             )
-          })}
+            })
+          })()}
         </div>
         {!isLocked && question.maxSelections > 1 && <button className="primary-button" type="button" disabled={selectedOptionIds.length === 0} onClick={() => submitPracticeAnswer(selectedOptionIds)}>Xác nhận {selectedOptionIds.length}/{question.maxSelections} đáp án</button>}
         {isLocked && (
@@ -421,6 +564,29 @@ function App() {
         )}
       </section>
     </main>
+  )
+}
+
+  const isGamifiedScreen = screen !== 'loading' && screen !== 'error' && screen !== 'exam' && screen !== 'practice'
+
+  return (
+    <>
+      {isGamifiedScreen && (
+        <header className="global-gamification-header">
+          <button type="button" className="theme-toggle" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} title="Đổi giao diện Sáng/Tối" style={{ background: 'transparent', border: 'none', fontSize: '1.25rem', cursor: 'pointer', marginRight: '1rem' }}>
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+          <div className="gamification-badge" onClick={() => setScreen('profile')}>
+            <span className="gamification-level">⭐ Lvl {profile.level}</span>
+            <span className="gamification-xp">{profile.xp} XP</span>
+          </div>
+        </header>
+      )}
+      {renderScreen()}
+      <div className="toast-container">
+        {toastMessages.map(t => <div key={t.id} className="toast">{t.message}</div>)}
+      </div>
+    </>
   )
 }
 

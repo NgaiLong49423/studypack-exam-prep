@@ -1,6 +1,6 @@
 import type { AttemptRecord, PracticeMode, PracticeSession, Question } from './types'
 
-export const PRACTICE_SESSION_SIZE = 10
+export const PRACTICE_SESSION_SIZE = 20
 export const attemptsStorageKey = (subjectId: string) => `studypack:${subjectId}:attempts:v1`
 export const practiceSessionStorageKey = (subjectId: string) => `studypack:${subjectId}:practice-session:v1`
 
@@ -17,10 +17,11 @@ function frequencyBand(questionId: string, attempts: AttemptRecord[]): number {
   return 4
 }
 
-export function selectPracticeQuestions(questions: Question[], attemptsOrSize: AttemptRecord[] | number = [], requestedSize = PRACTICE_SESSION_SIZE): Question[] {
+export function selectPracticeQuestions(questions: Question[], attemptsOrSize: AttemptRecord[] | number = [], requestedSize = PRACTICE_SESSION_SIZE, excludeQuestionIds: string[] = []): Question[] {
   const attempts = Array.isArray(attemptsOrSize) ? attemptsOrSize : []
   const size = typeof attemptsOrSize === 'number' ? attemptsOrSize : requestedSize
-  const available = questions.filter((question) => question.active)
+  const excludeSet = new Set(excludeQuestionIds)
+  const available = questions.filter((question) => question.active && !excludeSet.has(question.id))
   const limit = Math.min(size, available.length)
   const groups = Array.from({ length: 5 }, () => [] as Question[])
   available.forEach((question) => groups[frequencyBand(question.id, attempts)].push(question))
@@ -45,23 +46,27 @@ export function selectPracticeQuestions(questions: Question[], attemptsOrSize: A
   return selected
 }
 
-export function selectRandomQuestions(questions: Question[], size = PRACTICE_SESSION_SIZE): Question[] {
+export function selectRandomQuestions(questions: Question[], size = PRACTICE_SESSION_SIZE, excludeQuestionIds: string[] = []): Question[] {
+  const excludeSet = new Set(excludeQuestionIds)
   const uniqueQuestions = Array.from(new Map(
-    questions.filter((question) => question.active).map((question) => [question.id, question]),
+    questions.filter((question) => question.active && !excludeSet.has(question.id)).map((question) => [question.id, question]),
   ).values())
   const shuffled = uniqueQuestions.sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(size, shuffled.length))
 }
 
-export function selectUnseenQuestions(questions: Question[], attempts: AttemptRecord[] = [], size = PRACTICE_SESSION_SIZE): Question[] {
+export function selectUnseenQuestions(questions: Question[], attempts: AttemptRecord[] = [], size = PRACTICE_SESSION_SIZE, excludeQuestionIds: string[] = []): Question[] {
   const attemptedQuestionIds = new Set(attempts.map((attempt) => attempt.questionId))
-  return selectRandomQuestions(questions.filter((question) => !attemptedQuestionIds.has(question.id)), size)
+  const excludeSet = new Set([...attemptedQuestionIds, ...excludeQuestionIds])
+  return selectRandomQuestions(questions.filter((question) => !excludeSet.has(question.id)), size)
 }
 
-export function selectReviewQuestions(questions: Question[], attempts: AttemptRecord[] = [], size = PRACTICE_SESSION_SIZE): Question[] {
+export function selectReviewQuestions(questions: Question[], attempts: AttemptRecord[] = [], size = PRACTICE_SESSION_SIZE, excludeQuestionIds: string[] = []): Question[] {
   const byQuestion = new Map<string, AttemptRecord[]>()
   attempts.forEach((attempt) => byQuestion.set(attempt.questionId, [...(byQuestion.get(attempt.questionId) ?? []), attempt]))
+  const excludeSet = new Set(excludeQuestionIds)
   const needsReview = questions.filter((question) => {
+    if (excludeSet.has(question.id)) return false
     const history = byQuestion.get(question.id) ?? []
     return history.length > 0 && history.filter((attempt) => attempt.isCorrect).length / history.length <= 0.5
   })
@@ -117,7 +122,10 @@ export function createPracticeSession(subjectId: string, mode: PracticeMode, que
     sessionId: `practice-${subjectId}-${Date.now()}`,
     subjectId,
     mode,
-    questionRefs: questions.map((question) => ({ questionId: question.id, questionVersion: question.version })),
+    questionRefs: questions.map((question) => {
+      const optionOrder = mode === 'exam' ? question.options.map((o) => o.id) : question.options.map((o) => o.id).sort(() => Math.random() - 0.5)
+      return { questionId: question.id, questionVersion: question.version, optionOrder }
+    }),
     position: 0,
     selectedOptionIds: [],
     isLocked: false,
@@ -155,4 +163,29 @@ export function restorePracticeQuestions(session: PracticeSession, questions: Qu
     return question && question.version === questionVersion ? question : null
   })
   return restored.every((question): question is Question => question !== null) ? restored : null
+}
+
+export function extendPracticeSession(session: PracticeSession, questions: Question[], attempts: AttemptRecord[]): PracticeSession {
+  if (session.mode === 'exam') return session // Exam mode cannot be extended
+  const recentCount = Math.min(20, session.questionRefs.length)
+  const recentIds = session.questionRefs.slice(-recentCount).map(r => r.questionId)
+  
+  let newQuestions: Question[] = []
+  if (session.mode === 'smart') newQuestions = selectPracticeQuestions(questions, attempts, PRACTICE_SESSION_SIZE, recentIds)
+  else if (session.mode === 'random') newQuestions = selectRandomQuestions(questions, PRACTICE_SESSION_SIZE, recentIds)
+  else if (session.mode === 'unseen') newQuestions = selectUnseenQuestions(questions, attempts, PRACTICE_SESSION_SIZE, recentIds)
+  else if (session.mode === 'review') newQuestions = selectReviewQuestions(questions, attempts, PRACTICE_SESSION_SIZE, recentIds)
+
+  if (newQuestions.length === 0) return session
+
+  const newRefs = newQuestions.map(q => {
+    const optionOrder = q.options.map(o => o.id).sort(() => Math.random() - 0.5)
+    return { questionId: q.id, questionVersion: q.version, optionOrder }
+  })
+
+  return {
+    ...session,
+    questionRefs: [...session.questionRefs, ...newRefs],
+    updatedAt: new Date().toISOString()
+  }
 }
