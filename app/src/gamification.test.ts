@@ -104,4 +104,27 @@ describe('Gamification Logic', () => {
     expect([...levelIds, ...examIds]).toContain('level_50')
     expect([...levelIds, ...examIds]).toContain('challenger')
   })
+
+  it('isolates gamification data by subject', () => {
+    // Answer PRJ301 correctly
+    const prjResult = handlePracticeAnswer('prj301', true)
+    expect(prjResult.xpAdded).toBe(10)
+    expect(prjResult.profile.xp).toBe(10)
+    expect(prjResult.profile.currentStreak).toBe(1)
+    
+    // Switch to JPD123 and answer correctly
+    const jpdResult = handlePracticeAnswer('jpd123', true)
+    // Should be a fresh start for JPD123
+    expect(jpdResult.xpAdded).toBe(10)
+    expect(jpdResult.profile.xp).toBe(10)
+    expect(jpdResult.profile.currentStreak).toBe(1)
+    
+    // Switch back to PRJ301 and answer correctly
+    const prjResult2 = handlePracticeAnswer('prj301', true)
+    expect(prjResult2.profile.xp).toBe(21) // 10 (base) + 11 (10 base + 1 streak bonus)
+    expect(prjResult2.profile.currentStreak).toBe(2)
+    
+    // Verify they are still isolated
+    expect(jpdResult.profile.xp).not.toBe(prjResult2.profile.xp)
+  })
 })

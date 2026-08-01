@@ -82,7 +82,7 @@ function App() {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [screen])
+  }, [screen, profile?.subjectId])
 
   const addToast = (msg: string) => {
     const id = Date.now() + Math.random()
