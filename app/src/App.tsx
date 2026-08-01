@@ -7,7 +7,7 @@ import { clearTutorNotebookUrl, loadTutorNotebookUrl, saveTutorNotebookUrl } fro
 import { downloadFile, fullGeminiPack, learningProgressMarkdown, createExportContext } from './gemini-export'
 import { clearAttempts, clearPracticeSession, createPracticeSession, extendPracticeSession, gradeAnswer, loadAttempts, loadPracticeSession, restorePracticeQuestions, saveAttempt, saveAttempts, savePracticeSession, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions, seedStatisticsDemo } from './practice'
 import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
-import { ACHIEVEMENTS, addXp, checkExamAchievements, checkLevelAchievements, checkMasteryAchievements, handlePracticeAnswer, loadProfile, unlockAchievement, xpForNextLevel, getLevelTitle, type UserProfile } from './gamification'
+import { ACHIEVEMENTS, addXp, checkExamAchievements, checkLevelAchievements, checkMasteryAchievements, handlePracticeAnswer, loadProfile, xpForNextLevel, getLevelTitle, type UserProfile } from './gamification'
 import type { Exam, PracticeMode, PracticeSession, Question, Subject, SubjectCatalogEntry } from './types'
 
 type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'mock-exam-setup' | 'exam' | 'exam-result' | 'error' | 'profile'
@@ -208,7 +208,7 @@ function App() {
     setCorrectCount((current) => current + Number(correct))
     
     if (!subject || !profile) return
-    const { profile: updatedProfile, xpAdded, levelUp } = handlePracticeAnswer(subject.subjectId, correct)
+    const { profile: updatedProfile, xpAdded, levelUp, unlockedIds: practiceUnlockedIds } = handlePracticeAnswer(subject.subjectId, correct)
     let newProfile = updatedProfile
     
     if (correct) {
@@ -216,16 +216,14 @@ function App() {
         addToast(`🔥 Combo x${updatedProfile.currentStreak}! (+${xpAdded} EXP)`)
       } else {
         addToast(`✅ +${xpAdded} EXP`)
-        const fbRes = unlockAchievement('first_blood', newProfile)
-        if (fbRes.unlocked) { newProfile = fbRes.profile; addToast(`🏆 Đạt thành tựu mới: First Blood!`) }
       }
     } else {
       addToast(`❌ +${xpAdded} EXP`)
     }
     
     if (levelUp) addToast(`⭐ Lên cấp ${newProfile.level}!`)
-    const { profile: achProfile, unlockedIds } = checkLevelAchievements(newProfile)
-    checkAndShowAchievements(unlockedIds, achProfile)
+    const { profile: achProfile, unlockedIds: levelUnlockedIds } = checkLevelAchievements(newProfile)
+    checkAndShowAchievements([...practiceUnlockedIds, ...levelUnlockedIds], achProfile)
 
     saveAttempt(subject?.subjectId ?? '', {
       questionId: question.id,

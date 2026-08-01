@@ -36,9 +36,19 @@ const profileStorageKey = (subjectId: string) => `studypack:profile:${subjectId}
 export function loadProfile(subjectId: string): UserProfile {
   try {
     const raw = localStorage.getItem(profileStorageKey(subjectId))
-    if (raw) return JSON.parse(raw) as UserProfile
+    if (raw) {
+      const parsed = JSON.parse(raw)
+      return {
+        subjectId, // Luôn ép subjectId theo tham số
+        xp: typeof parsed.xp === 'number' && !isNaN(parsed.xp) ? parsed.xp : 0,
+        level: typeof parsed.level === 'number' && !isNaN(parsed.level) ? parsed.level : 1,
+        currentStreak: typeof parsed.currentStreak === 'number' && !isNaN(parsed.currentStreak) ? parsed.currentStreak : 0,
+        incorrectStreak: typeof parsed.incorrectStreak === 'number' && !isNaN(parsed.incorrectStreak) ? parsed.incorrectStreak : 0,
+        achievements: Array.isArray(parsed.achievements) ? parsed.achievements : []
+      }
+    }
   } catch {}
-  return { subjectId, xp: 0, level: 1, currentStreak: 0, achievements: [] }
+  return { subjectId, xp: 0, level: 1, currentStreak: 0, incorrectStreak: 0, achievements: [] }
 }
 
 export function saveProfile(profile: UserProfile) {
