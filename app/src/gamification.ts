@@ -3,6 +3,7 @@ export type UserProfile = {
   xp: number
   level: number
   currentStreak: number
+  incorrectStreak?: number
   achievements: string[]
 }
 
@@ -15,8 +16,13 @@ export type Achievement = {
 
 export const ACHIEVEMENTS: Achievement[] = [
   { id: 'first_blood', name: 'First Blood', description: 'Lần đầu tiên trả lời đúng một câu hỏi.', icon: '🩸' },
-  { id: 'starter', name: 'Khởi Động', description: 'Đạt Level 2.', icon: '🔥' },
-  { id: 'bookworm', name: 'Mọt Sách', description: 'Đạt Level 10.', icon: '🤓' },
+  { id: 'stumble', name: 'Cú Vấp Ngã', description: 'Trả lời sai 5 câu liên tiếp.', icon: '🩹' },
+  { id: 'combo_10', name: 'Nóng Máy', description: 'Đạt chuỗi Combo 10 câu đúng.', icon: '🔥' },
+  { id: 'combo_30', name: 'Bất Khả Chiến Bại', description: 'Đạt chuỗi Combo 30 câu đúng.', icon: '🚀' },
+  { id: 'combo_50', name: 'Thần Giao Cách Cảm', description: 'Đạt chuỗi Combo 50 câu đúng.', icon: '⚡' },
+  { id: 'level_20', name: 'Thợ Săn Điểm Số', description: 'Đạt Cấp độ 20 ở môn học này.', icon: '🛠️' },
+  { id: 'level_50', name: 'Kẻ Chinh Phục', description: 'Đạt Cấp độ 50 ở môn học này.', icon: '🏰' },
+  { id: 'level_100', name: 'Đỉnh Cao Danh Vọng', description: 'Đạt Cấp độ 100 ở môn học này.', icon: '🏆' },
   { id: 'challenger', name: 'Kẻ Thách Thức', description: 'Đạt 80% tỉ lệ đúng trong một bài Thi thử 50 câu.', icon: '🏅' },
   { id: 'master_10', name: 'Tân Binh Thành Thạo', description: 'Thành thạo > 10% tổng số câu hỏi trong ngân hàng.', icon: '🥉' },
   { id: 'master_30', name: 'Chuyên Viên Thành Thạo', description: 'Thành thạo > 30% tổng số câu hỏi.', icon: '🥈' },
@@ -39,6 +45,16 @@ export function saveProfile(profile: UserProfile) {
   localStorage.setItem(profileStorageKey(profile.subjectId), JSON.stringify(profile))
 }
 
+export function getLevelTitle(level: number): string {
+  if (level >= 100) return 'Huyền Thoại'
+  if (level >= 50) return 'Đại Tông Sư'
+  if (level >= 30) return 'Cao Thủ'
+  if (level >= 20) return 'Chuyên Gia'
+  if (level >= 10) return 'Học Giả'
+  if (level >= 5) return 'Tân Binh'
+  return 'Tập Sự'
+}
+
 export function calculateLevel(xp: number): number {
   return Math.floor(Math.sqrt(xp / 100)) + 1
 }
@@ -57,23 +73,35 @@ export function addXp(profile: UserProfile, amount: number): { profile: UserProf
   return { profile: updatedProfile, levelUp }
 }
 
-export function handlePracticeAnswer(subjectId: string, isCorrect: boolean): { xpAdded: number, currentStreak: number, levelUp: boolean, profile: UserProfile } {
+export function handlePracticeAnswer(subjectId: string, isCorrect: boolean): { xpAdded: number, currentStreak: number, levelUp: boolean, profile: UserProfile, unlockedIds: string[] } {
   const profile = loadProfile(subjectId)
   let xpAdded = 0
   let newStreak = profile.currentStreak
+  let newIncorrectStreak = profile.incorrectStreak ?? 0
 
   if (isCorrect) {
     xpAdded = 10 + newStreak
     newStreak += 1
+    newIncorrectStreak = 0
   } else {
     xpAdded = 2
     newStreak = 0
+    newIncorrectStreak += 1
   }
 
-  const updatedStreakProfile = { ...profile, currentStreak: newStreak }
+  const updatedStreakProfile = { ...profile, currentStreak: newStreak, incorrectStreak: newIncorrectStreak }
   const { profile: finalProfile, levelUp } = addXp(updatedStreakProfile, xpAdded)
 
-  return { xpAdded, currentStreak: newStreak, levelUp, profile: finalProfile }
+  let current = finalProfile
+  const unlockedIds: string[] = []
+
+  if (isCorrect && newStreak === 1) { const r = unlockAchievement('first_blood', current); if (r.unlocked) { current = r.profile; unlockedIds.push('first_blood') } }
+  if (newStreak === 10) { const r = unlockAchievement('combo_10', current); if (r.unlocked) { current = r.profile; unlockedIds.push('combo_10') } }
+  if (newStreak === 30) { const r = unlockAchievement('combo_30', current); if (r.unlocked) { current = r.profile; unlockedIds.push('combo_30') } }
+  if (newStreak === 50) { const r = unlockAchievement('combo_50', current); if (r.unlocked) { current = r.profile; unlockedIds.push('combo_50') } }
+  if (newIncorrectStreak === 5) { const r = unlockAchievement('stumble', current); if (r.unlocked) { current = r.profile; unlockedIds.push('stumble') } }
+
+  return { xpAdded, currentStreak: newStreak, levelUp, profile: current, unlockedIds }
 }
 
 export function unlockAchievement(id: string, currentProfile?: UserProfile, subjectId?: string): { unlocked: boolean, profile: UserProfile } {
@@ -91,13 +119,17 @@ export function unlockAchievement(id: string, currentProfile?: UserProfile, subj
 export function checkLevelAchievements(profile: UserProfile): { profile: UserProfile, unlockedIds: string[] } {
   let current = profile
   const unlockedIds: string[] = []
-  if (current.level >= 2) {
-    const res = unlockAchievement('starter', current)
-    if (res.unlocked) { current = res.profile; unlockedIds.push('starter') }
+  if (current.level >= 20) {
+    const res = unlockAchievement('level_20', current)
+    if (res.unlocked) { current = res.profile; unlockedIds.push('level_20') }
   }
-  if (current.level >= 10) {
-    const res = unlockAchievement('bookworm', current)
-    if (res.unlocked) { current = res.profile; unlockedIds.push('bookworm') }
+  if (current.level >= 50) {
+    const res = unlockAchievement('level_50', current)
+    if (res.unlocked) { current = res.profile; unlockedIds.push('level_50') }
+  }
+  if (current.level >= 100) {
+    const res = unlockAchievement('level_100', current)
+    if (res.unlocked) { current = res.profile; unlockedIds.push('level_100') }
   }
   return { profile: current, unlockedIds }
 }

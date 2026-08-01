@@ -7,7 +7,7 @@ import { clearTutorNotebookUrl, loadTutorNotebookUrl, saveTutorNotebookUrl } fro
 import { downloadFile, fullGeminiPack, learningProgressMarkdown, createExportContext } from './gemini-export'
 import { clearAttempts, clearPracticeSession, createPracticeSession, extendPracticeSession, gradeAnswer, loadAttempts, loadPracticeSession, restorePracticeQuestions, saveAttempt, saveAttempts, savePracticeSession, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions, seedStatisticsDemo } from './practice'
 import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
-import { ACHIEVEMENTS, addXp, checkExamAchievements, checkLevelAchievements, checkMasteryAchievements, handlePracticeAnswer, loadProfile, unlockAchievement, xpForNextLevel, type UserProfile } from './gamification'
+import { ACHIEVEMENTS, addXp, checkExamAchievements, checkLevelAchievements, checkMasteryAchievements, handlePracticeAnswer, loadProfile, unlockAchievement, xpForNextLevel, getLevelTitle, type UserProfile } from './gamification'
 import type { Exam, PracticeMode, PracticeSession, Question, Subject, SubjectCatalogEntry } from './types'
 
 type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'mock-exam-setup' | 'exam' | 'exam-result' | 'error' | 'profile'
@@ -393,7 +393,7 @@ function App() {
         <main className="app-shell">
           <section className="subject-card result-card">
             <p className="eyebrow">Hồ sơ cá nhân</p>
-            <h1>⭐ Cấp độ {profile.level}</h1>
+            <h1>⭐ Cấp độ {profile.level} - {getLevelTitle(profile.level)}</h1>
             <p>Kinh nghiệm: {profile.xp} / {xpForNextLevel(profile.level)} XP</p>
             <h2 style={{marginTop: '2rem'}}>Danh hiệu của bạn</h2>
             <div className="achievements-grid">
