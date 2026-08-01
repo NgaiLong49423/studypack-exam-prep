@@ -13,6 +13,11 @@ h2 { color: #253042; font-size: 1.35rem; }
 .subject-facts div { border-radius: .75rem; background: #f4f7f8; padding: 1rem; }
 .subject-facts dt { color: #687386; font-size: .875rem; }
 .subject-facts dd { margin: .25rem 0 0; color: #182230; font-size: 1.1rem; font-weight: 700; }
+.resume-card { margin: 1.5rem 0; border: 1px solid #b8dcc7; border-radius: .85rem; background: #f1faf5; padding: 1.25rem; }
+.resume-card h2 { margin-bottom: .5rem; }
+.resume-card p:not(.eyebrow) { color: #364152; line-height: 1.55; }
+.resume-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.resume-actions .secondary-button { margin: 0; }
 .primary-button, .text-button, .answer-button { cursor: pointer; font: inherit; }
 .primary-button { border: 0; border-radius: .625rem; background: #176447; color: #fff; padding: .8rem 1.15rem; font-weight: 750; }
 .primary-button:hover, .primary-button:focus-visible { background: #0f5138; }

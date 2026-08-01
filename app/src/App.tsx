@@ -5,14 +5,11 @@ import { createMockExam, examAttempts, examScore, formatRemainingTime, MOCK_EXAM
 import { copyPromptToClipboard, createAiTutorPrompt } from './ai-tutor'
 import { clearTutorNotebookUrl, loadTutorNotebookUrl, saveTutorNotebookUrl } from './tutor-settings'
 import { downloadFile, fullGeminiPack, learningProgressMarkdown, createExportContext } from './gemini-export'
-import { gradeAnswer, saveAttempt, saveAttempts, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions } from './practice'
-import { clearAttempts, loadAttempts, seedStatisticsDemo } from './practice'
+import { clearAttempts, clearPracticeSession, createPracticeSession, gradeAnswer, loadAttempts, loadPracticeSession, restorePracticeQuestions, saveAttempt, saveAttempts, savePracticeSession, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions, seedStatisticsDemo } from './practice'
 import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
-import type { Exam, Question, Subject, SubjectCatalogEntry } from './types'
+import type { Exam, PracticeMode, PracticeSession, Question, Subject, SubjectCatalogEntry } from './types'
 
 type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'mock-exam-setup' | 'exam' | 'exam-result' | 'error'
-type PracticeMode = 'smart' | 'random' | 'unseen' | 'review'
-
 function textOf(blocks: { text: string }[]) {
   return blocks.map((block) => block.text).join('\n')
 }
@@ -41,6 +38,8 @@ function App() {
   const examSubmissionLocked = useRef(false)
   const submitExamRef = useRef<(autoSubmitted?: boolean) => void>(() => {})
   const [session, setSession] = useState<Question[]>([])
+  const [practiceSessionId, setPracticeSessionId] = useState('')
+  const [resumeCandidate, setResumeCandidate] = useState<PracticeSession | null>(null)
   const [position, setPosition] = useState(0)
   const [selectedOptionIds, setSelectedOptionIds] = useState<string[]>([])
   const [isLocked, setIsLocked] = useState(false)
@@ -67,6 +66,10 @@ function App() {
       const savedUrl = loadTutorNotebookUrl(loadedSubject.subjectId)
       setPersonalNotebookUrl(savedUrl); setSavedNotebookUrl(savedUrl)
       setQuestions(bank.questions); setExams(loadedExams); setNotebookDocuments(loadedNotebookDocuments)
+      const savedSession = loadPracticeSession(loadedSubject.subjectId)
+      const restoredQuestions = savedSession ? restorePracticeQuestions(savedSession, bank.questions) : null
+      setResumeCandidate(savedSession && restoredQuestions ? savedSession : null)
+      if (savedSession && !restoredQuestions) clearPracticeSession(loadedSubject.subjectId)
       setScreen('subject')
     } catch (reason: unknown) { setError(reason instanceof Error ? reason.message : 'Đã xảy ra lỗi không xác định.'); setScreen('error') }
   }
@@ -98,7 +101,48 @@ function App() {
     setCorrectCount(0)
     setSelectedOptionIds([])
     setIsLocked(false)
-    setScreen(selected.length ? 'practice' : 'practice-empty')
+    if (selected.length) {
+      const nextSession = createPracticeSession(subject?.subjectId ?? '', mode, selected)
+      setPracticeSessionId(nextSession.sessionId)
+      savePracticeSession(nextSession)
+      setResumeCandidate(null)
+      setScreen('practice')
+    } else {
+      setScreen('practice-empty')
+    }
+  }
+
+  function persistPracticeSession(changes: Partial<PracticeSession> = {}) {
+    if (!subject || !practiceSessionId || !session.length) return
+    const current = loadPracticeSession(subject.subjectId)
+    if (!current || current.sessionId !== practiceSessionId) return
+    savePracticeSession({ ...current, ...changes, updatedAt: new Date().toISOString() })
+  }
+
+  function resumePractice() {
+    if (!subject || !resumeCandidate) return
+    const restored = restorePracticeQuestions(resumeCandidate, questions)
+    if (!restored) {
+      clearPracticeSession(subject.subjectId)
+      setResumeCandidate(null)
+      return
+    }
+    setSession(restored)
+    setPracticeSessionId(resumeCandidate.sessionId)
+    setPracticeMode(resumeCandidate.mode)
+    setPosition(resumeCandidate.position)
+    setSelectedOptionIds(resumeCandidate.selectedOptionIds)
+    setIsLocked(resumeCandidate.isLocked)
+    setCorrectCount(resumeCandidate.correctCount)
+    setResumeCandidate(null)
+    setScreen('practice')
+  }
+
+  function startNewPractice() {
+    if (!subject) return
+    clearPracticeSession(subject.subjectId)
+    setResumeCandidate(null)
+    setScreen('mode')
   }
 
   function submitPracticeAnswer(optionIds: string[]) {
@@ -115,22 +159,28 @@ function App() {
       isCorrect: correct,
       answeredAt: new Date().toISOString(),
     })
+    persistPracticeSession({ selectedOptionIds: optionIds, isLocked: true, correctCount: correctCount + Number(correct) })
   }
 
   function chooseAnswer(optionId: string) {
     if (!question || isLocked) return
     if (question.maxSelections === 1) { submitPracticeAnswer([optionId]); return }
-    setSelectedOptionIds((current) => current.includes(optionId)
-      ? current.filter((id) => id !== optionId)
-      : current.length < question.maxSelections ? [...current, optionId] : current)
+    const nextSelection = selectedOptionIds.includes(optionId)
+      ? selectedOptionIds.filter((id) => id !== optionId)
+      : selectedOptionIds.length < question.maxSelections ? [...selectedOptionIds, optionId] : selectedOptionIds
+    setSelectedOptionIds(nextSelection)
+    persistPracticeSession({ selectedOptionIds: nextSelection })
   }
 
   function continuePractice() {
     if (position + 1 >= session.length) {
+      if (subject) clearPracticeSession(subject.subjectId)
       setScreen('complete')
       return
     }
-    setPosition((current) => current + 1)
+    const nextPosition = position + 1
+    setPosition(nextPosition)
+    persistPracticeSession({ position: nextPosition, selectedOptionIds: [], isLocked: false })
     setSelectedOptionIds([])
     setIsLocked(false)
   }
@@ -243,6 +293,12 @@ function App() {
             <div><dt>Ngân hàng câu hỏi</dt><dd>{questions.length} câu</dd></div>
             <div><dt>Chế độ hiện có</dt><dd>Practice</dd></div>
           </dl>
+          {resumeCandidate && <section className="resume-card" role="dialog" aria-labelledby="resume-title" aria-describedby="resume-description">
+            <p className="eyebrow">Practice Session</p>
+            <h2 id="resume-title">Bạn có một lượt luyện đang làm dở</h2>
+            <p id="resume-description">Lượt {({ smart: 'luyện thông minh', random: 'ngẫu nhiên', unseen: 'câu chưa ôn', review: 'ôn lại' })[resumeCandidate.mode]} đang ở câu {resumeCandidate.position + 1}/{resumeCandidate.questionRefs.length}. Bạn muốn tiếp tục không?</p>
+            <div className="resume-actions"><button className="primary-button" type="button" onClick={resumePractice}>Tiếp tục lượt đang làm</button><button className="secondary-button" type="button" onClick={startNewPractice}>Bắt đầu lượt mới</button></div>
+          </section>}
           <button className="primary-button" type="button" onClick={() => setScreen('mode')}>Chọn cách luyện</button>
           <button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button>
           <button className="text-button" type="button" onClick={() => setScreen('subject-picker')}>Đổi môn học</button>

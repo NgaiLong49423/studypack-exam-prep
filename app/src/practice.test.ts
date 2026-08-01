@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { gradeAnswer, loadAttempts, saveAttempt, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions } from './practice'
+import { clearPracticeSession, createPracticeSession, gradeAnswer, loadAttempts, loadPracticeSession, restorePracticeQuestions, saveAttempt, savePracticeSession, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions } from './practice'
 import type { Question } from './types'
 
 const questions: Question[] = [
@@ -48,6 +48,37 @@ describe('practice helpers', () => {
     saveAttempt('jpd123', { questionId: 'jpd123-q-0001', questionVersion: 1, selectedOptionId: 'opt-a', isCorrect: true, answeredAt: '2026-07-31T00:00:00.000Z' })
     expect(loadAttempts('jpd123')).toHaveLength(1)
     expect(loadAttempts('prj301')).toEqual([])
+  })
+
+  it('saves and loads an in-progress practice session by subject', () => {
+    const created = createPracticeSession('jpd123', 'random', questions, '2026-08-01T00:00:00.000Z')
+    created.position = 1
+    created.selectedOptionIds = ['opt-b']
+    created.isLocked = true
+    created.correctCount = 1
+    savePracticeSession(created)
+
+    expect(loadPracticeSession('jpd123')).toMatchObject({
+      sessionId: created.sessionId,
+      position: 1,
+      selectedOptionIds: ['opt-b'],
+      isLocked: true,
+      correctCount: 1,
+    })
+    expect(loadPracticeSession('prj301')).toBeNull()
+  })
+
+  it('restores the exact question order and rejects a changed question version', () => {
+    const created = createPracticeSession('jpd123', 'smart', [questions[1], questions[0]], '2026-08-01T00:00:00.000Z')
+    expect(restorePracticeQuestions(created, questions)?.map((question) => question.id)).toEqual(['jpd123-q-0002', 'jpd123-q-0001'])
+    expect(restorePracticeQuestions(created, [{ ...questions[0], version: 2 }, questions[1]])).toBeNull()
+  })
+
+  it('clears a completed in-progress session', () => {
+    const created = createPracticeSession('jpd123', 'random', questions)
+    savePracticeSession(created)
+    clearPracticeSession('jpd123')
+    expect(loadPracticeSession('jpd123')).toBeNull()
   })
 
   it('selects only active questions with no history for unseen practice', () => {

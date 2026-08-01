@@ -56,5 +56,21 @@ export type AttemptRecord = {
   examItemId?: string
 }
 
+export type PracticeMode = 'smart' | 'random' | 'unseen' | 'review'
+
+export type PracticeSession = {
+  sessionId: string
+  subjectId: string
+  mode: PracticeMode
+  questionRefs: { questionId: string; questionVersion: number }[]
+  position: number
+  selectedOptionIds: string[]
+  isLocked: boolean
+  correctCount: number
+  startedAt: string
+  updatedAt: string
+  status: 'in_progress'
+}
+
 export type ExamItem = { examItemId: string; order: number; originalNumber: number; questionId: string; questionVersion: number }
 export type Exam = { examId: string; title: string; declaredQuestionCount: number; items: ExamItem[] }
