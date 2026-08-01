@@ -1,0 +1,1920 @@
+{
+  "schemaVersion": "1.0",
+  "batchId": "batch-2",
+  "subjectId": "iot102",
+  "sourceKind": "question-bank",
+  "examDraft": null,
+  "items": [
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1031).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 1,
+      "originalNumber": 41,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of microcontroller does the Arduino use?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "32-bit microcontroller"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "8-bit microcontroller"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "16-bit microcontroller"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "64-bit microcontroller"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1032).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 2,
+      "originalNumber": 42,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which digit does the color violet denote on the first color band of a resistor?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "2"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "5"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "7"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1033).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 3,
+      "originalNumber": 43,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which communication range has a distance of about 10cm?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "NFC"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "RF"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Wifi"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Bluetooth"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1034).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 4,
+      "originalNumber": 44,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which component is referred to as the 'brain' of the Arduino?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ATMega328"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "16 MHz crystal"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "FTDI USB-To-Serial chip"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Power regulator"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1035).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 5,
+      "originalNumber": 45,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which category of actuators includes mechanisms that utilize air pressure to control or move objects?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Electrical"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Mechanical"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Hydraulic"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pneumatic"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1036).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 6,
+      "originalNumber": 46,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of interface is typically used by a fingerprint sensor?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "UART interface"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "CoAP interface"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "SPI interface"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "I2P interface"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1037).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 7,
+      "originalNumber": 47,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which component on tinkercad.com allows displaying the results of the simulation program?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Components"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Send to"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Start simulation"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial monitor"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1038).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 8,
+      "originalNumber": 48,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which board is commonly used for IoT projects?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Raspberry Pi"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Arduino UNO"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "BeagleBone Black"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "All of the above"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1039).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 9,
+      "originalNumber": 49,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which Arduino model is most commonly used by beginners due to its simplicity and affordability?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Due"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Uno"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Esplora"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "LilyPad"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1040).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 10,
+      "originalNumber": 50,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which software is used to upload the Arduino Sketches to the board?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Avrgcc"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "g++"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "cpython for windows"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Avrdude"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1041).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 11,
+      "originalNumber": 51,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which function to retrieve text sent from the computer? Hoàng Hoàng"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial.readStringUntil('\\n')"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ReadStringUntil('\\n')"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial.readingStringUntil('\\n')"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "The source answer mark is 'AA'; this staging item was normalized to option label 'A' because the batch provides only option labels A, B and C."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.9,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1042).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 12,
+      "originalNumber": 52,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Why is the delay(1000); function used in the Arduino sketch for blinking an LED?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To increase the voltage supplied to the LED."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To turn the LED off."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To keep the LED on or off for a visible amount of time."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To set the LED_BUILTIN pin as an input."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1043).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 13,
+      "originalNumber": 53,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many bits are in an IPv6 address?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "8"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "32"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "64"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "128"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1044).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 14,
+      "originalNumber": 54,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many parts of a complete IoT system?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "3"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "5"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "6"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1045).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 15,
+      "originalNumber": 55,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many errors are present in the code given below?\n\n```cpp\nint pin1=12;\nvoid setup() {\n  pinmode(pin1, IN);\n  Serial.begin(9600);\n}\nvoid loop() {\n  int value=analogRead(pin1);\n  Serial.println(value);\n}\n```"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "1"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "2"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "3"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": "chỗ này có 2 lỗi lớn nếu tính theo dòng là cái dòng int pin1=12 nó là chân digital, nhưng ở dưới lại viết là analogRead tức là đọc tín hiệu analog từ chân digital nên nó sẽ sai, với cái cái dòng vàng cái chỗ pinmode phải sửa thành pinMode là 1 lỗi nữa, ngoài ra đoạn sau nó quy định chân pin1 là input nma để mỗi là IN nên n sai phải là INPUT, tuy nhiên cái lỗi pin1=12 nó gây tranh cãi vì bản thân nó không phải là lỗi compile nó là lỗi logic. nếu tính khắt khe thì là 3 lỗi còn nếu chỉ quy ước code chạy đúng thì nó chỉ có 2 lỗi thôi nhưng thường thì với môn này ngta hay tính 3 lỗi vì nếu n đọc giá trị liên tục mà nó auto là 1 giá trị rồi rạc thì n sai về mặt logic",
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1046).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 16,
+      "originalNumber": 56,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How much space of flash memory does the default bootloader of Arduino Uno take?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "0.5 KB"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "1 KB"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "16 KB"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "32 KB"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": "Flash memory: 32 KB, of which 0.5 KB used by the bootloader",
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1047).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 17,
+      "originalNumber": 57,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many pins on Arduino Uno R3 support the pulse width modulation (PWM)?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "7"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "5"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "9"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "6"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": "PWM pins in Arduino:\n\nArduino Uno R3 has 6 PWM pins that are 3, 5, 6, 9, 10, and 11. These pins are marked with the negation sign \"~\". These pins can generate a pulse as per the given inputs. Arduino supports an 8-bit wide pulse that can have 256 possible levels (0 to 255).\n\nhttps://www.geeksforgeeks.org/analog-write-and-working-of-pwm-in-arduino/",
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1048).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 18,
+      "originalNumber": 58,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many bits does the TCS34725 use for its ADC resolution?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "10-bit with oversampling"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "16-bit"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "12-bit with gain stages"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "14-bit in fast mode"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1049).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 19,
+      "originalNumber": 59,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many bits are in an IPv4 address?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "16"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "32"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "64"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1050).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 20,
+      "originalNumber": 60,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many groups are an IPv6 represented?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "8"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "12"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "16"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1051).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 21,
+      "originalNumber": 61,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many bits are there in a nibble?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "2"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "3"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "5"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": "One nibble equals four bits.\n\nIn computing, the term \"nibble\" (occasionally, the term nybble is used to spell bytes) can also be defined as a 4-bit aggregate known as half an Octet.",
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1053).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 22,
+      "originalNumber": 63,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many parts of a complete IoT system? Hoàng Hoàng"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "3"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "5"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "6"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": "Each application and example of IoT highlights four different integrations of elements: Sensors/devices, Connectivity, Data Processing, and User Interface.",
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1054).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 23,
+      "originalNumber": 64,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many bits are in an IPv4 address?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "16"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "32"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "64"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1055).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 24,
+      "originalNumber": 65,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many pins are there in a servo motor?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "2"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "3"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "5"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1056).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 25,
+      "originalNumber": 66,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "A part of an Arduino sketch is as follows: digitalWrite(13, HIGH); delay(1000); digitalWrite(13, LOW); delay(1000); How long is the built-in LED on?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "1000 seconds"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "100 seconds"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "1 second"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "100 milliseconds"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1057).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 26,
+      "originalNumber": 67,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "A part of an Arduino sketch is as follows: digitalWrite(11, HIGH); delay(300); digitalWrite(11, LOW); delay(200); What is the frequency of the waveform at digital pin D11?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "2 Hz"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "3 kHz"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "10 kHz"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "15 MHz"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1058).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 27,
+      "originalNumber": 68,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "If the following are the parameters of ADC, Vref = 5V, and a 10-bit A/D output code is 0x1AB, what is the ADC input voltage?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "1.685V"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "2.085V"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "1.885V"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "2.285V"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": "V_in = (Output Code / (2^n - 1)) × V_ref\n\nSteps:\n1. Convert Output Code (0x1AB) to decimal: 0x1AB = 427 (in decimal).\n2. Calculate the maximum ADC value for a 10-bit ADC: 2^10 - 1 = 1023.\n3. Substitute values into the formula.\n4. Perform the calculation: V_in = 0.4175 × 5 = 2.085 V.",
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1059).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 28,
+      "originalNumber": 69,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "If a resistor has bands of yellow, violet, and orange, what would be its resistance value?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "43 kilo Ohms"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "470 Ohms"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "47 kilo Ohms"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "4.7 kilo Ohms"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1060).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 29,
+      "originalNumber": 70,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "If the following are the parameters of ADC, Vref = 5V, and a 10-bit A/D output code is 0x1AB, what is the ADC input voltage?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "1.685V"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "2.085V"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "1.885V"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "2.285V"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.97,
+      "needsReview": false,
+      "issues": []
+    }
+  ],
+  "batchIssues": [
+    {
+      "code": "POSSIBLE_DUPLICATE_ITEMS",
+      "message": "Several questions appear duplicated or near-duplicated: originalNumber 54/63, 59/64, and 68/70. They were retained as separate items."
+    }
+  ]
+}

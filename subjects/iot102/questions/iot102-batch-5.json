@@ -1,0 +1,1998 @@
+{
+  "schemaVersion": "1.0",
+  "batchId": "batch-5",
+  "subjectId": "iot102",
+  "sourceKind": "question-bank",
+  "examDraft": null,
+  "items": [
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1121).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 1,
+      "originalNumber": 132,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following is an example of an authentication method used in IoT devices?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Biometric data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Data encryption"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Data backup"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Device size reduction"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1122).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 2,
+      "originalNumber": 133,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following devices is considered an input device in an IoT system?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Microcontroller"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Temperature sensor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "LCD screen"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Servo motor"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1123).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 3,
+      "originalNumber": 134,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which data type is used to store integer values in C?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "float"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "char"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "int"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "double"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1124).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 4,
+      "originalNumber": 135,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which command is used to read the state of a digital input pin?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "digitalRead()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "analogRead()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "pinRead()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "getPinState()"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1125).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 5,
+      "originalNumber": 136,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which communication protocol does the MAX30102 use?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "SPI with open-drain outputs"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Inter-Integrated Circuit"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "UART with parity bit"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "SWD debug interface"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1126).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 6,
+      "originalNumber": 137,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which Arduino function is specifically used to link a servo object to a designated control pin on the board?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "myservo.connect()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "myservo.attach()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "myservo.link()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "myservo.bind()"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1127).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 7,
+      "originalNumber": 138,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which function is used to create a PWM signal to dim an LED?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "analogWrite(pin, value);"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "digitalWrite(pin, value);"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "pwmSend(pin, value);"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "fade(pin, value);"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1128).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 8,
+      "originalNumber": 139,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which layer of IoT architecture involves sensors and devices that collect data?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Perception layer"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Network layer"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Application layer"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Data layer"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1129).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 9,
+      "originalNumber": 140,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which Arduino command is used to generate a pulse width modulated signal?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "analogWrite()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "tone()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "digitalRead()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "digitalWrite()"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1130).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 10,
+      "originalNumber": 141,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which board is the Arduino's first development board to use one microcontroller with built-in USB?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Lily Pad"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Uno"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "RedBoard"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Leonardo"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1131).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 11,
+      "originalNumber": 142,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which microcontroller does Arduino Uno use?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ATmega328P"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ESP32"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "STM32"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Raspberry Pi"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1132).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 12,
+      "originalNumber": 143,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which command is used to read a signal from an analog temperature sensor?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "digitalRead(A0);"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "analogRead(A0);"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "readSensor();"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "input(A0);"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1133).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 13,
+      "originalNumber": 144,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which factors must be considered when aligning multiple IoT devices in a network to work together efficiently? (Select all that apply)"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Interoperability"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Communication latency"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Power source compatibility"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Device color coding"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: ABC"
+      },
+      "maxSelections": 3,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1134).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 14,
+      "originalNumber": 145,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which medium is best suited for long-distance, high-speed communication?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Copper cables"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Fibre optic cables"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Wireless transmission"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Plastic wires"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1135).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 15,
+      "originalNumber": 146,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following is an example of an output device?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Temperature sensor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "LED"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Microphone"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Touchscreen"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1136).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 16,
+      "originalNumber": 147,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which port is commonly used to connect input/output modules to Arduino?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "GPIO"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "USB"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "HDMI"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Ethernet"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1137).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 17,
+      "originalNumber": 148,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which actuator types operate using pressurized fluids or gases? (Select all that apply)"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pneumatic"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Hydraulic"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Electrical"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Mechanical spring"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A",
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: AB"
+      },
+      "maxSelections": 2,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1138).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 18,
+      "originalNumber": 149,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which board is commonly used for IoT projects?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Raspberry Pi"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Arduino UNO"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "BeagleBone Black"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "All of the above"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1139).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 19,
+      "originalNumber": 150,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which category of actuators includes mechanisms that utilize air pressure to control or move objects?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Electrical"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Mechanical"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Hydraulic"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pneumatic"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1140).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 20,
+      "originalNumber": 151,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which function in the Arduino is used to initialize the serial communication?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial.print()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial.available()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial.read()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial.begin()"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1141).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 21,
+      "originalNumber": 152,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which component on tinkercad.com allows displaying the results of the simulation program?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Components"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Send to"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Start simulation"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial monitor"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1142).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 22,
+      "originalNumber": 153,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which device commonly uses binary states to store information?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Resistor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Transistor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Capacitor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Inductor"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1143).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 23,
+      "originalNumber": 154,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following is used for comments in Arduino sketch?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "/* comment */"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "// comment /"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "// comment"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "both /* comment and / comment */"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1144).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 24,
+      "originalNumber": 155,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following IoT network topologies provides the highest reliability?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Star topology"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Mesh topology"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Bus topology"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Ring topology"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1145).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 25,
+      "originalNumber": 156,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following could be an IOT device?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "A lamp"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "A pen"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "A couch"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "All of the mentioned"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1146).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 26,
+      "originalNumber": 157,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which part of the ATmega328p is responsible for executing instructions?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Flash memory"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ALU"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "EEPROM"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "UART"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1147).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 27,
+      "originalNumber": 158,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following is not an example of an open loop system?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Automatic water faucet"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Traffic signals"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Electronic lift"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Automatic electric iron"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": "not example -> Automatic electric iron",
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1148).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 28,
+      "originalNumber": 159,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which type of network is the connection between a Bluetooth headset and a smartphone? Hoàng Hoàng"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "PAN"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "MAN"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "LAN"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "WAN"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1149).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 29,
+      "originalNumber": 160,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which Arduino function is used to stop an active interrupt?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "detachInterrupt()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "interruptOff()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "disableISR()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "stopInterrupt()"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1150).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 30,
+      "originalNumber": 161,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which issue in the cloud focuses on protecting data from theft or corruption?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "DATA PRIVATE"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "DATA ACCESS"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "DATA THEFT"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "SECURE NETWORK"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    }
+  ],
+  "batchIssues": [
+    {
+      "code": "POSSIBLE_DUPLICATE_ITEMS",
+      "message": "OriginalNumber 149 duplicates the common IoT project board question from an earlier batch; originalNumber 150 and 152 also repeat questions seen in earlier batches. They were retained as separate items."
+    }
+  ]
+}

@@ -1,0 +1,1977 @@
+{
+  "schemaVersion": "1.0",
+  "batchId": "batch-9",
+  "subjectId": "iot102",
+  "sourceKind": "question-bank",
+  "examDraft": null,
+  "items": [
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1242).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 1,
+      "originalNumber": 253,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What are the 4 Vs of Big Data, as described by IBM?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Volume, Velocity, Value, Variability"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Velocity, Versatility, Verification, Viscosity"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Volume, Velocity, Variety, Veracity"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Volatility, Vibration, Visualization, Visibility"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1243).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 2,
+      "originalNumber": 254,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What are the two main functions of a program in Arduino IDE?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "build() and loop()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "setup() and build()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "setup() and loop()"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "build() and setup()"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1244).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 3,
+      "originalNumber": 255,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What are properties of a tree"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "One node is marked as Root node"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Every node other than the root is associated with one parent node"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Each node can have an arbitrary number of child node"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "All of the others"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1245).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 4,
+      "originalNumber": 256,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What does the analogRead() function do physically when invoked in a code?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It accepts a digital input"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It reads the raw voltage value"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It activates the ADC Circuit to read voltage values"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It activates the DAC Circuit to read voltage values"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1246).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 5,
+      "originalNumber": 257,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What does interoperability in IoT refer to?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Efficient storage, processing, and analysis of IoT data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Seamless communication between different IoT devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Responsible data collection and privacy protection"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Ensuring user data remains confidential and secure"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1247).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 6,
+      "originalNumber": 258,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What does the RX LED blinking on an Arduino board signify?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The Arduino is receiving data from a connected device."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The Arduino is sending data to a connected device."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The Arduino is in programming mode."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The Arduino is disconnected from the serial monitor."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1248).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 7,
+      "originalNumber": 259,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What does MAC stand for?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Media Area Control"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Memory Access Control"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Media Access Control"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Memory Access Control"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1249).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 8,
+      "originalNumber": 260,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What does the RX LED on an Arduino board indicate?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The Arduino is transmitting data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The Arduino is receiving data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The Arduino is powered on"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The Arduino is in programming mode"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1250).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 9,
+      "originalNumber": 261,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What does the analogRead() function do physically when invoked in a code?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It accepts a digital input"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It reads the raw voltage value"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It activates the ADC Circuit to read voltage values"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It activates the DAC Circuit to read voltage values"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1251).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 10,
+      "originalNumber": 262,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What does interoperability in IoT refer to?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Efficient storage, processing, and analysis of IoT data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Seamless communication between different IoT devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Responsible data collection and privacy protection"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Ensuring user data remains confidential and secure"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1252).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 11,
+      "originalNumber": 263,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What programming strategies could be employed to handle the \"velocity\" aspect of big data in an IoT system?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Implementing strict data type casting in all functions"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Utilizing just-in-time compilation for all code"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Employing data streaming and real-time processing frameworks"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Using older data protocols to ensure compatibility"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1253).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 12,
+      "originalNumber": 264,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of signal does the analogWrite() function output? Hoàng Hoàng"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pulse Code Modulated Signal"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Frequency Modulated Signal"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pulse Width Modulated Signal"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pulse Amplitude Modulated Signal"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1254).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 13,
+      "originalNumber": 265,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What types of programming languages are commonly used for IoT systems?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "JavaScript, HTML, and CSS"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Python, C++, Java, Arduino, and Raspberry Pi platforms"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "PHP and SQL"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Assembly language only"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1255).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 14,
+      "originalNumber": 266,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What types of programming languages are commonly used for IoT systems?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "JavaScript, HTML, and CSS"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Python, C++, Java, Arduino, and Raspberry Pi platforms"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "PHP and SQL"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Assembly language only"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1256).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 15,
+      "originalNumber": 267,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What two key pieces of information should you have a clear idea of when planning an IoT project?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The marketing strategy and the product's brand name."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The target audience and their requirements."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The specific programming languages and hardware components you will use."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The project's budget and timeline."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1257).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 16,
+      "originalNumber": 268,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What factors should be considered when selecting a communication medium in a network?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The distance a signal needs to travel"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The environment the signal will travel in"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The amount and speed of data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "All of the others"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1258).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 17,
+      "originalNumber": 269,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which function to retrieve text sent from the computer?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial.readStringUntil('\\n')"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ReadStringUntil('\\n')"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial.readingStringUntil('\\n')"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1259).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 18,
+      "originalNumber": 270,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following is an example of an IoT application?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Wearable device to monitor blood glucose level"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Manufacturing Bolt using CNC machine"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Bank web page to monitor customer experience"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1260).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 19,
+      "originalNumber": 271,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following IoT deployment models involves direct communication between nearby devices without relying on a centralized infrastructure?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Cloud based IoT"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Peer-to-peer IoT"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Hybrid IoT"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Edge computing IoT"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1261).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 20,
+      "originalNumber": 272,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following is a challenge that arises when manipulating big data for analysis?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The difficulty in storing data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Ensuring data accuracy and consistency"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The lack of data collection sources"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The absence of tools for manipulating the data"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1262).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 21,
+      "originalNumber": 273,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following is an example of a fog computing concept in IoT?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Storing data on remote servers"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Routing data through multiple gateways"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Performing data analytics on edge devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Using blockchain technology for secure transactions"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1263).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 22,
+      "originalNumber": 274,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following is an example of a method used for authenticating IoT devices?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "RFID (Radio Frequency Identification)"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Device power consumption monitoring"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Device software version tracking"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Physical device location tracking"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1264).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 23,
+      "originalNumber": 275,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following best describes the role of sensors in the context of IoT?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Sensors are used to create data signatures for various devices."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Sensors collect and transmit data about the physical environment."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Sensors generate power for IoT devices."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Sensors are responsible for controlling mechanical movements."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1265).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 24,
+      "originalNumber": 276,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following is a fundamental benefit of integrating IoT devices with cloud platforms?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Reduced power consumption of IoT devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Enhanced local processing capabilities of IoT devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Scalable data storage and processing"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Elimination of network connectivity requirements"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1266).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 25,
+      "originalNumber": 277,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following IoT deployment models involves direct communication between nearby devices without relying on a centralized infrastructure?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Cloud based IoT"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Peer-to-peer IoT"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Hybrid IoT"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Edge computing IoT"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1267).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 26,
+      "originalNumber": 278,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following best describes 'Veracity'?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The quantity of data that is being observed and tracked without sampling."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The speed at which big data is available."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The extraction of data from multiple sources like text, images, and video."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The quality of the data, and whether it stays true or is lost or damaged."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1268).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 27,
+      "originalNumber": 279,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which type of input pins does the Arduino Uno have?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Digital pins only"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Digital and Analog input pins"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "PWM pins only"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "UART and SPI pins"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1269).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 28,
+      "originalNumber": 280,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "When integrating IoT devices with cloud platforms, what is the main programming challenge related to data flow? Hoàng Hoàng"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Minimizing the physical size of data packets"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Ensuring real-time data synchronization across devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Prioritizing graphical data over textual data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Creating aesthetically pleasing data visualizations"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1270).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 29,
+      "originalNumber": 281,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "When does electricity occur?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The negatively charged electrons jump between atoms."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The positively charged protons jump from one atom to another."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The neutral neutrons jump between atoms."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The positively charged protons and negatively charged electrons cancel each other out."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1271).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 30,
+      "originalNumber": 282,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "When using the LCD 1602 display with an Arduino, what is the purpose of wiring a 10k ohm potentiometer to the V0 pin of the LCD?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To adjust the display contrast"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To provide power to the LCD"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To set the refresh rate of the display"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To enable the autoscroll feature"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    }
+  ],
+  "batchIssues": [
+    {
+      "code": "POSSIBLE_DUPLICATE_ITEMS",
+      "message": "Several questions are duplicated within this batch or repeat earlier batches, including originalNumber 256/261, 257/262, 265/266, and 271/277. They were retained as separate source items."
+    }
+  ]
+}

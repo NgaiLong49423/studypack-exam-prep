@@ -106,6 +106,25 @@ Nếu người dùng không xác nhận được loại nguồn, dừng và hỏ
 
 ## 5. Đáp án đúng và lời giải
 
+### 5.1. Đáp án từ nguồn không mặc nhiên đúng tuyệt đối
+
+Đáp án được nhìn thấy trong ảnh và đáp án đúng về mặt kiến thức là hai việc
+khác nhau:
+
+- `evidence: "explicit"` chỉ có nghĩa là ảnh có ghi hoặc đánh dấu lựa chọn đó.
+  Nó không phải là giấy chứng nhận rằng lựa chọn đó đúng 100%.
+- `extractionConfidence` chỉ cho biết Agent đọc chữ hoặc dấu đánh dấu chắc đến
+  đâu; nó không đo độ đúng của kiến thức.
+- Một câu có đáp án được đánh dấu rõ vẫn có thể cần xem xét lại nếu nguồn có
+  thể sai, câu hỏi mơ hồ, đáp án phụ thuộc phiên bản tài liệu, hoặc Agent tìm
+  được bằng chứng kỹ thuật đáng tin hơn.
+- Khi có nghi ngờ về nội dung, không âm thầm sửa đáp án. Phải giữ lại bằng
+  chứng nguồn, nêu lý do bằng ngôn ngữ đời thường và chờ chủ ngân hàng quyết
+  định: giữ đáp án, đổi đáp án, giữ để xem xét sau hoặc bỏ câu.
+
+Sau khi người dùng đã chốt, quyết định thủ công được ghi rõ là quyết định của
+chủ ngân hàng, không được mô tả như đáp án chính thức xuất hiện trong ảnh.
+
 `answer.evidence` nhận:
 
 | Giá trị | Cách dùng |
@@ -117,6 +136,8 @@ Nếu người dùng không xác nhận được loại nguồn, dừng và hỏ
 Quy tắc:
 
 - Chỉ điền `sourceLabels` khi bằng chứng là `explicit`.
+- `sourceLabels` là đáp án được trích xuất hoặc đáp án đã được chủ ngân hàng
+  chốt để app chấm; không được hiểu là luôn đúng về mặt kiến thức.
 - Nếu không có đáp án, dùng `sourceLabels: []`, `evidence: "absent"` và
   `needsReview: true`.
 - Không giải câu hỏi để tự tạo đáp án chính thức trong bước OCR.
@@ -168,7 +189,52 @@ Các mã tối thiểu:
 
 Không thay văn bản mơ hồ bằng nội dung bịa để làm hết issue.
 
-## 8. Agent kiểm tra độ sạch trước khi nạp
+## 8. Kiểm tra và tự sửa có kiểm soát trong bước chuyển ảnh
+
+LLM chuyển ảnh sang `ImageImportBatch` phải kiểm tra toàn bộ ZIP trước khi trả
+JSON, bao gồm tệp hỏng hoặc không mở được, tệp không phải ảnh được hỗ trợ, ảnh
+trống/không đọc được, ảnh trùng, ảnh thiếu, sai thứ tự và ảnh có nội dung không
+phải câu hỏi. Mọi vấn đề cấp tệp phải ghi vào `batchIssues` kèm đúng tên tệp.
+
+LLM được phép tự sửa các lỗi kỹ thuật hoặc lỗi chép chữ có căn cứ rõ ràng, ví dụ
+chuẩn hóa khoảng trắng, sửa ký tự OCR rõ ràng nhờ ngữ cảnh, hoặc sửa cấu trúc
+JSON. LLM không được tự sửa theo suy đoán các phần làm thay đổi ý nghĩa như
+đáp án đúng, nội dung bị khuất, lời giải, Topic, nguồn hoặc thứ tự ảnh.
+
+Mỗi lần tự sửa phải ghi vào `repairLog` trong cùng JSON, gồm tên ảnh, vị trí,
+hành động, nội dung trước và sau, lý do, cùng `needsReview`. Nếu sửa có thể làm
+thay đổi ý nghĩa câu hỏi hoặc đáp án thì bắt buộc đặt `needsReview: true` và tạo
+issue tương ứng. Nếu không thể sửa có căn cứ, giữ nguyên phần chưa chắc chắn,
+đặt `needsReview: true` và báo issue thay vì bịa nội dung.
+
+`repairLog` là nhật ký minh bạch để Agent kiểm tra và người dùng biết LLM đã tự
+động làm gì trong chính lần xuất lô đó; nó không biến bản sửa thành đáp án đúng
+tuyệt đối. LLM luôn phải trả `repairLog`, kể cả khi danh sách rỗng. Người dùng
+đọc báo cáo ngay khi nhận JSON của lô; không bắt buộc phải lưu nhật ký này vào
+Question Bank hoặc theo dõi nó trong các bước import tiếp theo.
+
+## 9. Quy tắc Agent trao đổi khi cần người dùng xem xét
+
+Khi phát hiện câu có vấn đề về đáp án, nội dung, ảnh hoặc khả năng sử dụng,
+Agent phải:
+
+1. Chỉ rõ câu nào, nội dung đang có là gì và bằng chứng đang có.
+2. Luôn ghi rõ `sourceRef.fileName` (tên ảnh), `pageIndex` (vị trí/thứ tự ảnh)
+   và `region` hoặc tọa độ nếu có, để người dùng mở đúng ảnh đối chứng.
+3. Giải thích vấn đề bằng ngôn ngữ đời thường: người học sẽ thấy gì, vì sao có
+   thể gây hiểu sai hoặc chấm sai, và mức ảnh hưởng là gì.
+4. Nếu phải nhắc đến tên trường dữ liệu hoặc thuộc tính kỹ thuật, phải giải
+   thích ngay tác dụng của nó; không dùng tên kỹ thuật thay cho lời giải thích.
+5. Nếu có thể, tìm bằng chứng độc lập đáng tin cậy và nói rõ đó là bằng chứng
+   tham khảo, không phải sự chắc chắn tuyệt đối.
+6. Đưa ra các lựa chọn rõ ràng: giữ, đổi đáp án, xem xét sau hoặc bỏ câu.
+7. Dừng và chờ người dùng chốt. Không tự sửa, tự xóa hoặc tự publish.
+
+Agent phải giữ danh sách các quyết định đã chốt và chỉ áp dụng các thay đổi dữ
+liệu sau khi người dùng hoàn tất vòng xem xét, trừ khi người dùng yêu cầu sửa
+ngay một câu cụ thể.
+
+## 10. Agent kiểm tra độ sạch trước khi nạp
 
 Agent lập trình chỉ làm việc trên JSON, schema, contract và ngân hàng hiện có.
 Agent không cần nhận ZIP ảnh và không đối chiếu nội dung từng item với ảnh.
@@ -199,7 +265,7 @@ JSON và ngân hàng hiện có. Nó không chứng minh LLM đã đọc ảnh c
 đối. Nếu cần xác minh một câu với ảnh nguồn, đó là bước kiểm tra thủ công do
 người dùng chủ động yêu cầu, không phải bước bắt buộc của pipeline.
 
-## 9. Phân chia trách nhiệm tài liệu
+## 11. Phân chia trách nhiệm tài liệu
 
 - `README.md`: giải thích ngắn luồng nhập cho con người.
 - `AGENTS.md`: quy tắc bắt buộc Agent lập trình phải tuân thủ khi kiểm tra dữ
@@ -209,10 +275,13 @@ người dùng chủ động yêu cầu, không phải bước bắt buộc củ
   tổng quát JSON trước khi nạp.
 - JSON Schema: kiểm cấu trúc tự động; không khẳng định độ chính xác so với ảnh.
 
-## 10. Bất biến
+## 12. Bất biến
 
 - Không nạp thẳng output OCR/LLM vào ngân hàng chính.
 - Không bịa dữ liệu để vượt validation.
 - Không dùng độ tự tin của LLM làm bằng chứng đáp án.
+- Không mất nhật ký tự sửa trong `repairLog`.
+- Không coi đáp án được đánh dấu trong nguồn là đúng tuyệt đối; đáp án có thể
+  được chủ ngân hàng xem xét và sửa lại sau khi có bằng chứng phù hợp.
 - Không mất liên kết giữa item và ảnh nguồn.
 - Không để câu thiếu đáp án được publish nếu app cần chấm tự động.

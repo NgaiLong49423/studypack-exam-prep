@@ -1,0 +1,1990 @@
+{
+  "schemaVersion": "1.0",
+  "batchId": "batch-4",
+  "subjectId": "iot102",
+  "sourceKind": "question-bank",
+  "examDraft": null,
+  "items": [
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1091).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 1,
+      "originalNumber": 102,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What is the use of the ESP8266 WiFi Module?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Network Provider"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Switches circuits"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Evaluates air pressure"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Monitors Motion"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label A is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1092).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 2,
+      "originalNumber": 103,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What is the term for the extension of the existing Internet structure to billions of connected devices?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Digitization"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "M2M"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "IoT"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "B2B"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1093).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 3,
+      "originalNumber": 104,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What does NFC stand for?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Near Fast Connection"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Near Field Connection"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Near Fast Communication"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Near Field Communication"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label D is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1094).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 4,
+      "originalNumber": 105,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What does a fog extend cloud to?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Application to process logic"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Storage of processed data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Things that process and act on data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Hardware for executing boot loading"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1095).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 5,
+      "originalNumber": 106,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What additional consideration is necessary to make an IoT project successful compared to existing solutions?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Focus on expensive materials"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Implement the latest IoT protocols"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Be better than current solutions"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Use cutting-edge programming languages"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1096).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 6,
+      "originalNumber": 107,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What pin mode is used for the button in the Arduino setup code?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "OUTPUT"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "INPUT"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "ANALOG"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "PWM"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label B is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1097).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 7,
+      "originalNumber": 108,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of loop is used to repeatedly check a sensor?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "FOR loop"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "LOOP function"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "setup() function"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "check() function"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label B is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1098).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 8,
+      "originalNumber": 109,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What color represents the digit 6 in the resistor color band? Hoàng Hoàng"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "blue"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "orange"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "white"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "black"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label A is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1099).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 9,
+      "originalNumber": 110,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What kind of control system in which the output quantity has no effect upon the input quantity?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Open loop"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Closed loop"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Variable"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Non-variable"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label A is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1100).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 10,
+      "originalNumber": 111,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What does the statement delay(1000); do in Arduino C?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Repeat the program 1000 times"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pause the program for 1000 microseconds"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pause the program for 1 second"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Send data after 1 second"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1101).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 11,
+      "originalNumber": 112,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What role do gas monitoring systems play in IoT-enabled mining operations?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "They reduce the number of gas emissions"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "They detect harmful gases"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "They automate mining drills"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "They track the amount of fuel used"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label B is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1102).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 12,
+      "originalNumber": 113,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What happens if pinMode is not set for a pin before digitalWrite?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It works as expected"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The pin stays in input mode"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The sketch won’t compile"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It creates random output"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Manual decision by question bank owner: B. The source image did not provide an answer; Arduino documentation indicates the pin remains in input mode when OUTPUT is not configured."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.96,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1103).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 13,
+      "originalNumber": 114,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of communication does the RX and TX pins on the Arduino Uno facilitate?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Power transfer"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Wireless communication"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial communication"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Analog signal processing"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1104).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 14,
+      "originalNumber": 115,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What technique is used to create an analog-like behavior from a digital output?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Serial communication"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pulse Width Modulation (PWM)"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Digital-to-Analog Conversion (DAC)"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Analog-to-Digital Conversion (ADC)"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label B is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1105).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 15,
+      "originalNumber": 116,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of signal does the analogWrite() function output?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pulse Code Modulated Signal"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Frequency Modulated Signal"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pulse Width Modulated Signal"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pulse Amplitude Modulated Signal"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1106).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 16,
+      "originalNumber": 117,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of device could allow a vehicle to place a show a warning on the dashboard, which might also notify the car's manufacturer?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Digital network"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Smart phone"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Sensor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Bluetooth"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1107).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 17,
+      "originalNumber": 118,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of actuator is typically used to control the movement of a conveyor belt?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Electrical"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Hydraulic"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Mechanical"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pneumatic"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label A is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1108).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 18,
+      "originalNumber": 119,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What feature of IPv6 makes it particularly suitable for IoT?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It provides many more IP addresses."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It has better encryption."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It uses less power."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It is easier to remember."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label A is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1109).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 19,
+      "originalNumber": 120,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What programming language is primarily used by the Arduino IDE in IoT software development for writing code?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Python"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Java"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "C/C++"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "JavaScript"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1110).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 20,
+      "originalNumber": 121,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What programming language is used for a sketch in Arduino IDE?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Python"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Java"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "C/C++"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Assembly"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1111).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 21,
+      "originalNumber": 122,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What component needs to connect to an interrupt pin to use the external interrupt on Arduino?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "LED"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Resistor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Button"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Capacitor"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1112).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 22,
+      "originalNumber": 123,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of sensor is the LM35?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Pressure sensor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Humidity sensor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Temperature sensor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Touch sensor"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1113).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 23,
+      "originalNumber": 124,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of sensor detects motion or presence using infrared light?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Hall effect sensor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Photoresistor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Infrared sensor"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Force sensitive resistor"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1114).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 24,
+      "originalNumber": 125,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What material is used as the sensing element in the MQ135?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Tin dioxide (SnO₂)"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Zinc oxide (ZnO)"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Silicon carbide (SiC)"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Titanium dioxide (TiO₂)"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label A is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1115).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 25,
+      "originalNumber": 126,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What feature helps the MAX30102 reduce power consumption?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Duty-cycle modulation mode"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Shutdown mode"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Adaptive sampling rate"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Standby with FIFO buffering"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label B is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1116).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 26,
+      "originalNumber": 127,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What value range is used with the analogWrite() function for PWM control?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "0 to 1023"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "0 to 5"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "0 to 255"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "-255 to 255"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1117).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 27,
+      "originalNumber": 128,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of network does the Wi-Fi shield allow the Arduino to connect to?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "A Bluetooth network"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "A wired Ethernet network"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "A Wi-Fi network"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "A ZigBee mesh network"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label C is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1118).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 28,
+      "originalNumber": 129,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What type of light does the TCS34725 measure in addition to RGB?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Infrared filtered channel"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Clear light"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Narrowband blue light"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Polarized light"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label B is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1119).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 29,
+      "originalNumber": 130,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "What symbol is used to indicate a comment in C?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "//"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "#"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "<>"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "&"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label A is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1120).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 30,
+      "originalNumber": 131,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Which of the following is an example of an IoT device?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Smart thermostat"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Traditional desktop computer"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Mechanical typewriter"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Standard light bulb"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label A is shown in the presenter notes panel."
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    }
+  ],
+  "batchIssues": []
+}

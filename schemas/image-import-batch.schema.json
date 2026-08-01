@@ -24,6 +24,10 @@
     "batchIssues": {
       "type": "array",
       "items": {"$ref": "#/$defs/issue"}
+    },
+    "repairLog": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/repair"}
     }
   },
   "allOf": [
@@ -125,6 +129,20 @@
         "field": {"$ref": "#/$defs/nullableString"},
         "sourceFile": {"$ref": "#/$defs/nullableString"},
         "message": {"type": "string", "minLength": 1}
+      }
+    },
+    "repair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceFile", "location", "action", "before", "after", "reason", "needsReview"],
+      "properties": {
+        "sourceFile": {"type": "string", "minLength": 1},
+        "location": {"type": "string", "minLength": 1},
+        "action": {"type": "string", "minLength": 1},
+        "before": {"type": "string", "minLength": 1},
+        "after": {"type": "string", "minLength": 1},
+        "reason": {"type": "string", "minLength": 1},
+        "needsReview": {"type": "boolean"}
       }
     },
     "item": {

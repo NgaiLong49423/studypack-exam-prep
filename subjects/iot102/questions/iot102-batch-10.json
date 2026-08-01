@@ -1,0 +1,1999 @@
+{
+  "schemaVersion": "1.0",
+  "batchId": "batch-10",
+  "subjectId": "iot102",
+  "sourceKind": "question-bank",
+  "examDraft": null,
+  "items": [
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1272).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 1,
+      "originalNumber": 283,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Why is the motion sensor in the responder important on a dairy farm?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It tracks the cow's milk yield"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It monitors the cow's movements, potentially detecting health issues"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It tracks the cow's location to ensure it stays in a designated area"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It measures the temperature of the milk being produced"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1273).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 2,
+      "originalNumber": 284,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Why do you use a breadboard?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It's an inexpensive way to check the design and function of your circuit."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It can be used to mass produce lots of identical circuits easily and cost effectively."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The plug board versions are extremely reliable and will last for years, you might never need to do anything else."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Breadboards aren't used any more. It's an old technology that is not needed with modern circuits."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1274).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 3,
+      "originalNumber": 285,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Why is it essential to focus on the unique value proposition of an IoT product in the early planning stages of development and commercialization?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It helps reduce the cost of production."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It allows for more efficient product distribution."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Differentiation from competitors is crucial for success."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It ensures compatibility with all existing IoT devices."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1275).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 4,
+      "originalNumber": 286,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Why is security a major concern in the context of the Internet of Things (IoT)?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Because IoT devices are not capable of transmitting data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Because IoT introduces many new entry points for hackers to access data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Because IoT does not transmit data in real-time"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Because IoT devices are always offline"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1276).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 5,
+      "originalNumber": 287,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Why might having 20 billion connected devices cause a major disruption in employment?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Automation may replace jobs traditionally done by humans"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "New job sectors will be created, making previous roles obsolete"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "There will be fewer jobs available due to more devices doing the work"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Workers will need to learn new internet communication tools"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1277).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 6,
+      "originalNumber": 288,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Why is it important to consider limited power supply when programming IoT devices?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It affects the device's physical size"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It determines the maximum number of devices in a network"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Devices need to operate efficiently on minimal power for long durations"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It limits the types of sensors that can be used"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1278).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 7,
+      "originalNumber": 289,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How does the veracity of big data impact IoT applications?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By increasing the data transmission range"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By improving the energy efficiency of devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By ensuring the reliability and accuracy of the data used for decision-making"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By decreasing the cost of data storage"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1279).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 8,
+      "originalNumber": 290,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How do standards and protocols help communication between machines?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By defining the TCP/IP model as the most common networking protocol suite."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By creating an accepted set of rules for a procedure, which only applies to machine communication."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By minimizing miscommunication and ensuring that messages can get through."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By governing the connection of computer systems to the Internet."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1280).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 9,
+      "originalNumber": 291,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How can IoT systems address the issue of data privacy in the cloud?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By restricting device access to the cloud"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By ensuring all data is publicly accessible"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By preventing misuse of private data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By increasing the data storage capacity in the cloud"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1281).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 10,
+      "originalNumber": 292,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How can you create a network of IoT devices that efficiently exchange data?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By using a single protocol for all devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By connecting all devices directly to the internet"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By designing a mesh network topology"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By using the highest data rate possible"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1282).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 11,
+      "originalNumber": 293,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How is the distance to an object calculated using the ultrasonic sensor?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By measuring the intensity of the returned pulse"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By calculating the time it takes for a pulse to return"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By detecting the angle of the returned pulse"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By the frequency shift of the returned pulse"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1283).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 12,
+      "originalNumber": 294,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How might the evolving nature of the Internet, where it's no longer just a means of communication, but also connects various devices like refrigerators, impact various aspects of our society?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It will simplify security measures and reduce the need for big data analysis."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It will have no significant impact on employment as most jobs remain unchanged."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It could introduce new security challenges, require advanced big data solutions, and potentially disrupt employment."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "It will lead to reduced complexity in our daily lives and fewer security concerns."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1284).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 13,
+      "originalNumber": 295,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How is the input voltage range of 0 to 5 volts converted to a digital value between 0 and 1023 in an Arduino microcontroller?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By using an external circuit."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By using a digital-to-analog converter (DAC)."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By a process called analog-to-digital conversion (ADC) inside the microcontroller."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By directly mapping the voltage to the digital value without conversion."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1285).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 14,
+      "originalNumber": 297,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How does IoT help improve tire maintenance in mining vehicles?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By inflating tires automatically"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By monitoring tire pressure"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By replacing tires remotely"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "By making tires more durable"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1286).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 15,
+      "originalNumber": 298,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How has the Internet of Things prompted new concerns over security issues? Hoàng Hoàng"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Devices are equipped with security from the manufacturer."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Devices are less likely to be compromised in today's age."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Devices are not compatible with traditional security measures."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Devices respond only to user-installed security protocols."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1287).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 16,
+      "originalNumber": 299,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "How many times does the loop() function run on every startup of the Arduino System?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "1"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Depends upon the setup() function"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Infinitely till the power is supplied to the Arduino"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "3"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1288).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 17,
+      "originalNumber": 300,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Why is C commonly used in IoT programming?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Easy to use in graphic design"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Efficient in memory and performance"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Strong support for artificial intelligence"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Beautiful user interface"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1289).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 18,
+      "originalNumber": 301,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "A photoresistor:"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "changes voltage according to light level"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "increases or decreases current through a wire"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "stores an image"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "changes resistance according to light level"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1290).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 19,
+      "originalNumber": 302,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Among the following protocols commonly used in IoT, which one is considered lightweight?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "IP (Internet Protocol)"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "HTTP (Hypertext Transfer Protocol)"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "MQTT (Message Queuing Telemetry Transport)"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Bluetooth"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1291).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 20,
+      "originalNumber": 303,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "An IOT device can most easily be differentiated from a standard computer based on ________"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Computational Performance"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Interface with the user and the world"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Memory Capacity"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Weight/Size"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1292).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 21,
+      "originalNumber": 304,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Can the loop() function be used to call another function that is custom defined by the programmer?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Yes, it can call"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "No, it cannot call"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Yes, it can call but only functions with no return values"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Yes, it can call but only functions with return values"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1293).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 22,
+      "originalNumber": 305,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "Can the setup() function change the value of constant variables?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Yes, it can change"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "No, it cannot change"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Yes, it can change but only integer values"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Yes, it can change but only byte values"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1294).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 23,
+      "originalNumber": 307,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "In the smart grid architecture of IoT, what is the primary function of the Cloud?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Enhancing security"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Collecting data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Managing data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Storing data"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1295).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 24,
+      "originalNumber": 308,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "In a thin client setup, where is most of the software and data processing performed?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Locally on the thin client device."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "On a central server or cloud infrastructure."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "On a central server or client infrastructure."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "On a dedicated network switch."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "B"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: B"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1296).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 25,
+      "originalNumber": 309,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "In IoT, what is the purpose of a Gateway?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To act as an intermediary for data transmission between different network protocols"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To store data collected from IoT devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To increase the power supply to IoT devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To directly connect sensors to the internet"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1297).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 26,
+      "originalNumber": 310,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "In IoT, what is the purpose of a Gateway?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To act as an intermediary for data transmission between different network protocols"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To store data collected from IoT devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To increase the power supply to IoT devices"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "To directly connect sensors to the internet"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1298).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 27,
+      "originalNumber": 311,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "In a software simulation environment (Tinkercad) for Arduino programming, which of the following options is typically used to write and run code for your Arduino projects?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Selecting the code option to start coding."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Using a physical Arduino board to write code."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Connecting various electronic components to a breadboard."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Employing a real-time oscilloscope for debugging."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "A"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: A"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1299).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 28,
+      "originalNumber": 312,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "IOT devices gather private information about users. Which statement is most true about the security of that data?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "User can ensure security of collected data by encrypting it manually"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "User can sue data collecting agencies if their data is not held securely"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Users must rely on data collecting agencies to securely store and transmit their data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Most data gathered by IOT devices is safe because IOT devices are not a target of hackers"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1300).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 29,
+      "originalNumber": 313,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "IoT devices create more significant security challenges for networks due to all of these concerns EXCEPT which? Hoàng Hoàng"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "They do not have security alerts."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "They are always on."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "They are always connected."
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "They produce an event log."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "D"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: D"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    },
+    {
+      "sourceRef": {
+        "fileName": "Screenshot (1301).png",
+        "pageIndex": 1,
+        "region": null
+      },
+      "sourceOrder": 30,
+      "originalNumber": 314,
+      "stemBlocks": [
+        {
+          "type": "markdown",
+          "text": "In the smart grid architecture of IoT, what is the primary function of the Cloud?"
+        }
+      ],
+      "options": [
+        {
+          "sourceLabel": "A",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Enhancing security"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "B",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Collecting data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "C",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Managing data"
+            }
+          ]
+        },
+        {
+          "sourceLabel": "D",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Storing data"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "sourceLabels": [
+          "C"
+        ],
+        "evidence": "explicit",
+        "evidenceText": "Answer label(s) shown in the presenter notes panel: C"
+      },
+      "maxSelections": 1,
+      "explanation": null,
+      "topicIds": [],
+      "extractionConfidence": 0.98,
+      "needsReview": false,
+      "issues": []
+    }
+  ],
+  "batchIssues": [
+    {
+      "code": "SOURCE_QUESTION_NUMBER_GAP",
+      "message": "The source jumps from originalNumber 295 to 297 and from 305 to 307; originalNumber 296 and 306 are not present in the ZIP."
+    },
+    {
+      "code": "POSSIBLE_DUPLICATE_ITEMS",
+      "message": "Several questions duplicate content within this batch or earlier batches, including originalNumber 307/314 and 309/310. They were retained as separate source items."
+    }
+  ]
+}

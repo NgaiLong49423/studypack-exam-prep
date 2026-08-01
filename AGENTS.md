@@ -37,3 +37,23 @@ Read `docs/PRODUCT-OVERVIEW.md`, `docs/DATA-CONTRACT.md`, and the relevant issue
 - Use the UI/UX skill for learner-facing interface work.
 - Use the issue-delivery skill when implementing a GitHub Issue.
 - Do not introduce a backend, authentication, database or AI API without explicit approval.
+
+## Content review communication
+
+- A marked answer in a source image is evidence of what the source says, not a
+  guarantee that the answer is factually correct.
+- Agents must distinguish image-reading confidence from knowledge correctness.
+  They may research independent evidence, but must state uncertainty and never
+  silently change an answer.
+- When asking the user to review content, explain the problem and its effect in
+  ordinary language. If a technical field or property is mentioned, explain
+  what it controls and why it matters. Offer clear decisions (keep, change,
+  defer or drop), wait for the user's choice, and apply agreed data changes only
+  after the review round is complete unless the user explicitly asks for an
+  immediate single-item change.
+- Every review message must include the source image filename and its page or
+  region when available, so the user can open the exact image and compare it.
+- The image-to-JSON LLM must audit every file in the input archive. It may repair
+  clearly evidenced OCR or structural errors, but must record before/after,
+  reason, location and `needsReview` in `repairLog`; repairs that may change
+  meaning or the answer remain for human review.

@@ -15,6 +15,19 @@ mở hoặc đối chiếu lại từng ảnh nguồn.
 Không sửa âm thầm, không đoán đáp án, không tự gộp câu nghi trùng và không
 publish dữ liệu. Nếu đề xuất bản sửa, phải liệt kê mọi thay đổi.
 
+Đáp án nhìn thấy trong ảnh không mặc nhiên đúng 100%. `explicit` chỉ có nghĩa
+ảnh có ghi hoặc đánh dấu đáp án; `extractionConfidence` chỉ nói về độ chắc khi
+đọc ảnh, không nói về độ đúng kiến thức. Nếu câu hỏi hoặc đáp án có dấu hiệu
+sai, mơ hồ, phụ thuộc phiên bản tài liệu hoặc có bằng chứng độc lập trái chiều,
+hãy đưa câu đó vào danh sách cần người dùng xem xét, không tự sửa.
+
+Khi báo vấn đề cho người dùng, hãy viết như đang giải thích cho người không
+biết JSON: nói câu hỏi đang hỏi gì, vấn đề có thể khiến người học bị chấm sai
+hoặc không thể trả lời ra sao, bằng chứng nào đang có, và đưa lựa chọn giữ,
+đổi, xem xét sau hoặc bỏ. Nếu buộc phải nhắc tên trường/thuộc tính kỹ thuật,
+giải thích ngay nó dùng để làm gì. Chờ người dùng chốt trước khi thay đổi dữ
+liệu; có thể gom các quyết định rồi áp dụng một lần.
+
 Thực hiện:
 1. Kiểm JSON parse được và đúng ImageImportBatch Schema.
 2. Kiểm trường bắt buộc, kiểu dữ liệu, enum, ID và định dạng giá trị.

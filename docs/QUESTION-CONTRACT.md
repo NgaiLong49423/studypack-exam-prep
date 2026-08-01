@@ -23,6 +23,11 @@ Status: Accepted
 - Prompt Hỏi AI phải gửi cả question ID lẫn nội dung câu hỏi.
 - `explanation` không bắt buộc và dùng cấu trúc `blocks`.
 - Lời giải thuộc Question, không thuộc ExamItem.
+- `correctAnswerIds` là đáp án đang được app dùng để chấm, không phải cam kết
+  rằng đáp án đó đúng tuyệt đối về mặt kiến thức. Chủ ngân hàng có thể yêu cầu
+  xem xét lại dựa trên nguồn học thuật hoặc tài liệu kỹ thuật đáng tin cậy.
+- Khi thay đổi đáp án của câu đã phát hành, phải ghi nhận lý do và không được
+  làm mất lịch sử kết quả cũ một cách âm thầm.
 
 ## Cấu trúc tham chiếu
 
