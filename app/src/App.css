@@ -115,6 +115,7 @@ h2 { color: var(--text-heading); font-size: 1.35rem; }
 .question-text { overflow-wrap: anywhere; white-space: pre-wrap; font-size: clamp(1.35rem, 2.2vw, 2.35rem); line-height: 1.45; }
 .answers { display: grid; gap: .75rem; margin-top: 1.75rem; }
 .answer-button { display: flex; align-items: flex-start; gap: .85rem; min-width: 0; width: 100%; border: 1px solid var(--border); border-radius: .75rem; background: var(--bg); padding: 1rem; color: var(--text-heading); text-align: left; line-height: 1.5; overflow-wrap: anywhere; }
+.answer-content { min-width: 0; overflow-wrap: anywhere; white-space: pre-wrap; }
 .answer-button:not(:disabled):hover, .answer-button:not(:disabled):focus-visible { border-color: var(--primary); background: var(--bg-hover); }
 .answer-button:disabled { cursor: default; }
 .option-label { display: grid; width: 1.75rem; height: 1.75rem; flex: 0 0 auto; place-items: center; border-radius: 50%; background: var(--bg-muted); color: var(--text); font-size: .875rem; font-weight: 800; }

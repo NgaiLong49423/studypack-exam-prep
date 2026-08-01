@@ -474,7 +474,7 @@ function App() {
       const next = question.maxSelections === 1 ? [optionId] : selected.includes(optionId) ? selected.filter((id) => id !== optionId) : selected.length < question.maxSelections ? [...selected, optionId] : selected
       return { ...current, [itemId]: next }
     })
-    return <main className="practice-shell"><header className="practice-header"><span>{exam.title}</span><span>{mockExamEndsAt ? `Còn ${formatRemainingTime(remainingSeconds)}` : `${answeredCount}/${examItemsInOrder.length} đã trả lời`}</span></header>{mockExamEndsAt && <p className="hint">{answeredCount}/{examItemsInOrder.length} đã trả lời · Hết giờ sẽ tự nộp bài.</p>}{examItemsInOrder.map(({ item, question }, index) => <section className="question-card exam-question" key={item.examItemId}><p className="eyebrow">Câu {index + 1}{question.maxSelections > 1 ? ` · Chọn tối đa ${question.maxSelections} đáp án` : ''}</p><h2 className="question-text">{textOf(question.blocks)}</h2><div className="answers">{question.options.map((option, optionIndex) => <button className={`answer-button${(examAnswers[item.examItemId] ?? []).includes(option.id) ? ' selected' : ''}`} key={option.id} type="button" onClick={() => toggleExamAnswer(item.examItemId, question, option.id)}><span className="option-label">{String.fromCharCode(65 + optionIndex)}</span><span>{textOf(option.blocks)}</span></button>)}</div></section>)}<button className="primary-button" type="button" onClick={() => submitExam()}>Nộp bài</button></main>
+    return <main className="practice-shell"><header className="practice-header"><span>{exam.title}</span><span>{mockExamEndsAt ? `Còn ${formatRemainingTime(remainingSeconds)}` : `${answeredCount}/${examItemsInOrder.length} đã trả lời`}</span></header>{mockExamEndsAt && <p className="hint">{answeredCount}/{examItemsInOrder.length} đã trả lời · Hết giờ sẽ tự nộp bài.</p>}{examItemsInOrder.map(({ item, question }, index) => <section className="question-card exam-question" key={item.examItemId}><p className="eyebrow">Câu {index + 1}{question.maxSelections > 1 ? ` · Chọn tối đa ${question.maxSelections} đáp án` : ''}</p><h2 className="question-text">{textOf(question.blocks)}</h2><div className="answers">{question.options.map((option, optionIndex) => <button className={`answer-button${(examAnswers[item.examItemId] ?? []).includes(option.id) ? ' selected' : ''}`} key={option.id} type="button" onClick={() => toggleExamAnswer(item.examItemId, question, option.id)}><span className="option-label">{String.fromCharCode(65 + optionIndex)}</span><span className="answer-content">{textOf(option.blocks)}</span></button>)}</div></section>)}<button className="primary-button" type="button" onClick={() => submitExam()}>Nộp bài</button></main>
   }
 
   if (screen === 'exam-result' && exam) {
@@ -571,7 +571,7 @@ function App() {
               return (
               <button aria-pressed={isSelected} className={`answer-button${state}`} disabled={isLocked} key={option.id} type="button" onClick={() => chooseAnswer(option.id)}>
                 <span className="option-label">{String.fromCharCode(65 + index)}</span>
-                <span>{textOf(option.blocks)}</span>
+                <span className="answer-content">{textOf(option.blocks)}</span>
               </button>
             )
             })
