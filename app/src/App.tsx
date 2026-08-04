@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
-import { loadExams, loadNotebookDocuments, loadQuestions, loadSubject, loadSubjectCatalog } from './content'
+import { loadExams, loadJapaneseStudyContent, loadNotebookDocuments, loadQuestions, loadSubject, loadSubjectCatalog } from './content'
+import { ReadingLibrary, VocabularyStudy } from './japanese-study'
 import { createMockExam, examAttempts, examScore, formatRemainingTime, MOCK_EXAM_MAX_QUESTION_COUNT, MOCK_EXAM_MIN_QUESTION_COUNT, resolveExamItems } from './exam'
 import { copyPromptToClipboard, createAiTutorPrompt } from './ai-tutor'
 import { clearTutorNotebookUrl, loadTutorNotebookUrl, saveTutorNotebookUrl } from './tutor-settings'
@@ -8,9 +9,9 @@ import { downloadFile, fullGeminiPack, learningProgressMarkdown, createExportCon
 import { clearAttempts, clearPracticeSession, createPracticeSession, extendPracticeSession, gradeAnswer, loadAttempts, loadPracticeSession, restorePracticeQuestions, saveAttempt, saveAttempts, savePracticeSession, selectPracticeQuestions, selectRandomQuestions, selectReviewQuestions, selectUnseenQuestions, seedStatisticsDemo } from './practice'
 import { questionsByStatus, summarizeQuestions, type LearningStatus } from './statistics'
 import { ACHIEVEMENTS, addXp, checkExamAchievements, checkLevelAchievements, checkMasteryAchievements, handlePracticeAnswer, loadProfile, xpForNextLevel, getLevelTitle, type UserProfile } from './gamification'
-import type { Exam, PracticeMode, PracticeSession, Question, Subject, SubjectCatalogEntry } from './types'
+import type { Exam, PracticeMode, PracticeSession, Question, ReadingDocument, Subject, SubjectCatalogEntry, VocabularyBank } from './types'
 
-type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'mock-exam-setup' | 'exam' | 'exam-result' | 'error' | 'profile'
+type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'mock-exam-setup' | 'exam' | 'exam-result' | 'reading' | 'vocabulary' | 'error' | 'profile'
 
 function textOf(blocks: { text: string }[]) {
   return blocks.map((block) => block.text).join('\n')
@@ -23,6 +24,8 @@ function App() {
   const [questions, setQuestions] = useState<Question[]>([])
   const [exams, setExams] = useState<Exam[]>([])
   const [notebookDocuments, setNotebookDocuments] = useState({ subjectContext: '', tutorRules: '' })
+  const [readingDocuments, setReadingDocuments] = useState<ReadingDocument[]>([])
+  const [vocabulary, setVocabulary] = useState<VocabularyBank | null>(null)
   const [selectedGeminiExamIds, setSelectedGeminiExamIds] = useState<string[]>([])
   const [geminiExportStatus, setGeminiExportStatus] = useState('')
   const [aiTutorStatus, setAiTutorStatus] = useState('')
@@ -112,11 +115,12 @@ function App() {
     if (entry.status !== 'published') return
     setScreen('loading')
     try {
-      const [loadedSubject, bank, loadedExams, loadedNotebookDocuments] = await Promise.all([loadSubject(entry.subjectId), loadQuestions(entry.subjectId), loadExams(entry.subjectId, entry.examIds), loadNotebookDocuments(entry.subjectId)])
+      const [loadedSubject, bank, loadedExams, loadedNotebookDocuments, japaneseStudyContent] = await Promise.all([loadSubject(entry.subjectId), loadQuestions(entry.subjectId), loadExams(entry.subjectId, entry.examIds), loadNotebookDocuments(entry.subjectId), loadJapaneseStudyContent(entry.subjectId)])
       setSubject(loadedSubject)
       const savedUrl = loadTutorNotebookUrl(loadedSubject.subjectId)
       setPersonalNotebookUrl(savedUrl); setSavedNotebookUrl(savedUrl)
       setQuestions(bank.questions); setExams(loadedExams); setNotebookDocuments(loadedNotebookDocuments)
+      setReadingDocuments(japaneseStudyContent.readingDocuments); setVocabulary(japaneseStudyContent.vocabulary)
       const savedSession = loadPracticeSession(loadedSubject.subjectId)
       const restoredQuestions = savedSession ? restorePracticeQuestions(savedSession, bank.questions) : null
       setResumeCandidate(savedSession && restoredQuestions ? savedSession : null)
@@ -442,6 +446,8 @@ function App() {
             <div className="resume-actions"><button className="primary-button" type="button" onClick={resumePractice}>Tiếp tục lượt đang làm</button><button className="secondary-button" type="button" onClick={startNewPractice}>Bắt đầu lượt mới</button></div>
           </section>}
           <button className="primary-button" type="button" onClick={() => setScreen('mode')}>Chọn cách luyện</button>
+          {readingDocuments.length > 0 && <button className="secondary-button" type="button" onClick={() => setScreen('reading')}>Đọc tiếng Nhật + phiên âm</button>}
+          {vocabulary && <button className="secondary-button" type="button" onClick={() => setScreen('vocabulary')}>Từ vựng / Từ Hán</button>}
           <button className="text-button" type="button" onClick={() => setScreen('statistics')}>Xem thống kê học tập</button>
           <button className="text-button" type="button" onClick={() => setScreen('subject-picker')}>Đổi môn học</button>
           <p className="hint">Chọn đáp án, bấm Xác nhận để xem kết quả, rồi bấm Tiếp tục sang câu kế tiếp.</p>
@@ -449,6 +455,10 @@ function App() {
       </main>
     )
   }
+
+  if (screen === 'reading' && subject) return <ReadingLibrary documents={readingDocuments} onBack={() => setScreen('subject')} />
+
+  if (screen === 'vocabulary' && subject && vocabulary) return <VocabularyStudy vocabulary={vocabulary} onBack={() => setScreen('subject')} />
 
   if (screen === 'mode') return <main className="app-shell"><section className="subject-card" aria-labelledby="mode-title">
     <p className="eyebrow">{subject?.code} · Practice</p><h1 id="mode-title">Bạn muốn luyện thế nào?</h1>

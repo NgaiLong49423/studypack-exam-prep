@@ -75,3 +75,12 @@ export type PracticeSession = {
 
 export type ExamItem = { examItemId: string; order: number; originalNumber: number; questionId: string; questionVersion: number }
 export type Exam = { examId: string; title: string; declaredQuestionCount: number; items: ExamItem[] }
+
+export type ReadingToken = { tokenId: string; japanese: string; romaji: string; kind: 'word' | 'particle' | 'number' | 'punctuation' | 'phrase' }
+export type ReadingParagraph = { paragraphId: string; japaneseText: string; sourceRomajiText: string; tokens: ReadingToken[] }
+export type ReadingPassage = { passageId: string; title: string; order: number; status: 'draft' | 'published' | 'archived'; paragraphs: ReadingParagraph[] }
+export type ReadingDocumentIndexEntry = { readingDocumentId: string; title: string; file: string; status: 'draft' | 'published' | 'archived'; order: number; passageCount: number }
+export type ReadingDocumentIndex = { schemaVersion: string; subjectId: string; documents: ReadingDocumentIndexEntry[] }
+export type ReadingDocument = { schemaVersion: string; subjectId: string; readingDocumentId: string; title: string; sourceMarkdown: string; passages: ReadingPassage[] }
+export type VocabularyEntry = { vocabularyId: string; written: string; kanji: string | null; kana: string; romaji: string; meaningVi: string; categoryId: string; categoryName: string; status: 'draft' | 'published' | 'archived' }
+export type VocabularyBank = { schemaVersion: string; subjectId: string; entries: VocabularyEntry[] }

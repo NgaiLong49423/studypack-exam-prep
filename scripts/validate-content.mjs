@@ -62,6 +62,41 @@ for (const entry of catalog?.subjects ?? []) {
   }
 }
 
+const jpdReadingIndexFile = resolve(subjectsRoot, 'jpd123', 'reading', 'reading-index.json')
+if (existsSync(jpdReadingIndexFile)) {
+  const readingIndex = readJson(jpdReadingIndexFile)
+  if (readingIndex?.schemaVersion !== '1.0' || readingIndex?.subjectId !== 'jpd123' || !Array.isArray(readingIndex?.documents)) issue('error', 'JPD_READING_INDEX_INVALID', jpdReadingIndexFile, 'Reading index needs schemaVersion 1.0, subjectId jpd123 and documents.')
+  const documentIds = new Set()
+  for (const document of readingIndex?.documents ?? []) {
+    const documentFile = `${jpdReadingIndexFile}#${document?.readingDocumentId ?? 'unknown'}`
+    if (!validId(document?.readingDocumentId) || documentIds.has(document.readingDocumentId) || typeof document.file !== 'string' || !document.file.startsWith('reading/') || !['draft', 'published', 'archived'].includes(document.status)) { issue('error', 'JPD_READING_DOCUMENT_INVALID', documentFile, 'Reading document needs a unique valid ID, in-pack file and status.'); continue }
+    documentIds.add(document.readingDocumentId)
+    const sourceFile = resolve(subjectsRoot, 'jpd123', document.file)
+    const source = readJson(sourceFile)
+    if (!source || source.schemaVersion !== '1.0' || source.subjectId !== 'jpd123' || source.readingDocumentId !== document.readingDocumentId || !Array.isArray(source.passages)) { issue('error', 'JPD_READING_FILE_INVALID', sourceFile, 'Reading file metadata or passages is invalid.'); continue }
+    const passageIds = new Set()
+    for (const passage of source.passages) {
+      if (!validId(passage?.passageId) || passageIds.has(passage.passageId) || typeof passage.title !== 'string' || !Array.isArray(passage.paragraphs) || passage.paragraphs.length === 0) { issue('error', 'JPD_PASSAGE_INVALID', sourceFile, 'Passage needs a unique ID, title and paragraphs.'); continue }
+      passageIds.add(passage.passageId)
+      for (const paragraph of passage.paragraphs) {
+        const tokenText = paragraph?.tokens?.map((token) => token.japanese).join('')
+        if (!validId(paragraph?.paragraphId) || typeof paragraph.japaneseText !== 'string' || typeof paragraph.sourceRomajiText !== 'string' || !Array.isArray(paragraph.tokens) || paragraph.tokens.length === 0 || tokenText !== paragraph.japaneseText || paragraph.tokens.some((token) => !validId(token?.tokenId) || typeof token.japanese !== 'string' || !token.japanese || typeof token.romaji !== 'string' || !token.romaji || !['word', 'particle', 'number', 'punctuation', 'phrase'].includes(token.kind))) issue('error', 'JPD_READING_ALIGNMENT_INVALID', sourceFile, 'Paragraph token alignment must preserve Japanese text and provide valid Japanese/Romaji tokens.')
+      }
+    }
+  }
+}
+
+const jpdVocabularyFile = resolve(subjectsRoot, 'jpd123', 'vocabulary', 'vocabulary.json')
+if (existsSync(jpdVocabularyFile)) {
+  const vocabulary = readJson(jpdVocabularyFile)
+  if (vocabulary?.schemaVersion !== '1.0' || vocabulary?.subjectId !== 'jpd123' || !Array.isArray(vocabulary?.entries)) issue('error', 'JPD_VOCABULARY_BANK_INVALID', jpdVocabularyFile, 'Vocabulary bank needs schemaVersion 1.0, subjectId jpd123 and entries.')
+  const vocabularyIds = new Set()
+  for (const entry of vocabulary?.entries ?? []) {
+    if (!validId(entry?.vocabularyId) || vocabularyIds.has(entry.vocabularyId) || typeof entry.written !== 'string' || !entry.written || !(entry.kanji === null || typeof entry.kanji === 'string') || typeof entry.kana !== 'string' || !entry.kana || typeof entry.romaji !== 'string' || !entry.romaji || typeof entry.meaningVi !== 'string' || !entry.meaningVi || typeof entry.categoryId !== 'string' || !entry.categoryId) issue('error', 'JPD_VOCABULARY_ENTRY_INVALID', jpdVocabularyFile, 'Vocabulary entry needs a unique ID, written form, nullable Kanji, kana, romaji, Vietnamese meaning and category.')
+    vocabularyIds.add(entry?.vocabularyId)
+  }
+}
+
 for (const result of [...errors, ...warnings]) console.log(`${result.severity.toUpperCase()} ${result.code} ${result.file}: ${result.message}`)
 console.log(`Content validation: ${errors.length} error(s), ${warnings.length} warning(s).`)
 process.exitCode = errors.length ? 1 : 0

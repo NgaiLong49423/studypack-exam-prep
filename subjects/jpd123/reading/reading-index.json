@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "subjectId": "jpd123",
+  "documents": [
+    {
+      "readingDocumentId": "jpd123-reading-review-4-5-6",
+      "title": "Ôn tập kiểm tra bài 4-5-6",
+      "file": "reading/jpd123-reading-review-4-5-6.json",
+      "status": "published",
+      "order": 1,
+      "passageCount": 14
+    },
+    {
+      "readingDocumentId": "jpd123-reading-speaking-6-7",
+      "title": "Speaking ôn tập test bài 6+7",
+      "file": "reading/jpd123-reading-speaking-6-7.json",
+      "status": "published",
+      "order": 2,
+      "passageCount": 18
+    }
+  ]
+}

@@ -1,0 +1,6075 @@
+{
+  "schemaVersion": "1.0",
+  "subjectId": "jpd123",
+  "entries": [
+    {
+      "vocabularyId": "jpd123-v-0001",
+      "written": "今日",
+      "kanji": "今日",
+      "kana": "きょう",
+      "romaji": "kyou",
+      "meaningVi": "hôm nay",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0002",
+      "written": "昨日",
+      "kanji": "昨日",
+      "kana": "きのう",
+      "romaji": "kinou",
+      "meaningVi": "hôm qua",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0003",
+      "written": "明日",
+      "kanji": "明日",
+      "kana": "あした",
+      "romaji": "ashita",
+      "meaningVi": "ngày mai",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0004",
+      "written": "毎日",
+      "kanji": "毎日",
+      "kana": "まいにち",
+      "romaji": "mainichi",
+      "meaningVi": "mỗi ngày",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0005",
+      "written": "毎週",
+      "kanji": "毎週",
+      "kana": "まいしゅう",
+      "romaji": "maishuu",
+      "meaningVi": "mỗi tuần",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0006",
+      "written": "毎月",
+      "kanji": "毎月",
+      "kana": "まいつき",
+      "romaji": "maitsuki",
+      "meaningVi": "mỗi tháng",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0007",
+      "written": "毎年",
+      "kanji": "毎年",
+      "kana": "まいとし",
+      "romaji": "maitoshi",
+      "meaningVi": "mỗi năm",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0008",
+      "written": "今",
+      "kanji": "今",
+      "kana": "いま",
+      "romaji": "ima",
+      "meaningVi": "bây giờ",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0009",
+      "written": "今週",
+      "kanji": "今週",
+      "kana": "こんしゅう",
+      "romaji": "konshuu",
+      "meaningVi": "tuần này",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0010",
+      "written": "先週",
+      "kanji": "先週",
+      "kana": "せんしゅう",
+      "romaji": "senshuu",
+      "meaningVi": "tuần trước",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0011",
+      "written": "来週",
+      "kanji": "来週",
+      "kana": "らいしゅう",
+      "romaji": "raishuu",
+      "meaningVi": "tuần sau",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0012",
+      "written": "今月",
+      "kanji": "今月",
+      "kana": "こんげつ",
+      "romaji": "kongetsu",
+      "meaningVi": "tháng này",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0013",
+      "written": "先月",
+      "kanji": "先月",
+      "kana": "せんげつ",
+      "romaji": "sengetsu",
+      "meaningVi": "tháng trước",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0014",
+      "written": "来月",
+      "kanji": "来月",
+      "kana": "らいげつ",
+      "romaji": "raigetsu",
+      "meaningVi": "tháng sau",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0015",
+      "written": "今年",
+      "kanji": "今年",
+      "kana": "ことし",
+      "romaji": "kotoshi",
+      "meaningVi": "năm nay",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0016",
+      "written": "去年",
+      "kanji": "去年",
+      "kana": "きょねん",
+      "romaji": "kyonen",
+      "meaningVi": "năm ngoái",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0017",
+      "written": "来年",
+      "kanji": "来年",
+      "kana": "らいねん",
+      "romaji": "rainen",
+      "meaningVi": "năm sau",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0018",
+      "written": "朝",
+      "kanji": "朝",
+      "kana": "あさ",
+      "romaji": "asa",
+      "meaningVi": "buổi sáng",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0019",
+      "written": "昼",
+      "kanji": "昼",
+      "kana": "ひる",
+      "romaji": "hiru",
+      "meaningVi": "buổi trưa",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0020",
+      "written": "夕方",
+      "kanji": "夕方",
+      "kana": "ゆうがた",
+      "romaji": "yuugata",
+      "meaningVi": "chiều tối",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0021",
+      "written": "夜",
+      "kanji": "夜",
+      "kana": "よる",
+      "romaji": "yoru",
+      "meaningVi": "buổi tối",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0022",
+      "written": "午前",
+      "kanji": "午前",
+      "kana": "ごぜん",
+      "romaji": "gozen",
+      "meaningVi": "buổi sáng, AM",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0023",
+      "written": "午後",
+      "kanji": "午後",
+      "kana": "ごご",
+      "romaji": "gogo",
+      "meaningVi": "buổi chiều, PM",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0024",
+      "written": "週末",
+      "kanji": "週末",
+      "kana": "しゅうまつ",
+      "romaji": "shuumatsu",
+      "meaningVi": "cuối tuần",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0025",
+      "written": "日曜日",
+      "kanji": "日曜日",
+      "kana": "にちようび",
+      "romaji": "nichiyoubi",
+      "meaningVi": "Chủ nhật",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0026",
+      "written": "月曜日",
+      "kanji": "月曜日",
+      "kana": "げつようび",
+      "romaji": "getsuyoubi",
+      "meaningVi": "Thứ Hai",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0027",
+      "written": "火曜日",
+      "kanji": "火曜日",
+      "kana": "かようび",
+      "romaji": "kayoubi",
+      "meaningVi": "Thứ Ba",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0028",
+      "written": "水曜日",
+      "kanji": "水曜日",
+      "kana": "すいようび",
+      "romaji": "suiyoubi",
+      "meaningVi": "Thứ Tư",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0029",
+      "written": "木曜日",
+      "kanji": "木曜日",
+      "kana": "もくようび",
+      "romaji": "mokuyoubi",
+      "meaningVi": "Thứ Năm",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0030",
+      "written": "金曜日",
+      "kanji": "金曜日",
+      "kana": "きんようび",
+      "romaji": "kinyoubi",
+      "meaningVi": "Thứ Sáu",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0031",
+      "written": "土曜日",
+      "kanji": "土曜日",
+      "kana": "どようび",
+      "romaji": "doyoubi",
+      "meaningVi": "Thứ Bảy",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0032",
+      "written": "時",
+      "kanji": "時",
+      "kana": "じ",
+      "romaji": "ji",
+      "meaningVi": "giờ",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0033",
+      "written": "時間",
+      "kanji": "時間",
+      "kana": "じかん",
+      "romaji": "jikan",
+      "meaningVi": "thời gian, số giờ",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0034",
+      "written": "分",
+      "kanji": "分",
+      "kana": "ふん / ぷん",
+      "romaji": "fun / pun",
+      "meaningVi": "phút",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0035",
+      "written": "半",
+      "kanji": "半",
+      "kana": "はん",
+      "romaji": "han",
+      "meaningVi": "rưỡi, một nửa",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0036",
+      "written": "一日",
+      "kanji": "一日",
+      "kana": "いちにち",
+      "romaji": "ichinichi",
+      "meaningVi": "một ngày",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0037",
+      "written": "一週間",
+      "kanji": "一週間",
+      "kana": "いっしゅうかん",
+      "romaji": "isshuukan",
+      "meaningVi": "một tuần",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0038",
+      "written": "一年間",
+      "kanji": "一年間",
+      "kana": "いちねんかん",
+      "romaji": "ichinenkan",
+      "meaningVi": "một năm",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0039",
+      "written": "一人",
+      "kanji": "一人",
+      "kana": "ひとり",
+      "romaji": "hitori",
+      "meaningVi": "một người, một mình",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0040",
+      "written": "二人",
+      "kanji": "二人",
+      "kana": "ふたり",
+      "romaji": "futari",
+      "meaningVi": "hai người",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0041",
+      "written": "一番",
+      "kanji": "一番",
+      "kana": "いちばん",
+      "romaji": "ichiban",
+      "meaningVi": "nhất",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0042",
+      "written": "何時",
+      "kanji": "何時",
+      "kana": "なんじ",
+      "romaji": "nanji",
+      "meaningVi": "mấy giờ",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0043",
+      "written": "何分",
+      "kanji": "何分",
+      "kana": "なんぷん",
+      "romaji": "nanpun",
+      "meaningVi": "mấy phút",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0044",
+      "written": "何曜日",
+      "kanji": "何曜日",
+      "kana": "なんようび",
+      "romaji": "nanyoubi",
+      "meaningVi": "thứ mấy",
+      "categoryId": "thoi-gian-so-va-tan-suat",
+      "categoryName": "Thời gian, số và tần suất",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Thời gian, số và tần suất"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0045",
+      "written": "私",
+      "kanji": "私",
+      "kana": "わたし",
+      "romaji": "watashi",
+      "meaningVi": "tôi",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0046",
+      "written": "人",
+      "kanji": "人",
+      "kana": "ひと",
+      "romaji": "hito",
+      "meaningVi": "người",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0047",
+      "written": "人物",
+      "kanji": "人物",
+      "kana": "じんぶつ",
+      "romaji": "jinbutsu",
+      "meaningVi": "nhân vật",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0048",
+      "written": "男",
+      "kanji": "男",
+      "kana": "おとこ",
+      "romaji": "otoko",
+      "meaningVi": "đàn ông, con trai",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0049",
+      "written": "女",
+      "kanji": "女",
+      "kana": "おんな",
+      "romaji": "onna",
+      "meaningVi": "phụ nữ, con gái",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0050",
+      "written": "男の人",
+      "kanji": "男の人",
+      "kana": "おとこのひと",
+      "romaji": "otoko no hito",
+      "meaningVi": "người đàn ông",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0051",
+      "written": "女の人",
+      "kanji": "女の人",
+      "kana": "おんなのひと",
+      "romaji": "onna no hito",
+      "meaningVi": "người phụ nữ",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0052",
+      "written": "友だち",
+      "kanji": "友だち",
+      "kana": "ともだち",
+      "romaji": "tomodachi",
+      "meaningVi": "bạn",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0053",
+      "written": "家族",
+      "kanji": "家族",
+      "kana": "かぞく",
+      "romaji": "kazoku",
+      "meaningVi": "gia đình",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0054",
+      "written": "父 / お父さん",
+      "kanji": "父 / お父さん",
+      "kana": "ちち / おとうさん",
+      "romaji": "chichi / otousan",
+      "meaningVi": "bố / bố của người khác",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0055",
+      "written": "母 / お母さん",
+      "kanji": "母 / お母さん",
+      "kana": "はは / おかあさん",
+      "romaji": "haha / okaasan",
+      "meaningVi": "mẹ / mẹ của người khác",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0056",
+      "written": "兄",
+      "kanji": "兄",
+      "kana": "あに",
+      "romaji": "ani",
+      "meaningVi": "anh trai của mình",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0057",
+      "written": "恋人",
+      "kanji": "恋人",
+      "kana": "こいびと",
+      "romaji": "koibito",
+      "meaningVi": "người yêu",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0058",
+      "written": "先生",
+      "kanji": "先生",
+      "kana": "せんせい",
+      "romaji": "sensei",
+      "meaningVi": "thầy, cô",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0059",
+      "written": "学生",
+      "kanji": "学生",
+      "kana": "がくせい",
+      "romaji": "gakusei",
+      "meaningVi": "học sinh, sinh viên",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0060",
+      "written": "大学生",
+      "kanji": "大学生",
+      "kana": "だいがくせい",
+      "romaji": "daigakusei",
+      "meaningVi": "sinh viên đại học",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0061",
+      "written": "年生",
+      "kanji": "年生",
+      "kana": "ねんせい",
+      "romaji": "nensei",
+      "meaningVi": "năm học",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0062",
+      "written": "学校",
+      "kanji": "学校",
+      "kana": "がっこう",
+      "romaji": "gakkou",
+      "meaningVi": "trường học",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0063",
+      "written": "小学校",
+      "kanji": "小学校",
+      "kana": "しょうがっこう",
+      "romaji": "shougakkou",
+      "meaningVi": "tiểu học",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0064",
+      "written": "大学",
+      "kanji": "大学",
+      "kana": "だいがく",
+      "romaji": "daigaku",
+      "meaningVi": "đại học",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0065",
+      "written": "会社",
+      "kanji": "会社",
+      "kana": "かいしゃ",
+      "romaji": "kaisha",
+      "meaningVi": "công ty",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0066",
+      "written": "会社員",
+      "kanji": "会社員",
+      "kana": "かいしゃいん",
+      "romaji": "kaishain",
+      "meaningVi": "nhân viên công ty",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0067",
+      "written": "仕事",
+      "kanji": "仕事",
+      "kana": "しごと",
+      "romaji": "shigoto",
+      "meaningVi": "công việc",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0068",
+      "written": "勉強",
+      "kanji": "勉強",
+      "kana": "べんきょう",
+      "romaji": "benkyou",
+      "meaningVi": "học",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0069",
+      "written": "卒業",
+      "kanji": "卒業",
+      "kana": "そつぎょう",
+      "romaji": "sotsugyou",
+      "meaningVi": "tốt nghiệp",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0070",
+      "written": "日本語",
+      "kanji": "日本語",
+      "kana": "にほんご",
+      "romaji": "Nihongo",
+      "meaningVi": "tiếng Nhật",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0071",
+      "written": "英語",
+      "kanji": "英語",
+      "kana": "えいご",
+      "romaji": "Eigo",
+      "meaningVi": "tiếng Anh",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0072",
+      "written": "フランス語",
+      "kanji": "フランス語",
+      "kana": "フランスご",
+      "romaji": "Furansugo",
+      "meaningVi": "tiếng Pháp",
+      "categoryId": "nguoi-truong-hoc-cong-viec-va-gia-dinh",
+      "categoryName": "Người, trường học, công việc và gia đình",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Người, trường học, công việc và gia đình"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0073",
+      "written": "家 / うち",
+      "kanji": "家 / うち",
+      "kana": "いえ / うち",
+      "romaji": "ie / uchi",
+      "meaningVi": "nhà",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0074",
+      "written": "国",
+      "kanji": "国",
+      "kana": "くに",
+      "romaji": "kuni",
+      "meaningVi": "đất nước",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0075",
+      "written": "日本",
+      "kanji": "日本",
+      "kana": "にほん",
+      "romaji": "Nihon",
+      "meaningVi": "Nhật Bản",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0076",
+      "written": "中国",
+      "kanji": "中国",
+      "kana": "ちゅうごく",
+      "romaji": "Chuugoku",
+      "meaningVi": "Trung Quốc",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0077",
+      "written": "韓国",
+      "kanji": "韓国",
+      "kana": "かんこく",
+      "romaji": "Kankoku",
+      "meaningVi": "Hàn Quốc",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0078",
+      "written": "外国",
+      "kanji": "外国",
+      "kana": "がいこく",
+      "romaji": "gaikoku",
+      "meaningVi": "nước ngoài",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0079",
+      "written": "東京",
+      "kanji": "東京",
+      "kana": "とうきょう",
+      "romaji": "Toukyou",
+      "meaningVi": "Tokyo",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0080",
+      "written": "北海道",
+      "kanji": "北海道",
+      "kana": "ほっかいどう",
+      "romaji": "Hokkaidou",
+      "meaningVi": "Hokkaido",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0081",
+      "written": "町",
+      "kanji": "町",
+      "kana": "まち",
+      "romaji": "machi",
+      "meaningVi": "thị trấn, thành phố",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0082",
+      "written": "市",
+      "kanji": "市",
+      "kana": "し",
+      "romaji": "shi",
+      "meaningVi": "thành phố (hậu tố)",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0083",
+      "written": "区",
+      "kanji": "区",
+      "kana": "く",
+      "romaji": "ku",
+      "meaningVi": "quận, khu",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0084",
+      "written": "駅",
+      "kanji": "駅",
+      "kana": "えき",
+      "romaji": "eki",
+      "meaningVi": "ga tàu",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0085",
+      "written": "図書館",
+      "kanji": "図書館",
+      "kana": "としょかん",
+      "romaji": "toshokan",
+      "meaningVi": "thư viện",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0086",
+      "written": "病院",
+      "kanji": "病院",
+      "kana": "びょういん",
+      "romaji": "byouin",
+      "meaningVi": "bệnh viện",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0087",
+      "written": "大使館",
+      "kanji": "大使館",
+      "kana": "たいしかん",
+      "romaji": "taishikan",
+      "meaningVi": "đại sứ quán",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0088",
+      "written": "教会",
+      "kanji": "教会",
+      "kana": "きょうかい",
+      "romaji": "kyoukai",
+      "meaningVi": "nhà thờ",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0089",
+      "written": "寺 / お寺",
+      "kanji": "寺 / お寺",
+      "kana": "てら / おてら",
+      "romaji": "tera / otera",
+      "meaningVi": "chùa",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0090",
+      "written": "城 / お城",
+      "kanji": "城 / お城",
+      "kana": "しろ / おしろ",
+      "romaji": "shiro / oshiro",
+      "meaningVi": "lâu đài",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0091",
+      "written": "神社",
+      "kanji": "神社",
+      "kana": "じんじゃ",
+      "romaji": "jinja",
+      "meaningVi": "đền Thần đạo",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0092",
+      "written": "公園",
+      "kanji": "公園",
+      "kana": "こうえん",
+      "romaji": "kouen",
+      "meaningVi": "công viên",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0093",
+      "written": "本屋",
+      "kanji": "本屋",
+      "kana": "ほんや",
+      "romaji": "honya",
+      "meaningVi": "hiệu sách",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0094",
+      "written": "台所",
+      "kanji": "台所",
+      "kana": "だいどころ",
+      "romaji": "daidokoro",
+      "meaningVi": "nhà bếp",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0095",
+      "written": "部屋",
+      "kanji": "部屋",
+      "kana": "へや",
+      "romaji": "heya",
+      "meaningVi": "phòng",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0096",
+      "written": "海",
+      "kanji": "海",
+      "kana": "うみ",
+      "romaji": "umi",
+      "meaningVi": "biển",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0097",
+      "written": "山",
+      "kanji": "山",
+      "kana": "やま",
+      "romaji": "yama",
+      "meaningVi": "núi",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0098",
+      "written": "川",
+      "kanji": "川",
+      "kana": "かわ",
+      "romaji": "kawa",
+      "meaningVi": "sông",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0099",
+      "written": "田んぼ",
+      "kanji": "田んぼ",
+      "kana": "たんぼ",
+      "romaji": "tanbo",
+      "meaningVi": "ruộng lúa",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0100",
+      "written": "温泉",
+      "kanji": "温泉",
+      "kana": "おんせん",
+      "romaji": "onsen",
+      "meaningVi": "suối nước nóng",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0101",
+      "written": "北",
+      "kanji": "北",
+      "kana": "きた",
+      "romaji": "kita",
+      "meaningVi": "phía bắc",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0102",
+      "written": "南",
+      "kanji": "南",
+      "kana": "みなみ",
+      "romaji": "minami",
+      "meaningVi": "phía nam",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0103",
+      "written": "東",
+      "kanji": "東",
+      "kana": "ひがし",
+      "romaji": "higashi",
+      "meaningVi": "phía đông",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0104",
+      "written": "西",
+      "kanji": "西",
+      "kana": "にし",
+      "romaji": "nishi",
+      "meaningVi": "phía tây",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0105",
+      "written": "真ん中",
+      "kanji": "真ん中",
+      "kana": "まんなか",
+      "romaji": "mannaka",
+      "meaningVi": "chính giữa",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0106",
+      "written": "前",
+      "kanji": "前",
+      "kana": "まえ",
+      "romaji": "mae",
+      "meaningVi": "phía trước",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0107",
+      "written": "後ろ",
+      "kanji": "後ろ",
+      "kana": "うしろ",
+      "romaji": "ushiro",
+      "meaningVi": "phía sau",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0108",
+      "written": "中",
+      "kanji": "中",
+      "kana": "なか",
+      "romaji": "naka",
+      "meaningVi": "bên trong",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0109",
+      "written": "外",
+      "kanji": "外",
+      "kana": "そと",
+      "romaji": "soto",
+      "meaningVi": "bên ngoài",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0110",
+      "written": "間",
+      "kanji": "間",
+      "kana": "あいだ",
+      "romaji": "aida",
+      "meaningVi": "giữa, khoảng giữa",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0111",
+      "written": "近く",
+      "kanji": "近く",
+      "kana": "ちかく",
+      "romaji": "chikaku",
+      "meaningVi": "gần",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0112",
+      "written": "隣",
+      "kanji": "隣",
+      "kana": "となり",
+      "romaji": "tonari",
+      "meaningVi": "bên cạnh",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0113",
+      "written": "車",
+      "kanji": "車",
+      "kana": "くるま",
+      "romaji": "kuruma",
+      "meaningVi": "ô tô, xe",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0114",
+      "written": "電車",
+      "kanji": "電車",
+      "kana": "でんしゃ",
+      "romaji": "densha",
+      "meaningVi": "tàu điện",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0115",
+      "written": "新幹線",
+      "kanji": "新幹線",
+      "kana": "しんかんせん",
+      "romaji": "shinkansen",
+      "meaningVi": "tàu cao tốc",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0116",
+      "written": "飛行機",
+      "kanji": "飛行機",
+      "kana": "ひこうき",
+      "romaji": "hikouki",
+      "meaningVi": "máy bay",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0117",
+      "written": "バス",
+      "kanji": null,
+      "kana": "バス",
+      "romaji": "basu",
+      "meaningVi": "xe buýt",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0118",
+      "written": "歩いて",
+      "kanji": "歩いて",
+      "kana": "あるいて",
+      "romaji": "aruite",
+      "meaningVi": "đi bộ",
+      "categoryId": "dia-diem-quoc-gia-phuong-huong-va-giao-thong",
+      "categoryName": "Địa điểm, quốc gia, phương hướng và giao thông",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Địa điểm, quốc gia, phương hướng và giao thông"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0119",
+      "written": "行きます",
+      "kanji": "行きます",
+      "kana": "いきます",
+      "romaji": "ikimasu",
+      "meaningVi": "đi",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0120",
+      "written": "来ます",
+      "kanji": "来ます",
+      "kana": "きます",
+      "romaji": "kimasu",
+      "meaningVi": "đến",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0121",
+      "written": "帰ります",
+      "kanji": "帰ります",
+      "kana": "かえります",
+      "romaji": "kaerimasu",
+      "meaningVi": "về",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0122",
+      "written": "会います",
+      "kanji": "会います",
+      "kana": "あいます",
+      "romaji": "aimasu",
+      "meaningVi": "gặp",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0123",
+      "written": "見ます",
+      "kanji": "見ます",
+      "kana": "みます",
+      "romaji": "mimasu",
+      "meaningVi": "xem",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0124",
+      "written": "見えます",
+      "kanji": "見えます",
+      "kana": "みえます",
+      "romaji": "miemasu",
+      "meaningVi": "nhìn thấy được",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0125",
+      "written": "見せます",
+      "kanji": "見せます",
+      "kana": "みせます",
+      "romaji": "misemasu",
+      "meaningVi": "cho xem",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0126",
+      "written": "見学します",
+      "kanji": "見学します",
+      "kana": "けんがくします",
+      "romaji": "kengaku shimasu",
+      "meaningVi": "tham quan, kiến tập",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0127",
+      "written": "聞きます",
+      "kanji": "聞きます",
+      "kana": "ききます",
+      "romaji": "kikimasu",
+      "meaningVi": "nghe, hỏi",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0128",
+      "written": "読みます",
+      "kanji": "読みます",
+      "kana": "よみます",
+      "romaji": "yomimasu",
+      "meaningVi": "đọc",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0129",
+      "written": "書きます",
+      "kanji": "書きます",
+      "kana": "かきます",
+      "romaji": "kakimasu",
+      "meaningVi": "viết",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0130",
+      "written": "話します",
+      "kanji": "話します",
+      "kana": "はなします",
+      "romaji": "hanashimasu",
+      "meaningVi": "nói chuyện",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0131",
+      "written": "言います",
+      "kanji": "言います",
+      "kana": "いいます",
+      "romaji": "iimasu",
+      "meaningVi": "nói",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0132",
+      "written": "食べます",
+      "kanji": "食べます",
+      "kana": "たべます",
+      "romaji": "tabemasu",
+      "meaningVi": "ăn",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0133",
+      "written": "飲みます",
+      "kanji": "飲みます",
+      "kana": "のみます",
+      "romaji": "nomimasu",
+      "meaningVi": "uống",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0134",
+      "written": "買います",
+      "kanji": "買います",
+      "kana": "かいます",
+      "romaji": "kaimasu",
+      "meaningVi": "mua",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0135",
+      "written": "買い物します",
+      "kanji": "買い物します",
+      "kana": "かいものします",
+      "romaji": "kaimono shimasu",
+      "meaningVi": "mua sắm",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0136",
+      "written": "食事します",
+      "kanji": "食事します",
+      "kana": "しょくじします",
+      "romaji": "shokuji shimasu",
+      "meaningVi": "dùng bữa",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0137",
+      "written": "作ります",
+      "kanji": "作ります",
+      "kana": "つくります",
+      "romaji": "tsukurimasu",
+      "meaningVi": "làm, nấu",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0138",
+      "written": "切ります",
+      "kanji": "切ります",
+      "kana": "きります",
+      "romaji": "kirimasu",
+      "meaningVi": "cắt",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0139",
+      "written": "取ります",
+      "kanji": "取ります",
+      "kana": "とります",
+      "romaji": "torimasu",
+      "meaningVi": "lấy, chụp",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0140",
+      "written": "使います",
+      "kanji": "使います",
+      "kana": "つかいます",
+      "romaji": "tsukaimasu",
+      "meaningVi": "dùng",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0141",
+      "written": "入れます",
+      "kanji": "入れます",
+      "kana": "いれます",
+      "romaji": "iremasu",
+      "meaningVi": "cho vào",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0142",
+      "written": "出します",
+      "kanji": "出します",
+      "kana": "だします",
+      "romaji": "dashimasu",
+      "meaningVi": "lấy ra, nộp, gửi",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0143",
+      "written": "置きます",
+      "kanji": "置きます",
+      "kana": "おきます",
+      "romaji": "okimasu",
+      "meaningVi": "đặt, để",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0144",
+      "written": "洗います",
+      "kanji": "洗います",
+      "kana": "あらいます",
+      "romaji": "araimasu",
+      "meaningVi": "rửa",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0145",
+      "written": "手伝います",
+      "kanji": "手伝います",
+      "kana": "てつだいます",
+      "romaji": "tetsudaimasu",
+      "meaningVi": "giúp đỡ",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0146",
+      "written": "教えます",
+      "kanji": "教えます",
+      "kana": "おしえます",
+      "romaji": "oshiemasu",
+      "meaningVi": "dạy, chỉ",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0147",
+      "written": "働きます",
+      "kanji": "働きます",
+      "kana": "はたらきます",
+      "romaji": "hatarakimasu",
+      "meaningVi": "làm việc",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0148",
+      "written": "分かります",
+      "kanji": "分かります",
+      "kana": "わかります",
+      "romaji": "wakarimasu",
+      "meaningVi": "hiểu",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0149",
+      "written": "掃除します",
+      "kanji": "掃除します",
+      "kana": "そうじします",
+      "romaji": "souji shimasu",
+      "meaningVi": "dọn dẹp",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0150",
+      "written": "洗濯します",
+      "kanji": "洗濯します",
+      "kana": "せんたくします",
+      "romaji": "sentaku shimasu",
+      "meaningVi": "giặt",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0151",
+      "written": "電話します",
+      "kanji": "電話します",
+      "kana": "でんわします",
+      "romaji": "denwa shimasu",
+      "meaningVi": "gọi điện",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0152",
+      "written": "遊びに行きます",
+      "kanji": "遊びに行きます",
+      "kana": "あそびにいきます",
+      "romaji": "asobi ni ikimasu",
+      "meaningVi": "đi chơi",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0153",
+      "written": "迎えに行きます",
+      "kanji": "迎えに行きます",
+      "kana": "むかえにいきます",
+      "romaji": "mukae ni ikimasu",
+      "meaningVi": "đi đón",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0154",
+      "written": "食べに行きます",
+      "kanji": "食べに行きます",
+      "kana": "たべにいきます",
+      "romaji": "tabe ni ikimasu",
+      "meaningVi": "đi ăn",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0155",
+      "written": "見に行きます",
+      "kanji": "見に行きます",
+      "kana": "みにいきます",
+      "romaji": "mi ni ikimasu",
+      "meaningVi": "đi xem",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0156",
+      "written": "したいです",
+      "kanji": null,
+      "kana": "したいです",
+      "romaji": "shitai desu",
+      "meaningVi": "muốn làm",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0157",
+      "written": "登ります",
+      "kanji": "登ります",
+      "kana": "のぼります",
+      "romaji": "noborimasu",
+      "meaningVi": "leo, trèo",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0158",
+      "written": "入ります",
+      "kanji": "入ります",
+      "kana": "はいります",
+      "romaji": "hairimasu",
+      "meaningVi": "vào; tắm (suối nước nóng)",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0159",
+      "written": "風邪をひきます",
+      "kanji": "風邪をひきます",
+      "kana": "かぜをひきます",
+      "romaji": "kaze o hikimasu",
+      "meaningVi": "bị cảm",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0160",
+      "written": "旅行します",
+      "kanji": "旅行します",
+      "kana": "りょこうします",
+      "romaji": "ryokou shimasu",
+      "meaningVi": "du lịch",
+      "categoryId": "dong-tu-va-hanh-dong-quan-trong",
+      "categoryName": "Động từ và hành động quan trọng",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Động từ và hành động quan trọng"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0161",
+      "written": "食べ物",
+      "kanji": "食べ物",
+      "kana": "たべもの",
+      "romaji": "tabemono",
+      "meaningVi": "thức ăn",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0162",
+      "written": "飲み物",
+      "kanji": "飲み物",
+      "kana": "のみもの",
+      "romaji": "nomimono",
+      "meaningVi": "đồ uống",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0163",
+      "written": "ごはん",
+      "kanji": null,
+      "kana": "ごはん",
+      "romaji": "gohan",
+      "meaningVi": "cơm, bữa ăn",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0164",
+      "written": "昼ごはん",
+      "kanji": "昼ごはん",
+      "kana": "ひるごはん",
+      "romaji": "hirugohan",
+      "meaningVi": "bữa trưa",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0165",
+      "written": "晩ごはん",
+      "kanji": "晩ごはん",
+      "kana": "ばんごはん",
+      "romaji": "bangohan",
+      "meaningVi": "bữa tối",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0166",
+      "written": "肉",
+      "kanji": "肉",
+      "kana": "にく",
+      "romaji": "niku",
+      "meaningVi": "thịt",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0167",
+      "written": "野菜",
+      "kanji": "野菜",
+      "kana": "やさい",
+      "romaji": "yasai",
+      "meaningVi": "rau",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0168",
+      "written": "貝",
+      "kanji": "貝",
+      "kana": "かい",
+      "romaji": "kai",
+      "meaningVi": "sò, ốc",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0169",
+      "written": "牛乳",
+      "kanji": "牛乳",
+      "kana": "ぎゅうにゅう",
+      "romaji": "gyuunyuu",
+      "meaningVi": "sữa bò",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0170",
+      "written": "パン",
+      "kanji": null,
+      "kana": "パン",
+      "romaji": "pan",
+      "meaningVi": "bánh mì",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0171",
+      "written": "ラーメン",
+      "kanji": null,
+      "kana": "ラーメン",
+      "romaji": "raamen",
+      "meaningVi": "mì ramen",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0172",
+      "written": "お茶",
+      "kanji": "お茶",
+      "kana": "おちゃ",
+      "romaji": "ocha",
+      "meaningVi": "trà",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0173",
+      "written": "コーヒー",
+      "kanji": null,
+      "kana": "コーヒー",
+      "romaji": "koohii",
+      "meaningVi": "cà phê",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0174",
+      "written": "ジュース",
+      "kanji": null,
+      "kana": "ジュース",
+      "romaji": "juusu",
+      "meaningVi": "nước ép",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0175",
+      "written": "ビール",
+      "kanji": null,
+      "kana": "ビール",
+      "romaji": "biiru",
+      "meaningVi": "bia",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0176",
+      "written": "ワイン",
+      "kanji": null,
+      "kana": "ワイン",
+      "romaji": "wain",
+      "meaningVi": "rượu vang",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0177",
+      "written": "チョコレート",
+      "kanji": null,
+      "kana": "チョコレート",
+      "romaji": "chokoreeto",
+      "meaningVi": "sô-cô-la",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0178",
+      "written": "料理",
+      "kanji": "料理",
+      "kana": "りょうり",
+      "romaji": "ryouri",
+      "meaningVi": "món ăn, nấu ăn",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0179",
+      "written": "材料",
+      "kanji": "材料",
+      "kana": "ざいりょう",
+      "romaji": "zairyou",
+      "meaningVi": "nguyên liệu",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0180",
+      "written": "作り方",
+      "kanji": "作り方",
+      "kana": "つくりかた",
+      "romaji": "tsukurikata",
+      "meaningVi": "cách làm",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0181",
+      "written": "本",
+      "kanji": "本",
+      "kana": "ほん",
+      "romaji": "hon",
+      "meaningVi": "sách",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0182",
+      "written": "新聞",
+      "kanji": "新聞",
+      "kana": "しんぶん",
+      "romaji": "shinbun",
+      "meaningVi": "báo",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0183",
+      "written": "写真",
+      "kanji": "写真",
+      "kana": "しゃしん",
+      "romaji": "shashin",
+      "meaningVi": "ảnh",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0184",
+      "written": "映画",
+      "kanji": "映画",
+      "kana": "えいが",
+      "romaji": "eiga",
+      "meaningVi": "phim",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0185",
+      "written": "音楽",
+      "kanji": "音楽",
+      "kana": "おんがく",
+      "romaji": "ongaku",
+      "meaningVi": "âm nhạc",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0186",
+      "written": "野球",
+      "kanji": "野球",
+      "kana": "やきゅう",
+      "romaji": "yakyuu",
+      "meaningVi": "bóng chày",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0187",
+      "written": "試合",
+      "kanji": "試合",
+      "kana": "しあい",
+      "romaji": "shiai",
+      "meaningVi": "trận đấu",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0188",
+      "written": "景色",
+      "kanji": "景色",
+      "kana": "けしき",
+      "romaji": "keshiki",
+      "meaningVi": "phong cảnh",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0189",
+      "written": "スポーツ",
+      "kanji": null,
+      "kana": "スポーツ",
+      "romaji": "supootsu",
+      "meaningVi": "thể thao",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0190",
+      "written": "テニス",
+      "kanji": null,
+      "kana": "テニス",
+      "romaji": "tenisu",
+      "meaningVi": "quần vợt",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0191",
+      "written": "水泳",
+      "kanji": "水泳",
+      "kana": "すいえい",
+      "romaji": "suiei",
+      "meaningVi": "bơi lội",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0192",
+      "written": "サッカー",
+      "kanji": null,
+      "kana": "サッカー",
+      "romaji": "sakkaa",
+      "meaningVi": "bóng đá",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0193",
+      "written": "ゲーム",
+      "kanji": null,
+      "kana": "ゲーム",
+      "romaji": "geemu",
+      "meaningVi": "trò chơi",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0194",
+      "written": "アニメ",
+      "kanji": null,
+      "kana": "アニメ",
+      "romaji": "anime",
+      "meaningVi": "anime",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0195",
+      "written": "ジャズ",
+      "kanji": null,
+      "kana": "ジャズ",
+      "romaji": "jazu",
+      "meaningVi": "nhạc jazz",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0196",
+      "written": "パーティー",
+      "kanji": null,
+      "kana": "パーティー",
+      "romaji": "paatii",
+      "meaningVi": "bữa tiệc",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0197",
+      "written": "バーベキュー",
+      "kanji": null,
+      "kana": "バーベキュー",
+      "romaji": "baabekyuu",
+      "meaningVi": "tiệc nướng",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0198",
+      "written": "花火",
+      "kanji": "花火",
+      "kana": "はなび",
+      "romaji": "hanabi",
+      "meaningVi": "pháo hoa",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0199",
+      "written": "セール",
+      "kanji": null,
+      "kana": "セール",
+      "romaji": "seeru",
+      "meaningVi": "đợt giảm giá",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0200",
+      "written": "コンサート",
+      "kanji": null,
+      "kana": "コンサート",
+      "romaji": "konsaato",
+      "meaningVi": "buổi hòa nhạc",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0201",
+      "written": "カラオケ",
+      "kanji": null,
+      "kana": "カラオケ",
+      "romaji": "karaoke",
+      "meaningVi": "hát karaoke",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0202",
+      "written": "ドライブ",
+      "kanji": null,
+      "kana": "ドライブ",
+      "romaji": "doraibu",
+      "meaningVi": "lái xe dạo chơi",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0203",
+      "written": "チケット",
+      "kanji": null,
+      "kana": "チケット",
+      "romaji": "chiketto",
+      "meaningVi": "vé",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0204",
+      "written": "地図",
+      "kanji": "地図",
+      "kana": "ちず",
+      "romaji": "chizu",
+      "meaningVi": "bản đồ",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0205",
+      "written": "水着",
+      "kanji": "水着",
+      "kana": "みずぎ",
+      "romaji": "mizugi",
+      "meaningVi": "đồ bơi",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0206",
+      "written": "携帯電話",
+      "kanji": "携帯電話",
+      "kana": "けいたいでんわ",
+      "romaji": "keitai denwa",
+      "meaningVi": "điện thoại di động",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0207",
+      "written": "お金",
+      "kanji": "お金",
+      "kana": "おかね",
+      "romaji": "okane",
+      "meaningVi": "tiền",
+      "categoryId": "do-an-do-vat-hoat-dong-va-so-thich",
+      "categoryName": "Đồ ăn, đồ vật, hoạt động và sở thích",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Đồ ăn, đồ vật, hoạt động và sở thích"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0208",
+      "written": "大きい",
+      "kanji": "大きい",
+      "kana": "おおきい",
+      "romaji": "ookii",
+      "meaningVi": "lớn",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0209",
+      "written": "小さい",
+      "kanji": "小さい",
+      "kana": "ちいさい",
+      "romaji": "chiisai",
+      "meaningVi": "nhỏ",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0210",
+      "written": "高い",
+      "kanji": "高い",
+      "kana": "たかい",
+      "romaji": "takai",
+      "meaningVi": "cao, đắt",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0211",
+      "written": "低い",
+      "kanji": "低い",
+      "kana": "ひくい",
+      "romaji": "hikui",
+      "meaningVi": "thấp",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0212",
+      "written": "新しい",
+      "kanji": "新しい",
+      "kana": "あたらしい",
+      "romaji": "atarashii",
+      "meaningVi": "mới",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0213",
+      "written": "古い",
+      "kanji": "古い",
+      "kana": "ふるい",
+      "romaji": "furui",
+      "meaningVi": "cũ",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0214",
+      "written": "多い",
+      "kanji": "多い",
+      "kana": "おおい",
+      "romaji": "ooi",
+      "meaningVi": "nhiều",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0215",
+      "written": "少ない",
+      "kanji": "少ない",
+      "kana": "すくない",
+      "romaji": "sukunai",
+      "meaningVi": "ít",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0216",
+      "written": "有名",
+      "kanji": "有名",
+      "kana": "ゆうめい",
+      "romaji": "yuumei",
+      "meaningVi": "nổi tiếng",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0217",
+      "written": "便利",
+      "kanji": "便利",
+      "kana": "べんり",
+      "romaji": "benri",
+      "meaningVi": "tiện lợi",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0218",
+      "written": "親切",
+      "kanji": "親切",
+      "kana": "しんせつ",
+      "romaji": "shinsetsu",
+      "meaningVi": "tốt bụng",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0219",
+      "written": "難しい",
+      "kanji": "難しい",
+      "kana": "むずかしい",
+      "romaji": "muzukashii",
+      "meaningVi": "khó",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0220",
+      "written": "残念",
+      "kanji": "残念",
+      "kana": "ざんねん",
+      "romaji": "zannen",
+      "meaningVi": "đáng tiếc",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0221",
+      "written": "きれい",
+      "kanji": null,
+      "kana": "きれい",
+      "romaji": "kirei",
+      "meaningVi": "đẹp, sạch",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0222",
+      "written": "静か",
+      "kanji": "静か",
+      "kana": "しずか",
+      "romaji": "shizuka",
+      "meaningVi": "yên tĩnh",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0223",
+      "written": "にぎやか",
+      "kanji": null,
+      "kana": "にぎやか",
+      "romaji": "nigiyaka",
+      "meaningVi": "náo nhiệt",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0224",
+      "written": "いい",
+      "kanji": null,
+      "kana": "いい",
+      "romaji": "ii",
+      "meaningVi": "tốt",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0225",
+      "written": "おいしい",
+      "kanji": null,
+      "kana": "おいしい",
+      "romaji": "oishii",
+      "meaningVi": "ngon",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0226",
+      "written": "からい",
+      "kanji": null,
+      "kana": "からい",
+      "romaji": "karai",
+      "meaningVi": "cay",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0227",
+      "written": "あまい",
+      "kanji": null,
+      "kana": "あまい",
+      "romaji": "amai",
+      "meaningVi": "ngọt",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0228",
+      "written": "にがい",
+      "kanji": null,
+      "kana": "にがい",
+      "romaji": "nigai",
+      "meaningVi": "đắng",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0229",
+      "written": "すっぱい",
+      "kanji": null,
+      "kana": "すっぱい",
+      "romaji": "suppai",
+      "meaningVi": "chua",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0230",
+      "written": "たのしい",
+      "kanji": null,
+      "kana": "たのしい",
+      "romaji": "tanoshii",
+      "meaningVi": "vui",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0231",
+      "written": "おもしろい",
+      "kanji": null,
+      "kana": "おもしろい",
+      "romaji": "omoshiroi",
+      "meaningVi": "thú vị",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0232",
+      "written": "いそがしい",
+      "kanji": null,
+      "kana": "いそがしい",
+      "romaji": "isogashii",
+      "meaningVi": "bận",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0233",
+      "written": "ひま",
+      "kanji": null,
+      "kana": "ひま",
+      "romaji": "hima",
+      "meaningVi": "rảnh",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0234",
+      "written": "かわいい",
+      "kanji": null,
+      "kana": "かわいい",
+      "romaji": "kawaii",
+      "meaningVi": "dễ thương",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0235",
+      "written": "あたたかい",
+      "kanji": null,
+      "kana": "あたたかい",
+      "romaji": "atatakai",
+      "meaningVi": "ấm",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0236",
+      "written": "あつい",
+      "kanji": null,
+      "kana": "あつい",
+      "romaji": "atsui",
+      "meaningVi": "nóng",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0237",
+      "written": "さむい",
+      "kanji": null,
+      "kana": "さむい",
+      "romaji": "samui",
+      "meaningVi": "lạnh",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0238",
+      "written": "すずしい",
+      "kanji": null,
+      "kana": "すずしい",
+      "romaji": "suzushii",
+      "meaningVi": "mát",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0239",
+      "written": "天気",
+      "kanji": "天気",
+      "kana": "てんき",
+      "romaji": "tenki",
+      "meaningVi": "thời tiết",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0240",
+      "written": "雨",
+      "kanji": "雨",
+      "kana": "あめ",
+      "romaji": "ame",
+      "meaningVi": "mưa",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0241",
+      "written": "雪",
+      "kanji": "雪",
+      "kana": "ゆき",
+      "romaji": "yuki",
+      "meaningVi": "tuyết",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0242",
+      "written": "春",
+      "kanji": "春",
+      "kana": "はる",
+      "romaji": "haru",
+      "meaningVi": "mùa xuân",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0243",
+      "written": "夏休み",
+      "kanji": "夏休み",
+      "kana": "なつやすみ",
+      "romaji": "natsuyasumi",
+      "meaningVi": "nghỉ hè",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0244",
+      "written": "秋",
+      "kanji": "秋",
+      "kana": "あき",
+      "romaji": "aki",
+      "meaningVi": "mùa thu",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0245",
+      "written": "花見",
+      "kanji": "花見",
+      "kana": "はなみ",
+      "romaji": "hanami",
+      "meaningVi": "ngắm hoa",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0246",
+      "written": "気持ちがいい",
+      "kanji": "気持ちがいい",
+      "kana": "きもちがいい",
+      "romaji": "kimochi ga ii",
+      "meaningVi": "dễ chịu, sảng khoái",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0247",
+      "written": "大変",
+      "kanji": "大変",
+      "kana": "たいへん",
+      "romaji": "taihen",
+      "meaningVi": "vất vả, rất",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0248",
+      "written": "安い",
+      "kanji": "安い",
+      "kana": "やすい",
+      "romaji": "yasui",
+      "meaningVi": "rẻ",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0249",
+      "written": "欲しい",
+      "kanji": "欲しい",
+      "kana": "ほしい",
+      "romaji": "hoshii",
+      "meaningVi": "muốn có",
+      "categoryId": "tinh-tu-thoi-tiet-va-mo-ta",
+      "categoryName": "Tính từ, thời tiết và mô tả",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Tính từ, thời tiết và mô tả"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0250",
+      "written": "あります",
+      "kanji": null,
+      "kana": "あります",
+      "romaji": "arimasu",
+      "meaningVi": "có, nằm ở (vật/sự vật)",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0251",
+      "written": "います",
+      "kanji": null,
+      "kana": "います",
+      "romaji": "imasu",
+      "meaningVi": "có, ở (người/động vật)",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0252",
+      "written": "どこ",
+      "kanji": null,
+      "kana": "どこ",
+      "romaji": "doko",
+      "meaningVi": "ở đâu",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0253",
+      "written": "どのくらい",
+      "kanji": null,
+      "kana": "どのくらい",
+      "romaji": "dono kurai",
+      "meaningVi": "bao lâu, khoảng bao nhiêu",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0254",
+      "written": "どんな",
+      "kanji": null,
+      "kana": "どんな",
+      "romaji": "donna",
+      "meaningVi": "như thế nào, loại nào",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0255",
+      "written": "どう",
+      "kanji": null,
+      "kana": "どう",
+      "romaji": "dou",
+      "meaningVi": "như thế nào",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0256",
+      "written": "どうして",
+      "kanji": null,
+      "kana": "どうして",
+      "romaji": "doushite",
+      "meaningVi": "tại sao",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0257",
+      "written": "何",
+      "kanji": "何",
+      "kana": "なに / なん",
+      "romaji": "nani / nan",
+      "meaningVi": "cái gì",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0258",
+      "written": "いくつ",
+      "kanji": null,
+      "kana": "いくつ",
+      "romaji": "ikutsu",
+      "meaningVi": "bao nhiêu cái",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0259",
+      "written": "いっしょに",
+      "kanji": null,
+      "kana": "いっしょに",
+      "romaji": "issho ni",
+      "meaningVi": "cùng nhau",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0260",
+      "written": "もう",
+      "kanji": null,
+      "kana": "もう",
+      "romaji": "mou",
+      "meaningVi": "đã, nữa",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0261",
+      "written": "まだ",
+      "kanji": null,
+      "kana": "まだ",
+      "romaji": "mada",
+      "meaningVi": "vẫn chưa",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0262",
+      "written": "とても",
+      "kanji": null,
+      "kana": "とても",
+      "romaji": "totemo",
+      "meaningVi": "rất",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0263",
+      "written": "あまり",
+      "kanji": null,
+      "kana": "あまり",
+      "romaji": "amari",
+      "meaningVi": "không ... lắm (đi với phủ định)",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0264",
+      "written": "すこし",
+      "kanji": null,
+      "kana": "すこし",
+      "romaji": "sukoshi",
+      "meaningVi": "một chút",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0265",
+      "written": "たくさん",
+      "kanji": null,
+      "kana": "たくさん",
+      "romaji": "takusan",
+      "meaningVi": "nhiều",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0266",
+      "written": "ゆっくり",
+      "kanji": null,
+      "kana": "ゆっくり",
+      "romaji": "yukkuri",
+      "meaningVi": "thong thả",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0267",
+      "written": "そして",
+      "kanji": null,
+      "kana": "そして",
+      "romaji": "soshite",
+      "meaningVi": "và, sau đó",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0268",
+      "written": "それから",
+      "kanji": null,
+      "kana": "それから",
+      "romaji": "sorekara",
+      "meaningVi": "sau đó",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0269",
+      "written": "ですが",
+      "kanji": null,
+      "kana": "ですが",
+      "romaji": "desu ga",
+      "meaningVi": "nhưng",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0270",
+      "written": "から",
+      "kanji": null,
+      "kana": "から",
+      "romaji": "kara",
+      "meaningVi": "từ, vì",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0271",
+      "written": "まで",
+      "kanji": null,
+      "kana": "まで",
+      "romaji": "made",
+      "meaningVi": "đến, cho tới",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0272",
+      "written": "くらい / ぐらい",
+      "kanji": null,
+      "kana": "くらい / ぐらい",
+      "romaji": "kurai / gurai",
+      "meaningVi": "khoảng",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0273",
+      "written": "ながら",
+      "kanji": null,
+      "kana": "ながら",
+      "romaji": "nagara",
+      "meaningVi": "vừa ... vừa ...",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0274",
+      "written": "など",
+      "kanji": null,
+      "kana": "など",
+      "romaji": "nado",
+      "meaningVi": "vân vân",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0275",
+      "written": "ぜひ",
+      "kanji": null,
+      "kana": "ぜひ",
+      "romaji": "zehi",
+      "meaningVi": "nhất định, rất mong",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0276",
+      "written": "返事",
+      "kanji": "返事",
+      "kana": "へんじ",
+      "romaji": "henji",
+      "meaningVi": "hồi đáp, trả lời",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0277",
+      "written": "約束",
+      "kanji": "約束",
+      "kana": "やくそく",
+      "romaji": "yakusoku",
+      "meaningVi": "lời hứa, cuộc hẹn",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0278",
+      "written": "用事",
+      "kanji": "用事",
+      "kana": "ようじ",
+      "romaji": "youji",
+      "meaningVi": "việc bận",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0279",
+      "written": "だれ",
+      "kanji": null,
+      "kana": "だれ",
+      "romaji": "dare",
+      "meaningVi": "ai",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0280",
+      "written": "いつ",
+      "kanji": null,
+      "kana": "いつ",
+      "romaji": "itsu",
+      "meaningVi": "khi nào",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0281",
+      "written": "どちら",
+      "kanji": null,
+      "kana": "どちら",
+      "romaji": "dochira",
+      "meaningVi": "bên nào, cái nào (lịch sự)",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0282",
+      "written": "ほう",
+      "kanji": null,
+      "kana": "ほう",
+      "romaji": "hou",
+      "meaningVi": "phía; dùng trong so sánh",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0283",
+      "written": "まい",
+      "kanji": null,
+      "kana": "まい",
+      "romaji": "mai",
+      "meaningVi": "lượng từ cho vật mỏng (tờ, áo, vé)",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0284",
+      "written": "ええ",
+      "kanji": null,
+      "kana": "ええ",
+      "romaji": "ee",
+      "meaningVi": "vâng, được",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0285",
+      "written": "ましょう",
+      "kanji": null,
+      "kana": "ましょう",
+      "romaji": "mashou",
+      "meaningVi": "hãy, cùng ... nhé",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0286",
+      "written": "浅草",
+      "kanji": "浅草",
+      "kana": "あさくさ",
+      "romaji": "Asakusa",
+      "meaningVi": "Asakusa",
+      "categoryId": "tu-chuc-nang-va-tu-hay-gap-khong-co-kanji",
+      "categoryName": "Từ chức năng và từ hay gặp (không có Kanji)",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Từ chức năng và từ hay gặp (không có Kanji)"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0287",
+      "written": "イタリア",
+      "kanji": null,
+      "kana": "イタリア",
+      "romaji": "Itaria",
+      "meaningVi": "Ý",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0288",
+      "written": "イタリア人",
+      "kanji": "イタリア人",
+      "kana": "イタリアじん",
+      "romaji": "Itariajin",
+      "meaningVi": "người Ý",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0289",
+      "written": "ローマ",
+      "kanji": null,
+      "kana": "ローマ",
+      "romaji": "Rooma",
+      "meaningVi": "Rome",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0290",
+      "written": "ナポリ",
+      "kanji": null,
+      "kana": "ナポリ",
+      "romaji": "Napori",
+      "meaningVi": "Naples",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0291",
+      "written": "〜才",
+      "kanji": "〜才",
+      "kana": "〜さい",
+      "romaji": "sai",
+      "meaningVi": "... tuổi",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0292",
+      "written": "さくら",
+      "kanji": null,
+      "kana": "さくら",
+      "romaji": "sakura",
+      "meaningVi": "hoa anh đào",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0293",
+      "written": "インド",
+      "kanji": null,
+      "kana": "インド",
+      "romaji": "Indo",
+      "meaningVi": "Ấn Độ",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0294",
+      "written": "食べられません",
+      "kanji": "食べられません",
+      "kana": "たべられません",
+      "romaji": "taberaremasen",
+      "meaningVi": "không thể ăn",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0295",
+      "written": "何も",
+      "kanji": "何も",
+      "kana": "なにも",
+      "romaji": "nanimo",
+      "meaningVi": "không gì cả",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0296",
+      "written": "服",
+      "kanji": "服",
+      "kana": "ふく",
+      "romaji": "fuku",
+      "meaningVi": "quần áo",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0297",
+      "written": "服屋",
+      "kanji": "服屋",
+      "kana": "ふくや",
+      "romaji": "fukuya",
+      "meaningVi": "cửa hàng quần áo",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0298",
+      "written": "シャツ",
+      "kanji": null,
+      "kana": "シャツ",
+      "romaji": "shatsu",
+      "meaningVi": "áo sơ mi",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0299",
+      "written": "ズボン",
+      "kanji": null,
+      "kana": "ズボン",
+      "romaji": "zubon",
+      "meaningVi": "quần dài",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0300",
+      "written": "階",
+      "kanji": "階",
+      "kana": "かい",
+      "romaji": "kai",
+      "meaningVi": "tầng",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0301",
+      "written": "プール",
+      "kanji": null,
+      "kana": "プール",
+      "romaji": "puuru",
+      "meaningVi": "hồ bơi",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0302",
+      "written": "ルームメイト",
+      "kanji": null,
+      "kana": "ルームメイト",
+      "romaji": "ruumumeito",
+      "meaningVi": "bạn cùng phòng",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0303",
+      "written": "ピザ",
+      "kanji": null,
+      "kana": "ピザ",
+      "romaji": "piza",
+      "meaningVi": "pizza",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0304",
+      "written": "コンビニ",
+      "kanji": null,
+      "kana": "コンビニ",
+      "romaji": "konbini",
+      "meaningVi": "cửa hàng tiện lợi",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0305",
+      "written": "スーパー",
+      "kanji": null,
+      "kana": "スーパー",
+      "romaji": "suupaa",
+      "meaningVi": "siêu thị",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0306",
+      "written": "テレビ",
+      "kanji": null,
+      "kana": "テレビ",
+      "romaji": "terebi",
+      "meaningVi": "tivi",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0307",
+      "written": "インターネット",
+      "kanji": null,
+      "kana": "インターネット",
+      "romaji": "intaanetto",
+      "meaningVi": "Internet",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0308",
+      "written": "電話",
+      "kanji": "電話",
+      "kana": "でんわ",
+      "romaji": "denwa",
+      "meaningVi": "điện thoại",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0309",
+      "written": "コメディ",
+      "kanji": null,
+      "kana": "コメディ",
+      "romaji": "komedi",
+      "meaningVi": "phim hài, hài kịch",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0310",
+      "written": "お酒",
+      "kanji": "お酒",
+      "kana": "おさけ",
+      "romaji": "osake",
+      "meaningVi": "rượu",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0311",
+      "written": "魚",
+      "kanji": "魚",
+      "kana": "さかな",
+      "romaji": "sakana",
+      "meaningVi": "cá",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0312",
+      "written": "くだもの",
+      "kanji": null,
+      "kana": "くだもの",
+      "romaji": "kudamono",
+      "meaningVi": "trái cây",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0313",
+      "written": "りんご",
+      "kanji": null,
+      "kana": "りんご",
+      "romaji": "ringo",
+      "meaningVi": "táo",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0314",
+      "written": "いちご",
+      "kanji": null,
+      "kana": "いちご",
+      "romaji": "ichigo",
+      "meaningVi": "dâu tây",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0315",
+      "written": "うどん",
+      "kanji": null,
+      "kana": "うどん",
+      "romaji": "udon",
+      "meaningVi": "mì udon",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0316",
+      "written": "すきやき",
+      "kanji": null,
+      "kana": "すきやき",
+      "romaji": "sukiyaki",
+      "meaningVi": "lẩu/sukiyaki",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0317",
+      "written": "焼肉",
+      "kanji": "焼肉",
+      "kana": "やきにく",
+      "romaji": "yakiniku",
+      "meaningVi": "thịt nướng kiểu Nhật",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0318",
+      "written": "漫画",
+      "kanji": "漫画",
+      "kana": "まんが",
+      "romaji": "manga",
+      "meaningVi": "truyện tranh",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0319",
+      "written": "歌手",
+      "kanji": "歌手",
+      "kana": "かしゅ",
+      "romaji": "kashu",
+      "meaningVi": "ca sĩ",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0320",
+      "written": "季節",
+      "kanji": "季節",
+      "kana": "きせつ",
+      "romaji": "kisetsu",
+      "meaningVi": "mùa",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0321",
+      "written": "月",
+      "kanji": "月",
+      "kana": "がつ",
+      "romaji": "gatsu",
+      "meaningVi": "tháng (khi ghép số)",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0322",
+      "written": "広い",
+      "kanji": "広い",
+      "kana": "ひろい",
+      "romaji": "hiroi",
+      "meaningVi": "rộng",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0323",
+      "written": "緑",
+      "kanji": "緑",
+      "kana": "みどり",
+      "romaji": "midori",
+      "meaningVi": "màu xanh, cây xanh",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0324",
+      "written": "銀行",
+      "kanji": "銀行",
+      "kana": "ぎんこう",
+      "romaji": "ginkou",
+      "meaningVi": "ngân hàng",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0325",
+      "written": "新宿",
+      "kanji": "新宿",
+      "kana": "しんじゅく",
+      "romaji": "Shinjuku",
+      "meaningVi": "Shinjuku",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0326",
+      "written": "横浜",
+      "kanji": "横浜",
+      "kana": "よこはま",
+      "romaji": "Yokohama",
+      "meaningVi": "Yokohama",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0327",
+      "written": "箱根",
+      "kanji": "箱根",
+      "kana": "はこね",
+      "romaji": "Hakone",
+      "meaningVi": "Hakone",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0328",
+      "written": "富士山",
+      "kanji": "富士山",
+      "kana": "ふじさん",
+      "romaji": "Fujisan",
+      "meaningVi": "núi Phú Sĩ",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0329",
+      "written": "バックリエウ",
+      "kanji": null,
+      "kana": "バックリエウ",
+      "romaji": "Bakkurieu",
+      "meaningVi": "Bạc Liêu",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0330",
+      "written": "ダナン市",
+      "kanji": "ダナン市",
+      "kana": "ダナンし",
+      "romaji": "Danan-shi",
+      "meaningVi": "thành phố Đà Nẵng",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0331",
+      "written": "ホーチミン市",
+      "kanji": "ホーチミン市",
+      "kana": "ホーチミンし",
+      "romaji": "Hoochimin-shi",
+      "meaningVi": "Thành phố Hồ Chí Minh",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0332",
+      "written": "ベトナム人",
+      "kanji": "ベトナム人",
+      "kana": "ベトナムじん",
+      "romaji": "Betonamujin",
+      "meaningVi": "người Việt Nam",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0333",
+      "written": "日本料理",
+      "kanji": "日本料理",
+      "kana": "にほんりょうり",
+      "romaji": "Nihon ryouri",
+      "meaningVi": "món ăn Nhật",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0334",
+      "written": "先日",
+      "kanji": "先日",
+      "kana": "せんじつ",
+      "romaji": "senjitsu",
+      "meaningVi": "hôm trước, ngày nọ",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0335",
+      "written": "来日",
+      "kanji": "来日",
+      "kana": "らいにち",
+      "romaji": "rainichi",
+      "meaningVi": "đến Nhật Bản",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0336",
+      "written": "飲食",
+      "kanji": "飲食",
+      "kana": "いんしょく",
+      "romaji": "inshoku",
+      "meaningVi": "ăn uống",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0337",
+      "written": "飲み水",
+      "kanji": "飲み水",
+      "kana": "のみみず",
+      "romaji": "nomimizu",
+      "meaningVi": "nước uống",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0338",
+      "written": "言葉",
+      "kanji": "言葉",
+      "kana": "ことば",
+      "romaji": "kotoba",
+      "meaningVi": "từ ngữ",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0339",
+      "written": "言語",
+      "kanji": "言語",
+      "kana": "げんご",
+      "romaji": "gengo",
+      "meaningVi": "ngôn ngữ",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0340",
+      "written": "会話",
+      "kanji": "会話",
+      "kana": "かいわ",
+      "romaji": "kaiwa",
+      "meaningVi": "hội thoại",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0341",
+      "written": "読書",
+      "kanji": "読書",
+      "kana": "どくしょ",
+      "romaji": "dokusho",
+      "meaningVi": "việc đọc sách",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0342",
+      "written": "辞書",
+      "kanji": "辞書",
+      "kana": "じしょ",
+      "romaji": "jisho",
+      "meaningVi": "từ điển",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0343",
+      "written": "書き物",
+      "kanji": "書き物",
+      "kana": "かきもの",
+      "romaji": "kakimono",
+      "meaningVi": "đồ/văn bản để viết",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0344",
+      "written": "読み物",
+      "kanji": "読み物",
+      "kana": "よみもの",
+      "romaji": "yomimono",
+      "meaningVi": "tài liệu để đọc",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0345",
+      "written": "飲み会",
+      "kanji": "飲み会",
+      "kana": "のみかい",
+      "romaji": "nomikai",
+      "meaningVi": "tiệc uống rượu",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0346",
+      "written": "国会",
+      "kanji": "国会",
+      "kana": "こっかい",
+      "romaji": "kokkai",
+      "meaningVi": "quốc hội",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0347",
+      "written": "会見",
+      "kanji": "会見",
+      "kana": "かいけん",
+      "romaji": "kaiken",
+      "meaningVi": "buổi gặp, họp báo",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0348",
+      "written": "日帰り",
+      "kanji": "日帰り",
+      "kana": "ひがえり",
+      "romaji": "higaeri",
+      "meaningVi": "đi về trong ngày",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0349",
+      "written": "帰国",
+      "kanji": "帰国",
+      "kana": "きこく",
+      "romaji": "kikoku",
+      "meaningVi": "về nước",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0350",
+      "written": "休日",
+      "kanji": "休日",
+      "kana": "きゅうじつ",
+      "romaji": "kyuujitsu",
+      "meaningVi": "ngày nghỉ",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0351",
+      "written": "名前",
+      "kanji": "名前",
+      "kana": "なまえ",
+      "romaji": "namae",
+      "meaningVi": "tên",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0352",
+      "written": "女性",
+      "kanji": "女性",
+      "kana": "じょせい",
+      "romaji": "josei",
+      "meaningVi": "phụ nữ (lịch sự)",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0353",
+      "written": "男女",
+      "kanji": "男女",
+      "kana": "だんじょ",
+      "romaji": "danjo",
+      "meaningVi": "nam nữ",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0354",
+      "written": "社会",
+      "kanji": "社会",
+      "kana": "しゃかい",
+      "romaji": "shakai",
+      "meaningVi": "xã hội",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0355",
+      "written": "市民",
+      "kanji": "市民",
+      "kana": "しみん",
+      "romaji": "shimin",
+      "meaningVi": "người dân thành phố",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0356",
+      "written": "水田",
+      "kanji": "水田",
+      "kana": "すいでん",
+      "romaji": "suiden",
+      "meaningVi": "ruộng nước",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "vocabularyId": "jpd123-v-0357",
+      "written": "一年中",
+      "kanji": "一年中",
+      "kana": "いちねんじゅう",
+      "romaji": "ichinenjuu",
+      "meaningVi": "quanh năm",
+      "categoryId": "bo-sung-doi-chieu-tu-cac-bai-doc-tranh-va-speaking-test",
+      "categoryName": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test",
+      "sourceRefs": [
+        {
+          "sourceMarkdown": "theory/TỪ VỰNG JPD123 - TỔNG HỢP ÔN THI.md",
+          "sourceSection": "Bổ sung đối chiếu từ các bài đọc, tranh và speaking test"
+        }
+      ],
+      "status": "published"
+    }
+  ]
+}

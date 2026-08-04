@@ -1,4 +1,4 @@
-import type { Exam, QuestionBank, Subject, SubjectCatalog } from './types'
+import type { Exam, QuestionBank, ReadingDocument, ReadingDocumentIndex, Subject, SubjectCatalog, VocabularyBank } from './types'
 
 const contentRevision = import.meta.env.VITE_CONTENT_REVISION || 'development'
 export const contentUrl = (path: string) => `${import.meta.env.BASE_URL}subjects/${path}?v=${encodeURIComponent(contentRevision)}`
@@ -41,4 +41,23 @@ export async function loadNotebookDocuments(subjectId: string): Promise<{ subjec
   }
   const [subjectContext, tutorRules] = await Promise.all(['notebook/subject-context.md', 'notebook/tutor-rules.md'].map(loadOptionalDocument))
   return { subjectContext, tutorRules }
+}
+
+export async function loadJapaneseStudyContent(subjectId: string): Promise<{ readingDocuments: ReadingDocument[]; vocabulary: VocabularyBank | null }> {
+  try {
+    const indexResponse = await fetch(subjectUrl(subjectId, 'reading/reading-index.json'))
+    if (!indexResponse.ok) return { readingDocuments: [], vocabulary: null }
+    const index = await indexResponse.json() as ReadingDocumentIndex
+    const [readingDocuments, vocabularyResponse] = await Promise.all([
+      Promise.all(index.documents.filter((document) => document.status === 'published').map(async (document) => {
+        const response = await fetch(subjectUrl(subjectId, document.file))
+        if (!response.ok) throw new Error(`Không thể tải bài đọc ${document.title}.`)
+        return response.json() as Promise<ReadingDocument>
+      })),
+      fetch(subjectUrl(subjectId, 'vocabulary/vocabulary.json')),
+    ])
+    return { readingDocuments, vocabulary: vocabularyResponse.ok ? await vocabularyResponse.json() as VocabularyBank : null }
+  } catch {
+    return { readingDocuments: [], vocabulary: null }
+  }
 }

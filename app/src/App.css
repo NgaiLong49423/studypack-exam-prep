@@ -179,6 +179,34 @@ h2 { color: var(--text-heading); font-size: 1.35rem; }
 .mode-list button:disabled { cursor: not-allowed; border-color: var(--border); background: var(--bg-subtle); opacity: .72; }
 .mode-list strong, .mode-list span { display: block; }
 .mode-list span { margin-top: .3rem; color: var(--text-light); }
+.japanese-study-shell { min-height: 100vh; padding: clamp(1rem, 4vw, 3rem); }
+.japanese-study-header, .reading-controls, .reading-viewer, .vocabulary-panel { width: min(100%, 76rem); margin-inline: auto; }
+.japanese-study-header { margin-bottom: 1.25rem; }
+.japanese-study-header > p:not(.eyebrow) { max-width: 62ch; color: var(--text-muted); line-height: 1.6; }
+.reading-controls, .vocabulary-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+.reading-controls label, .vocabulary-filters label { display: grid; gap: .4rem; color: var(--text-muted); font-weight: 700; }
+.reading-controls select, .vocabulary-filters select, .vocabulary-filters input { width: 100%; box-sizing: border-box; border: 1px solid var(--border); border-radius: .6rem; background: var(--bg); color: var(--text); padding: .72rem; font: inherit; }
+.reading-viewer, .vocabulary-panel { border: 1px solid var(--border); border-radius: 1rem; background: var(--bg); box-shadow: 0 1rem 2.5rem var(--shadow-color); padding: clamp(1.25rem, 3vw, 2rem); }
+.reading-viewer-title { border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.parallel-paragraph { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border: 1px solid var(--border); border-radius: .75rem; overflow: hidden; }
+.parallel-paragraph section { min-width: 0; padding: 1.1rem; }
+.parallel-paragraph section + section { border-left: 1px solid var(--border); background: var(--bg-subtle); }
+.parallel-paragraph h3 { margin: 0 0 .75rem; color: var(--text-muted); font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; }
+.token-line { margin: 0; font-size: clamp(1.1rem, 2vw, 1.5rem); line-height: 2.05; }
+.japanese-line { font-family: "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif; }
+.romaji-line { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.reading-token { display: inline; border: 0; border-radius: .3rem; background: transparent; color: inherit; padding: .08rem .15rem; font: inherit; cursor: pointer; }
+.romaji-line .reading-token:not(:last-child)::after { content: ' '; }
+.reading-token:hover, .reading-token:focus-visible, .reading-token.active { background: #fef08a; color: #1c1917; outline: 0; }
+.source-romaji { margin: 1rem 0 0; border-top: 1px dashed var(--border); padding-top: .75rem; color: var(--text-muted); font-size: .85rem; line-height: 1.5; }
+.reading-navigation { display: flex; justify-content: space-between; gap: .75rem; margin-top: 1.25rem; }
+.reading-navigation .secondary-button, .reading-navigation .primary-button { margin: 0; }
+.vocabulary-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: .75rem; }
+.vocabulary-table-wrap table { width: 100%; border-collapse: collapse; text-align: left; }
+.vocabulary-table-wrap th, .vocabulary-table-wrap td { border-bottom: 1px solid var(--border); padding: .8rem; vertical-align: top; }
+.vocabulary-table-wrap th { background: var(--bg-subtle); color: var(--text-muted); font-size: .85rem; }
+.vocabulary-table-wrap td:first-child, .vocabulary-table-wrap td:nth-child(2) { font-family: "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif; font-size: 1.05rem; }
+@media (max-width: 45rem) { .reading-controls, .vocabulary-filters, .parallel-paragraph { grid-template-columns: 1fr; } .parallel-paragraph section + section { border-top: 1px solid var(--border); border-left: 0; } .reading-navigation { flex-direction: column; } }
 .danger-button { width: 100%; border: 1px solid var(--danger-border); border-radius: .625rem; background: var(--bg); color: var(--danger-text); padding: .8rem 1rem; font-weight: 700; }
 .demo-button { width: 100%; margin-top: .75rem; border: 1px dashed var(--text-light); border-radius: .625rem; background: var(--bg-subtle); color: var(--text); padding: .7rem 1rem; }
 @media (max-width: 35rem) { .subject-facts { grid-template-columns: 1fr; } .practice-shell { padding-inline: 1rem; } .practice-header { align-items: flex-start; flex-direction: column; gap: .25rem; } .question-card { padding: 1.25rem; } }
