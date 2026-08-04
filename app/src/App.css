@@ -215,6 +215,7 @@ h2 { color: var(--text-heading); font-size: 1.35rem; }
 .quizcard-meaning { margin: .5rem 0 0; color: var(--text-muted); font-size: 1.2rem; }
 .quizcard-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
 .quizcard-actions .primary-button, .quizcard-actions .secondary-button { margin: 0; }
+.quizcard-actions .quizcard-back-button { width: 100%; margin: 0; }
 .quizcard-panel > .primary-button { margin-top: 1.25rem; }
 .quizcard-reward { margin: 1.25rem 0 0; color: var(--success-text); font-weight: 750; }
 @media (max-width: 45rem) { .reading-controls, .vocabulary-filters, .parallel-paragraph { grid-template-columns: 1fr; } .parallel-paragraph section + section { border-top: 1px solid var(--border); border-left: 0; } .reading-navigation { flex-direction: column; } }
