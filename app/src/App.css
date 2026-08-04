@@ -206,6 +206,17 @@ h2 { color: var(--text-heading); font-size: 1.35rem; }
 .vocabulary-table-wrap th, .vocabulary-table-wrap td { border-bottom: 1px solid var(--border); padding: .8rem; vertical-align: top; }
 .vocabulary-table-wrap th { background: var(--bg-subtle); color: var(--text-muted); font-size: .85rem; }
 .vocabulary-table-wrap td:first-child, .vocabulary-table-wrap td:nth-child(2) { font-family: "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif; font-size: 1.05rem; }
+.quizcard-panel { width: min(100%, 42rem); margin: 0 auto; border: 1px solid var(--border); border-radius: 1rem; background: var(--bg); box-shadow: 0 1rem 2.5rem var(--shadow-color); padding: clamp(1.5rem, 5vw, 3rem); text-align: center; }
+.quizcard { display: grid; min-height: 20rem; place-content: center; border: 2px solid var(--primary); border-radius: 1rem; background: linear-gradient(145deg, var(--bg), var(--bg-subtle)); padding: 1.5rem; }
+.quizcard.flipped { border-color: var(--success-border); background: var(--bg-success); }
+.quizcard-label { margin: 0 0 1rem; color: var(--text-muted); font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.quizcard h2 { margin: 0; color: var(--text-strong); font-family: "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif; font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.25; }
+.quizcard-romaji { margin: 1rem 0 0; color: var(--text-heading); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1.25rem; }
+.quizcard-meaning { margin: .5rem 0 0; color: var(--text-muted); font-size: 1.2rem; }
+.quizcard-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+.quizcard-actions .primary-button, .quizcard-actions .secondary-button { margin: 0; }
+.quizcard-panel > .primary-button { margin-top: 1.25rem; }
+.quizcard-reward { margin: 1.25rem 0 0; color: var(--success-text); font-weight: 750; }
 @media (max-width: 45rem) { .reading-controls, .vocabulary-filters, .parallel-paragraph { grid-template-columns: 1fr; } .parallel-paragraph section + section { border-top: 1px solid var(--border); border-left: 0; } .reading-navigation { flex-direction: column; } }
 .danger-button { width: 100%; border: 1px solid var(--danger-border); border-radius: .625rem; background: var(--bg); color: var(--danger-text); padding: .8rem 1rem; font-weight: 700; }
 .demo-button { width: 100%; margin-top: .75rem; border: 1px dashed var(--text-light); border-radius: .625rem; background: var(--bg-subtle); color: var(--text); padding: .7rem 1rem; }
