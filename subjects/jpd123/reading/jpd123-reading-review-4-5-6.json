@@ -1383,54 +1383,48 @@
             },
             {
               "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-049",
-              "japanese": "1",
-              "romaji": "1",
-              "kind": "word"
+              "japanese": "1日",
+              "romaji": "Ichinichi",
+              "kind": "number"
             },
             {
               "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-050",
-              "japanese": "日",
-              "romaji": "Nichi",
-              "kind": "word"
-            },
-            {
-              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-051",
               "japanese": "でした",
               "romaji": "Deshita",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-052",
+              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-051",
               "japanese": "。",
               "romaji": "。",
               "kind": "punctuation"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-053",
+              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-052",
               "japanese": "また",
               "romaji": "Mata",
               "kind": "word"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-054",
+              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-053",
               "japanese": "行",
               "romaji": "Kudari",
               "kind": "word"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-055",
+              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-054",
               "japanese": "きた",
               "romaji": "Kita",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-056",
+              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-055",
               "japanese": "いです",
               "romaji": "Idesu",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-057",
+              "tokenId": "jpd123-reading-review-4-5-6-04-di-bien-voi-ban-p-001-t-056",
               "japanese": "。",
               "romaji": "。",
               "kind": "punctuation"
@@ -3969,57 +3963,57 @@
             },
             {
               "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-008",
-              "japanese": "4",
-              "romaji": "4",
-              "kind": "word"
+              "japanese": "4人",
+              "romaji": "Yonin",
+              "kind": "number"
             },
             {
               "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-009",
-              "japanese": "人",
-              "romaji": "Hito",
-              "kind": "word"
-            },
-            {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-010",
               "japanese": "です",
               "romaji": "Desu",
               "kind": "word"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-011",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-010",
               "japanese": "。",
               "romaji": "。",
               "kind": "punctuation"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-012",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-011",
               "japanese": "あに",
               "romaji": "Ani",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-013",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-012",
               "japanese": "は",
               "romaji": "Wa",
               "kind": "particle"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-014",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-013",
               "japanese": "会社",
               "romaji": "Kaisha",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-015",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-014",
               "japanese": "いんです",
               "romaji": "Indesu",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-016",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-015",
               "japanese": "。",
               "romaji": "。",
               "kind": "punctuation"
+            },
+            {
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-016",
+              "japanese": "ち",
+              "romaji": "Chi",
+              "kind": "word"
             },
             {
               "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-017",
@@ -4029,45 +4023,45 @@
             },
             {
               "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-018",
-              "japanese": "ち",
-              "romaji": "Chi",
-              "kind": "word"
-            },
-            {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-019",
               "japanese": "は",
               "romaji": "Wa",
               "kind": "particle"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-020",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-019",
               "japanese": "大学",
               "romaji": "Daigaku",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-021",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-020",
               "japanese": "で",
               "romaji": "De",
               "kind": "word"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-022",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-021",
               "japanese": "おしえて",
               "romaji": "Oshiete",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-023",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-022",
               "japanese": "います",
               "romaji": "Imasu",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-024",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-023",
               "japanese": "。",
               "romaji": "。",
               "kind": "punctuation"
+            },
+            {
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-024",
+              "japanese": "は",
+              "romaji": "Wa",
+              "kind": "particle"
             },
             {
               "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-025",
@@ -4077,126 +4071,120 @@
             },
             {
               "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-026",
-              "japanese": "は",
-              "romaji": "Wa",
-              "kind": "particle"
-            },
-            {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-027",
               "japanese": "（",
               "romaji": "（",
               "kind": "punctuation"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-028",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-027",
               "japanese": "mẹ",
               "romaji": "Mẹ",
               "kind": "word"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-029",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-028",
               "japanese": "）",
               "romaji": "）",
               "kind": "punctuation"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-030",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-029",
               "japanese": "は",
               "romaji": "Wa",
               "kind": "particle"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-031",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-030",
               "japanese": "びょういんで",
               "romaji": "Byouinde",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-032",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-031",
               "japanese": "はたらいて",
               "romaji": "Hataraite",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-033",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-032",
               "japanese": "います",
               "romaji": "Imasu",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-034",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-033",
               "japanese": "。",
               "romaji": "。",
               "kind": "punctuation"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-035",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-034",
               "japanese": "私",
               "romaji": "Watashi",
               "kind": "word"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-036",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-035",
               "japanese": "は",
               "romaji": "Wa",
               "kind": "particle"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-037",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-036",
               "japanese": "ロサンゼルス",
               "romaji": "Rosanzerusu",
               "kind": "word"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-038",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-037",
               "japanese": "大学",
               "romaji": "Daigaku",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-039",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-038",
               "japanese": "の",
               "romaji": "No",
               "kind": "particle"
             },
             {
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-039",
+              "japanese": "1年生",
+              "romaji": "Ichinensei",
+              "kind": "number"
+            },
+            {
               "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-040",
-              "japanese": "1",
-              "romaji": "1",
+              "japanese": "です",
+              "romaji": "Desu",
               "kind": "word"
             },
             {
               "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-041",
-              "japanese": "年生です",
-              "romaji": "Nenseidesu",
-              "kind": "phrase"
-            },
-            {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-042",
               "japanese": "。",
               "romaji": "。",
               "kind": "punctuation"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-043",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-042",
               "japanese": "来年",
               "romaji": "Rainen",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-044",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-043",
               "japanese": "、",
               "romaji": "、",
               "kind": "punctuation"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-045",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-044",
               "japanese": "そつぎょうします",
               "romaji": "Sotsugyou shimasu",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-046",
+              "tokenId": "jpd123-reading-review-4-5-6-12-gia-dinh-daniel-p-001-t-045",
               "japanese": "。",
               "romaji": "。",
               "kind": "punctuation"
@@ -4440,36 +4428,30 @@
             },
             {
               "tokenId": "jpd123-reading-review-4-5-6-13-anna-den-nhat-ban-p-001-t-037",
-              "japanese": "2",
-              "romaji": "2",
-              "kind": "word"
+              "japanese": "2年間",
+              "romaji": "Ninenkan",
+              "kind": "number"
             },
             {
               "tokenId": "jpd123-reading-review-4-5-6-13-anna-den-nhat-ban-p-001-t-038",
-              "japanese": "年間",
-              "romaji": "Nenkan",
-              "kind": "word"
-            },
-            {
-              "tokenId": "jpd123-reading-review-4-5-6-13-anna-den-nhat-ban-p-001-t-039",
               "japanese": "日本語",
               "romaji": "Nihongo",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-13-anna-den-nhat-ban-p-001-t-040",
+              "tokenId": "jpd123-reading-review-4-5-6-13-anna-den-nhat-ban-p-001-t-039",
               "japanese": "を",
               "romaji": "O",
               "kind": "particle"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-13-anna-den-nhat-ban-p-001-t-041",
+              "tokenId": "jpd123-reading-review-4-5-6-13-anna-den-nhat-ban-p-001-t-040",
               "japanese": "べんきょうしました",
               "romaji": "Benkyou shimashita",
               "kind": "phrase"
             },
             {
-              "tokenId": "jpd123-reading-review-4-5-6-13-anna-den-nhat-ban-p-001-t-042",
+              "tokenId": "jpd123-reading-review-4-5-6-13-anna-den-nhat-ban-p-001-t-041",
               "japanese": "。",
               "romaji": "。",
               "kind": "punctuation"

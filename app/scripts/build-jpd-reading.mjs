@@ -37,13 +37,22 @@ const numberRomaji = (value) => {
 }
 const counterRomaji = (number, counter) => {
   const value = Number(number)
+  if (counter === '人') return ({ 1: 'hitori', 2: 'futari', 3: 'sannin', 4: 'yonin', 5: 'gonin', 6: 'rokunin', 7: 'nananin', 8: 'hachinin', 9: 'kyuunin', 10: 'juunin' })[value] ?? `${numberRomaji(number)}nin`
+  if (counter === '日') return ({ 1: 'ichinichi', 2: 'futsuka', 3: 'mikka', 4: 'yokka', 5: 'itsuka', 6: 'muika', 7: 'nanoka', 8: 'youka', 9: 'kokonoka', 10: 'tooka' })[value] ?? `${numberRomaji(number)}nichi`
   if (counter === '時') return ({ 1: 'ichiji', 2: 'niji', 3: 'sanji', 4: 'yoji', 5: 'goji', 6: 'rokuji', 7: 'shichiji', 8: 'hachiji', 9: 'kuji', 10: 'juuji', 11: 'juuichiji', 12: 'juuniji' })[value] ?? `${numberRomaji(number)}ji`
+  if (counter === '時半') return ({ 1: 'ichijihan', 2: 'nijihan', 3: 'sanjihan', 4: 'yojihan', 5: 'gojihan', 6: 'rokujihan', 7: 'shichijihan', 8: 'hachijihan', 9: 'kujihan', 10: 'juujihan', 11: 'juuichijihan', 12: 'juunijihan' })[value] ?? `${numberRomaji(number)}jihan`
   if (counter === '才') {
     if (value % 10 === 8) return `${numberRomaji(number).replace(/hachi$/, '')}hassai`
     if (value % 10 === 0) return `${numberRomaji(number).replace(/juu$/, '')}jussai`
     return ({ 1: 'issai' })[value] ?? `${numberRomaji(number)}sai`
   }
-  if (counter === 'かい' || counter === '階') return ({ 1: 'ikkai', 3: 'sankai', 4: 'yonkai', 6: 'rokkai', 8: 'hakkai', 10: 'jukkai' })[value] ?? `${numberRomaji(number)}kai`
+  if (counter === 'かい' || counter === '階') {
+    if (value % 10 === 8) return `${numberRomaji(number).replace(/hachi$/, '')}hakkai`
+    if (value % 10 === 0) return `${numberRomaji(number).replace(/juu$/, '')}jukkai`
+    return ({ 1: 'ikkai', 3: 'sankai', 4: 'yonkai', 6: 'rokkai' })[value] ?? `${numberRomaji(number)}kai`
+  }
+  if (counter === '年生') return `${numberRomaji(number)}nensei`
+  if (counter === '年間') return `${numberRomaji(number)}nenkan`
   return `${numberRomaji(number)}${counter === '時間' ? 'jikan' : counter}`
 }
 
@@ -108,7 +117,7 @@ function tokenizeJapanese(japaneseText, passageId, paragraphId, vocabularyByForm
   for (let index = 0; index < rawTokens.length;) {
     const numeral = rawTokens[index].surface_form
     const counter = rawTokens[index + 1]?.surface_form
-    if (/^\d+$/.test(numeral) && ['時', '時間', '才', 'かい', '階'].includes(counter)) {
+    if (/^\d+$/.test(numeral) && ['人', '日', '時', '時半', '時間', '才', 'かい', '階', '年生', '年間'].includes(counter)) {
       tokens.push({ surface_form: `${numeral}${counter}`, reading: counterRomaji(numeral, counter), pos: '名詞', knownRomaji: counterRomaji(numeral, counter), kind: 'number' })
       index += 2
       continue
