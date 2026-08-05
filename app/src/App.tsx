@@ -465,13 +465,22 @@ function App() {
     checkAndShowAchievements(unlockedIds, achievementProfile)
   }
 
+  function awardVocabularyPracticeXp(amount: 1 | 3, correct: boolean) {
+    if (!subject) return
+    const { profile: xpProfile, levelUp } = addXp(loadProfile(subject.subjectId), amount)
+    const { profile: achievementProfile, unlockedIds } = checkLevelAchievements(xpProfile)
+    if (levelUp) addToast(`⭐ Lên cấp ${achievementProfile.level}!`)
+    addToast(correct ? '✅ Đúng! +3 XP' : '📚 Sai, hãy ôn lại. +1 XP')
+    checkAndShowAchievements(unlockedIds, achievementProfile)
+  }
+
   if (screen === 'reading' && subject) return <ReadingLibrary documents={readingDocuments} onBack={() => setScreen('subject')} />
 
   if (screen === 'vocabulary' && subject && vocabulary) return <VocabularyStudy vocabulary={vocabulary} onBack={() => setScreen('subject')} onStartQuizcard={() => setScreen('quizcard')} onStartPractice={() => setScreen('vocabulary-practice')} />
 
   if (screen === 'quizcard' && subject && vocabulary) return <QuizcardStudy subjectId={subject.subjectId} vocabulary={vocabulary} onBack={() => setScreen('vocabulary')} onAwardXp={awardVocabularyXp} />
 
-  if (screen === 'vocabulary-practice' && subject && vocabulary) return <VocabularyPractice subjectId={subject.subjectId} vocabulary={vocabulary} onBack={() => setScreen('vocabulary')} />
+  if (screen === 'vocabulary-practice' && subject && vocabulary) return <VocabularyPractice subjectId={subject.subjectId} vocabulary={vocabulary} onBack={() => setScreen('vocabulary')} onAwardXp={awardVocabularyPracticeXp} />
 
   if (screen === 'mode') return <main className="app-shell"><section className="subject-card" aria-labelledby="mode-title">
     <p className="eyebrow">{subject?.code} · Practice</p><h1 id="mode-title">Bạn muốn luyện thế nào?</h1>
