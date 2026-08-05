@@ -21,7 +21,7 @@ export function ReadingLibrary({ documents, onBack }: { documents: ReadingDocume
   const selectPassage = (nextIndex: number) => { const next = document.passages[nextIndex]; if (next) { setPassageId(next.passageId); setActiveTokenId('') } }
 
   return <main className="japanese-study-shell">
-    <header className="japanese-study-header"><button className="text-button inline-button" type="button" onClick={onBack}>← Quay lại môn học</button><p className="eyebrow">JPD123 · Bài đọc song song</p><h1>Đọc tiếng Nhật và xem phiên âm</h1><p>Rê chuột, chạm hoặc tab vào một từ để tô sáng phần tương ứng ở hai bên.</p></header>
+    <header className="japanese-study-header"><button className="text-button inline-button" type="button" onClick={onBack}>← Quay lại môn học</button><p className="eyebrow">JPD123 · Bài đọc song song</p><h1>Đọc tiếng Nhật và xem phiên âm</h1><p>Rê chuột, chạm hoặc tab vào một từ hay cụm để tô sáng phần tương ứng ở hai bên.</p></header>
     <section className="reading-controls" aria-label="Chọn tài liệu và bài đọc">
       <label>Tài liệu<select value={document.readingDocumentId} onChange={(event) => changeDocument(event.target.value)}>{documents.map((item) => <option key={item.readingDocumentId} value={item.readingDocumentId}>{item.title}</option>)}</select></label>
       <label>Bài đọc<select value={passage.passageId} onChange={(event) => { setPassageId(event.target.value); setActiveTokenId('') }}>{document.passages.map((item) => <option key={item.passageId} value={item.passageId}>{item.order}. {item.title}</option>)}</select></label>

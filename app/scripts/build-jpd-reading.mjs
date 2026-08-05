@@ -47,6 +47,35 @@ const counterRomaji = (number, counter) => {
   return `${numberRomaji(number)}${counter === '時間' ? 'jikan' : counter}`
 }
 
+const particleReading = { は: 'wa', へ: 'e', を: 'o' }
+const romajiForRawToken = (token) => {
+  if (isPunctuation(token.surface_form)) return token.surface_form
+  if (token.pos === '助詞' && particleReading[token.surface_form]) return particleReading[token.surface_form]
+  const reading = token.reading && token.reading !== '*' ? token.reading : token.surface_form
+  return wanakana.toRomaji(reading, { upcaseKatakana: false })
+}
+const isHonorificSuffix = (token) => token?.pos === '名詞' && token.pos_detail_1 === '接尾' && ['さん', '先生', 'ちゃん', '君', 'くん', '様'].includes(token.surface_form)
+const isIndependentVerb = (token) => token?.pos === '動詞' && token.pos_detail_1 === '自立'
+const isInflectionPart = (token) => token?.pos === '助動詞' || (token?.pos === '助詞' && ['て', 'で'].includes(token.surface_form)) || (token?.pos === '動詞' && token.pos_detail_1 === '非自立')
+
+function makePhrase(rawTokens, start, end, romajiSegments = [[start, end]]) {
+  const phraseTokens = rawTokens.slice(start, end)
+  return {
+    end,
+    japanese: phraseTokens.map((token) => token.surface_form).join(''),
+    romaji: capitalize(romajiSegments.map(([segmentStart, segmentEnd]) => rawTokens.slice(segmentStart, segmentEnd).map(romajiForRawToken).join('')).join(' ')),
+    kind: 'phrase',
+  }
+}
+
+function findConjugatedPhrase(rawTokens, start) {
+  const first = rawTokens[start]
+  if (!isIndependentVerb(first) && !(first?.pos === '形容詞' && first.pos_detail_1 === '自立')) return null
+  let end = start + 1
+  while (isInflectionPart(rawTokens[end])) end += 1
+  return end > start + 1 ? makePhrase(rawTokens, start, end) : null
+}
+
 function tokenizeJapanese(japaneseText, passageId, paragraphId, vocabularyByForm) {
   const rawTokens = tokenizer.tokenize(japaneseText)
   const tokens = []
@@ -58,6 +87,18 @@ function tokenizeJapanese(japaneseText, passageId, paragraphId, vocabularyByForm
       index += 2
       continue
     }
+    if (rawTokens[index]?.pos === '名詞' && isHonorificSuffix(rawTokens[index + 1])) {
+      tokens.push(makePhrase(rawTokens, index, index + 2, [[index, index + 1], [index + 1, index + 2]]))
+      index += 2
+      continue
+    }
+    if (rawTokens[index + 1]?.surface_form === 'に' && isIndependentVerb(rawTokens[index + 2]) && rawTokens[index + 2].surface_form.startsWith('行')) {
+      const verbPhrase = findConjugatedPhrase(rawTokens, index + 2)
+      const end = verbPhrase?.end ?? index + 3
+      tokens.push(makePhrase(rawTokens, index, end, [[index, index + 1], [index + 1, index + 2], [index + 2, end]]))
+      index = end
+      continue
+    }
     let matched = null
     for (let end = Math.min(rawTokens.length, index + 6); end > index; end -= 1) {
       const japanese = rawTokens.slice(index, end).map((token) => token.surface_form).join('')
@@ -67,19 +108,26 @@ function tokenizeJapanese(japaneseText, passageId, paragraphId, vocabularyByForm
       tokens.push({ surface_form: matched.japanese, reading: matched.romaji, pos: '名詞', knownRomaji: matched.romaji })
       index = matched.end
     } else {
-      tokens.push(rawTokens[index])
-      index += 1
+      const conjugatedPhrase = findConjugatedPhrase(rawTokens, index)
+      if (conjugatedPhrase) {
+        tokens.push(conjugatedPhrase)
+        index = conjugatedPhrase.end
+      } else {
+        tokens.push(rawTokens[index])
+        index += 1
+      }
     }
   }
   return tokens.map((token, index) => {
-    const reading = token.reading && token.reading !== '*' ? token.reading : token.surface_form
-    const particleRomaji = token.pos === '助詞' ? ({ は: 'Wa', へ: 'E', を: 'O' }[token.surface_form] ?? null) : null
-    const romaji = isPunctuation(token.surface_form) ? token.surface_form : token.knownRomaji ? capitalize(token.knownRomaji) : particleRomaji ?? capitalize(wanakana.toRomaji(reading, { upcaseKatakana: false }))
+    const japanese = token.japanese ?? token.surface_form
+    const reading = token.reading && token.reading !== '*' ? token.reading : japanese
+    const particleRomaji = token.pos === '助詞' ? ({ は: 'Wa', へ: 'E', を: 'O' }[japanese] ?? null) : null
+    const romaji = token.romaji ?? (isPunctuation(japanese) ? japanese : token.knownRomaji ? capitalize(token.knownRomaji) : particleRomaji ?? capitalize(wanakana.toRomaji(reading, { upcaseKatakana: false })))
     return {
       tokenId: `${passageId}-${paragraphId}-t-${String(index + 1).padStart(3, '0')}`,
-      japanese: token.surface_form,
+      japanese,
       romaji,
-      kind: token.kind ?? (isPunctuation(token.surface_form) ? 'punctuation' : token.pos === '助詞' ? 'particle' : token.pos === '記号' ? 'punctuation' : 'word'),
+      kind: token.kind ?? (isPunctuation(japanese) ? 'punctuation' : token.pos === '助詞' ? 'particle' : token.pos === '記号' ? 'punctuation' : 'word'),
     }
   })
 }
