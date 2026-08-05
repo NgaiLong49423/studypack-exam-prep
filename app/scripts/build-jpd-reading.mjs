@@ -56,7 +56,33 @@ const romajiForRawToken = (token) => {
 }
 const isHonorificSuffix = (token) => token?.pos === '名詞' && token.pos_detail_1 === '接尾' && ['さん', '先生', 'ちゃん', '君', 'くん', '様'].includes(token.surface_form)
 const isIndependentVerb = (token) => token?.pos === '動詞' && token.pos_detail_1 === '自立'
-const isInflectionPart = (token) => token?.pos === '助動詞' || (token?.pos === '助詞' && ['て', 'で'].includes(token.surface_form)) || (token?.pos === '動詞' && token.pos_detail_1 === '非自立')
+const isInflectionPart = (token) => token?.pos === '助動詞' || ['ます', 'まし', 'た', 'ませ', 'ん', 'たい', 'です'].includes(token?.surface_form) || (token?.pos === '助詞' && ['て', 'で'].includes(token.surface_form)) || (token?.pos === '動詞' && token.pos_detail_1 === '非自立')
+const isProtectedVocabularyForm = (form) => form.length >= 2
+const readingPhraseOverrides = [
+  { form: 'おかあさん', romaji: 'okaasan' },
+]
+
+function tokenizeWithVocabularyOverlay(japaneseText, protectedVocabularyByForm) {
+  const rawTokens = []
+  let unprotectedText = ''
+  const flushUnprotectedText = () => {
+    if (unprotectedText) rawTokens.push(...tokenizer.tokenize(unprotectedText))
+    unprotectedText = ''
+  }
+  for (let index = 0; index < japaneseText.length;) {
+    const matched = protectedVocabularyByForm.find(({ form }) => japaneseText.startsWith(form, index))
+    if (matched) {
+      flushUnprotectedText()
+      rawTokens.push({ surface_form: matched.form, reading: matched.romaji, knownRomaji: matched.romaji, pos: '名詞', kind: 'phrase' })
+      index += matched.form.length
+    } else {
+      unprotectedText += japaneseText[index]
+      index += 1
+    }
+  }
+  flushUnprotectedText()
+  return rawTokens
+}
 
 function makePhrase(rawTokens, start, end, romajiSegments = [[start, end]]) {
   const phraseTokens = rawTokens.slice(start, end)
@@ -70,14 +96,14 @@ function makePhrase(rawTokens, start, end, romajiSegments = [[start, end]]) {
 
 function findConjugatedPhrase(rawTokens, start) {
   const first = rawTokens[start]
-  if (!isIndependentVerb(first) && !(first?.pos === '形容詞' && first.pos_detail_1 === '自立')) return null
+  if (!isIndependentVerb(first) && !(first?.pos === '形容詞' && first.pos_detail_1 === '自立') && !['し', 'でし'].includes(first?.surface_form) && !(first?.knownRomaji && isInflectionPart(rawTokens[start + 1]))) return null
   let end = start + 1
   while (isInflectionPart(rawTokens[end])) end += 1
   return end > start + 1 ? makePhrase(rawTokens, start, end) : null
 }
 
-function tokenizeJapanese(japaneseText, passageId, paragraphId, vocabularyByForm) {
-  const rawTokens = tokenizer.tokenize(japaneseText)
+function tokenizeJapanese(japaneseText, passageId, paragraphId, vocabularyByForm, protectedVocabularyByForm) {
+  const rawTokens = tokenizeWithVocabularyOverlay(japaneseText, protectedVocabularyByForm)
   const tokens = []
   for (let index = 0; index < rawTokens.length;) {
     const numeral = rawTokens[index].surface_form
@@ -86,6 +112,19 @@ function tokenizeJapanese(japaneseText, passageId, paragraphId, vocabularyByForm
       tokens.push({ surface_form: `${numeral}${counter}`, reading: counterRomaji(numeral, counter), pos: '名詞', knownRomaji: counterRomaji(numeral, counter), kind: 'number' })
       index += 2
       continue
+    }
+    if (rawTokens[index + 1]?.surface_form === 'じゃ' && rawTokens[index + 2]?.surface_form === 'あり' && rawTokens[index + 3]?.surface_form === 'ませ' && rawTokens[index + 4]?.surface_form === 'ん') {
+      tokens.push(makePhrase(rawTokens, index, index + 5, [[index, index + 1], [index + 1, index + 2], [index + 2, index + 5]]))
+      index += 5
+      continue
+    }
+    if (rawTokens[index]?.pos === '名詞' && rawTokens[index + 1]?.surface_form === 'し') {
+      const conjugatedPhrase = findConjugatedPhrase(rawTokens, index + 1)
+      if (conjugatedPhrase) {
+        tokens.push(makePhrase(rawTokens, index, conjugatedPhrase.end, [[index, index + 1], [index + 1, conjugatedPhrase.end]]))
+        index = conjugatedPhrase.end
+        continue
+      }
     }
     if (rawTokens[index]?.pos === '名詞' && isHonorificSuffix(rawTokens[index + 1])) {
       tokens.push(makePhrase(rawTokens, index, index + 2, [[index, index + 1], [index + 1, index + 2]]))
@@ -99,6 +138,17 @@ function tokenizeJapanese(japaneseText, passageId, paragraphId, vocabularyByForm
       index = end
       continue
     }
+    const conjugatedPhrase = findConjugatedPhrase(rawTokens, index)
+    if (conjugatedPhrase) {
+      tokens.push(conjugatedPhrase)
+      index = conjugatedPhrase.end
+      continue
+    }
+    if (rawTokens[index].knownRomaji) {
+      tokens.push(rawTokens[index])
+      index += 1
+      continue
+    }
     let matched = null
     for (let end = Math.min(rawTokens.length, index + 6); end > index; end -= 1) {
       const japanese = rawTokens.slice(index, end).map((token) => token.surface_form).join('')
@@ -108,14 +158,8 @@ function tokenizeJapanese(japaneseText, passageId, paragraphId, vocabularyByForm
       tokens.push({ surface_form: matched.japanese, reading: matched.romaji, pos: '名詞', knownRomaji: matched.romaji })
       index = matched.end
     } else {
-      const conjugatedPhrase = findConjugatedPhrase(rawTokens, index)
-      if (conjugatedPhrase) {
-        tokens.push(conjugatedPhrase)
-        index = conjugatedPhrase.end
-      } else {
-        tokens.push(rawTokens[index])
-        index += 1
-      }
+      tokens.push(rawTokens[index])
+      index += 1
     }
   }
   return tokens.map((token, index) => {
@@ -132,7 +176,7 @@ function tokenizeJapanese(japaneseText, passageId, paragraphId, vocabularyByForm
   })
 }
 
-function parseReadingMarkdown(markdown, source, vocabularyByForm) {
+function parseReadingMarkdown(markdown, source, vocabularyByForm, protectedVocabularyByForm) {
   const blocks = markdown.split(/\r?\n(?=##\s+\d+\.)/)
   return blocks.filter((block) => /^##\s+\d+\./m.test(block)).map((block, index) => {
     const heading = block.match(/^##\s+\d+\.\s+(.+)$/m)?.[1]?.trim()
@@ -141,7 +185,7 @@ function parseReadingMarkdown(markdown, source, vocabularyByForm) {
     if (!heading || !japanese || !sourceRomaji) throw new Error(`Không thể đọc bài số ${index + 1} trong ${source.file}.`)
     const passageId = `${source.id}-${String(index + 1).padStart(2, '0')}-${slug(heading)}`
     const paragraphId = 'p-001'
-    const tokens = tokenizeJapanese(japanese, passageId, paragraphId, vocabularyByForm)
+    const tokens = tokenizeJapanese(japanese, passageId, paragraphId, vocabularyByForm, protectedVocabularyByForm)
     if (compact(tokens.map((token) => token.japanese).join('')) !== compact(japanese)) throw new Error(`Tokenizer không giữ nguyên tiếng Nhật của ${passageId}.`)
     return {
       passageId,
@@ -195,10 +239,16 @@ for (const entry of entries) {
     if (form && !form.includes('/') && !vocabularyByForm.has(form)) vocabularyByForm.set(form, entry.romaji)
   }
 }
+const protectedVocabularyByForm = [...new Map([
+  ...[...vocabularyByForm.entries()].filter(([form]) => isProtectedVocabularyForm(form)),
+  ...readingPhraseOverrides.map(({ form, romaji }) => [form, romaji]),
+]).entries()]
+  .map(([form, romaji]) => ({ form, romaji }))
+  .sort((left, right) => right.form.length - left.form.length)
 const documentIndex = []
 for (const source of sources) {
   const markdown = await readFile(resolve(theoryRoot, source.file), 'utf8')
-  const passages = parseReadingMarkdown(markdown, source, vocabularyByForm)
+  const passages = parseReadingMarkdown(markdown, source, vocabularyByForm, protectedVocabularyByForm)
   const output = { schemaVersion: '1.0', subjectId: 'jpd123', readingDocumentId: source.id, title: source.title, sourceMarkdown: `theory/${source.file}`, passages }
   const outputFile = `${source.id}.json`
   await writeFile(resolve(readingRoot, outputFile), `${JSON.stringify(output, null, 2)}\n`, 'utf8')
