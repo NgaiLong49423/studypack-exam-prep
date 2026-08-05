@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import { loadExams, loadJapaneseStudyContent, loadNotebookDocuments, loadQuestions, loadSubject, loadSubjectCatalog } from './content'
-import { QuizcardStudy, ReadingLibrary, VocabularyStudy } from './japanese-study'
+import { QuizcardStudy, ReadingLibrary, VocabularyPractice, VocabularyStudy } from './japanese-study'
 import { createMockExam, examAttempts, examScore, formatRemainingTime, MOCK_EXAM_MAX_QUESTION_COUNT, MOCK_EXAM_MIN_QUESTION_COUNT, resolveExamItems } from './exam'
 import { copyPromptToClipboard, createAiTutorPrompt } from './ai-tutor'
 import { clearTutorNotebookUrl, loadTutorNotebookUrl, saveTutorNotebookUrl } from './tutor-settings'
@@ -11,7 +11,7 @@ import { questionsByStatus, summarizeQuestions, type LearningStatus } from './st
 import { ACHIEVEMENTS, addXp, checkExamAchievements, checkLevelAchievements, checkMasteryAchievements, handlePracticeAnswer, loadProfile, xpForNextLevel, getLevelTitle, type UserProfile } from './gamification'
 import type { Exam, PracticeMode, PracticeSession, Question, ReadingDocument, Subject, SubjectCatalogEntry, VocabularyBank } from './types'
 
-type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'mock-exam-setup' | 'exam' | 'exam-result' | 'reading' | 'vocabulary' | 'quizcard' | 'error' | 'profile'
+type Screen = 'loading' | 'subject-picker' | 'subject' | 'mode' | 'practice' | 'practice-empty' | 'complete' | 'statistics' | 'exam-list' | 'mock-exam-setup' | 'exam' | 'exam-result' | 'reading' | 'vocabulary' | 'quizcard' | 'vocabulary-practice' | 'error' | 'profile'
 
 function textOf(blocks: { text: string }[]) {
   return blocks.map((block) => block.text).join('\n')
@@ -467,9 +467,11 @@ function App() {
 
   if (screen === 'reading' && subject) return <ReadingLibrary documents={readingDocuments} onBack={() => setScreen('subject')} />
 
-  if (screen === 'vocabulary' && subject && vocabulary) return <VocabularyStudy vocabulary={vocabulary} onBack={() => setScreen('subject')} onStartQuizcard={() => setScreen('quizcard')} />
+  if (screen === 'vocabulary' && subject && vocabulary) return <VocabularyStudy vocabulary={vocabulary} onBack={() => setScreen('subject')} onStartQuizcard={() => setScreen('quizcard')} onStartPractice={() => setScreen('vocabulary-practice')} />
 
   if (screen === 'quizcard' && subject && vocabulary) return <QuizcardStudy subjectId={subject.subjectId} vocabulary={vocabulary} onBack={() => setScreen('vocabulary')} onAwardXp={awardVocabularyXp} />
+
+  if (screen === 'vocabulary-practice' && subject && vocabulary) return <VocabularyPractice subjectId={subject.subjectId} vocabulary={vocabulary} onBack={() => setScreen('vocabulary')} />
 
   if (screen === 'mode') return <main className="app-shell"><section className="subject-card" aria-labelledby="mode-title">
     <p className="eyebrow">{subject?.code} · Practice</p><h1 id="mode-title">Bạn muốn luyện thế nào?</h1>
