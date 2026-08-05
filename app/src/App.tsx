@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import { loadExams, loadJapaneseStudyContent, loadNotebookDocuments, loadQuestions, loadSubject, loadSubjectCatalog } from './content'
-import { QuizcardStudy, ReadingLibrary, VocabularyPractice, VocabularyStudy } from './japanese-study'
+import { ReadingLibrary, VocabularyPractice, VocabularyStudy } from './japanese-study'
+import { AdaptiveQuizcardStudy } from './adaptive-quizcard'
 import { createMockExam, examAttempts, examScore, formatRemainingTime, MOCK_EXAM_MAX_QUESTION_COUNT, MOCK_EXAM_MIN_QUESTION_COUNT, resolveExamItems } from './exam'
 import { copyPromptToClipboard, createAiTutorPrompt } from './ai-tutor'
 import { clearTutorNotebookUrl, loadTutorNotebookUrl, saveTutorNotebookUrl } from './tutor-settings'
@@ -478,7 +479,7 @@ function App() {
 
   if (screen === 'vocabulary' && subject && vocabulary) return <VocabularyStudy vocabulary={vocabulary} onBack={() => setScreen('subject')} onStartQuizcard={() => setScreen('quizcard')} onStartPractice={() => setScreen('vocabulary-practice')} />
 
-  if (screen === 'quizcard' && subject && vocabulary) return <QuizcardStudy subjectId={subject.subjectId} vocabulary={vocabulary} onBack={() => setScreen('vocabulary')} onAwardXp={awardVocabularyXp} />
+  if (screen === 'quizcard' && subject && vocabulary) return <AdaptiveQuizcardStudy subjectId={subject.subjectId} vocabulary={vocabulary} onBack={() => setScreen('vocabulary')} onAwardXp={awardVocabularyXp} />
 
   if (screen === 'vocabulary-practice' && subject && vocabulary) return <VocabularyPractice subjectId={subject.subjectId} vocabulary={vocabulary} onBack={() => setScreen('vocabulary')} onAwardXp={awardVocabularyPracticeXp} />
 
